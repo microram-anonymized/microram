@@ -463,6 +463,14 @@ claim-by-claim map is [LEAN_CLAIMS.md](analysis/bound_certification/LEAN_CLAIMS.
 The replay of the implementation against the model is described in
 [lean/oracle/README.md](lean/oracle/README.md).
 
+The [replay summary](lean/oracle/hierarchy_battery_summary.txt) records the
+run at the artifact commit named in its header: 64 runs, 6,993 published
+tables compared lane for lane, and 5,298,876 probes, with no mismatch.
+These are the paper's 6,993 tables and 5.3 million probes (rounded).
+All 89 mutation checks passed, including 54 vacuity probes. Fresh fixtures
+were generated serially at that commit before the recorded four-worker
+replay with `--no-generate`; its recorded replay timing excludes generation.
+
 ### 5.3 Table 2
 
 The storage-overhead column (4.5x, 2.92x, 2.41x for B = 2, 4, 8) is the

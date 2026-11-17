@@ -338,6 +338,14 @@ recorded chunks are the fixture's `AccessBatch` operations, one plan per
 chunk, no `write_np` lane, both engines cut the same chunks). On a scalar view
 it also runs the batch model (`online_batch`, `BatchScalar`), which must agree.
 
+The [committed replay summary](hierarchy_battery_summary.txt) records a run
+at the preceding artifact commit: 64 runs, 6,993 compared tables and
+5,298,876 probes, with no mismatch and all 89 mutation checks passing
+(including 54 vacuity probes). Fresh fixtures were generated serially at
+that same clean commit before the recorded four-worker `--no-generate`
+replay. Its timing excludes fixture generation. The summary's commit line
+identifies the source tree used.
+
     python3 -I oracle/hierarchy_replay_tests.py -j 16    # build, generate, compare, mutate (~10 min)
     python3 -I oracle/hierarchy_replay_tests.py -j 16 --summary .lake/oracle/hierarchy-summary.txt
     python3 -I oracle/hierarchy_replay_tests.py --no-selected  # 60 runs; ignores stale selected JSON
