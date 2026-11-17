@@ -1,0 +1,12 @@
+/.lake
+
+# The repository's .gitignore ignores every tmp/, build/ and build-*/
+# directory. Inside the library and the spec tests such a directory would hide
+# modules that Lake still builds and imports, so git shows them here
+# (scripts/audit_axioms.sh rejects an imported module git does not see).
+!/RebuildBound/**/tmp/
+!/RebuildBound/**/build/
+!/RebuildBound/**/build-*/
+!/spec_tests/**/tmp/
+!/spec_tests/**/build/
+!/spec_tests/**/build-*/

@@ -1,0 +1,3218 @@
+{
+  "scope": "Native configuration inventory and conservative lifetime ledger.\n\nThe adapter reuses conditional ordinary certificates only at their audited\ngeometry. Other cases remain explicit gaps with probability one. This is a\nchecker foundation, not a proof of integrated histories or exhaustive events.\nThe library runs one residual routing, the certified one (separated sources,\none-page DFS top preparation), so the routing fields must name it.\n",
+  "declared_domain": {
+    "branching": 8,
+    "levels": 6,
+    "top_digit": 8,
+    "prefix_flushes": 8,
+    "stash_buckets": 1,
+    "dense_prefixes": 2,
+    "tier_buckets": 0,
+    "horizon_accesses": 4294967296,
+    "separated_sources": true,
+    "top_prepare_dfs": true,
+    "target_exact": "1/18446744073709551616"
+  },
+  "status_counts": {
+    "unproved_applicability": 1
+  },
+  "configurations": [
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 6,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4194304,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 10111244,
+        "capacity_entries": 134217728
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "meets_target",
+      "conditional_lifetime_upper_exact": "6460153821712987743525358989609415570082152070688339901977753908004972449435404391446364475405408877711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "covered_obligations_subtotal_exact": "6460153821712987743525358989609415570082152070688339901977753908004972449435404391446364475405408877711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker.",
+        "The deterministic inventory classifies non-capacity census sites (public refusals, liveness, unreachable paths) by reviewed per-rule arguments and a lexical occupancy lint, not by a machine proof; scheduler liveness, C++ memory safety beyond the audited extents and allocation failure are outside it."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 1048577,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "133380906260974052368845772498423982445048761460781550240601170176242478388519567190132147/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "2318603317082090970312561469886972911442500504479993573707780167817216015921785541504475347/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "3154123397944432950120998795234364143165460309691036964930935696090534531707466975416682233/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "41153854090033074723305953419381446204683628031765914477044628716799624217300583110692150867/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "17808434801224336153373084577675864484805299281548744696997717978764218012144812914469200651/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "6487762763279479324588231776639302519627387913667868277450241265880681578259513463640522863/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "314352264171088795341037911257102741691434472546938147845130979254810133792172354772354979/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 16385,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "8466818353733515269678000805888129442791944067902481341761242529517567328036902466183999649/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "2190877512082372294966024139837056497867435366027968630560560285214993029959094861319567827/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "5043716522109236039331237246550351390757696457130364102099795344981424607294599275897013183/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d5": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1360752074429428407650788019316733210046704182722336499063342348078012115665583117399492421259/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d6": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "37812966813526622917402116379381155988553880491425336843963973425626503875270126156832740231/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d7": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "54519079957196153298880171618595761313456883087398219505837566915529427842267046508478041647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d8": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "3352915211413426422941865852983626675456815602959527682662101854087173413507555288615354169/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 2049,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1271023382500808637218478997688647382200951503986285106821873661448806140585458439079587213692987061765498717193134873/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "19853615523004279601156676489371573572080045192652001483787787418385994655402738490692876728975765657833356864964971739/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "2073001129182053707937042380521744654794965628656977625508115483406842461761681633966157198166181628190016167786896119/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "56884651511357684128543518748816378841738300471843897257329835642624257944528104476541966148410348662148306912952967247/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "21851650123255831068934582794936425197551458316072032792029085901292795077985703589194236755748110245027601244800266847/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "112551341667770953211629471828410125965457673114128361876744539412532386412629275946292637937718442975338552368972963/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "29083801262821061732381325975898908360924873236051603330901563011874640520658240557503550919740193605206569367200521/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "274500735209460953090941700680310466718852235366548041849747372139745162242561334301829018459913845350469045749563/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "217120642869608257742501748788919513123059121007957515979593857657835262013185110274013756119879106967623172917613/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "10884353338123662496223290006835128819606801913476389687322676194089272058255017316241775320504613180752860029151/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "107814427116957235340832083832638163496203282413743238473539912350362055799601669355459703660584637902205662996763/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "30712366737537597553092404828581839285681149663351550934696259591699198150135053389597296784643814261892604892209/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1287609835528027139561246026380035973623390470804515358636417660136372864777547381299531720978606717747230074401/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "172217802135802304286047476226290233901679427816460554734356496943984627186526552598238185380961363568908526159/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_prepare": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "6663476096146592468924411814003965512960406381695159689452531162996495828354657285304130743/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "22736672790294702736812073490450393386077812532003795270069867829885801190189206603448272889/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "4833942090915170423710608398897137231929388711121886053728506610207584849487616330615655200473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 158,
+      "native_inventory": [
+        {
+          "kind": "geometry",
+          "top_buckets": 4194304,
+          "tier_buckets": 2,
+          "prefix_positions": 512,
+          "arena_buckets": 10111244,
+          "capacity_entries": 134217728
+        },
+        {
+          "kind": "level",
+          "level": 1,
+          "carry_buckets": 16,
+          "carry_positions": 512,
+          "stash_buckets": 1,
+          "tier_buckets": 1
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 1,
+          "fanout": 8,
+          "seeded_carries": 262144
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 1,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 1,
+          "out_buckets": 16,
+          "main_bits": 4,
+          "pool_buckets": 0,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 0,
+          "index_bits": 4,
+          "range_buckets": 1,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": false,
+          "dfs": false,
+          "direct_buckets": 0,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 2,
+          "carry_bits": 4,
+          "block_bits": 5,
+          "radix": 1,
+          "out_buckets": 32,
+          "main_bits": 5,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 5,
+          "index_bits": 0,
+          "range_buckets": 32,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 3,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 3,
+          "out_buckets": 48,
+          "main_bits": 6,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 0,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 4,
+          "carry_bits": 4,
+          "block_bits": 6,
+          "radix": 1,
+          "out_buckets": 64,
+          "main_bits": 6,
+          "pool_buckets": 8,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 0,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 5,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 5,
+          "out_buckets": 80,
+          "main_bits": 7,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 1,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 6,
+          "carry_bits": 4,
+          "block_bits": 5,
+          "radix": 3,
+          "out_buckets": 96,
+          "main_bits": 7,
+          "pool_buckets": 8,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 1,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 7,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 7,
+          "out_buckets": 112,
+          "main_bits": 7,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 1,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 8,
+          "carry_bits": 4,
+          "block_bits": 7,
+          "radix": 1,
+          "out_buckets": 128,
+          "main_bits": 7,
+          "pool_buckets": 9,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 1,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "level",
+          "level": 2,
+          "carry_buckets": 128,
+          "carry_positions": 4096,
+          "stash_buckets": 1,
+          "tier_buckets": 1
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 2,
+          "fanout": 8,
+          "seeded_carries": 32768
+        },
+        {
+          "kind": "adoption",
+          "level": 2,
+          "digit": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 2,
+          "carry_bits": 7,
+          "block_bits": 8,
+          "radix": 1,
+          "out_buckets": 256,
+          "main_bits": 8,
+          "pool_buckets": 10,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 1,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 3,
+          "carry_bits": 7,
+          "block_bits": 7,
+          "radix": 3,
+          "out_buckets": 384,
+          "main_bits": 9,
+          "pool_buckets": 10,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 2,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 4,
+          "carry_bits": 7,
+          "block_bits": 9,
+          "radix": 1,
+          "out_buckets": 512,
+          "main_bits": 9,
+          "pool_buckets": 11,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 2,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 5,
+          "carry_bits": 7,
+          "block_bits": 7,
+          "radix": 5,
+          "out_buckets": 640,
+          "main_bits": 10,
+          "pool_buckets": 10,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 3,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 6,
+          "carry_bits": 7,
+          "block_bits": 8,
+          "radix": 3,
+          "out_buckets": 768,
+          "main_bits": 10,
+          "pool_buckets": 11,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 3,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 7,
+          "carry_bits": 7,
+          "block_bits": 7,
+          "radix": 7,
+          "out_buckets": 896,
+          "main_bits": 10,
+          "pool_buckets": 10,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 3,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 2,
+          "digit": 8,
+          "carry_bits": 7,
+          "block_bits": 10,
+          "radix": 1,
+          "out_buckets": 1024,
+          "main_bits": 10,
+          "pool_buckets": 12,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 3,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "level",
+          "level": 3,
+          "carry_buckets": 1024,
+          "carry_positions": 32768,
+          "stash_buckets": 1,
+          "tier_buckets": 1
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 3,
+          "fanout": 8,
+          "seeded_carries": 4096
+        },
+        {
+          "kind": "adoption",
+          "level": 3,
+          "digit": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 2,
+          "carry_bits": 10,
+          "block_bits": 11,
+          "radix": 1,
+          "out_buckets": 2048,
+          "main_bits": 11,
+          "pool_buckets": 13,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 4,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 3,
+          "carry_bits": 10,
+          "block_bits": 10,
+          "radix": 3,
+          "out_buckets": 3072,
+          "main_bits": 12,
+          "pool_buckets": 13,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 5,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 4,
+          "carry_bits": 10,
+          "block_bits": 12,
+          "radix": 1,
+          "out_buckets": 4096,
+          "main_bits": 12,
+          "pool_buckets": 14,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 5,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 5,
+          "carry_bits": 10,
+          "block_bits": 10,
+          "radix": 5,
+          "out_buckets": 5120,
+          "main_bits": 13,
+          "pool_buckets": 13,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 6,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 6,
+          "carry_bits": 10,
+          "block_bits": 11,
+          "radix": 3,
+          "out_buckets": 6144,
+          "main_bits": 13,
+          "pool_buckets": 14,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 6,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 7,
+          "carry_bits": 10,
+          "block_bits": 10,
+          "radix": 7,
+          "out_buckets": 7168,
+          "main_bits": 13,
+          "pool_buckets": 13,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 6,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 3,
+          "digit": 8,
+          "carry_bits": 10,
+          "block_bits": 13,
+          "radix": 1,
+          "out_buckets": 8192,
+          "main_bits": 13,
+          "pool_buckets": 15,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 7,
+          "index_bits": 6,
+          "range_buckets": 128,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "level",
+          "level": 4,
+          "carry_buckets": 8192,
+          "carry_positions": 262144,
+          "stash_buckets": 2,
+          "tier_buckets": 1
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 4,
+          "fanout": 8,
+          "seeded_carries": 512
+        },
+        {
+          "kind": "adoption",
+          "level": 4,
+          "digit": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 2,
+          "carry_bits": 13,
+          "block_bits": 14,
+          "radix": 1,
+          "out_buckets": 16384,
+          "main_bits": 14,
+          "pool_buckets": 30,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 6,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 3,
+          "carry_bits": 13,
+          "block_bits": 13,
+          "radix": 3,
+          "out_buckets": 24576,
+          "main_bits": 15,
+          "pool_buckets": 30,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 7,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 4,
+          "carry_bits": 13,
+          "block_bits": 15,
+          "radix": 1,
+          "out_buckets": 32768,
+          "main_bits": 15,
+          "pool_buckets": 32,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 7,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 5,
+          "carry_bits": 13,
+          "block_bits": 13,
+          "radix": 5,
+          "out_buckets": 40960,
+          "main_bits": 16,
+          "pool_buckets": 30,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 8,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 6,
+          "carry_bits": 13,
+          "block_bits": 14,
+          "radix": 3,
+          "out_buckets": 49152,
+          "main_bits": 16,
+          "pool_buckets": 32,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 8,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 7,
+          "carry_bits": 13,
+          "block_bits": 13,
+          "radix": 7,
+          "out_buckets": 57344,
+          "main_bits": 16,
+          "pool_buckets": 30,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 8,
+          "index_bits": 8,
+          "range_buckets": 256,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 4,
+          "digit": 8,
+          "carry_bits": 13,
+          "block_bits": 16,
+          "radix": 1,
+          "out_buckets": 65536,
+          "main_bits": 16,
+          "pool_buckets": 34,
+          "stash_buckets": 2,
+          "tier_buckets": 1,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 7,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "level",
+          "level": 5,
+          "carry_buckets": 65536,
+          "carry_positions": 2097152,
+          "stash_buckets": 2,
+          "tier_buckets": 2
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 5,
+          "fanout": 8,
+          "seeded_carries": 64
+        },
+        {
+          "kind": "adoption",
+          "level": 5,
+          "digit": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 2,
+          "carry_bits": 16,
+          "block_bits": 17,
+          "radix": 1,
+          "out_buckets": 131072,
+          "main_bits": 17,
+          "pool_buckets": 36,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 8,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 3,
+          "carry_bits": 16,
+          "block_bits": 16,
+          "radix": 3,
+          "out_buckets": 196608,
+          "main_bits": 18,
+          "pool_buckets": 37,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 9,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 4,
+          "carry_bits": 16,
+          "block_bits": 18,
+          "radix": 1,
+          "out_buckets": 262144,
+          "main_bits": 18,
+          "pool_buckets": 39,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 9,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 5,
+          "carry_bits": 16,
+          "block_bits": 16,
+          "radix": 5,
+          "out_buckets": 327680,
+          "main_bits": 19,
+          "pool_buckets": 37,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 10,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 6,
+          "carry_bits": 16,
+          "block_bits": 17,
+          "radix": 3,
+          "out_buckets": 393216,
+          "main_bits": 19,
+          "pool_buckets": 39,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 10,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 7,
+          "carry_bits": 16,
+          "block_bits": 16,
+          "radix": 7,
+          "out_buckets": 458752,
+          "main_bits": 19,
+          "pool_buckets": 37,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 10,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "ordinary",
+          "level": 5,
+          "digit": 8,
+          "carry_bits": 16,
+          "block_bits": 19,
+          "radix": 1,
+          "out_buckets": 524288,
+          "main_bits": 19,
+          "pool_buckets": 41,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 10,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 2,
+          "carry_tier_buckets": 1,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "level",
+          "level": 6,
+          "carry_buckets": 524288,
+          "carry_positions": 16777216,
+          "stash_buckets": 2,
+          "tier_buckets": 2
+        },
+        {
+          "kind": "ordinal_seed",
+          "level": 6,
+          "fanout": 8,
+          "seeded_carries": 8
+        },
+        {
+          "kind": "top_prepare",
+          "level": 6,
+          "digit": 8,
+          "carry_bits": 19,
+          "block_bits": 22,
+          "radix": 1,
+          "out_buckets": 4194304,
+          "main_bits": 22,
+          "pool_buckets": 44,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 9,
+          "index_bits": 13,
+          "range_buckets": 512,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": false,
+          "dfs": true,
+          "direct_buckets": 0,
+          "older_tier_buckets": 0,
+          "carry_tier_buckets": 0,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        {
+          "kind": "top_finish",
+          "level": 6,
+          "digit": 8,
+          "carry_bits": 19,
+          "block_bits": 22,
+          "radix": 1,
+          "out_buckets": 4194304,
+          "main_bits": 22,
+          "pool_buckets": 4,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 4,
+          "index_bits": 18,
+          "range_buckets": 16,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 2,
+          "older_tier_buckets": 0,
+          "carry_tier_buckets": 2,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        }
+      ],
+      "passes": [
+        {
+          "name": "ordinary_L1_d1",
+          "clock": "ordinary_L1_d1",
+          "exposures": 1048577,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": false,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 0
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": false,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d2",
+          "clock": "ordinary_L1_d2",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "125342414682254359612384466675101444242344795992739450361306463094174074124990841792667471/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "596628603651578967224573727917826142947922961022500202223409540212925840445694930951978519/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "125342414682254359612384466675101444242344795992739450361306463094174074124990841792667471/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d3",
+          "clock": "ordinary_L1_d3",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "66689086028217561779028157760154847373991502642285983075675465317801418367408626137267781/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "307502526638543903846660881138488125555461739645172686813059304806166934070076780117281/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "133378172056435431563452922418534393535923422939904616668155258796483268243463130196072999/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d4",
+          "clock": "ordinary_L1_d4",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "276610232082754089590200150359102115351031925771832730241935692474352753020724626836886791/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "412795054489614964477942785061272443652531975775156350607356559203137227997713226343899339/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "115254263367813896896868224134533220231603924868959909767439353672439009011391813738079559/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d5",
+          "clock": "ordinary_L1_d5",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "177097118067136421975710073630395015731943670035735169438449666730688076866811138053671291/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "384893145497248990258725833314503778144859982860190324662716855884094657615097824375524853/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "708388472268550972975812493971127073875158778698629669538421397962070167081701632536833267/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d6",
+          "clock": "ordinary_L1_d6",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "605480816729241585732811237504380519431905189546341815529866511301557333134294515511655947/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "118212219064526811708342187772126957760756791889720757094556675594689891181711617235353921/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "100913469454873313796443421108389388543929665464440422471769696646476917460174658967362343/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d7",
+          "clock": "ordinary_L1_d7",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "340879994731503286242988204089586209772630320002828483024229736611201313059403041342539733/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "255081889414591351420622701773153332789018279695792060835865133260847743821425378263917147/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "34087999473150710104740155712595098480177569961855629064305308123103750569275277508043903/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L1_d8",
+          "clock": "ordinary_L1_d8",
+          "exposures": 1048576,
+          "obligations": [
+            {
+              "name": "direct_B_producer_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "producer_checked": true,
+              "fixed_population": true,
+              "same_current_family": true
+            },
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "124026612403551577617665846399841592138943675573034358433898648523686859019160095542570463/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "273431500214924594588177262872800247774478374910831467312479792650312734951221012951426951/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "dfs_containment": true,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "354361749724426469441980383216086286622604281778450890234216849466732303662682472480919/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "level1_certificates.json",
+              "gap": null,
+              "shared_witness_charged_once": true,
+              "merge_stash_capacity_slots": 64
+            }
+          ]
+        },
+        {
+          "name": "adoption_L2_d1",
+          "clock": "ordinary_L2_d1",
+          "exposures": 131073,
+          "obligations": [
+            {
+              "name": "adopt_existing_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "In-place adoption at the producer's width; producing job owns its capacity events",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d2",
+          "clock": "ordinary_L2_d2",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "560834361149700498269226345520826982459326090022663724799645054614795243080299388353887267/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 8
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "359658750114572012913492237811895569585019560284110608034051644395677434772610240525375597/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 1,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "701042951437125622836532931901033728074157612528329655999556318268494053850374235442359083/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d3",
+          "clock": "ordinary_L2_d3",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "126813688115323054484661866846027047763435232524627024274139636673316627189893887413881857/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 8
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "891949325784694217710193739528648203587569705740591645809232408850262143453920204526211409/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 2,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "19814638768020775969468632737256778777572309186641460644643924029223450071115807854930671/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d4",
+          "clock": "ordinary_L2_d4",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "25588959956849063448446769814089729499826469289177341195642006639128976087934950618045801/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 9
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "310905624961227920804175031698275484467146418887066312459551616491362942459013827106349651/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 2,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "142160888649149342236073391063557854357833480943118266453591707843136990227479043252876241/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d5",
+          "clock": "ordinary_L2_d5",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "8977806226369674893740276228112403278625829645629853177250614692013072561701862032775803/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 8
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "371138412881665487850179044122205766163344777562049196363399434439100375570411812055403589/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 3,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "448890311318655980791938515915908276898818417309053569804439396084357635578657092041470767/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d6",
+          "clock": "ordinary_L2_d6",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "23529654327356688300948319731599347931280594279039861639423987378830535447558006648811373/400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 9
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "112724197102917658684557424524464546174373172096805675678590541207401553891227039450380779/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 3,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "653601509093398209680262192329572884547833502108211719282667013316428761132607307228279501/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d7",
+          "clock": "ordinary_L2_d7",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "359936384789237540573954695592757689716210456208065542019655081117862934262809157474653193/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 8
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "487695686880069199845962863098470948104358464987869342496967786588468885108126090617574747/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 3,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "224960240493378959809435252609685440971745513323933072384425760879853905045395717903058599/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L2_d8",
+          "clock": "ordinary_L2_d8",
+          "exposures": 131072,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "118900106806976603528429027981942554028756074560282012435956164082125357761472544453465987/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 10
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "16491259123677704397032534243213899789671448897952461244132639012214185256970226598023423/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 3,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "118900106806834671068378728574665771534868434764631234959971031257370127234612703758740257/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "adoption_L3_d1",
+          "clock": "ordinary_L3_d1",
+          "exposures": 16385,
+          "obligations": [
+            {
+              "name": "adopt_existing_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "In-place adoption at the producer's width; producing job owns its capacity events",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d2",
+          "clock": "ordinary_L3_d2",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "573844611768768890008393974319506988224678631098445089598029204459898607481587460167670089/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 11
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "110334765812801823479321508847402660380681586432335836398228014952297307775524690490470843/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 4,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "521676919789789900007630885745006352931526028271313717816390185872635097710534054697881899/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d3",
+          "clock": "ordinary_L3_d3",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "4405342834384243433901596675687774183550464121914705101963174651902143521252389946084953/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 11
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "19986443702181683425247119642505858366477846687426347504992412283873180471593135834627247/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 5,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "16019428488834215085248308558959693877632132408745675982792070751589241949685680013445007/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d4",
+          "clock": "ordinary_L3_d4",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "148475686214588217120539425354114477276212132227753743429740755691108759160790987042491617/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 12
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "5708572877487058620995734540215465948000039031622534784537787424105686375628039782434689/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 5,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "247459477021612938201813686599112741873441322456078102452888255445429783877806804668080363/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d5",
+          "clock": "ordinary_L3_d5",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "229885732723128603572846478553276495419651089229054689416425849473434227174524277632105661/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 11
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "67786819285773285656779729436040525244647781069925701853175889047354252360483400439840781/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 6,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "417974059500122443736501024857175245355539539241368211496050141458383912424623050034688039/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d6",
+          "clock": "ordinary_L3_d6",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "77746257119083154503748384349258381149964769687229366249316783289736669689570628361254977/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 12
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "180642322879724681078402027679554091887884701217164447299131953972437339823746146365052033/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 6,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "129577095200023611646743156485169987977644854247860059151246965344302516729484316597234091/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d7",
+          "clock": "ordinary_L3_d7",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "104024388422773623807801705458381979616936791871775373039351962167241653709310114611227541/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 11
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "107927412141205219122673599249655367825503811852672723357639129554162363570088067911433119/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 6,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "945676258436703269030561372895416221561679159151592858846718877140317043300807882782039947/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L3_d8",
+          "clock": "ordinary_L3_d8",
+          "exposures": 16384,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "85808407921878041753027686994582405471892523604878552643831656157754881642616052516859393/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 13
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "15047341177215232968140257213587486352614587083374024493208257043586294982322677766116841/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 6,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "132012935254342291067286391733229930757506422524554180464643026573446282422966461666482209/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "adoption_L4_d1",
+          "clock": "ordinary_L4_d1",
+          "exposures": 2049,
+          "obligations": [
+            {
+              "name": "adopt_existing_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "In-place adoption at the producer's width; producing job owns its capacity events",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d2",
+          "clock": "ordinary_L4_d2",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "118239669123856016683450030518178361588994498331435108224180902192987061765498717193134873/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 14
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "85942059024783129826256582536696031767514439698834967982208883307602167501633920224769869/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 6,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "823205584505954677911826344406894790803902180628970792963212933567579934475368257215415243/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d3",
+          "clock": "ordinary_L4_d3",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "187672440946816742808960301263646583963914897001188839232182023975765657833356864964971739/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 14
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "24490327402849347340906973587640286349721485825783069232851888077878527846355638081517693/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 7,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "52270720144960345686219523814334410271207957843317159248526074423851496263407837249308061/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d4",
+          "clock": "ordinary_L4_d4",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "931099236785618910357814218527047507154493341675498330075360922166181628190016167786896119/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 15
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "36364959781853900077956132701191750509294040074135949919152061229041146450165113645694161/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 7,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "154600684476974426204699267885743849409396278833431352553746381772675815519894689515757459/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d5",
+          "clock": "ordinary_L4_d5",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "74185463927613198039723213074503030586190556864309338405615740410348662148306912952967247/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 14
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "28426860673896501729023070559299270306693248418048968187048056715674926910003138501966337/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 8,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "3866270445585083812172203767956595553023804713279708769902397586026695957189766775459551/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d6",
+          "clock": "ordinary_L4_d6",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "891154819130191917086229281796211090572119602091329529531681831748110245027601244800266847/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 15
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "108148869641583532443041374747114063672341864648809337086750020474764887149091741371730479/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 8,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "55469048734781145081576961155614410988223367305984023220717678941924511519006446329114781/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d7",
+          "clock": "ordinary_L4_d7",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "50719357506258050463000452400495162343365398900618523934793626137718442975338552368972963/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 14
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "413374942754117174568911170339395450714721617332537008904863156207301483254651565516291407/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 8,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "184152119584833191388033583856838115610384366359873145000671760346832333966957212648523201/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L4_d8",
+          "clock": "ordinary_L4_d8",
+          "exposures": 2048,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "254967264073256970052629663113230320309058559585990267447055554614740193605206569367200521/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 16
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "45944569905995729922025644373646833577708336310091397369717391967788406837864444406171861/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 7,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "28854078413291083082771197499063410119779361501871483230822655742977138900478650888417137/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "adoption_L5_d1",
+          "clock": "ordinary_L5_d1",
+          "exposures": 257,
+          "obligations": [
+            {
+              "name": "adopt_existing_tier",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "In-place adoption at the producer's width; producing job owns its capacity events",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d2",
+          "clock": "ordinary_L5_d2",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "421143277189425761230643704089511659029688445184642990477062892607598991863171988743209681/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 17
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "137250367604730476545468620758099524634807837804840605863149411248692191834860494465012469/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 8,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "247731339523191624253319825935006858252757908932142935574742878004469995213630581613652753/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d3",
+          "clock": "ordinary_L5_d3",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "679600417707174370248632031662783396192704024863704746217620711064764785536411801315695529/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 17
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "86848257147843303096999979938653221822538105504504978579402346072630650634545553770653373/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 9,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "199882484381261576471333231825145195021432392952329911363591205323415830531876239767357581/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d4",
+          "clock": "ordinary_L5_d4",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "585770034206334940727114575432495317140733728113453173367745206642515771814190766173394891/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 18
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "43537413352494649984880793771091921497574860520882252343205734026403348155774240677057197/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 9,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "20339236389596313681401297333015616942377355983469180577302618032936455692778365249131837/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d5",
+          "clock": "ordinary_L5_d5",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "30452541102350996437651716939555282640525301170045422575689811345011807228696583285818171/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 17
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "215628854233914470681660943278545935474171002087374837722357387518689002491748953932263427/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 10,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "89566310078209295898784208841848229192325959052282598407898760739570223203073041372088213/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d6",
+          "clock": "ordinary_L5_d6",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "17175664396713816546603992657236226839268775508992655346383273414965748428491345929519227/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 18
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "122849466950150390212340611525653143208887371789495473419161292615830516654773473884759429/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 10,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "381681409867956840665118914788089170228927537971924303131609041453235272417723520797201409/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d7",
+          "clock": "ordinary_L5_d7",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "461141082066819343084765496252720516695436598421085119464564945563269816346961267876237691/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 17
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "257521967105605427911760938242158645023330003679203903621436904219804537471861420633029207/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 10,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "67814879454325895658312463616118972877978022622375910458726703284668448435955703924442973/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "ordinary_L5_d8",
+          "clock": "ordinary_L5_d8",
+          "exposures": 256,
+          "obligations": [
+            {
+              "name": "completed_A_route_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "312138569230494295069386887678877039008281686832619078903252276813821320202474929185227/19531250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "stage_count": 19
+            },
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "137774241708641843427155718402658362159846418503925857726251791115926913515861867612329/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "event": "max_R completed_A_residuals(R) > 64",
+              "dfs_containment": true,
+              "includes_final_A_route_sheds": true,
+              "index_bits": 10,
+              "direct_B_pages": 1
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "105141379892117713427328605408419526888755253347223186718403511218478931665524022123073359/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "separated_sources_certificates.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "top_prepare_L6_d8",
+          "clock": "top_prepare",
+          "exposures": 257,
+          "obligations": [
+            {
+              "name": "final_ranges",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "104015215782952676704361431759116146437014169206095260296453131905353280226333272973664351/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/sorted_ranges",
+              "gap": null,
+              "pool_buckets": 44,
+              "range_buckets": 512,
+              "intermediate_router_removed": true,
+              "dfs_containment": true,
+              "range_capacity_slots": 64
+            },
+            {
+              "name": "stage_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "124367040475307959924872738758349215103807225701305400359395798819552970872842084796604999/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/stages",
+              "gap": null,
+              "stage_witness": {
+                "name": "binary_top_route_stashes",
+                "probability_upper_decimal": "2.48734080950615919849745477516698430207614451402610800718791597639105941745684169593209998E-37",
+                "certified_power_of_two_exponent": 121,
+                "approximate_log2_for_display_only": -121.59673531509979,
+                "slots": 128,
+                "first_potentially_shedding_stage": 1,
+                "last_stage": 22,
+                "stage_count": 22,
+                "per_stage_upper_decimal": "1.13060945886643599931702489780317468276188387001186727599450726199593609884401895269640908E-38",
+                "final_stage_drain_only": true
+              }
+            },
+            {
+              "name": "preparation_carry",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "28265236471660899982925622445079367069047096750296681899862681549898402471100473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/packing",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "initialization",
+          "clock": "initialization",
+          "exposures": 1,
+          "obligations": [
+            {
+              "name": "final_ranges",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "214930023855416231375633461028669012350397402749907412664759098416902714814607857554822229/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/sorted_ranges",
+              "gap": null,
+              "pool_buckets": 44,
+              "range_buckets": 512,
+              "intermediate_router_removed": true,
+              "dfs_containment": true,
+              "range_capacity_slots": 64
+            },
+            {
+              "name": "stage_stashes",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "237427986361951559856575228538666683379995612702492127958846525019146580757243980066245907/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/stages",
+              "gap": null,
+              "stage_witness": {
+                "name": "binary_top_route_stashes",
+                "probability_upper_decimal": "2.37427986361951559856575228538666683379995612702492127958846525019146580757243980066245907E-37",
+                "certified_power_of_two_exponent": 121,
+                "approximate_log2_for_display_only": -121.66384951095833,
+                "slots": 128,
+                "first_potentially_shedding_stage": 2,
+                "last_stage": 22,
+                "stage_count": 21,
+                "per_stage_upper_decimal": "1.13060945886643599931702489780317468276188387001186727599450726199593609884401895269640908E-38",
+                "final_stage_drain_only": true
+              }
+            },
+            {
+              "name": "published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "28265236471660899982925622445079367069047096750296681899862681549898402471100473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_preparation_certificates.json#/packing",
+              "gap": null
+            }
+          ]
+        },
+        {
+          "name": "top_finish_L6_d8",
+          "clock": "top_finish",
+          "exposures": 257,
+          "obligations": [
+            {
+              "name": "A_only_range_router",
+              "capacity_slots": 64,
+              "conditional_upper_exact": "48339420909151421584741367379971543063069436317548170066317563135256849868060664322131841/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_finish_evaluation.json",
+              "gap": null,
+              "event": "max_R retained_carry(R) > 64",
+              "dfs_containment": true,
+              "retained_carry_is_A_excess": true,
+              "index_bits": 18,
+              "direct_B_pages": 2
+            },
+            {
+              "name": "B_producer_tier_reuse",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "0",
+              "evidence": "B producer owns this event; no consumer/range/lane multiplier",
+              "gap": null
+            },
+            {
+              "name": "insertion_and_published_tier",
+              "capacity_slots": 128,
+              "conditional_upper_exact": "28265236471660899982925622445079367069047096750296681899862681549898402471100473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "evidence": "top_finish_evaluation.json",
+              "gap": null,
+              "covered_events": [
+                "final_B_insertion_shed",
+                "published_tier"
+              ],
+              "shared_witness_charged_once": true
+            }
+          ]
+        },
+        {
+          "name": "integrated_inventory",
+          "clock": "integrated_inventory",
+          "exposures": 1,
+          "obligations": [
+            {
+              "name": "remaining_storage_and_partial_jobs",
+              "capacity_slots": null,
+              "conditional_upper_exact": "0",
+              "evidence": "deterministic_inventory_audit.json#/configurations/uniform",
+              "gap": null,
+              "covered": "Every native capacity test reachable by this configuration, including initialization, lanes and paused phases, is deterministic or implies one of this ledger's obligations at its capacity (REPORT.tex, Proposition deterministic-inventory).",
+              "census_sites": 709,
+              "capacity_sites": 1043,
+              "probe_checks": 318424
+            }
+          ]
+        }
+      ],
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 134217728,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": false
+      }
+    }
+  ],
+  "input_sha256": {
+    "ordinary_geometry_reference.json": "1087136ca95a58c3f4a09491deb15de3ce8de805052c68a9453f722597fc8d47",
+    "ordinary_range_audit.json": "21f06314fd216167a2d2c236a1eafc99be527badefe0e0d5fd2dc50a9d8747cd",
+    "configuration_domain.json": "7db3c82f644c4703ed0dd183f24ed996c0952777aeb25c89da8d0fcfc7467a4b",
+    "top_preparation_certificates.json": "da55aab5640a657dfeaf2be43eda1e598d7440f4e59c6cc9f24161259881c4b7",
+    "separated_sources_certificates.json": "16a6f2f0e450799c6e1553b966edb16d3d59e20feb31f656ec0c537ffaea0116",
+    "top_finish_evaluation.json": "03344327c775a419fcb7e17b768becb09dd0ea76284791204f581d3aef8426b5",
+    "level1_certificates.json": "60d5c989e668b77834d727aad5fbcedc21a2feeb4bd4e23f57f255faa6e396cc",
+    "selected_configuration.json": "08033d195cb0cc871bfcb8070acf6fe00517a86e12a85a89852b50fb5b11ea43",
+    "selected_configuration_half_fanout.json": "163e211285953b5e1b2fe69bba73bf1713e38bd073f9582d5edb7cbcb9f254ab",
+    "deterministic_inventory_audit.json": "9af050f2d8f83898e58ad09ed1465828a18afdffe8ef33446543a1404725337a"
+  },
+  "source_sha256": {
+    "analysis/bound_certification/code/configuration_probe.cpp": "5c4406ebf9526a398fae4731e368ffc3fd465d67308361cf6db561b740374dc0",
+    "src/oram/levelarena/cpu_byteslice_level_arena_geometry.hpp": "7c15bc7660f78912023a23a1c12ae05437e2c6e979f26c3f6307ae4039413d57",
+    "src/oram/levelarena/cpu_byteslice_level_arena_merge.hpp": "8a5c48f43fceee9df12310d06936afde47fa6d4a2b7d3ab8a9838de98a0192d4",
+    "src/oram/levelarena/cpu_byteslice_level_arena_pass_shape.hpp": "d323499b9bfff5502fd341952f0b2f1da490201078973ca502b18648c969accb",
+    "src/oram/levelarena/cpu_byteslice_level_arena_stash.hpp": "b316f8c668e731ee06b52cfc4022d174177810813708dac5ce0eea968348e9ff",
+    "src/oram/rebuild/cpu_byteslice_dfs_residual.hpp": "a37d058cc3994ed52d71836739e1f3e0257ef3aa6f79e8ba7df1f19fbfbcff66",
+    "src/oram/rebuild/cpu_byteslice_residual_range.hpp": "c32589da50eda79e8e1d68c43930469e66f20833d4895b34f441d435851885c1",
+    "src/oram/rebuild/cpu_byteslice_residual_tier_bound.hpp": "f7dc6c1fd87a7de89c2b6cf7165c5d5868d8d8bc3d04274c0f4498c8d9b11384",
+    "src/oram/rebuild/cpu_byteslice_stash_capacity_table.hpp": "b534d5b2f5fa279de71ab79ce9efcef2ce39a53ed477fbe3e9f9bc68ad8fff86",
+    "src/oram/scheduler/cpu_byteslice_residual_pass.hpp": "b4c664474d79ad4f20aeb43abae941d36aa27685cd205e2992776c8622b8f6d5",
+    "src/oram/scheduler/cpu_byteslice_subtask.hpp": "48fa2b7b4c0bdb1b4ba65ce6a2fcfe55df664b046797c62656045d9d7dd531ef",
+    "src/oram/scheduler/cpu_byteslice_subtask_plan.hpp": "eb2e3c9d384c155add96a65e3b869aa7e1391d85bc53dad7327968017f15ef4b",
+    "analysis/bound_certification/code/ladder_probe.cpp": "039a06e85d00ecb7a9a54d060e96f80cb9eb9c300b3067d069095b7ef55f096c",
+    "analysis/bound_certification/code/check_configuration.py": "c9ba4a177f2c71b241ae656748c4fb3c96f015f48ac3585516d2d7b072d7b8ad",
+    "analysis/bound_certification/code/source_scope.py": "a8cbe29b0d7866486c539e00f9dfe73337777b25b7ff88bdf7140765df8115da"
+  },
+  "implementation_scope": "Uniform or explicit per-level fanout ladders (level_fanouts), default no-clone bank placement, fixed 64-slot buckets and 64-bit tags. Other engine options are not modeled; unknown config fields are rejected.",
+  "ledger_scope": "Native ordinary/top pool geometry; exact ordinary source-component coverage; initialization separate; unresolved top and integrated history explicitly charged one; the deterministic-inventory line is charged one unless a fresh inventory audit of exactly that configuration and ledger discharges it."
+}

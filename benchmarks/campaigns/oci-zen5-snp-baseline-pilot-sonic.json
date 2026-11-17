@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far"
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 10000000000,
+    "drain_deadline_ns": 30000000000,
+    "setup_allowance_ns": 300000000000,
+    "max_trial_ns": 900000000000
+  },
+  "name": "oci-zen5-snp-baseline-pilot-sonic",
+  "base_seed": 7601,
+  "stages": [
+    {
+      "name": "pilot-k4-v8",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "k4-v8-dense",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        131072,
+        524288,
+        2097152,
+        8388608
+      ],
+      "api_modes": [
+        "scalar",
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 10797,
+              "setup_ns_per_entry": 10713,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 6749,
+              "setup_ns_per_entry": 6599,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 181910
+            }
+          ]
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 45801,
+              "setup_ns_per_entry": 38912,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 29992,
+              "setup_ns_per_entry": 31002,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 344459
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pilot-value-width",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "k4-v64-dense",
+          "key_bytes": 4,
+          "value_bytes": 64,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-v512-dense",
+          "key_bytes": 4,
+          "value_bytes": 512,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 8602,
+              "setup_ns_per_entry": 8610,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 14715,
+              "setup_ns_per_entry": 16553,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            }
+          ]
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 28205,
+              "setup_ns_per_entry": 26176,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 36235,
+              "setup_ns_per_entry": 35526,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 20,
+    "max_campaign_trial_ns": 36000000000000
+  }
+}

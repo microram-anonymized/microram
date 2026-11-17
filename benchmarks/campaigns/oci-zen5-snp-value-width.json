@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-value-width",
+  "repetitions": 1,
+  "base_seed": 3001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far"
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "stages": [
+    {
+      "name": "value-width",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v8",
+          "key_bytes": 8,
+          "value_bytes": 8
+        },
+        {
+          "name": "k8-v16",
+          "key_bytes": 8,
+          "value_bytes": 16
+        },
+        {
+          "name": "k8-v32",
+          "key_bytes": 8,
+          "value_bytes": 32
+        },
+        {
+          "name": "k8-v48",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "k8-v64",
+          "key_bytes": 8,
+          "value_bytes": 64
+        },
+        {
+          "name": "k8-v128",
+          "key_bytes": 8,
+          "value_bytes": 128
+        },
+        {
+          "name": "k8-v192",
+          "key_bytes": 8,
+          "value_bytes": 192
+        },
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v512",
+          "key_bytes": 8,
+          "value_bytes": 512
+        },
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        },
+        {
+          "name": "k8-v4096",
+          "key_bytes": 8,
+          "value_bytes": 4096
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "hierarchy-frozen",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "branching_factor": 8,
+              "online_stash_entries": 64,
+              "prefix_flushes": 8,
+              "top_digit": 8,
+              "dense_prefixes": 2,
+              "owner_threads": 2,
+              "top_helpers": 0,
+              "rebuild_lanes": 1,
+              "bank_first": "no_clone",
+              "time_rebuild_stages": false,
+              "near_max_level": 0,
+              "batch_lanes": 16,
+              "batch_execution": "chunked_cascade",
+              "batch_participants": 1,
+              "batch_bucket_scan": false,
+              "batch_profile": false,
+              "batch_result_layout": "sliced_place_at_lane",
+              "batch_spin_ns": 1000000,
+              "owner_spin_ns": 1000000,
+              "park_retry_us": 1000,
+              "wait_limit_ms": 120000
+            }
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        },
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "key-width-control",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k4-v64",
+          "key_bytes": 4,
+          "value_bytes": 64
+        },
+        {
+          "name": "k4-v256",
+          "key_bytes": 4,
+          "value_bytes": 256
+        },
+        {
+          "name": "k4-v1024",
+          "key_bytes": 4,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v64",
+          "key_bytes": 8,
+          "value_bytes": 64
+        },
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k32-v64",
+          "key_bytes": 32,
+          "value_bytes": 64
+        },
+        {
+          "name": "k32-v256",
+          "key_bytes": 32,
+          "value_bytes": 256
+        },
+        {
+          "name": "k32-v1024",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        },
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        }
+      ]
+    },
+    {
+      "name": "value-width-std-unordered-map",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v8",
+          "key_bytes": 8,
+          "value_bytes": 8
+        },
+        {
+          "name": "k8-v16",
+          "key_bytes": 8,
+          "value_bytes": 16
+        },
+        {
+          "name": "k8-v32",
+          "key_bytes": 8,
+          "value_bytes": 32
+        },
+        {
+          "name": "k8-v48",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "k8-v64",
+          "key_bytes": 8,
+          "value_bytes": 64
+        },
+        {
+          "name": "k8-v128",
+          "key_bytes": 8,
+          "value_bytes": 128
+        },
+        {
+          "name": "k8-v192",
+          "key_bytes": 8,
+          "value_bytes": 192
+        },
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v512",
+          "key_bytes": 8,
+          "value_bytes": 512
+        },
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        },
+        {
+          "name": "k8-v4096",
+          "key_bytes": 8,
+          "value_bytes": 4096
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    },
+    {
+      "name": "value-width-dense-k4",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k4-dense-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v16",
+          "key_bytes": 4,
+          "value_bytes": 16,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v32",
+          "key_bytes": 4,
+          "value_bytes": 32,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v48",
+          "key_bytes": 4,
+          "value_bytes": 48,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v64",
+          "key_bytes": 4,
+          "value_bytes": 64,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v128",
+          "key_bytes": 4,
+          "value_bytes": 128,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v192",
+          "key_bytes": 4,
+          "value_bytes": 192,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v256",
+          "key_bytes": 4,
+          "value_bytes": 256,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v512",
+          "key_bytes": 4,
+          "value_bytes": 512,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v1024",
+          "key_bytes": 4,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v2048",
+          "key_bytes": 4,
+          "value_bytes": 2048,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v4096",
+          "key_bytes": 4,
+          "value_bytes": 4096,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576,
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "hierarchy-frozen",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "branching_factor": 8,
+              "online_stash_entries": 64,
+              "prefix_flushes": 8,
+              "top_digit": 8,
+              "dense_prefixes": 2,
+              "owner_threads": 2,
+              "top_helpers": 0,
+              "rebuild_lanes": 1,
+              "bank_first": "no_clone",
+              "time_rebuild_stages": false,
+              "near_max_level": 0,
+              "batch_lanes": 16,
+              "batch_execution": "chunked_cascade",
+              "batch_participants": 1,
+              "batch_bucket_scan": false,
+              "batch_profile": false,
+              "batch_result_layout": "sliced_place_at_lane",
+              "batch_spin_ns": 1000000,
+              "owner_spin_ns": 1000000,
+              "park_retry_us": 1000,
+              "wait_limit_ms": 120000
+            }
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        },
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    },
+    {
+      "name": "value-width-dense-k4-hierarchy-frozen-batch64",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k4-dense-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v16",
+          "key_bytes": 4,
+          "value_bytes": 16,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v32",
+          "key_bytes": 4,
+          "value_bytes": 32,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v48",
+          "key_bytes": 4,
+          "value_bytes": 48,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v64",
+          "key_bytes": 4,
+          "value_bytes": 64,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v128",
+          "key_bytes": 4,
+          "value_bytes": 128,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v192",
+          "key_bytes": 4,
+          "value_bytes": 192,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v256",
+          "key_bytes": 4,
+          "value_bytes": 256,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v512",
+          "key_bytes": 4,
+          "value_bytes": 512,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v1024",
+          "key_bytes": 4,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v2048",
+          "key_bytes": 4,
+          "value_bytes": 2048,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v4096",
+          "key_bytes": 4,
+          "value_bytes": 4096,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576,
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "hierarchy-frozen",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "branching_factor": 8,
+              "online_stash_entries": 64,
+              "prefix_flushes": 8,
+              "top_digit": 8,
+              "dense_prefixes": 2,
+              "owner_threads": 2,
+              "top_helpers": 0,
+              "rebuild_lanes": 1,
+              "bank_first": "no_clone",
+              "time_rebuild_stages": false,
+              "near_max_level": 0,
+              "batch_lanes": 16,
+              "batch_execution": "chunked_cascade",
+              "batch_participants": 1,
+              "batch_bucket_scan": false,
+              "batch_profile": false,
+              "batch_result_layout": "sliced_place_at_lane",
+              "batch_spin_ns": 1000000,
+              "owner_spin_ns": 1000000,
+              "park_retry_us": 1000,
+              "wait_limit_ms": 120000
+            }
+          }
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 522,
+    "max_campaign_trial_ns": 626400000000000
+  }
+}

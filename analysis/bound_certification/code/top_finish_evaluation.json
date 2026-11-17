@@ -1,0 +1,191 @@
+{
+  "scope": "Evaluate the binary top finish as a separated pass, like every sparse ordinary digit.\n\nThe top merge (BuildTopMergePass) distributes A's class alone -- the\npreparation's retained carry R -- through one one-page DFS leaf per coarse\nrange and offers B's carry tier directly to every destination\n(Proposition separated-capacity).  Its capacity events are\n  * the A-only coarse-range event max_r R_r > 64 (DFS containment), where\n    R_r = sum over the range's 2^I homes of (Y^A_v - 64)_+ is exactly A's\n    complete-home excess (the b_A marginal of Proposition top-finish-ranges\n    at the leaf: no intermediate stage, no stars);\n  * none for B's direct pages (its tier's capacity is charged at its\n    producer);\n  * the merge stash and published tier, one live-set excess at the smaller\n    capacity (Proposition top-excess), charged once.\nBoth selected configurations (uniform-eight and the default half-fanout\nladder) have one gated section each.\n",
+  "ladder": "uniform",
+  "configuration_gate": {
+    "branching": 8,
+    "levels": 6,
+    "top_digit": 8,
+    "prefix_flushes": 8,
+    "stash_buckets": 1,
+    "dense_prefixes": 2,
+    "level_fanouts": []
+  },
+  "case": {
+    "shape": {
+      "kind": "top_finish",
+      "level": 6,
+      "digit": 8,
+      "carry_bits": 19,
+      "block_bits": 22,
+      "radix": 1,
+      "out_buckets": 4194304,
+      "main_bits": 22,
+      "pool_buckets": 4,
+      "stash_buckets": 2,
+      "tier_buckets": 2,
+      "dense_bits": 0,
+      "range_bits": 4,
+      "index_bits": 18,
+      "range_buckets": 16,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 2,
+      "older_tier_buckets": 0,
+      "carry_tier_buckets": 2,
+      "dense_direct": false,
+      "merge_stash_buckets": 2
+    },
+    "exposures": 257,
+    "ranges": {
+      "name": "A_only_top_finish_ranges",
+      "probability_upper_decimal": "1.93357683636605686338965469519886172252277745270192680265270252541027399472242657288527364E-24",
+      "certified_power_of_two_exponent": 78,
+      "approximate_log2_for_display_only": -78.7750021820036,
+      "deterministic": false,
+      "coarse_ranges": 16,
+      "homes_per_range": 262144,
+      "per_range_upper": "60424276136439276980926709224964428828836795396935212582896953919071062335075830402664801/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "range_capacity": 64,
+      "pages": 1,
+      "retained_carry_slots": 128,
+      "event": "max_r sum_{v in range r} (Y^A_v - 64)_+ > 64",
+      "witness": "The retained carry is exactly A's complete-home excess; pool dedup and unshadowed drops only delete."
+    },
+    "direct_B_pages": {
+      "pages": 2,
+      "probability_upper_decimal": "0",
+      "reason": "B's carry tier is offered directly to every destination; no range is materialized or capacity-tested, and its capacity is charged at its producer."
+    },
+    "packing": {
+      "name": "top_finish_merge_and_tier",
+      "probability_upper_decimal": "1.13060945886643599931702489780317468276188387001186727599450726199593609884401895269640908E-38",
+      "certified_power_of_two_exponent": 126,
+      "approximate_log2_for_display_only": -126.05616693373709,
+      "capacity_slots": 128,
+      "complete_population_upper": 134217728
+    },
+    "lifetime": {
+      "name": "top_finish_total",
+      "probability_upper_decimal": "4.96929246946079519557450543406625707442341159503329886323290479529339722527326958787289355E-22",
+      "certified_power_of_two_exponent": 70,
+      "approximate_log2_for_display_only": -70.76937763280972
+    },
+    "meets_2_minus_64": true
+  },
+  "additional_configurations": [
+    {
+      "ladder": "half_fanout",
+      "configuration_gate": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "case": {
+        "shape": {
+          "kind": "top_finish",
+          "level": 7,
+          "digit": 8,
+          "carry_bits": 19,
+          "block_bits": 22,
+          "radix": 1,
+          "out_buckets": 4194304,
+          "main_bits": 22,
+          "pool_buckets": 4,
+          "stash_buckets": 2,
+          "tier_buckets": 2,
+          "dense_bits": 0,
+          "range_bits": 4,
+          "index_bits": 18,
+          "range_buckets": 16,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 2,
+          "older_tier_buckets": 0,
+          "carry_tier_buckets": 2,
+          "dense_direct": false,
+          "merge_stash_buckets": 2
+        },
+        "exposures": 257,
+        "ranges": {
+          "name": "A_only_top_finish_ranges",
+          "probability_upper_decimal": "1.93357683636605686338965469519886172252277745270192680265270252541027399472242657288527364E-24",
+          "certified_power_of_two_exponent": 78,
+          "approximate_log2_for_display_only": -78.7750021820036,
+          "deterministic": false,
+          "coarse_ranges": 16,
+          "homes_per_range": 262144,
+          "per_range_upper": "60424276136439276980926709224964428828836795396935212582896953919071062335075830402664801/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "range_capacity": 64,
+          "pages": 1,
+          "retained_carry_slots": 128,
+          "event": "max_r sum_{v in range r} (Y^A_v - 64)_+ > 64",
+          "witness": "The retained carry is exactly A's complete-home excess; pool dedup and unshadowed drops only delete."
+        },
+        "direct_B_pages": {
+          "pages": 2,
+          "probability_upper_decimal": "0",
+          "reason": "B's carry tier is offered directly to every destination; no range is materialized or capacity-tested, and its capacity is charged at its producer."
+        },
+        "packing": {
+          "name": "top_finish_merge_and_tier",
+          "probability_upper_decimal": "1.13060945886643599931702489780317468276188387001186727599450726199593609884401895269640908E-38",
+          "certified_power_of_two_exponent": 126,
+          "approximate_log2_for_display_only": -126.05616693373709,
+          "capacity_slots": 128,
+          "complete_population_upper": 134217728
+        },
+        "lifetime": {
+          "name": "top_finish_total",
+          "probability_upper_decimal": "4.96929246946079519557450543406625707442341159503329886323290479529339722527326958787289355E-22",
+          "certified_power_of_two_exponent": 70,
+          "approximate_log2_for_display_only": -70.76937763280972
+        },
+        "meets_2_minus_64": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "analysis/bound_certification/code/configuration_probe.cpp": "5c4406ebf9526a398fae4731e368ffc3fd465d67308361cf6db561b740374dc0",
+    "src/oram/levelarena/cpu_byteslice_level_arena_geometry.hpp": "7c15bc7660f78912023a23a1c12ae05437e2c6e979f26c3f6307ae4039413d57",
+    "src/oram/levelarena/cpu_byteslice_level_arena_merge.hpp": "8a5c48f43fceee9df12310d06936afde47fa6d4a2b7d3ab8a9838de98a0192d4",
+    "src/oram/levelarena/cpu_byteslice_level_arena_pass_shape.hpp": "d323499b9bfff5502fd341952f0b2f1da490201078973ca502b18648c969accb",
+    "src/oram/levelarena/cpu_byteslice_level_arena_stash.hpp": "b316f8c668e731ee06b52cfc4022d174177810813708dac5ce0eea968348e9ff",
+    "src/oram/rebuild/cpu_byteslice_dfs_residual.hpp": "a37d058cc3994ed52d71836739e1f3e0257ef3aa6f79e8ba7df1f19fbfbcff66",
+    "src/oram/rebuild/cpu_byteslice_residual_range.hpp": "c32589da50eda79e8e1d68c43930469e66f20833d4895b34f441d435851885c1",
+    "src/oram/rebuild/cpu_byteslice_residual_tier_bound.hpp": "f7dc6c1fd87a7de89c2b6cf7165c5d5868d8d8bc3d04274c0f4498c8d9b11384",
+    "src/oram/rebuild/cpu_byteslice_stash_capacity_table.hpp": "b534d5b2f5fa279de71ab79ce9efcef2ce39a53ed477fbe3e9f9bc68ad8fff86",
+    "src/oram/scheduler/cpu_byteslice_residual_pass.hpp": "b4c664474d79ad4f20aeb43abae941d36aa27685cd205e2992776c8622b8f6d5",
+    "src/oram/scheduler/cpu_byteslice_subtask.hpp": "48fa2b7b4c0bdb1b4ba65ce6a2fcfe55df664b046797c62656045d9d7dd531ef",
+    "src/oram/scheduler/cpu_byteslice_subtask_plan.hpp": "eb2e3c9d384c155add96a65e3b869aa7e1391d85bc53dad7327968017f15ef4b",
+    "analysis/bound_certification/code/evaluate_top_finish.py": "2c9e7700cfd6d1f2a76db8e18012fcb38abd388e1531a8c17e584efb5e7ff65e",
+    "analysis/bound_certification/code/certify_tier_router.py": "d108f64e2f4c0b25865140ba436a7188f36529ffacf286a0f102a2f06aceda4d",
+    "analysis/bound_certification/code/certify_oram.py": "10e55f084fb73e37e7c0b5d71354ef1a69de38a3a7b702d3d7c14b37602594d9",
+    "analysis/bound_certification/code/check_configuration.py": "c9ba4a177f2c71b241ae656748c4fb3c96f015f48ac3585516d2d7b072d7b8ad",
+    "analysis/bound_certification/code/source_scope.py": "a8cbe29b0d7866486c539e00f9dfe73337777b25b7ff88bdf7140765df8115da"
+  },
+  "complete_configuration_certified": false,
+  "assumptions": [
+    "Binary top, fixed logical A set at most 32T under the current top map (p_* = 1/T).",
+    "The retained carry is exactly A's complete-home excess after A-only preparation; pool dedup and unshadowed drops only delete.",
+    "Public one-page DFS leaves at the finish range plan; DFS containment reduces every distributor capacity test to the coarse-range event.",
+    "B's carry tier is offered directly (no range event); its tier capacity is charged at its producer.",
+    "Top-resolution theorem bounds merge stash and tier by one live-set excess at the smaller capacity.",
+    "Each section applies only under its configuration gate and at its exact native top-finish shape."
+  ],
+  "conclusion": "Evaluates a conservative upper bound, not a lower bound on actual failure probability."
+}

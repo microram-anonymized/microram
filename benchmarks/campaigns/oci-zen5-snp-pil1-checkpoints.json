@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-pil1-checkpoints",
+  "base_seed": 2301,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far"
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "timing": {
+    "max_trial_ns": 900000000000
+  },
+  "limits": {
+    "max_trials": 64,
+    "max_campaign_trial_ns": 115200000000000
+  },
+  "stages": [
+    {
+      "name": "gate-saturated",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1355,
+              "setup_ns_per_entry": 30,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 696,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 2603,
+              "setup_ns_per_entry": 237,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 2109,
+              "setup_ns_per_entry": 239,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 7108,
+              "setup_ns_per_entry": 7541,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "batch",
+              "access_ns": 7828,
+              "setup_ns_per_entry": 7534,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 13824,
+              "setup_ns_per_entry": 5447,
+              "reference_capacity": 32768,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "batch",
+              "access_ns": 15499,
+              "setup_ns_per_entry": 5444,
+              "reference_capacity": 32768,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 3278,
+              "setup_ns_per_entry": 2407,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 270000,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 1912,
+              "setup_ns_per_entry": 2405,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 117458,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3529,
+              "setup_ns_per_entry": 3363,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 86102,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3020,
+              "setup_ns_per_entry": 3372,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 91563,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 7141,
+              "setup_ns_per_entry": 7833,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 83271,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "batch",
+              "access_ns": 7936,
+              "setup_ns_per_entry": 7865,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 86019,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar",
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ]
+    }
+  ]
+}

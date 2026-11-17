@@ -1,0 +1,82 @@
+[
+  {
+    "label": "N20-f1-rr",
+    "spec": "z=4,b=2,lam=18,fold=1,logn=20,sched=readpath,plan=inplace,preg=2,label=N20-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 11000000,
+    "seeds": 1000,
+    "note": "Figure 9(a) 2^20, no merge; Figure 9(b) N = 2^20"
+  },
+  {
+    "label": "N21-f1-rr",
+    "spec": "z=4,b=2,lam=19,fold=1,logn=21,sched=readpath,plan=inplace,preg=2,label=N21-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 1000000,
+    "seeds": 1000,
+    "note": "Figure 9(a) 2^21, no merge; Figure 9(b) N = 2^21; A.3 121 records at 2^-95"
+  },
+  {
+    "label": "N20-f3-rr",
+    "spec": "z=4,b=2,lam=18,fold=3,logn=20,sched=readpath,plan=inplace,preg=1,label=N20-f3-rr",
+    "workload": "roundrobin",
+    "seed_base": 9000000,
+    "seeds": 1000,
+    "note": "Figure 9(a) 2^20, merge 2 levels; A.3 slope 0.76, 134 records at 2^-95"
+  },
+  {
+    "label": "N21-f4-rr",
+    "spec": "z=4,b=2,lam=19,fold=4,logn=21,sched=readpath,plan=inplace,preg=1,label=N21-f4-rr",
+    "workload": "roundrobin",
+    "seed_base": 4000000,
+    "seeds": 1000,
+    "note": "Figure 9(a) 2^21, merge 3 levels; A.3 slope 0.69, 158 records at 2^-95, about 2^-118 at 192 slots; A.4 2^-87 per 2^31 accesses"
+  },
+  {
+    "label": "N21-f5-rr",
+    "spec": "z=4,b=2,lam=19,fold=5,logn=21,sched=readpath,plan=inplace,preg=1,label=N21-f5-rr",
+    "workload": "roundrobin",
+    "seed_base": 5000000,
+    "seeds": 1000,
+    "note": "A.3 2^21 merging four levels: 199 records at 2^-95"
+  },
+  {
+    "label": "N12-f1-rr",
+    "spec": "z=4,b=2,lam=10,fold=1,logn=12,sched=readpath,plan=inplace,preg=1,label=N12-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 12000000,
+    "seeds": 1000,
+    "note": "Figure 9(b) N = 2^12"
+  },
+  {
+    "label": "N15-f1-rr",
+    "spec": "z=4,b=2,lam=13,fold=1,logn=15,sched=readpath,plan=inplace,preg=1,label=N15-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 13000000,
+    "seeds": 1000,
+    "note": "Figure 9(b) N = 2^15"
+  },
+  {
+    "label": "N18-f1-rr",
+    "spec": "z=4,b=2,lam=16,fold=1,logn=18,sched=readpath,plan=inplace,preg=1,label=N18-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 14000000,
+    "seeds": 1000,
+    "note": "Figure 9(b) N = 2^18"
+  },
+  {
+    "label": "N24-f1-rr",
+    "spec": "z=4,b=2,lam=22,fold=1,logn=24,sched=readpath,plan=inplace,preg=2,label=N24-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 15000000,
+    "seeds": 1000,
+    "note": "Figure 9(b) N = 2^24; worst N-sweep row extrapolated to the stash (below 2^-144)"
+  },
+  {
+    "label": "N27-f1-rr",
+    "spec": "z=4,b=2,lam=25,fold=1,logn=27,sched=readpath,plan=inplace,preg=2,label=N27-f1-rr",
+    "workload": "roundrobin",
+    "seed_base": 16000000,
+    "seeds": 3000,
+    "note": "Figure 9(b) N = 2^27; 3000 runs, not 1000 (the 2^-30 point is 39 with 3000 runs, 41 with the first 1000)"
+  }
+]

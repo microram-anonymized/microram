@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-table1-batch",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "checkpoint_thread": true,
+    "buffer_bytes": 1073741824,
+    "checkpoint_interval_ns": 1000000000,
+    "service_timing": true
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "settle_per_entry_ppm": 1000000,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 900000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 3600000000000
+  },
+  "stages": [
+    {
+      "name": "ours-k4v8",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "parallel-8x8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "batch_execution": "parallel_tiles",
+              "batch_participants": 8,
+              "batch_lanes": 8,
+              "batch_spin_ns": 1000000000
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 322,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "ours-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "parallel-8x8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "batch_execution": "parallel_tiles",
+              "batch_participants": 8,
+              "batch_lanes": 8,
+              "batch_spin_ns": 1000000000
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 1000,
+              "setup_ns_per_entry": 300,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k8v48"
+    },
+    {
+      "name": "ours-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "batch",
+              "access_ns": 6250,
+              "setup_ns_per_entry": 10000,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k32v1024"
+    },
+    {
+      "name": "umap-k4v8",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 457,
+              "setup_ns_per_entry": 1000,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "umap-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 400,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k8v48"
+    },
+    {
+      "name": "umap-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "batch",
+              "access_ns": 700,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "batch_policy": {
+        "formation": "arrive_together"
+      },
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k32v1024"
+    }
+  ],
+  "limits": {
+    "max_trials": 12,
+    "max_campaign_trial_ns": 172800000000000
+  }
+}

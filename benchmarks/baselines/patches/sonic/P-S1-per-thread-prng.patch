@@ -1,0 +1,36 @@
+--- a/sonic/src/sonic_oram/src/sonic/oram/zingoram/state.hpp
++++ b/sonic/src/sonic_oram/src/sonic/oram/zingoram/state.hpp
+@@ -279,7 +279,13 @@
+   sn::oram::uid_generator& uid_gen() noexcept { return uid_gen_; }
+   const sn::oram::uid_generator& uid_gen() const noexcept { return uid_gen_; }
+ 
+-  sn::crypto::buffered_prng<>& prng() noexcept { return prng_; }
++  // P-S1 (benchmark patch): one generator per thread. Concurrent accesses and the eviction team rebuild buckets on
++  // several threads at once, and a buffered_prng (a buffer plus an OpenSSL context) is not thread-safe. Each thread's
++  // generator seeds itself from random_device; callers must call prng() on the thread that uses the result.
++  sn::crypto::buffered_prng<>& prng() noexcept {
++    thread_local sn::crypto::buffered_prng<> per_thread;
++    return per_thread;
++  }
+   const sn::crypto::buffered_prng<>& prng() const noexcept { return prng_; }
+ 
+ #if defined(ORAM_DEBUG)
+--- a/sonic/src/sonic_oram/src/sonic/oram/zingoram/eviction.hpp
++++ b/sonic/src/sonic_oram/src/sonic/oram/zingoram/eviction.hpp
+@@ -218,7 +218,6 @@
+   auto& storage = st.storage();
+   auto& stash = st.stash();
+   auto& uid_gen = st.uid_gen();
+-  auto& prng = st.prng();
+   auto& epochs = st.epoch_states();
+ 
+   const std::size_t subtree_count = static_cast<std::size_t>(geom.subtree_count);
+@@ -282,7 +281,7 @@
+           sn::util::span<const block_t> real_span(
+               subpath_span.begin() + bucket_index * bucket_real_size, bucket_real_size
+           );
+-          bucket.rebuild(real_span, uid_gen, prng);
++          bucket.rebuild(real_span, uid_gen, st.prng());  // P-S1: this worker thread's own generator
+           // publish bucket sync metadata after rebuild
+           epoch.publish_after_eviction_rebuild();
+         }

@@ -1,0 +1,41 @@
+--- a/include/hash_planner.hpp
++++ b/include/hash_planner.hpp
+@@ -3,6 +3,7 @@
+ #include <unistd.h>
+ #include <concepts>
+ #include <fstream>
++#include <stdexcept>
+ #include "ocuckoo_hash.hpp"
+ #include "ohash_bucket.hpp"
+ #include "ohash_tiers.hpp"
+@@ -12,6 +13,16 @@
+ 
+ namespace ORAM
+ {
++#ifdef H2O2RAM_FROZEN_PLANNER
++    // P-H2: a frozen planner never times candidates. A (n, op_num, delta)
++    // missing from the cache throws instead, so no host-timing sweep runs in
++    // a measured process. A preparing process clears it to write the cache.
++    inline bool &planner_frozen()
++    {
++        static bool frozen = true;
++        return frozen;
++    }
++#endif
+     static std::string getExecutablePath()
+     {
+         char result[PATH_MAX];
+@@ -108,6 +119,13 @@
+             std::cerr << "unknown type: " << std::get<0>(hash_map[{n, op_num, delta_inv_log2}]) << std::endl;
+             return nullptr;
+         }
++#ifdef H2O2RAM_FROZEN_PLANNER
++        if (planner_frozen())
++            throw std::runtime_error("h2o2ram planner cache miss: " + getExecutablePath() + CONFIG_FILE +
++                                     std::to_string(BlockSize) + " has no entry for n " + std::to_string(n) +
++                                     ", op_num " + std::to_string(op_num) + ", delta_inv_log2 " +
++                                     std::to_string(delta_inv_log2));
++#endif
+         std::cerr << dp_cnt << "n: " << n << ", op_num: " << op_num << std::endl;
+         std::random_device rd;
+         std::mt19937 gen(rd());

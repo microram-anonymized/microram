@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-baseline-sonic-throughput",
+  "repetitions": 1,
+  "base_seed": 7301,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 4000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 28800000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 57600000000000
+  },
+  "stages": [
+    {
+      "name": "sonic-scalar",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 19400,
+              "setup_ns_per_entry": 19400,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 300000,
+              "coverage_accesses_per_entry_ppm": 500000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 10300,
+              "setup_ns_per_entry": 19400,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 300000,
+              "coverage_accesses_per_entry_ppm": 500000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "sonic-batch64",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 19400,
+              "setup_ns_per_entry": 19400,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 300000,
+              "coverage_accesses_per_entry_ppm": 500000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 10300,
+              "setup_ns_per_entry": 19400,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 300000,
+              "coverage_accesses_per_entry_ppm": 500000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    }
+  ],
+  "limits": {
+    "max_trials": 24,
+    "max_campaign_trial_ns": 1209600000000000
+  }
+}

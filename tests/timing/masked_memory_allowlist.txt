@@ -1,0 +1,34 @@
+# Masked memory operations in library code whose mask is PUBLIC.
+#
+# instruction_census.py fails on any masked load, store, broadcast or compare
+# with a memory operand that no entry here matches: under a secret mask such an
+# instruction reads or writes bytes chosen by the secret (src/core/DESIGN.md).
+# Permutes with a memory table (vpermb/w/d/q, vpermi2*, vpermt2*) are exempt:
+# they are exception class E4NF, with no fault suppression, so the whole table
+# is read whatever the mask.
+#
+# Format:  path | text | why the mask is public   (fields split on " | ")
+# `text` must appear on the very source line the census reports, so a new
+# masked operation on a neighbouring line needs its own review.  A statement
+# split across lines whose line table names another of its lines (either end)
+# needs one entry per such line.  Entries match text, not a line number, so an
+# entry survives edits elsewhere in the file and stops matching when the line
+# itself changes -- which is when it needs a new review.
+
+src/core/mov_intrinsics.hpp | _mm512_maskz_loadu_epi8(lane, | obliAssignBytes: tail mask from the public length n
+src/core/mov_intrinsics.hpp | _mm512_mask_storeu_epi8(dest + off, lane, | obliAssignBytes: tail mask from the public length n
+src/oram/levelarena/cpu_byteslice_level_arena_engine.hpp | _mm512_maskz_loadu_epi8(lane, value_out + c * 64) | BlendGroupRegisters: chunk mask from the public user value width
+src/oram/levelarena/cpu_byteslice_level_arena_engine.hpp | const __m512i current = core::obliPin512( | BlendGroupRegisters: first line of the statement above (the load of value_out under the chunk mask)
+src/oram/levelarena/cpu_byteslice_level_arena_engine.hpp | _mm512_mask_storeu_epi8(value_out + c * 64, lane, blended); | BlendGroupRegisters: chunk mask from the public user value width
+src/oram/table/cpu_byteslice_batch_layout.hpp | _mm512_maskz_loadu_epi8(lane_bits, | public piece-width load mask (kSplit)
+src/oram/table/cpu_byteslice_batch_layout.hpp | _cvtu64_mask64(uint64_t{1} << (j0 & 63)) | one-lane mask from the public pair index j0; at -O1 the secret slot byte is broadcast from its stack spill
+include/cpu_byteslice_oram/byte_map.hpp | found_out[base + i] = batch_found_[i] != 0; | compiler loop tail over the public batch length
+src/oram/levelarena/cpu_byteslice_level_arena_batch.hpp | active |= uint64_t{(offset + j) / 64 == g} << j; | compiler-vectorised loop over public lane indices
+# Gathers and scatters: GCC vectorizes these loops for Granite Rapids (not for
+# Zen 5).  The index vector is an address, so it must be public as well.
+src/oram/rebuild/cpu_byteslice_radix_stash.hpp | *bucket_masks[q] = new_mask[q]; | scatter to the caller's public mask pointers, mask from the public radix
+src/oram/rebuild/cpu_byteslice_residual_stash.hpp | for (size_t b = 0; b < kMaxResidualStashBuckets; ++b) masks[b] = 0; | scatter of zeros over the whole public array
+src/oram/rebuild/cpu_byteslice_residual_range.hpp | total += stashes[s]->num_buckets; | gather of stash capacities (public design constants)
+src/oram/levelarena/cpu_byteslice_level_arena_job.hpp | swept += spec.sources[i].stash->num_buckets; | gather of stash capacities (public design constants)
+# Occupancy observer (MICRORAM_BYTESLICE_OCCUPANCY_OBSERVER, a diagnostic build only; no production binary has it).
+src/oram/levelarena/cpu_byteslice_level_arena_job.hpp | count += Popcount64(rp.range.masks[(g << rp.plan.range_bits) + leaf]); | ObserveRangeLeaves: gather of range mask words at indices from the public loop counters g and leaf and the public plan; only the gathered values are secret, and their popcount is the observer's output

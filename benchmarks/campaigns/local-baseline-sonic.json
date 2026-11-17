@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "name": "local-baseline-sonic",
+  "base_seed": 8101,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 8,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 17179869184
+  },
+  "execution": {
+    "runtime": "native",
+    "require_protected": false
+  },
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 300000000,
+    "drain_deadline_ns": 1000000000,
+    "setup_allowance_ns": 30000000000,
+    "max_trial_ns": 60000000000
+  },
+  "stages": [
+    {
+      "name": "correctness-scalar",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram",
+            "sonic": {
+              "eviction_threads": 4
+            }
+          }
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "eviction_threads": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "correctness-batch",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram",
+            "sonic": {
+              "eviction_threads": 4,
+              "access_threads": 4
+            }
+          }
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "eviction_threads": 4,
+              "access_threads": 4
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 4,
+    "max_campaign_trial_ns": 480000000000
+  }
+}

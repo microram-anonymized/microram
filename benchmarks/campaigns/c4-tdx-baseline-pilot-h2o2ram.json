@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "repetitions": 1,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 10000000000,
+    "drain_deadline_ns": 30000000000,
+    "setup_allowance_ns": 300000000000,
+    "max_trial_ns": 900000000000
+  },
+  "name": "c4-tdx-baseline-pilot-h2o2ram",
+  "base_seed": 7201,
+  "stages": [
+    {
+      "name": "pilot-k4-v8",
+      "shapes": [
+        {
+          "name": "k4-v8-dense",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        131072,
+        524288,
+        2097152
+      ],
+      "kind": "capacity",
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram",
+          "overrides": {
+            "scheme": "h2o2ram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 10154,
+              "setup_ns_per_entry": 1013,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 238125,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pilot-k8-v48",
+      "shapes": [
+        {
+          "name": "k8-v48",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        131072,
+        524288,
+        2097152
+      ],
+      "kind": "capacity",
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram",
+          "overrides": {
+            "scheme": "h2o2ram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 15907,
+              "setup_ns_per_entry": 5153,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 192056,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pilot-k32-v1024",
+      "shapes": [
+        {
+          "name": "k32-v1024",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        32768,
+        131072
+      ],
+      "kind": "capacity",
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram",
+          "overrides": {
+            "scheme": "h2o2ram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 196636,
+              "setup_ns_per_entry": 38746,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 471720,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pilot-value-width",
+      "shapes": [
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v512",
+          "key_bytes": 8,
+          "value_bytes": 512
+        }
+      ],
+      "capacities": [
+        131072
+      ],
+      "kind": "capacity",
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram",
+          "overrides": {
+            "scheme": "h2o2ram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 256,
+              "api_mode": "scalar",
+              "access_ns": 47264,
+              "setup_ns_per_entry": 11752,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 471720,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 96025,
+              "setup_ns_per_entry": 21269,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 471720,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 10,
+    "max_campaign_trial_ns": 18000000000000
+  }
+}

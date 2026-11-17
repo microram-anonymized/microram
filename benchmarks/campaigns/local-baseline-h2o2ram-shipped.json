@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "name": "local-baseline-h2o2ram-shipped",
+  "base_seed": 8001,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 8,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 17179869184
+  },
+  "execution": {
+    "runtime": "native",
+    "require_protected": false
+  },
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 300000000,
+    "drain_deadline_ns": 1000000000,
+    "setup_allowance_ns": 30000000000,
+    "max_trial_ns": 60000000000
+  },
+  "stages": [
+    {
+      "name": "correctness",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 3,
+    "max_campaign_trial_ns": 360000000000
+  }
+}

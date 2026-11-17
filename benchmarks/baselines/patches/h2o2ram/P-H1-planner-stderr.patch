@@ -1,0 +1,57 @@
+--- a/include/hash_planner.hpp
++++ b/include/hash_planner.hpp
+@@ -108,7 +108,7 @@
+             std::cerr << "unknown type: " << std::get<0>(hash_map[{n, op_num, delta_inv_log2}]) << std::endl;
+             return nullptr;
+         }
+-        std::cout << dp_cnt << "n: " << n << ", op_num: " << op_num << std::endl;
++        std::cerr << dp_cnt << "n: " << n << ", op_num: " << op_num << std::endl;
+         std::random_device rd;
+         std::mt19937 gen(rd());
+         std::uniform_int_distribution<KeyType> dis(0, n - 1);
+@@ -191,14 +191,14 @@
+             type = "cuckoo";
+             hash = new OCuckooHash<KeyType, BlockSize>(n, delta_inv_log2);
+             file << " cuckoo" << std::endl;
+-            std::cout << dp_cnt << "alg: cuckoo_hash" << std::endl;
++            std::cerr << dp_cnt << "alg: cuckoo_hash" << std::endl;
+         }
+         else if (min_time == linear_time)
+         {
+             type = "linear";
+             hash = new OLinearScan<KeyType, BlockSize>(n);
+             file << " linear" << std::endl;
+-            std::cout << dp_cnt << "alg: linear_scan" << std::endl;
++            std::cerr << dp_cnt << "alg: linear_scan" << std::endl;
+         }
+         else if (min_time == bucket_time)
+         {
+@@ -207,7 +207,7 @@
+             __ = bucket_size;
+             hash = new OHashBucket<KeyType, BlockSize>(n, bucket_num, bucket_size);
+             file << " bucket " << bucket_num << " " << bucket_size << std::endl;
+-            std::cout << dp_cnt << "alg: hash_bucket w/ bucket_num: " << bucket_num << ", bucket_size: " << bucket_size << std::endl;
++            std::cerr << dp_cnt << "alg: hash_bucket w/ bucket_num: " << bucket_num << ", bucket_size: " << bucket_size << std::endl;
+         }
+         else
+         {
+@@ -215,7 +215,7 @@
+             _ = epsilon_inv;
+             hash = new OTwoTierHash<KeyType, BlockSize>(n, delta_inv_log2, epsilon_inv);
+             file << " two_tier " << epsilon_inv << std::endl;
+-            std::cout << dp_cnt << "alg: oblivious two_tier w/ epsilon: " << epsilon_inv << std::endl;
++            std::cerr << dp_cnt << "alg: oblivious two_tier w/ epsilon: " << epsilon_inv << std::endl;
+         }
+         file.close();
+         hash_map[{n, op_num, delta_inv_log2}] = std::make_tuple(type, _, __);
+--- a/include/ohash_tiers.hpp
++++ b/include/ohash_tiers.hpp
+@@ -89,7 +89,7 @@
+                 }
+                 epsilon_inv <<= 1;
+                 bin_size = compute_bin_size(epsilon_inv);
+-                std::cout << _ << "epsilon_inv: " << epsilon_inv << ", bin_size: " << bin_size << ", time: " << cur_time << ", memory usage: " << getMemoryUsage() << " KB" << std::endl;
++                std::cerr << _ << "epsilon_inv: " << epsilon_inv << ", bin_size: " << bin_size << ", time: " << cur_time << ", memory usage: " << getMemoryUsage() << " KB" << std::endl;
+             }
+             return {ret_eps_inv, min_time};
+         }

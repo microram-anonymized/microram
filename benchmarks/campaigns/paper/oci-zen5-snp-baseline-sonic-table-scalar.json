@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-baseline-sonic-table-scalar",
+  "repetitions": 1,
+  "base_seed": 7301,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 134576222208,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "checkpoint_thread": true,
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 4000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 28800000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 57600000000000
+  },
+  "stages": [
+    {
+      "name": "sonic-k4v8",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 50000,
+              "setup_ns_per_entry": 50000,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 250000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "sonic-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "k8-v48-dense",
+          "key_bytes": 8,
+          "value_bytes": 48,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 50000,
+              "setup_ns_per_entry": 50000,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 500000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k8v48"
+    },
+    {
+      "name": "sonic-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "k8-v1024-dense",
+          "key_bytes": 8,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 50000,
+              "setup_ns_per_entry": 50000,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1100000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k32v1024"
+    }
+  ],
+  "limits": {
+    "max_trials": 6,
+    "max_campaign_trial_ns": 1209600000000000
+  }
+}

@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-baseline-h2o2ram-shipped",
+  "base_seed": 7001,
+  "repetitions": 1,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "stages": [
+    {
+      "name": "capacity",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        32768,
+        131072,
+        524288,
+        2097152,
+        8388608,
+        33554432,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 9282,
+              "setup_ns_per_entry": 1011,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 68778,
+              "setup_ns_per_entry": 43481,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    },
+    {
+      "name": "value-width",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v8",
+          "key_bytes": 8,
+          "value_bytes": 8
+        },
+        {
+          "name": "k8-v16",
+          "key_bytes": 8,
+          "value_bytes": 16
+        },
+        {
+          "name": "k8-v32",
+          "key_bytes": 8,
+          "value_bytes": 32
+        },
+        {
+          "name": "k8-v48",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "k8-v64",
+          "key_bytes": 8,
+          "value_bytes": 64
+        },
+        {
+          "name": "k8-v128",
+          "key_bytes": 8,
+          "value_bytes": 128
+        },
+        {
+          "name": "k8-v192",
+          "key_bytes": 8,
+          "value_bytes": 192
+        },
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v512",
+          "key_bytes": 8,
+          "value_bytes": 512
+        },
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        },
+        {
+          "name": "k8-v4096",
+          "key_bytes": 8,
+          "value_bytes": 4096
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 6468,
+              "setup_ns_per_entry": 705,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 16,
+              "api_mode": "scalar",
+              "access_ns": 7670,
+              "setup_ns_per_entry": 1254,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 32,
+              "api_mode": "scalar",
+              "access_ns": 9508,
+              "setup_ns_per_entry": 2590,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 14038,
+              "setup_ns_per_entry": 5593,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 128,
+              "api_mode": "scalar",
+              "access_ns": 26302,
+              "setup_ns_per_entry": 11701,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 192,
+              "api_mode": "scalar",
+              "access_ns": 38489,
+              "setup_ns_per_entry": 18307,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 256,
+              "api_mode": "scalar",
+              "access_ns": 50626,
+              "setup_ns_per_entry": 25267,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 98859,
+              "setup_ns_per_entry": 55494,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 194487,
+              "setup_ns_per_entry": 122954,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 2048,
+              "api_mode": "scalar",
+              "access_ns": 384073,
+              "setup_ns_per_entry": 273636,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 4096,
+              "api_mode": "scalar",
+              "access_ns": 759917,
+              "setup_ns_per_entry": 610355,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    },
+    {
+      "name": "capacity-sweep-h",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        32768,
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 9282,
+              "setup_ns_per_entry": 1011,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 68778,
+              "setup_ns_per_entry": 43481,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    },
+    {
+      "name": "latency-headline-h",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 9282,
+              "setup_ns_per_entry": 1011,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 68778,
+              "setup_ns_per_entry": 43481,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          300000,
+          500000,
+          700000,
+          850000,
+          950000
+        ],
+        "minimum_ops_per_second": 1
+      }
+    },
+    {
+      "name": "latency-headline-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 9282,
+              "setup_ns_per_entry": 1011,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 68778,
+              "setup_ns_per_entry": 43481,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          300000,
+          500000,
+          700000,
+          850000,
+          950000
+        ],
+        "minimum_ops_per_second": 1
+      }
+    },
+    {
+      "name": "latency-headline-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram_shipped",
+          "overrides": {
+            "scheme": "h2o2ram_shipped"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 9282,
+              "setup_ns_per_entry": 1011,
+              "reference_capacity": 4194304,
+              "capacity_exponent_ppm": 260651,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 14150,
+              "setup_ns_per_entry": 5397,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 369422,
+              "coverage_accesses_per_entry_ppm": 2000000
+            },
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 68778,
+              "setup_ns_per_entry": 43481,
+              "reference_capacity": 131072,
+              "capacity_exponent_ppm": 499884,
+              "coverage_accesses_per_entry_ppm": 2000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          300000,
+          500000,
+          700000,
+          850000,
+          950000
+        ],
+        "minimum_ops_per_second": 1
+      }
+    }
+  ],
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "limits": {
+    "max_trials": 99,
+    "max_campaign_trial_ns": 400000000000000
+  },
+  "timing": {
+    "max_trial_ns": 10800000000000
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-throughput-k4v8",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 134576222208,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 2000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "settle_per_entry_ppm": 1000000,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 14400000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 43200000000000
+  },
+  "stages": [
+    {
+      "name": "ours-scalar",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728,
+        268435456,
+        536870912,
+        1073741824
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1648,
+              "setup_ns_per_entry": 36,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "ours-batch64",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728,
+        268435456,
+        536870912
+      ],
+      "candidates": [
+        {
+          "name": "parallel-8x8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "batch_execution": "parallel_tiles",
+              "batch_participants": 8,
+              "batch_lanes": 8
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 696,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "ours-batch64-2p30",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1073741824
+      ],
+      "candidates": [
+        {
+          "name": "parallel-8x8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "batch_execution": "parallel_tiles",
+              "batch_participants": 8,
+              "batch_lanes": 8
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 696,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 500000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "floor",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728,
+        268435456,
+        536870912,
+        1073741824
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1600,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 350000,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "floor-batch64",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        33554432,
+        67108864,
+        134217728,
+        268435456,
+        536870912,
+        1073741824
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 600,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 250000,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "seed_role": "screening",
+      "seed_stream": "oci-large-k4v8"
+    }
+  ],
+  "limits": {
+    "max_trials": 60,
+    "max_campaign_trial_ns": 1209600000000000
+  }
+}

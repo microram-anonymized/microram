@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-pilot",
+  "base_seed": 1101,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far"
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints"
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "measurement_ns": 30000000000,
+    "drain_deadline_ns": 30000000000,
+    "setup_allowance_ns": 900000000000,
+    "max_trial_ns": 1800000000000
+  },
+  "stages": [
+    {
+      "name": "pilot",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        32768,
+        33554432,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        },
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 60,
+    "max_campaign_trial_ns": 216000000000000
+  }
+}

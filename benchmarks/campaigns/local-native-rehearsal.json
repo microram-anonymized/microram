@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "name": "local-native-rehearsal",
+  "base_seed": 6001,
+  "repetitions": 1,
+  "resources": {
+    "physical_cores": 8,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 17179869184
+  },
+  "execution": {
+    "runtime": "native",
+    "require_protected": false
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints"
+  },
+  "stages": [
+    {
+      "name": "saturation",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        },
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        }
+      ]
+    },
+    {
+      "name": "offered-load",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "candidates": [
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000,
+          900000
+        ]
+      }
+    }
+  ],
+  "timing": {
+    "warmup_ns": 1000000000,
+    "measurement_ns": 3000000000,
+    "drain_deadline_ns": 5000000000,
+    "setup_allowance_ns": 30000000000,
+    "max_trial_ns": 60000000000
+  },
+  "limits": {
+    "max_trials": 27,
+    "max_campaign_trial_ns": 3240000000000
+  }
+}

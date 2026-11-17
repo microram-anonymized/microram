@@ -1,0 +1,2784 @@
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype,enumitem,needspace}
+\emergencystretch=2em
+\setcounter{tocdepth}{1}
+\setlist{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\Bin}{\operatorname{Bin}}
+\newcommand{\pos}[1]{\left(#1\right)_+}
+\newcommand{\lam}{\overline\lambda}
+\newcommand{\Exc}{\mathcal E}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\Wfun}{\mathcal W}
+\DeclareMathOperator{\supp}{supp}
+\title{Capacity Bounds for the ORAM Rebuild}
+\author{}
+\date{}
+\hypersetup{pdftitle={Capacity Bounds for the ORAM Rebuild},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Level one builds its deduplicated incoming prefix directly into a standalone
+main table. At digit one it drains into the published output tier; at larger
+digits it checks one global producer bucket, completes the older A-only route,
+and inserts B under the same current job family. All distributing ordinary
+passes use one-page A-only DFS leaves and direct B-tier offers.
+The producer event is total complete-home excess, including excess spread
+across several homes. Its probability is bounded on the unconditional
+ideal-word space and is unioned with A-stage, A-range and final-output events.
+The report gives conditional composition, complete-population excess
+comparisons, the shadow recurrence, binary-top proofs and public exposure
+accounting. Lean certifies all 94 listed standard $D=8$ planner
+geometries at capacities $2^{11}$ through $2^{31}$, from initialized and empty
+starts. \texttt{IdealApiFamily} combines arbitrary-byte-key reference API
+correctness, exact probe simulation and capacity failure at most
+$h\cdot2^{-64}$ over $h\ge1$ windows of $2^{32}$ accesses. The premises are
+valid initialization, public geometry, shape and schedule, and logical live
+capacity on every legal observation branch. No fixed key universe or numeric
+key bound is required. Independent countable client seeds may have unbounded
+support and seed-dependent initialization. Observation transfer gives the same
+eventwise simulator error under explicit agreement off capacity failure.
+\texttt{IdealApiBounded} and \texttt{IdealSeedBounded} give the same bound
+on the outer measure of incorrect actual API results under explicit agreement
+of actual history, issued requests and selected results. Empty-start correctness requires
+empty initial history. The fixed-universe \texttt{ConfigurationFamilyWindows},
+\texttt{ConfigurationFamilyOblivious} and \texttt{geometry31} statements keep
+their finite-universe scope and premises.
+Native certification remains open: the model's theorem does not establish
+native execution or hash correspondence, caller promises or inventory-rule
+semantics. Universal membership of native planner outputs in the Lean family
+under the standard family settings also remains unproved. The native numerical checker therefore retains
+unconditional bound one.
+Exact numerical outcomes are supplied by the ledgers and
+configuration-space artifacts.
+\end{abstract}
+\begingroup\small\tableofcontents\endgroup\clearpage
+
+\section{Conditional composition and source contract}
+\label{sec:abstract-contract}
+Fix a legal logical request trace and initial data independently of ideal
+routing words. For every canonical job family $f$ and distinct key $x$,
+sample an independent $w$-bit word $H_{f,x}$. Copies of the same key in the
+same family share one word. Potential jobs following an earlier failure
+still have reference words. This section gives the fixed-trace argument.
+The adaptive theorems use causal exposure bounds described in
+Section~\ref{sec:lean-current}; they do not assume that adaptive requests
+are independent of routing randomness.
+
+\begin{theorem}[Conditional composition of capacity witnesses]
+\label{thm:abstract-composition}
+Suppose every possible first capacity failure is deterministically impossible
+or implies one event $E_{e,j}$ in a finite public inventory, and
+$\Prb(E_{e,j})\le b_{e,j}$ on the unconditional ideal-word space.
+Suppose each component's logical-window, placement, distinctness and family
+premises hold, and the exposure inventory includes initialization and jobs
+crossing the horizon boundary. Then
+\[
+ \Prb\{\text{capacity failure}\}\le
+ \min\left(1,\sum_{e,j}b_{e,j}\right).
+\]
+\end{theorem}
+\begin{proof}
+Choose the first failing test. Its pointwise implication places the
+execution in the union of the inventoried reference events. Apply the union
+bound. Earlier success justifies the pointwise implication; it never
+conditions the probability of a reference event.
+\end{proof}
+No independence between jobs, A and B, or overlapping event witnesses is
+required. A scheduler-dependent choice needs a union bound or a common
+dominating event; the maximum of marginal probabilities alone is insufficient.
+A missing event is charged one. Cryptographic and stored-key matching errors,
+allocation failure and scheduler liveness require separate arguments.
+
+\paragraph{Native source obligations.}
+\label{sec:native-sources}\label{prop:native-sources}
+Chronological prefix deduplication retains the newest record for each key,
+including tombstones. Ordinary merges preserve the newest logical union;
+adoption, forwarding, pause and lane folds preserve that population.
+For a fixed trace its complete key sets are fixed independently of words.
+The old and current canonical families differ at a non-top merge with $d>1$;
+therefore complete old/current words are independent, although selected main
+records and residuals need not be. The native audit checks public wiring and
+shape compatibility. The complete history induction and applicability of
+imported probability comparisons remain explicit premises of certification.
+
+\paragraph{Unused bits.}
+\label{prop:native-frontiers}
+Binary routing decisions and survivor selection may inspect only the current
+bits already routed. Deferred bits retain their per-key law in an A-only
+frontier, before selection against B. Direct B selection at level one uses
+the low $\log_2U$ current bits. This is not an independent-family B residual:
+its producer and final insertion use the same job word. Neither A's reference
+bound nor final-union excess is conditioned on this producer succeeding.
+
+\section{Direct dense level one}
+\label{sec:level-one-completion}\label{sec:worked-configuration}
+Let $M=r_0s$ prefix buckets have $C$ slots each and $U=2M$ main homes.
+After chronological deduplication the incoming population $K_B$ is distinct
+and has $|K_B|\le CM=CU/2$. Direct selection scans every prefix bucket at
+each public B home, retains up to $C$ winners and preserves the rest in
+remaining masks. Let
+\[
+ X_i=\#\{x\in K_B:H_{f,x}\bmod U=i\},\qquad
+ E_B=\sum_{i=0}^{U-1}(X_i-C)_+.
+\]
+The producer occupancy is exactly $E_B$, across all homes together.
+At digit one B uses the published main/output tier directly, with capacity
+$S_{\rm out}$. There is no A route, final insertion or separate narrower
+producer check. At $d>1$ B uses a separate $U$-bucket main table and a
+single global $C$-slot residual bucket. Its producer failure is $E_B>C$.
+A failure distributed over several homes is included in this event.
+
+\begin{proposition}[Direct B producer bound]
+\label{prop:dense-producer}
+Under the fixed logical B-set and ideal-family premises, the probability
+of a producer overflow at capacity $S$ is at most
+$\min(1,\Phi_K(U,C,C/2,S))$, where $K>S$ and $\Phi_K$ is
+Equation~\eqref{eq:general-series}. Use $S=S_{\rm out}$ at digit one and
+$S=C$ above digit one. Deduplication can only decrease the population.
+\end{proposition}
+\begin{proof}
+The low-word home is exactly uniform because $U$ is a power of two.
+Distinct complete B keys are independent categorical trials, so
+Proposition~\ref{prop:general-tiers} applies to their full-home excess.
+Selection fills each home to $\min(X_i,C)$ and the checked drain appends
+each remaining winner once. Thus every drain prefix is at most $E_B$.
+\end{proof}
+For $C=64$, $U=16$ and $S=64$, the outward-rounded positive-series
+evaluation gives about $2^{-117.72}$ per build. The conservative
+$\lfloor H/(CM)\rfloor+1$ envelope at $H=2^{32}$ gives about
+$2^{-94.72}$ for this component. These numbers alone are not a hierarchy
+certificate; each digit has its own public exposure count in the ledger.
+
+\paragraph{Same-family final insertion.}
+Write $d=r2^e$, $U=2^k$, and
+$h_f(x)=(H_{f,x}\bmod2^{k+e})+2^{k+e}
+(\lfloor H_{f,x}/2^{k+e}\rfloor\bmod r)$.
+Then $h_f(x)\bmod U=H_{f,x}\bmod U$.
+A destination reads B main bucket $h_f(x)\bmod U$ and the global B tier;
+retagging supplies the remaining direction bits. Choosing another family
+for the producer would invalidate this congruence. B's scratch table must
+be separate from the output A occupies before insertion.
+
+\begin{proposition}[Composition for direct level one]
+\label{prop:level-one-composition}\label{cor:direct-plan-level-one}
+At digit one the per-job bound is the producer/output bound above.
+At $d>1$ assume the completed-A source/frontier contract, separated offer
+and drain contract, and current distinct-union law. Let $b_{A,\rm stage}$
+bound the A-stage storage events, $b_{A,\rm range}$ its completed-A
+coarse-range event at leaf capacity $C$, and $b_{\rm out}$ the full-union
+excess event at output capacity $S_{\rm out}$. Suppose insertion stash
+and lane copies have capacity at least $S_{\rm out}$. Then
+\[
+ b_{1,d}\le\min(1,b_{B,\rm producer}+b_{A,\rm stage}
+                         +b_{A,\rm range}+b_{\rm out}).
+\]
+A native direct A-pool plan has $b_{A,\rm range}=0$.
+\end{proposition}
+\begin{proof}
+Before a first failure the standalone B tier fits its producer capacity.
+Complete A's route with the B region blank. Only A's old tier and all
+A losses enter the one-page distributor. Proposition~\ref{prop:separated-capacity}
+covers DFS storage and direct B-tier offers. Fixed insertion deduplicates
+meeting main copies; combined source-rank dedup, A-before-B offers and
+original-source drain dedup preserve freshness. In particular, the drain
+epilogue discards an older A residual when its newer B-main copy shed into
+the merge stash.
+The coordinated drain of Section~\ref{sec:final-drain-bound} bounds every
+insertion-stash and publication prefix by the distinct union's complete-home
+excess. Since the insertion stash is at least as wide as the output tier,
+one output-capacity event dominates both. Union the unconditional events;
+never condition the A or union law on successful B selection.
+\end{proof}
+The finite-word radix density factor applies once to each appropriate
+old/current witness. The producer is exact binary uniform. Copies, pauses,
+lanes and repeated direct B-tier scans introduce no new random exposure.
+
+\subsection{Reference numerical ledgers for direct level one}
+Two capacity-$2^{27}$ reference ledgers are numerical evidence and inputs
+to shared certificate generation; they are not an adaptive instance.
+For capacity $N=2^{27}$, horizon $H=2^{32}$, $r_0=8$, $D=8$, $s=1$
+and $q=2$, the ledgers give the following approximate base-two
+logarithms of their exact rational conditional upper bounds:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Geometry & Level-one lifetime subtotal & Complete lifetime ledger\\\midrule
+Uniform fanout eight & $-83.647869$ & $-69.678562$\\
+Default half-fanout ladder & $-88.132529$ & $-69.678190$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The level-one subtotals include producer, completed-A route/range and output
+excess events with their native exposure counts. The exact values are in
+\path{code/level1_certificates.json}\footnote{Paths under \path{lean/},
+\path{src/} and \path{tests/} are relative to the repository root; the other
+paths in this report are relative to \path{analysis/bound_certification}.} and the selected ledgers
+\path{code/selected_configuration_check.json} and
+\path{code/selected_configuration_half_fanout_check.json}.
+Both complete ledgers meet the conditional $2^{-64}$ target with no coverage
+gap. They retain status \texttt{unproved\_applicability}, unconditional upper
+bound one and \texttt{complete\_configuration\_certified=false}; these
+numerical results do not discharge the source or execution premises.
+
+\subsection{Lean result and its boundary}
+\label{sec:lean-current}
+The numerical family covers all 94 listed standard geometries at capacities
+$2^{11}$ through $2^{31}$, with bucket capacity 64, load 32, $D=8$,
+automatic per-level tier/stash sizing and the $B=8$, $s=1$, $q=2$ candidate
+domain. Its compact public parameters are in
+\path{lean/RebuildBound/Spec/ConfigurationFamilyData.lean}; one Lean
+constructor derives each member's direct, separated and top job shapes.
+Arbitrary top-digit or tier pins are outside this numerical claim.
+
+\paragraph{Arbitrary-key API endpoints.}
+The canonical statement is \texttt{IdealApiFamily}: reference API correctness,
+exact probe simulation and the $h\,2^{-64}$ capacity budget for legal adaptive
+clients with arbitrary byte-string keys and bounded live support.
+\texttt{IdealApiOblivious} transfers the budget to observations agreeing off
+failure, and \texttt{IdealApiBounded} transfers it to incorrect actual API
+results under explicit adapter agreement. Their independent countable-seed
+forms permit seed-dependent initialization without a common key dictionary.
+\texttt{ApiLegalStructural} and \texttt{IdealApiExact} expose correctness and
+exact simulation under their smaller assumptions. \texttt{IdealGeometry}
+provides the generic analytic/exposure forms; the numerical family specializes
+the same chain. These results and the remaining native obligations are detailed
+below and in \path{LEAN_CLAIMS.md}.
+
+The source-review headline (generated by \path{lean/scripts/review_surface.py})
+contains only these direct arbitrary-key interfaces. Its declaration closure
+excludes the fixed key universe, numeric key encoding, finite family tape and
+numerical-certificate modules. The generator exports \texttt{headlines.tsv}
+separately from the complete guide and rejects fixed-universe dependencies in
+the headline. This is statement navigation, not a proof.
+
+\paragraph{Fixed-universe family construction.}
+\texttt{ConfigurationFamilyStructural} checks the structural contract for
+every member from both initialized and empty starts. Shared local source laws
+and causal first-failure accounting feed \texttt{ConfigurationFamilyAnalytic}.
+\texttt{ConfigurationFamilyNumerics} kernel-checks full-shape certificate
+coverage and the exact initialized exposure sum. A symbolic identity removes
+the initialization term for the empty start; no second numerical certificate
+is required. The \texttt{ConfigurationFamilyWindows} theorem bounds
+fixed and adaptive reference failure by $h\,2^{-64}$ over the first $h\ge1$
+windows of $2^{32}$ accesses. \texttt{ConfigurationFamilyOblivious} gives the
+same bound on scalar, batch and adaptive simulator distance. Statements are in
+\path{lean/RebuildBound/Spec/ConfigurationFamilyCertification.lean}.
+
+These results retain public geometry, shape and schedule, joint ideal routing
+and dummy tapes, the trace and unshadowed premises, and observation agreement
+off failure. For each member, one fixed universe of at most its capacity in
+distinct keys with \texttt{key.toNat}$<2^{64}$ covers the whole run and every adaptive branch. The bound
+is unconditional first-failure accounting, not a probability conditioned on
+surviving previous windows. Exact native shape and class-clock comparisons
+cover every member; they do not prove universal planner membership or native
+execution refinement. Python's conditional ledger and Lean's conservative
+numerical allocations remain separate artifacts.
+
+\paragraph{Fixed-universe reference semantics.}
+\texttt{HierarchyLookup} and \texttt{HierarchyUniverseLookup} establish scalar
+and batch reference lookup; \texttt{HierarchyFixedSemantics},
+\texttt{HierarchyUniverseSemantics} and \texttt{HierarchyAdaptiveSemantics}
+establish the exact ideal-tape laws and observation transfer with error equal
+to the actual failure probability. \texttt{HierarchyBatchApiCorrectness} and
+\texttt{HierarchyAdaptiveApiCorrectness} establish reference API correctness
+from local construction rules. These results require the structural contract,
+run and schedule premises, with empty initial history for empty-start
+correctness. They apply beyond the numerical family and import no numerical
+matrices; other geometries still require their own numerical certificates.
+\path{LEAN_CLAIMS.md} lists these exports with their premises.
+
+\subsubsection{The geometry31 statements}
+The following details describe the \texttt{geometry31} endpoints.
+Their non-top fanouts are $(4,4,8,8,8,8,8)$, with $D=8$, $U_1=16$,
+$T=2^{26}$, bucket capacity 64 and load 32. Published tier widths are
+$(1,1,1,1,2,2,2,3)$ and stage stash widths are $(1,1,1,1,2,2,2,4)$.
+Initialization drains three buckets; preparation drains four.
+A workload using fewer keys, including at most $2^{27}$, is covered by these
+endpoints when executed at this geometry. Smaller standard geometries are
+covered by the family theorems above.
+
+\paragraph{Deterministic reference and local laws.}
+\texttt{DirectJob} assembles all-digit publication correctness, agreement
+between bounded and analytical runs, and first-failure containment.
+\texttt{DirectJobResume} proves fuel splitting and finite completion for fixed
+geometry, inputs and words. Native interruption, helper scheduling and elapsed
+time are outside this logical cursor theorem. \texttt{DirectJobReference}
+extends histories to every outcome: exact published lanes on success,
+otherwise empty main buckets and an unrestricted tier of newest records.
+This continuation makes the reference interaction total after overflow.
+Population and locality lemmas derive chronology, fixed key sets and loads.
+The serialised hierarchy in \path{lean/RebuildBound/Spec/Model/Hierarchy.lean}
+then supplies separated and top inputs. The geometry-specific structural,
+covering and local-law obligations are discharged by
+\texttt{HierarchyInvariant31}, \texttt{HierarchyCovering31} and the
+\texttt{HierarchyLaws31} package. All 38 separated rows and the distinct top,
+preparation and initialization bounds are kernel certified; the direct
+geometries reuse existing local proofs. Shared A/B keys have one current word;
+local laws are not conditioned on preceding success.
+
+\paragraph{Fixed-trace capacity.}
+The theorem \texttt{HierarchyUniform31} proves a first-horizon bound $2^{-64}$;
+\texttt{HierarchyChunk31} proves that the first capacity failure lies in any
+fixed chunk of $2^{32}$ accesses with probability at most $2^{-64}$; and
+\texttt{HierarchyWindows31} bounds failure within the first $h\ge1$ chunks
+by $h\,2^{-64}$. Statements are in
+\path{lean/RebuildBound/Spec/HierarchyUniform31.lean} and
+\path{lean/RebuildBound/Spec/HierarchyChunk31.lean}.
+
+These statements fix the trace independently of routing words. Each unit has
+distinct keys; each level-one ordinal has at most 512 records; initialization
+keys are distinct; keys lie below $N\le2^{31}$; and the unshadowed-tombstone
+promise holds under every tape. The measurable ideal family tape has one
+independent uniform 64-bit word per family coordinate and key. Premises hold
+at horizon $(k+1)2^{32}$ for chunk $k$ and $h2^{32}$ for the window bound.
+The failure event filters potential jobs by \texttt{WithinHorizon}: a
+speculative top finish consuming a carry completed after the horizon is
+excluded. Windows are measured by the level-one ordinal triggering the job,
+one speculative ordinal included, rather than native execution time.
+The per-chunk theorem concerns the first failure in that chunk; the window
+theorem unions the chunk events, without independence between jobs or
+conditioning on prior survival. These \texttt{*31} statements start
+from direct initialization. The family theorems above additionally cover the
+reference empty-top start with zero seeds and no initialization job.
+
+\paragraph{Encoded keys in a fixed universe.}
+The generic endpoints choose one finite universe $U$ independently of the
+tapes, with $|U|\le2^{31}$ and each exact key encoding \texttt{key.toNat}$<2^{64}$. Every key used anywhere
+in the run belongs to $U$: initialization, queries, supplied records,
+tombstones and duplicate lanes. One universe covers all chunks. These fixed-universe
+endpoints do not cover unbounded churn; the canonical \texttt{IdealCapacity}
+theorem below instead uses logical live capacity.
+\path{lean/RebuildBound/Spec/KeyUniverse.lean} defines membership and tape
+premises; \path{lean/RebuildBound/Spec/KeyRelabel.lean} states the endpoints.
+\texttt{GenericHierarchyChunk31} and \texttt{GenericHierarchyWindows31}
+retain the same failure budgets. One fixed key permutation transports
+execution, failure events, chronological histories and probe addresses,
+including after overflow, and preserves the joint uniform family/dummy law.
+
+\paragraph{Fixed-run obliviousness and probe correctness.}
+The scalar theorem \texttt{OnlineOblivious31} and batch theorem
+\texttt{BatchOblivious31}, and their
+\texttt{Generic} counterparts, give simulator distance at most $h\,2^{-64}$
+under the joint ideal tapes and observation agreement off failure. The public
+simulator sees the schedule, probing kinds and batch widths. The exact
+simulator law holds on every outcome because the reference continues after
+failure. Batch horizons count slots. \texttt{OnlineCorrectness31} and
+\texttt{BatchCorrectness31}, and their \texttt{Generic} counterparts, establish
+latest preceding supplied-value lookup, tombstone handling, earlier-lane
+forwarding and address agreement for arbitrary routing and dummy words,
+without a capacity-success assumption. Their bounded-key statements are in
+\path{lean/RebuildBound/Spec/Oblivious31.lean}.
+
+\paragraph{Adaptive security.}
+\texttt{AdaptiveExact31}, \texttt{AdaptiveWindows31} and
+\texttt{AdaptiveOblivious31}, in \path{lean/RebuildBound/Spec/Adaptive.lean},
+use the same geometry and budget. A deterministic client chooses each
+operation's records from the rows of all earlier operations. Batch lanes are
+chosen together. The public shape (probing kinds and batch widths) and plan
+schedule are fixed by the program before the tapes. On every candidate
+transcript the replay must satisfy \texttt{AdaptiveSetting}, including one
+fixed universe $U$ of at most $2^{31}$ distinct keys with \texttt{key.toNat}$<2^{64}$ across all
+branches, the structural setting and unshadowed promise.
+The transcript is measurable and has exactly the existing public simulator
+law. Its adaptive failure event over $h\ge1$ windows has probability at most
+$h\,2^{-64}$. Any measurable observation agreeing with a measurable image of
+the transcript off that event is within $h\,2^{-64}$ of the simulator on
+every measurable event. \texttt{AdaptiveTwoClients31} bounds two such clients
+with the same public shape, schedule and observation map by $2h\,2^{-64}$.
+
+The proof uses causal exposure: a family's population is complete before its
+words are observed. Separated A witnesses are bounded at the early population
+cutoff and B/union witnesses at the late cutoff. It therefore permits B to
+depend on observations of A's old family. \texttt{BatchFound31} and
+\texttt{BatchFoundCausal} establish word-free, causal selected records;
+\texttt{FlagSoundness31} and \texttt{AdaptiveFlagAdmissible31} derive the
+unshadowed promise for clients following the model's flag rule.
+The native application still needs causal public observation maps, fixed
+before the tapes and shared by the compared secrets, and agreement of the
+engine's selected records and observations with the model off failure.
+\path{LEAN_CLAIMS.md} (``Adaptive clients'') states that boundary.
+
+\paragraph{Reference API semantics and native boundary.}
+The API correctness theorems are \texttt{BatchApiCorrectness31} for fixed runs
+and \texttt{AdaptiveApiCorrectness31} for adaptive runs. They establish Read,
+Write, Erase, Exchange and WriteWithoutProbe logical-map transitions,
+including prior-value responses, duplicate batch lanes and present zero
+values. Local native-adapter and access-lowering theorems make their premises
+explicit. Native execution correspondence, worker scheduling, compiled-code
+timing and the AES-to-ideal reduction remain outside the proof.
+Rebuild memory traces are assumed to depend only on public geometry.
+
+Public internal chunks stop at requester-unit boundaries.
+\texttt{ApiGroupedChoices} proves that repeated internal adapter calls retain
+the requests chosen from the original pre-batch observation prefix; arbitrary
+later observations do not create extra client decision points. The resulting
+shape and slot schedule depend only on public descriptors and geometry.
+\texttt{ApiGroupedReference} proves exact chronological record composition
+across these cuts, including encoded tombstone flags.
+\texttt{ApiExecutionImplements} constructs physical postrecords for fixed
+request groups using provisional lane probes; causality proves their local
+selection equations without a universe premise, and their flags follow.
+\texttt{ApiExecutionCorrectness} derives actual-tape API correctness from the
+existing explicit fixed-universe premises. \texttt{ApiAdaptiveReplay} and
+\texttt{ApiAdaptiveInteraction} connect the request client to replay and
+actual execution, using one observation prefix per public batch.
+\texttt{ApiAdaptiveCorrectness} derives the adaptive setting and API results
+under the same explicit universe premises. Physical selections need not equal
+chronological reference selections when publication has discarded a tombstone.
+The registered byte-key adapters and canonical product-law package prove
+length-sensitive identity, finite uniform restrictions, independent blocks
+and sectionwise bounds. \texttt{RequesterCuts} proves complete frozen-unit
+and grouped trace-prefix chronology, including cuts in the finite trace's
+empty tail. Such cuts saturate at the last frozen unit, excluding a partial
+current unit. \texttt{HierarchyStructural} proves top
+history and finish structure without a public numeric key bound, retaining
+explicit initial length, input-rate and local flag premises. \texttt{ApiCapacity}
+counts exact logical support at every lane prefix, including unbounded misses,
+churn and capacity-preserving idle extensions. \texttt{HierarchyLivePopulations}
+derives the four top-job populations for every modeled top ordinal from that
+support, without a supplied-cut premise,
+conditional on named API-prefix correspondence and flag premises. The
+\texttt{ApiStructural} package derives both premises from physical request
+construction, for fixed and adaptive runs, without a key universe or global
+key-count bound. Deterministic correctness needs only actual initialization
+size; live populations additionally need logical prefix capacity and unit-safe
+public grouping. Empty future trace inputs do not append physical operations.
+The \texttt{ApiContinuation} package constructs idle physical padding to a
+complete-unit endpoint, preserving prior records, selections and bucket
+observations. Its completed trace history represents the original final map;
+extended horizon and schedule validity remain explicit. \texttt{ApiLegal}
+provides public, slot-dependent bucket ranges and typed client prefixes, with
+capacity required only on legal transcripts; actual observations are unchanged
+and public batch decision points are preserved. \texttt{IdealHierarchy} feeds
+the hierarchy from the canonical routing/dummy tape, proving carry and horizon
+coherence, finite joint laws and outside-dependent finite-key section bounds.
+\texttt{IdealMeasurable} and \texttt{IdealFailure} prove measurability of
+actual adaptive transcripts and capacity-failure events on that product tape,
+including reference continuations after overflow. Finite local word dependence
+follows the actual computation and requires no shared key dictionary or success
+premise. \texttt{IdealSeed} proves independent-seed mixture and unconditional
+coupling adapters; \texttt{ApiSeed} applies them to legal clients with
+seed-dependent initialization and countable seeds of unbounded support.
+Seedwise exact laws and error estimates remain named premises of the adapters.
+The actual adaptive input prefix has canonical-tape exposure causality
+and independence from the entire fresh routing family
+(\texttt{IdealExposure}, \texttt{IdealFreshness}). Initialization has its actual
+analytic failure bound from the supplied input count
+(\texttt{IdealInitialization}), with no global key universe.
+This does not make routed intermediate layouts independent of their words;
+their local laws must account for that dependence.
+\texttt{IdealSepUnion} bounds the actual separated current-home union term
+for all certified geometries and both starts. Exposure fixes the complete
+input key sets while current-family routing may change their physical layout;
+requester widths supply the populations without a global key universe.
+\texttt{IdealSepA} derives the separated early-A route and range bounds by
+sampling the old and current families jointly. \texttt{IdealSepFirstFailure}
+combines those witnesses with the union term for all 94 geometries and both
+starts, without a global key universe or an earlier-success assumption on the
+reference execution. A private finite restriction supports fixed-universe lower-table
+locality, without restricting the actual adaptive keys.
+\texttt{IdealTopPreparation} derives the top-preparation contribution
+from legal adaptive API clients and logical live capacity. The two-family
+section keeps the previous top's layout dependent on its old words and proves
+the exact binary old-home density. \texttt{IdealTopPreparationFirstFailure}
+specializes the existing analytic budget to all 94 geometries and both starts.
+Initialization, public width/schedule and branchwise live capacity are explicit;
+no per-job population or key-universe premise is supplied. Tier fit is part of
+the event, without conditioning the reference execution on earlier success.
+\texttt{IdealTopFinish} derives the corresponding finish contribution from
+the same legal API contract. Its single-family section preserves complete
+record sets while preparation and the completing carry share the current
+family. Shared A/B keys reuse a word; other source keys supply independent
+finite history. Logical capacity bounds both A and resolved live winners.
+\texttt{IdealTopFinishFirstFailure} applies the existing analytic budget at
+cutoffs 576 to all 94 geometries and both starts.
+Direct jobs have canonical-tape bounds for B, union, and the two-family
+old-home A witnesses. \texttt{IdealDirectFirstFailure} composes them for all
+94 certified geometries and both starts, including reference continuations
+after overflow, without a key universe or supplied probability premise.
+Canonical records, requests, API maps and routing inputs use exact finite
+byte strings, preserving length and every byte. Numeric fixtures and
+finite tape views use explicit exact encodings. \texttt{IdealProbe} proves
+exact reference probe simulation without a live-capacity premise, using a
+separate finite restriction for each replay fibre. \texttt{IdealCapacity}
+composes all first-failure classes with the existing exposure counts and
+certificates, giving $h\,2^{-64}$ for all 94 geometries and both starts over
+$h\geq1$ windows of $2^{32}$ accesses. \texttt{IdealApiFamily} combines
+request correctness, exact law and that budget from valid initialization,
+public execution premises and logical capacity on every legal observation
+branch. Independent countable client seeds may have unbounded support and
+seed-dependent initialization. \texttt{IdealApiOblivious} and
+\texttt{IdealSeedOblivious} give the same eventwise simulator error under
+explicit agreement with the reference off failure.
+\texttt{ApiBoundedTransfer} supplies the generic arbitrary-key bounded API
+reduction under structural geometry, actual initialization size and public
+schedules, without live capacity or a tape-distribution assumption. Actual
+history, issued requests and selected probe results must agree with the
+reference off its capacity-failure event. The conclusion covers every logical
+prefix, scalar and batch replies, and probing addresses. Requiring the actual
+request count to equal the public slot count and actual slot count excludes
+truncated executions. \texttt{IdealApiBounded} and
+\texttt{IdealSeedBounded} compose this containment with the certified capacity
+budget for all 94 geometries and both starts. Incorrect-result outer measure
+is at most $h\,2^{-64}$ over $h\geq1$ windows of $2^{32}$ accesses; adapter
+measurability is not required. The seed theorem permits independent countable
+seeds with unbounded support and seed-dependent initialization. No event is
+conditioned on success. Concrete native agreement, cryptographic error
+accounting remain separate. The fixed-universe probability endpoints
+retain their finite-universe and encoding premises.
+
+\texttt{IdealGeometry} exports the generic canonical analytic chain.
+Explicit geometry, width, tier-link and cutoff checks derive all actual local
+probabilities; initialization and logical live capacity derive populations.
+A public exposure-sum inequality supplies the error, with optional window
+arithmetic yielding $h$ times a base-window budget. Reference correctness,
+exact simulation, independent countable-seed capacity and off-failure
+observation transfer are also exported. Load 32, bucket width 64, fanouts
+2--8, depth at most 14, lower cutoff 256 and compatible direct/DFS shapes
+remain explicit restrictions; top cutoffs are parameters.
+\texttt{IdealGeometryFamily} proves all 94 geometries and both starts
+instantiate that interface with exactly the existing class budgets.
+\texttt{IdealCapacityAnalytic} specializes the generic window proof.
+This changes neither the numerical family nor the native error obligations.
+
+Finite differential replays (\path{lean/oracle/}) compare engine and model
+tables lane by lane on small configurations and on two capacity-$2^{27}$
+reference configurations, where only lower levels are evaluated. This evidence
+supports the shared implementation, but does not establish an adaptive
+instance or a universal native refinement.
+\path{LEAN_CLAIMS.md} states the claims, premises and evidence.
+
+\section{A simpler distributor: containment of range events}
+\label{sec:dfs-theorem}
+If each coarse destination range fits, a parent buffer also fits when it has
+room for all its coarse descendants. Finer buffers contain subsets of one
+coarse range. This containment lets one probability bound cover the entire
+distributor. Depth-first traversal keeps only a path and pending siblings
+in memory, while still visiting every public node.
+
+The reference construction first expands the padded distribution tree and
+then performs the existing merge and residual offers. DFS is an evaluation
+schedule for that construction: preserve the same local operations and
+dependencies, but materialize only buffers still needed. It saves memory
+and can avoid memory passes; traversal itself adds no randomness assumption
+or new deduplication rule. The node-capacity argument below applies to either
+evaluation schedule. Equivalence here concerns this expanded padded tree.
+
+\begin{proposition}[Public-capacity DFS containment]
+Let a swept residual pool have at most $P_{\rm pool}$ physical records, and partition
+its destination domain into $Q=2^{D_c}$ public coarse ranges. Unreachable padded
+ranges contain no records. Suppose a first-failure reference event
+\[
+ E_c=\{\text{some coarse range contains more than }S\text{ candidates}\}
+\]
+has a proved probability bound $\beta_c$. Use a full binary depth-first traversal
+of the coarse partition, with any fixed number $R_f\ge0$ of additional
+refinement levels. Give every depth-$j$ node public capacity
+\begin{equation}\label{eq:dfs-capacity}
+ C_j=\min\bigl(P_{\rm pool},S2^{\max(D_c-j,0)}\bigr),\qquad 0\le j\le D_c+R_f.
+\end{equation}
+Assume lossless oblivious partitioning into padded children, with work arrays
+large enough for the entire parent input, a checked child capacity, and a
+public visit schedule. Then any first distributor overflow implies $E_c$.
+Its probability is at most $\beta_c$, with no extra factor for nodes or depth.
+\end{proposition}
+\begin{proof}
+On $E_c^c$, a depth-$j$ node above the coarse frontier contains at most
+$2^{D_c-j}$ coarse populations of at most $S$ records each, and never more
+than the entire pool's $P_{\rm pool}$ records. At the frontier its demand is at most
+$S$. Every finer descendant is a subset of one coarse population, so also
+has demand at most $S$. Thus every node fits Equation~\eqref{eq:dfs-capacity}.
+Conversely, an overfull coarse population cannot pass its frontier capacity
+test in a lossless execution. If gathering the root requires compaction
+from $P_{\rm pool}$ input slots to $C_0<P_{\rm pool}$, its failure has the same containment.
+For an ideal reference history with an earlier failure, retain the original
+coarse theorem's first-failure witness; no conditioning on earlier success
+or fresh split-bit law is introduced.
+\end{proof}
+
+The partitioner may use stable compaction separately for the two bit values,
+followed by fixed-size padded copies. Its temporary arrays must hold the
+whole input; using another capacity-limited butterfly inside the split would
+reintroduce a missing event. Visit both children, including empty subtrees,
+without secret-count-dependent addresses or allocation. Source identities,
+tags, masks and freshness metadata must be preserved.
+
+The native distributor takes $R_f=0$: its leaves are the coarse ranges.
+Depths whose capacity is the whole pool cannot fail, so it compacts the
+gathered pool directly into each node of the first binding depth, then
+halves capacities by binary splits, compacting each right child in place in
+its dead parent's buffer. Appendix~\ref{sec:dfs-application} gives its
+schedule and storage. These DFS symbols are separate from the merge digit
+$d$, odd radix $r$, binary width $b$ and early-source cap $P$ in the
+population calculation.
+
+\paragraph{Selected two-source specialization.}
+Take the pool to contain only A's old tier and A-only route residuals, set
+$S=C=64$ and $R_f=0$, and scan B's existing $s\ge1$ global tier pages
+directly for every destination. Combined swept-source deduplication still
+precedes distribution; splitting storage does not split that operation.
+The following proposition is the proof contract for this design.
+
+\begin{proposition}[One A leaf and global B pages]
+\label{prop:separated-capacity}
+Consider a pass with exactly two swept sources: A's residuals and a
+completed B tier of public capacity $Cs$. Let $A_R$ count the A residuals
+in coarse range $R$ before any deletion against B, with reference tails
+$\Prb\{A_R>C\}\le a_R$. Assume public lossless DFS capacities as in
+Equation~\eqref{eq:dfs-capacity} with $S=C$, sufficient work arrays, and
+no replication of B's payload per destination. Preserve combined source-rank
+deduplication, original-source lifetime, freshness-aware A-before-B offers,
+full-home matching for B, private consumption masks and their lane folds,
+and the coordinated epilogue. Then:
+\begin{enumerate}
+\item Any first A-distributor overflow implies
+      $E_A=\{\max_R A_R>C\}$, with probability at most
+      $\min(1,\sum_R a_R)$.
+\item Every destination scans one A page and the same $s$ B pages,
+      at most $C(1+s)$ physical candidate slots. B adds no distributor
+      event; its tier-capacity failure is charged at its producer only.
+\item Under the ordinary final-route premises, the combined leftovers
+      and final sheds retain the complete-home excess witness
+      $E_{\rm home}=\sum_v(X_v-C)_+$ for the two drain phases.
+\end{enumerate}
+No independence between A and B, or conditioning on successful routing,
+is required.
+\end{proposition}
+\begin{proof}
+Combined deduplication only deletes A records, so the routed A count in
+$R$ is at most $A_R$. On $E_A^c$, DFS containment bounds the gather and
+every node by its public capacity. B already occupies at most $Cs$ slots
+before the first failure and is read directly, so the offered slot count
+is deterministic; no mixed range is materialized or capacity-tested.
+The union bound gives the stated A charge on the unconditioned reference
+space. For draining, combined dedup leaves at most one swept copy per key.
+Freshness-aware offers never reduce main occupancy and leave a candidate
+only at a full home. Fold consumption masks and run drain-only dedup
+against the original fresh sources, including consumed records. Drain the
+A leftovers and surviving B tier once into one output, then perform the
+existing leftover dedup and append surviving final sheds. The argument in
+Appendix~\ref{sec:final-drain-bound} therefore bounds every packing prefix
+by $E_{\rm home}$. Earlier B-producer failure is covered by its original
+witness, not charged again at each scan, range, lane or consumer.
+\end{proof}
+
+Thus the new distributor term in the lifetime ledger is simply
+$\sum_j\sum_R a_{j,R}$ over eligible public pass ordinals $j$.
+Preparation stashes, B's producer tier, final sheds and output packing keep
+their existing charges. Section~\ref{sec:completed-a-shadow} supplies the completed-A marginal.
+
+\paragraph{The same pass at the top.}
+The top finish has the same two swept classes. A is the preparation's
+retained carry R: A's route and offers complete in the top's preparation,
+so R holds exactly the records of A's full homes that did not fit. B is
+the incoming carry's tier, offered directly. Only the drain witness
+differs: the top drops every tombstone, and its merge stash and output
+tier are bounded by the excess of the resolved live set rather than of the
+merged union. Corollary~\ref{cor:top-finish-separated}
+(Appendix~\ref{sec:top-excess}) states the top finish as this instance,
+with A marginal $a_R=\Phi_q(2^I,C,32,C)$ for coarse ranges of $2^I$ homes
+and the drain witness of Proposition~\ref{prop:top-excess}. No pass of the
+level arena routes a range table any more, and the top digit $D$ enters the
+top finish's ledger only through its exposure count.
+
+\section{Notation and scope}
+The probability bounds are functions of public configuration $\Theta$ and
+access horizon $H$. Legal native geometry, applicability of a probability
+law, and meeting the requested target are separate checks.
+\begin{center}\small
+\begin{tabular}{p{0.22\linewidth}p{0.69\linewidth}}
+\toprule
+Public parameter & Meaning\\
+\midrule
+$L,\ b_\ell,\ U_\ell$ & Hierarchy depth, fanout and carry width at each level.\\
+$C$ & Main-bucket record capacity.\\
+$S_e$ & Capacity of the particular stash, range bucket or tier being tested.\\
+$N_i,\ m_i$ & Complete logical population bound and home count of source $i$.\\
+$\lambda$ & An upper bound on the relevant mean loads $N_i/m_i$.\\
+$w,\ \mathcal R$ & Routing-word width and public destination/scatter maps.\\
+$H,\ \varepsilon$ & Access horizon and requested lifetime probability target.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Family identities, ownership, scheduling and deduplication order are also
+part of the model. Symbolic $C$ in a theorem does not imply a configurable
+native SIMD width. In the worked ordinary example, use:
+\begin{center}\small
+\begin{tabular}{p{0.18\linewidth}p{0.73\linewidth}}
+\toprule
+Symbol & Meaning\\
+\midrule
+$\ell,d$ & Ordinary level and public merge digit, $1\le\ell<L$, $1\le d\le b_\ell$.\\
+$U=U_\ell$ & Incoming carry width, $16\prod_{i<\ell}b_i$ buckets: $16\cdot8^{\ell-1}$
+on the uniform ladder; 16, 64, 256, 1024, 8192, 65536 on the default one.\\
+$A,B$ & Older partial table and incoming table; they may share keys.\\
+$M=(d-1)U$ & Older main width for $d>1$; output width is $dU$.\\
+$h_{\rm old},h_{\rm new}$ & A's previous routing family and this merge's family; B already uses the latter.\\
+$X_i,a_i$ & Complete logical old-home count and retained main count at bucket $i$.\\
+$S$ & One physical stage stash's capacity, in records.\\
+$D$ & Upper likelihood ratio for the old map relative to uniform old homes.\\
+$I$ & Low destination bits left for a main/range offer to match.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Abstract history and storage lemmas}
+\label{sec:abstract-history}
+These lemmas discharge algebraic and scheduling steps once, independently
+of a particular ladder. Their hypotheses specify what remains to be proved
+about native transitions. They use the fixed logical trace and ideal-word
+experiment of Section~\ref{sec:abstract-contract}.
+
+\begin{lemma}[Windows and canonical families for variable fanouts]
+\label{lem:window-family}
+Let $a$ be the number of access positions in one prefix, let
+$b_1,\ldots,b_{L-1}\ge2$ be integer fanouts, and set
+$P_\ell=\prod_{i<\ell}b_i$. The $v$th incoming carry at level $\ell$
+represents the interval
+\[
+ W_{\ell,v}=[(v-1)aP_\ell,vaP_\ell).
+\]
+Assume each prefix logical set is fixed by its request subsequence, has
+at most one record per position, and is distinct by key. Merges retain
+exactly the newest record of each key in their input union, and forwarding,
+adoption and pause preserve the represented logical set and window.
+Then a non-top partial at digit $d=1+((v-1)\bmod b_\ell)$ represents
+$[(v-d)aP_\ell,vaP_\ell)$ and has at most $daP_\ell$ distinct keys,
+counting tombstones. At a merge with $d>1$, A and B have bounds
+$(d-1)aP_\ell$ and $aP_\ell$ respectively.
+
+Define $F(\ell,v)$ by repeatedly replacing $(\ell,v)$ with
+$(\ell+1,v/b_\ell)$ when $\ell<L$ and $b_\ell$ divides $v$.
+The endpoint $vaP_\ell$ is invariant under this replacement, producer
+and consumer have the same canonical family, and the older and current
+families at every non-top merge with $d>1$ are different. Consecutive top
+ordinals also have different families.
+\end{lemma}
+\begin{proof}
+The prefix assertion is the base case. A partial is the union of $d$
+consecutive carry intervals; deduplication cannot increase their total
+number of access positions. At $d=b_\ell$ their union is exactly
+$W_{\ell+1,v/b_\ell}$, since $P_{\ell+1}=b_\ell P_\ell$.
+This proves the window and population assertions by induction. Preserving
+operations do not change them. The same product identity proves invariance of the endpoint
+and producer/consumer agreement. For $d>1$, $v-1$ is not divisible by
+$b_\ell$, so the older family's terminal coordinate is $(\ell,v-1)$.
+The new family's terminal coordinate is $(\ell,v)$ or has a larger level;
+both choices differ from the old one. At the top the coordinate is $(L,v)$.
+\end{proof}
+For a non-top output of $dU_\ell$ homes the implied load bound is
+$aP_\ell/U_\ell$; it need not be fixed to one load at every level.
+Thus changing the lower fanouts or enlarging level-one tables does not
+change the proof. Initialization may seed counters at a public cycle
+boundary with no lower partials; the subsequent windows are translated by
+that boundary. Its initial top population needs its own bound and does not
+inherit a non-top window bound.
+
+On a fixed trace, the complete key sets specified by these windows are
+fixed independently of routing. In the ideal model, distinct family
+coordinates therefore give independent old/current word arrays on those
+sets; a shared key has one current-family word. This is an unconditional
+statement about complete logical sources. Conditioning on selected tiers,
+main survivors or earlier success can destroy independence. The native obligations in Section~\ref{sec:native-sources} still require
+proof that the sources implement these sets, that family encoding is
+injective without wraparound (including initial families), and that the
+listed transitions preserve them.
+The functions \texttt{ForwardToTerminal} and \texttt{FamilyWindowEnd}
+in \path{src/oram/levelarena/cpu_byteslice_level_arena_family.hpp} implement
+the algebra above; finite coordinate checks alone would not establish the
+source induction.
+
+\section{Lifetime accounting}\label{sec:ledger}
+Let $\mathcal W(\Theta)$ be a set of witness classes covering every possible
+first capacity failure. For class $e$, let $n_e(\Theta,H)$ bound its number
+of exposures, including initialization and jobs crossing the horizon
+boundary. For every exposure, prove that a first failure implies a
+reference-word event with probability at most $b_e(\Theta)$. The ideal
+words in this argument are not conditioned on earlier capacity success.
+Then the union bound gives
+\begin{equation}\label{eq:general-lifetime}
+ \Prb\{\text{any ideal-tag capacity failure}\}
+ \le B(\Theta,H)
+ :=\min\!\left(1,\sum_{e\in\mathcal W(\Theta)}
+               n_e(\Theta,H)b_e(\Theta)\right).
+\end{equation}
+Witness events need not be independent. If several theorems bound the
+same witness, their minimum may be used; they are not additional failures
+to charge. Alternative public shapes within one exposure can instead be
+handled by a maximum when a common exposure bound is used. Cryptographic
+distinguishing and key-equality errors are separate from this ideal-tag sum.
+
+An omitted event invalidates a complete certificate. It must be reported
+as unproved, or conservatively assigned an upper bound of one. A small sum
+over the currently covered events alone is not $B(\Theta,H)$.
+
+
+\paragraph{Separate cryptographic and matching budget.}
+Let $\delta_{\rm crypto}$ bound the advantage for the tested outcome event
+between the native seeded construction and a specified ideal primitive experiment. Suppose a
+coupling with the reference capacity experiment agrees through first failure
+except for normalization collisions, false stored-key matches or routing-input
+aliases, of unconditional ideal probabilities at most $\eta_{\rm norm}$,
+$\eta_{\rm match}$ and $\eta_{\rm alias}$, or resource refusal of probability
+at most $\eta_{\rm stop}$. Then
+\[
+ \Prb_{\rm native}\{\mathrm{failure}\}
+ \le \min(1,\delta_{\rm crypto}+\eta_{\rm norm}
+              +\eta_{\rm match}+\eta_{\rm alias}+\eta_{\rm stop}+B(\Theta,H)).
+\]
+\texttt{NativeFailureBound} checks this composition.
+The \texttt{NativeObservationBound} transfer is two-sided for a tested public
+event under exact reference simulation and off-failure
+agreement. The eventwise hybrid remains a premise; a public-view hybrid
+alone does not bound incorrect confidential API results. These statements
+prove neither AES security nor native correspondence.
+
+In the exact configuration, wide-key rebuild helpers (stored widths 9--15
+always; width 16 without VP2INTERSECT or with
+\texttt{CPU\_BYTESLICE\_ORAM\_WIDE\_KEY\_VP2INTERSECT} off) and the
+VP2INTERSECT dense direct-slot matcher at width 16 with that option off compare both
+qwords against the same partner before reducing to membership. Other dense
+lookups use the generic complete-key matcher. The OR of the
+two XOR differences is zero exactly for complete stored-key equality;
+unsigned minimum, synchronized rotations and complete-zero repair preserve
+that predicate. A checked Lean experiment proves this algebra and slot
+coverage; scalar differential regressions and generated-code inspection
+exercise its native implementation. Exact equality contributes zero $\eta_{\rm match}$ subject to
+native correspondence, including packed-byte decoding and dense uniqueness.
+It does not remove normalization collisions or establish complete execution
+refinement. The default VP2INTERSECT build instead matches sixteen-byte AES
+stored keys approximately: rebuilds AND four 32-bit segment memberships and
+dense lookup ANDs two 64-bit halves, so different partners can supply
+different segments. The registered \texttt{NativeMatch} statements prove that
+this rule has no false negatives and agrees with key membership off its
+false-match event. The registered \texttt{NativeMatchLanes} package proves
+finite packed-word, unpack, mask-placement, zero-repair, retained-source and
+class-direction semantics, with conditional bridges to exact duplicate masks.
+\texttt{NativeMatchDense} proves the qword transpose, full-key verification
+and coverage of a lost present hit by fourteen other row/column subsets,
+under live-key uniqueness. Memory/byte layout and compiled execution remain
+separate. For a comparison inventory independent of the stored keys,
+they bound the false-match probability by $\min(1, \sum m^k / 2^{128})$ for
+$m$ partners and $k$ segments, under a random function or an ideal
+permutation. A per-site model of the public rebuild schedule counts these
+comparisons. Charging real records only, it bounds the
+term by $2^{-65.3}$ per $2^{32}$-access window over all certified geometries,
+about $2^{-97.3}$ per access; dense lookup adds at most $2^{-80.5}$. The registered production hierarchy inventory derives the tighter
+$S_{\min}$ count from actual comparison prestates and finite-prefix carry
+ordinals. Exact arithmetic combines it with the existing Lean capacity
+allocation for all 94 geometries and both starts, proving capacity union
+matching at most $h2^{-64}$ over $h$ windows. The finite native adaptive API,
+sparse routing replay and its logged local diagnostics are modeled.
+The checked \texttt{NativeMatchBestCodedFailure} and
+\texttt{NativeMatchBestCodedObservation} endpoints transfer correctness and
+public observations to an independent ideal RF64 oracle on actual complete
+native messages. For fixed certified geometry and initialization mode $g$,
+$I$ initialization records and $n\le h2^{32}$ actual charged lanes, their
+normalization allowance at fixed widths seventeen through sixty-four is
+\[
+ \eta_{\rm norm}(g,I,n)=\min\!\left\{1,
+   \frac{\min\!\left\{\binom{I+n}{2},\,A(g)+nB(g)\right\}}{2^{128}}\right\}.
+\]
+At width sixteen, $\eta_{\rm norm}=0$ under the existing ideal-permutation
+model. The birthday and affine endpoints concern the same native failure
+and public-observation events, so this comparison needs no additional
+error term.
+
+The coefficients count exact stored-key comparisons and deduplicated pairs
+of keys read within each complete-message routing family. For an explicit
+conservative construction, let $L$ be the number of levels, $S$ the allocated
+table-slot count, $r_0$ the requester units per prefix, $N$ the capacity,
+$P_\ell$ the level-$\ell$ carry period in charged lanes, and $f_\ell$ its
+fanout. In the certified load-32 family, put
+\[
+ \begin{aligned}
+ W&=\max_{1\le\ell<L} f_\ell P_\ell,
+ &M&=\max\{N,W\},\\
+ K&=L(3M+64r_0+N)+SW+3P_1+64,
+ &C&=\binom K2,\\
+ A(g)&=LC,
+ &B(g)&=192+192r_0+SM+\sum_{\ell=1}^{L}
+     \left\lceil\frac{C}{P_\ell}\right\rceil.
+ \end{aligned}
+\]
+Here $M$ bounds logical table populations even on reference overflow
+continuations, and $K$ bounds the combined construction and probe keys of
+one family on ring-ready branches. The canonical pair inventory is empty
+on ring-stop branches, whose probability is charged separately. These
+natural-number coefficients depend only on the fixed geometry/start, not on $h$, $n$, key identities or random outcomes. Blind
+lanes count toward $n$. The normalization count uses actual $n$, not the
+certificate horizon; the separate finite replay depth is not a pair-count
+coefficient. The numerical report evaluates these bounds for all 94
+geometries and both starts. Their conservatism does not guarantee an
+improvement over the birthday bound before saturation for every geometry.
+
+The common error is
+$\varepsilon=h2^{-64}+\eta_{\rm norm}+\operatorname{ringCost}$.
+Failure is at most $\min\{1,\varepsilon\}$; each observation inequality adds
+that same error to the other event probability and caps at one. Exact
+comparisons and routing use one shared normalization charge, additional to
+the existing capacity/matching allocation. The public view is the optional
+address-row transcript, absent on error or stop; confidential replies and
+additional compiled leakage are excluded. Native outcomes after a bad event
+remain unrestricted. The ring-stop probability and both routing marginal
+laws are evaluated on unconditional experiments. This local ideal bound
+does not remove the quadratic lifetime-query terms in the cryptographic
+reductions below, or cover normalization calls outside the modeled run.
+Stored-key secrecy, cryptographic
+replacement (including the width-sixteen permutation), normalization lifetime
+allowances, public encoding/counter fit, schedule realization, other
+resource/completion stops, simulation time and compiled memory/concurrency/
+instruction execution remain separate obligations. No total native error
+bound is claimed. The hierarchy derives routing and normalization keys by
+encrypting two fixed distinct labels under its master AES key. With an
+independent uniform secret master used only for those labels, separation costs
+the root AES-PRP advantage at two queries plus $2^{-128}$ for coupling a uniform
+distinct pair to independent keys. The reduction simulates the entire
+downstream execution; this cost is included once in $\delta_{\rm crypto}$.
+Routing uses a fixed two-block
+CBC message: the labeled packed identity followed by the complete stored key.
+This excludes wide-key message aliases, subject to identity bounds
+and native correspondence. The registered \texttt{NativeRouting} package
+identifies the native mask/shift expression with bounded arithmetic packing
+and proves complete-message injectivity, including real/dummy separation.
+Discarded-bit counterexamples show that the field bounds are necessary;
+the package's finite lane identities also check shared-key interleaving,
+variable-message assembly and main/tail output gathers for arbitrary block
+operations. Byte packing, AES rounds, native loop/memory behavior, compiled
+execution and allocated-family correspondence remain explicit. The package's
+family adapter derives canonical-family field bounds from the constructor's
+conservative lifetime allowance, including seeded and speculative ordinals for
+both starts. It reuses the hierarchy's forwarding function and preserves
+producer/consumer sharing. Native geometry mapping, actual counter progression
+and publication correspondence remain separate obligations.
+The fixed-length CBC theorem gives routing distance
+at most the AES-PRP advantage at $2q$ block queries plus $8q^2/2^{128}$,
+clipped to one, for $q$ routing messages; it already includes the permutation
+switch. At $q=2^{32}$ the statistical term is $2^{-61}$, so this construction
+does not establish a total native $2^{-64}$ target. At each fixed native key
+width $u>16$, normalization uses $m=1+\lceil u/16\rceil$ CBC blocks. The same
+theorem supplies the AES-PRP advantage at $mQ$ queries plus
+$2m^2Q^2/2^{128}$; in its random-function hybrid, distinct-key collisions cost
+at most $Q(Q-1)/2^{129}$ separately. The checked
+\texttt{NativeNormalize} package derives fresh-answer laws from replay
+fibres, constructs those fibres for causal fresh-query recursion, and integrates
+arbitrary independent measurable environments, including infinite oracle tapes.
+The same package proves the birthday bound and constructs answer slots for
+bounded-width conversion replay on the same unconditional space. Repeated keys
+reuse cached answers; repeated and unused slots query distinct proof-only keys
+longer than the real-key width. Returned conversions satisfy the persistent-tape
+step equation, and padding answers are hidden from the chooser. A direct trace
+endpoint derives replay correspondence from a chronological conversion
+list, its budgeted length, and causal local equations through the unused suffix.
+Unused reservations add no trace entries. Establishing these premises for
+native execution and its independent environment remains an obligation;
+the query limit alone does not establish them. Padding adds
+no native primitive calls. Keys below sixteen bytes are stored verbatim, and
+a sixteen-byte key is one AES permutation; neither needs a random
+normalization replacement for collisions, though segment matching needs ideal
+sixteen-byte stored keys. The checked \texttt{NativeKey} byte-encoding argument
+establishes injectivity at fixed width, using injective block encryption only at
+sixteen bytes. It also proves long-key input-message injectivity
+and the exact CBC block count; this does not assert digest injectivity or a
+mixed-width cryptographic bound. Native byte packing and AES correspondence
+remain explicit. Entropy,
+native correspondence and complete lifetime budgets remain open.
+\path{ERROR_ACCOUNTING.md} specifies the
+experiments and outstanding query-budget obligations.
+The conditional capacity target alone does not allocate these extra terms.
+
+The native engine enforces the declared online access horizon and checks
+scalar/batch dummy-counter reservations before probing. Composed callbacks and
+tree batches check their full access count before mutation. Native boundary
+regressions check refusal, state preservation and completion of accepted work.
+Construction also checks seeded positions, speculative family ordinals and
+complete window endpoints over that horizon. The same bound covers padded
+dense windows and shifted identifiers; hashed-table allocation stops below
+the dense identifier namespace. A separate, checked normalization reservation
+limit $B$ defaults to capacity plus the access horizon. It bounds both distinct
+inputs and actual conversions, including standalone conversion calls and failed
+attempts. Initialization and batch chunks reserve all inputs before conversion;
+rollback does not refund them. At width 16 this bounds normalization AES
+block calls by $B$, and above sixteen by $mB$. A separate routing allowance $R$
+reserves every leaf evaluation before encryption, including padding, repeated
+worker work, speculative rebuilds and failed initialization. It bounds distinct
+routing messages and actual evaluations by $R$, and routing AES block calls by
+$2R$. Its default is only an arithmetic ceiling. Refusal permanently stops the
+instance and may interrupt accepted work; it provides no rollback or completion
+guarantee. The full-run API contract requires the advertised request count,
+so such refusal belongs in $\eta_{\rm stop}$. Query limits alone do not bound
+its probability: use one unless a smaller bound or a matching reference stop
+contract is justified. Neither allowance supplies a simulation-time bound or
+establishes native execution/observation correspondence. A stopped reference
+requires a separately proved simulator law and does not imply full-run API
+correctness. The native error
+budget remains conditional.
+
+\section{Reusable computable probability bounds}
+The following results are parameterized statements. Their applicability
+depends on the source law, not on the number of rows in a geometry audit.
+
+\subsection{An uncapped-arrival bound}
+\begin{proposition}[Subset witness]\label{prop:general-subset}
+Suppose a storage demand is at most $\sum_{v=1}^n(Z_v-C)_+$ and, for every
+node subset $J$ and $z\ge1$,
+\[
+ \E z^{\sum_{v\in J}Z_v}
+ \le D\exp\{\lambda |J|(z-1)\},
+ \qquad 0<\lambda\le C.
+\]
+For any nonnegative integer storage capacity $S$, its overflow probability
+is at most
+\begin{equation}\label{eq:general-subset}
+ \mathcal B_{\rm sub}(n,C,\lambda,S,D)
+ =\min\!\left(1,D\sum_{j=1}^n\binom nj
+       \frac{\exp\{\lambda j(z_j-1)\}}{z_j^{Cj+S+1}}\right),
+ \qquad z_j=\frac{Cj+S+1}{\lambda j}.
+\end{equation}
+No independence of the $Z_v$ is assumed.
+\end{proposition}
+\begin{proof}
+If the total excess exceeds $S$, its overloaded coordinates form a
+nonempty subset $J$ whose total count is at least $C|J|+S+1$.
+Markov's inequality with $z_j>1$, followed by a union over subsets of size
+$j$, gives the expression. The zero-load case is deterministically safe.
+\end{proof}
+
+For main-only preparation the envelope follows from pointwise deletion.
+At bit stage $b$, a key's raw destination depends only on its old source
+block and the low $b$ bits of its new word. Earlier caps only remove keys,
+so retained arrivals at every destination subset $J$ are at most the raw
+arrivals of the complete logical population. Retention can depend on
+earlier low bits of that same word; retained routes need not be independent.
+Condition on the complete old-home counts $X_i$, and let $p_i(J)$ be the
+probability that a complete key at old home $i$ has raw destination in $J$.
+For $z\ge1$, the MGF of the complete raw count is
+\[
+ \E\!\left[z^{Z^{\rm raw}(J)}\mid(X_i)_i\right]
+ =\prod_i(1+p_i(J)(z-1))^{X_i}.
+\]
+Uniform complete old homes, $N/m\le\lambda$, and destination column sums
+$\sum_i p_i(J)\le |J|$ give the proposition's envelope. A proved joint
+likelihood factor $D$ handles a nonuniform reference map. This is a positive
+exponential comparison; it does not assert independent capped losses.
+
+The finite sum is directly computable. If only subset sizes below $q$ are
+evaluated, set $\mu=ne^\lambda/2^C$. Whenever $\mu/(q+1)<1$, the omitted
+sizes are bounded by
+\[
+ D\,2^{-(S+1)}\frac{\mu^q}{q!}
+              \frac{1}{1-\mu/(q+1)}.
+\]
+This follows by using $z=2$ and $\binom nj\le n^j/j!$. Otherwise increase
+the cutoff or evaluate the remaining finite sum. The implementation is
+\texttt{stage\_bound(n,S,capacity=C,mean=lambda)} in
+\path{code/certify_preparation.py}, followed by the factor $D$.
+
+\subsection{A sharper bound for completed populations}
+\label{sec:positive-series}
+\begin{proposition}[Joint retained-tier count]\label{prop:general-tiers}
+Consider complete logical populations indexed by $i$, with at most $N_i$
+distinct keys and $m_i$ main homes of capacity $C$. Assume their joint
+home law is bounded by $D$ times a reference law in which the populations'
+home-count vectors are independent uniform multinomials. Assume each
+completed population has the full-home identity
+\[
+ T_i=\sum_{v=1}^{m_i}(X_{iv}-C)_+.
+\]
+Put $n=\sum_i m_i$ and $\lambda=\max_i N_i/m_i$. Any class of storage tests
+whose physical inputs are subsets of these tiers, with no additional
+sources and capacities at least $S$, has failure probability at most
+$\min(1,D\Phi(n,C,\lambda,S))$, where $\Phi$ is computed below.
+Shared keys in different tiers still count once per physical copy.
+\end{proposition}
+\begin{proof}
+Any covered overflow implies $\sum_iT_i>S$. The indicator of this integer
+event is bounded by the stop loss
+$F_S(x)=(\sum_{i,v}(x_{iv}-C)_+-S)_+$.
+This function is increasing and has nonnegative mixed differences for
+nonnegative increments. For independent, identically distributed key
+increments $V_1,\ldots,V_k$ and fixed $x$, telescoping gives
+\[
+ \E F_S(x+V_1+\cdots+V_k)
+ \ge F_S(x)+k\{\E F_S(x+V_1)-F_S(x)\}.
+\]
+Averaging over $k\sim\Pois(1)$ and replacing keys one at a time increases
+the expectation. Apply this to each independent complete population
+separately. Poisson splitting gives independent comparison-home counts of
+means $N_i/m_i$; pad those means to $\lambda$. This is a comparison of
+expectations, not an assertion that the original homes are independent
+Poisson variables. The joint density factor $D$ transfers the result.
+\end{proof}
+
+For $Z\sim\Pois(\lambda)$ define $w_j=\Prb(Z=C+j)$, $j\ge1$, and
+$W(z)=\sum_{j\ge1}w_jz^j$. The generating function of $(Z-C)_+$ is
+coefficientwise at most $1+W(z)$, so the comparison total has coefficients
+bounded by
+\[
+ (1+W(z))^n\preceq\exp\{nW(z)\}=\sum_{k\ge0}c_kz^k,
+ \qquad c_0=1,\quad c_k=\frac nk\sum_{j=1}^k j w_jc_{k-j}.
+\]
+The inequality uses $\binom nr\le n^r/r!$. With an integer cutoff $K>S$,
+a computable upper bound on its stop loss is
+\begin{equation}\label{eq:general-series}
+ \Phi_K(n,C,\lambda,S)
+ =\sum_{k=S+1}^K(k-S)c_k
+ +\frac{K+1-S}{2^{K+1}}
+       \exp\{n\,2^{-C}e^\lambda\}.
+\end{equation}
+Indeed $W(2)\le2^{-C}e^\lambda$ by dropping the event $Z>C$ in the
+tilted Poisson expectation, and $(k-S)/2^k$ decreases for $k>K>S$.
+The probabilities obey $p_0=e^{-\lambda}$ and
+$p_k=\lambda p_{k-1}/k$, so all finite terms can be enclosed using positive
+arithmetic. The implementation is
+\texttt{positive\_excess\_bound(n,S,capacity=C,mean=lambda,cutoff=K)} in
+\path{code/certify_tier_router.py}. Its current interface checks
+$0<\lambda\le C$; the zero-load case needs no numerical routine.
+
+Every integer cutoff $K>S$ gives a valid bound, so $K$ is an evaluation
+parameter, not part of the statement. Unless a cutoff is passed, the
+implementation takes the rule \texttt{series\_cutoff(n,S)}: the smallest
+$K$ in $256,512,1024,\ldots$ with $K>S$ whose omitted-tail term, the last
+term of Equation~\eqref{eq:general-series}, is at most $2^{-128}$. At
+$C=64$, $\lambda=32$ and $S\le192$ this is 256 for every $n\le2^{24}$ homes, so every
+value at those sizes is the cutoff-256 value; it is 512 at
+$n=2^{25}$ and 1024 at $n=2^{26}$. At $n=2^{25}$ with 192 slots, where the
+tail term dominated at cutoff 256, the top finish's merge/tier witness is
+about $2^{-115.397}$ (\path{code/bound_table.json}) instead of the
+$2^{-43.759}$ the same routine gives with \texttt{cutoff=256}.
+
+Independent old/current families on jointly fixed complete key sets give
+one application of the reference-law premise, even when those sets overlap.
+Two selected tiers from the \emph{same} family do not automatically satisfy
+it. Arbitrary valid source combinations therefore cannot be passed to this
+formula without checking their dependence. In particular, selected route
+sheds are not completed full-home tiers.
+
+\section{Resolve before compression and top excess}
+\begin{lemma}[Resolve before home compression]
+\label{lem:resolved-compression}
+Let an expanded reference representation and its residual lists contain
+all versions to be merged. A public map groups its temporary homes into
+final homes, and every copy of a key belongs to the same final home.
+For each home, first resolve all versions by freshness, remove a winning
+tombstone together with every version it shadows, then retain up to $C$
+live winners and emit the rest. Assume no older source outside the merge
+requires the tombstone. If $X_v$ counts the live winners at final home $v$,
+then the final main count and total emitted demand are
+\[
+ M_v=\min(X_v,C),\qquad E=\sum_v(X_v-C)_+.
+\]
+Every append prefix of those emissions is at most $E$. A fused evaluator
+with sufficient public local workspace and the same resolution-before-test
+order has this same demand without materializing the expanded main table.
+\end{lemma}
+\begin{proof}
+After resolution, home $v$ contains exactly $X_v$ distinct live keys.
+Compaction retains $\min(X_v,C)$ and emits $(X_v-C)_+$. Summing gives
+$E$, and an append prefix is a subset of these emissions. Fusing the
+operations changes neither count when all relevant versions are available
+before the capacity test.
+\end{proof}
+This is the intended short route for top finish. For a fixed logical trace,
+the live winner set after consuming a carry is defined by logical history,
+not by routing. Once its size and ideal-home premises are proved, the
+existing subset/excess bounds apply directly to $E$. In the binary case,
+a doubled representation can group two temporary homes into each final
+home, with residual lists included in the resolution. A constant larger
+fan-in changes the local workspace and map, not this counting argument.
+The hierarchy fanout and the top's digit/way count are distinct parameters;
+the native top sweep uses the latter.
+
+This lemma does not bound the expanded representation's earlier routing
+or its residual distribution. Nor does final-output equivalence alone prove
+capacity equivalence: a fused evaluator must not overflow before performing
+a deletion the reference performs first. A sweep that tests its shed before
+offering B's tier, and drops tier tombstones only after the residual
+epilogue, lets a tier tombstone consume capacity or resolve an older key only
+after the sweep's test.
+
+For example, at abstract capacity one, let A's main contain live key $a$,
+B's main contain live key $b$, and B's tier contain a tombstone for $a$,
+all targeting one final home. Both B records have the same carry home,
+so its main/tier fullness identity holds. Such a sweep first sheds $b$;
+the tier then replaces $a$ by its tombstone, which the final drop removes.
+Only $b$ is a live winner, so the reference has $E=0$, while that sweep
+emits one record. This is a local state satisfying the stated
+placement/fullness conditions, not a claim about its frequency in engine
+histories. The native top therefore resolves first.
+
+\begin{proposition}[The native top finish resolves before it compresses]
+\label{prop:top-resolution}
+Let the top have $D$ ways, $1\le D\le8$, a carry of $U$ buckets, and final
+homes $v=i+qU$ for carry bucket $i$ and way $q$. At the finish, C holds A's
+main after preparation, R is A's retained carry, and each destination's
+candidate pages are its leaf of R followed by B's tier T, which every
+destination reads directly. Assume:
+(P1) A (C and R) and B (main and T) are each distinct by key, and nothing
+older than A and B is live;
+(P2) every copy of a key has one final home $v$: a C record lies at $v$, a
+B-main record at carry bucket $v\bmod U$ with way $\lfloor v/U\rfloor$, an
+R record is a candidate naming $v$ on the leaf of $v$'s range, and a T
+record is a candidate naming $v$ on B's tier pages;
+(P3) the pool dedup has removed R's copy of every key T holds.
+Let $W_v$ be the resolved live winners of home $v$ (freshest version of
+each key, winning tombstones removed with what they shadow), $X_v=|W_v|$ and
+$E=\sum_v(X_v-C)_+$. Then after the sweep $C[v]\subseteq W_v$ with
+$|C[v]|=\min(X_v,C)$, and the sheds and leftovers naming $v$ are
+$W_v\setminus C[v]$. Every append prefix of the merge stash and of the
+output tier is at most $E$, the tier ends with exactly $E$ records, and
+neither C nor the tier holds a tombstone.
+\end{proposition}
+\begin{proof}
+Fix $v$, with carry bucket $i$ and way $q$. The visit of B's bucket $i$
+first clears C's copies of all of B's main keys. For each of its
+destinations, before the merge and over every page,
+\texttt{ResolveTopDestination} (a) drops the R candidates for $v$ whose key
+B's main holds in direction $q$, which by (P2) holds every B-main copy of a
+key homed at $v$; (b) clears C[$v$]'s copies of the T candidates for $v$;
+(c) drops every tombstone candidate; and (d) drops C[$v$]'s own tombstones.
+The merge then omits B's main tombstones. By (P1)--(P3) each key homed at
+$v$ now appears at most once among C[$v$], B's surviving direction-$q$
+records and the candidates for $v$, and it appears exactly when its
+freshest version is live: an A copy survives only if B holds no version
+(B-main copies were cleared by the dedup and by (a), T copies by (b) and
+(P3)); B's tombstones leave only after clearing A's copies; and an A
+tombstone has nothing older (P1). So the survivors are $W_v$. The merge
+fills free lanes and sheds only into a full C[$v$]; an offer fills free
+lanes and leaves a candidate only when C[$v$] is full. After the resolution
+nothing removes a record from C[$v$]: no candidate shares a key with a
+record of C[$v$], a merged or shed B record or another candidate, so the
+offers clear no lane, and no tombstone remains for the trailing drops.
+Hence either C[$v$]$=W_v$ and nothing naming $v$ is emitted, or C[$v$] ends
+full and exactly $W_v\setminus C[v]$ is emitted; summing gives $E$. The
+merge stash receives sheds only. The epilogue drains the range leftovers,
+runs the leftover dedup, which removes nothing (an older-class leftover
+sharing a key with a shed would be an R candidate whose key B's main
+holds), and then drains the merge stash; every prefix is a sublist of the
+emitted records. The argument is per destination and $D$ enters only as the
+direction a destination reads, so it covers every public $D$, including
+$D=1$ and nonbinary maps.
+\end{proof}
+Lemma~\ref{lem:resolved-compression} therefore describes the native
+finish's demand. The merge stash and the output tier are distinct buffers
+bounded by the same witness $E$; R's DFS leaves are the finish
+distributor's separate event (Corollary~\ref{cor:top-finish-separated}),
+B's directly read tier pages have none, and the retained carry's capacity
+is the preparation's. Proposition~\ref{prop:top-excess} supplies the
+live-set size and home law for a symbolic probability bound on $E$.
+
+\emph{Implementation.} \texttt{ResolveTopDestination}
+(\path{src/oram/rebuild/cpu_byteslice_second_chance.hpp}) runs inside the
+offer-fused fixed-merge sweep whenever that sweep may drop every tombstone
+(\texttt{FixedMergeTombstones::kAll}), which is the level arena's top. It reads the
+candidate pages in place, the A leaf as the older class and B's direct tier
+pages as the fresher one, and clears only private masks, so it needs no scratch;
+B stays read-only. A sweep unit is one source bucket with all of its
+destinations, so pauses fall between complete resolutions, and lanes clear
+disjoint candidates of AND-folded private range masks. Because no candidate
+can then clear a lane, the offer allocates without its class-marked dedup;
+the staler-first allocation that guards a staler copy of a shed key is
+unchanged at every other site. The leftover dedup and the trailing drops
+are kept as public work, and checked builds assert that the drops find
+nothing. The resolution's candidate match and two intersects per page are
+charged two units and the offer without dedup one: the pass weight plus one
+per page.
+
+\emph{Tests.} \path{tests/oram/cpu_byteslice_top_resolution_test.cpp}
+drives the real sweep and epilogue on native-capacity inputs that satisfy
+(P1)--(P3) and the fullness identities, against a scalar
+resolve-then-compress oracle: the example above at capacity 64; a deleting
+B-tier version on a later page than the candidates it makes room for;
+$D=1,\ldots,8$ with one to three pages; B-main and B-tier tombstones, live
+B-tier replacements and absent-key tombstones; mixed full and nonfull
+homes; the merge stash and tier exactly full and one over; empty sources;
+A tombstones, a premise violation that (d) handles; and slice-by-slice and
+two-lane schedules. It checks every append prefix against $E$,
+$\min(X_v,64)$ per home, the absence of tombstones before the drops, and
+B's immutability. The job-level top battery checks every case against
+the same identity under pauses, lanes and helpers, and adds a case in which
+B's tier deletes a full bucket's keys while B's main adds live keys to it,
+at $D=1,2,3,4,6,8$. A test-before-resolve sweep fails these fixtures (for
+example, the capacity-64 example sheds one record with $E=0$). They are local
+fixtures, not a reachability or frequency claim for engine histories.
+
+\subsection{The top live population and its excess}
+\label{sec:top-excess}
+\begin{proposition}[One top-finish excess witness]
+\label{prop:top-excess}
+Let the public live capacity be $K$, the top have $T$ homes of capacity
+$C$, and let $p_v$ be the probability of home $v$ under its current map.
+Write $p_* = \max_v p_v$, $\lambda_*=Kp_*$ and
+$\Gamma=(Tp_*)^K$. At each top ordinal, including ordinals not reached
+following an earlier failure, define $W$ to be the live dictionary at its
+logical window end and
+\[
+ X_v=\#\{x\in W:h_f(x)=v\},\qquad
+ E_f=\sum_{v=0}^{T-1}(X_v-C)_+.
+\]
+If $S=\min(S_{\rm merge},S_{\rm tier})$, every first top-finish
+merge-stash or tier-append overflow implies $E_f>S$. For
+$0<\lambda_*\le C$ its probability is at most
+\[
+ b_{\rm top}(S)=\min\left\{1,
+ \mathcal B_{\rm sub}(T,C,\lambda_*,S,1),
+ \Gamma\Phi_{q}(T,C,K/T,S)\right\}.
+\]
+Here $q>S$ is any integer cutoff in Equation~\eqref{eq:general-series},
+independent of the population capacity $K$.
+For zero population the bound is zero. Charge this event once per top
+ordinal, including all lane-local and fold tests at capacities at least
+$S$; do not add another copy for the published top tier.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:native-sources} gives a fixed set $W$ with $|W|\le K$.
+Its home vector is multinomial with $|W|$ independent categorical trials
+of probabilities $(p_v)$, even though W's physical realization and the
+current-family B tier were computed with those same words. For any subset
+$J$ and $z\ge1$,
+\[
+ \E z^{\sum_{v\in J}X_v}
+ =\left(1+(z-1)\sum_{v\in J}p_v\right)^{|W|}
+ \le\exp\{Kp_*|J|(z-1)\}.
+\]
+Proposition~\ref{prop:general-subset} gives the first probability bound.
+Relative to uniform home assignments, the joint density of $|W|$ trials
+is at most $(Tp_*)^{|W|}\le\Gamma$. Pad the uniform population to $K$
+keys; excess is increasing. Proposition~\ref{prop:general-tiers} gives
+the second bound for one complete population. Neither argument applies
+a new independent law to selected survivors. Proposition~\ref{prop:top-resolution}
+gives the pointwise append implication; the lane-storage lemma below
+covers partitions of the same demand. Previous preparations, range tests
+and publications may be assumed successful for that implication alone.
+The probability above remains unconditional.
+\end{proof}
+
+For native $U=2^k$, $T=DU$ and $w=64$, the exact top maps are
+\[
+\begin{array}{ll}
+ D\in\{1,2,4,8\}:&h(t)=t\bmod T,\quad p_*=1/T,\\[2pt]
+ D\in\{3,5,6,7\}:&h(t)=(t\bmod U)+U((t\mathbin{\rm div}U)\bmod D),\\
+ &p_*={\lceil2^{w-k}/D\rceil}/{2^w}.
+\end{array}
+\]
+In particular $D=6$ uses a whole-digit modulus six, not the ordinary
+level's odd-part decomposition. A home in way $a$ has probability
+$\bigl(\lfloor2^{w-k}/D\rfloor+ind_{a<2^{w-k}\bmod D}\bigr)/2^w$.
+These formulas require sufficient word width for the stated map. Native
+$K=32T$ gives mean 32 for binary tops and $\lambda_*=32Tp_*$ otherwise.
+One may replace $\Gamma$ by $1/(1-K\delta)$ when
+$\delta=Tp_*-1$ and $K\delta<1$; the exact power does not require that
+last inequality. The worked binary-top numerical evaluation below uses this bound at the
+shared merge/output capacity; other top maps remain symbolic here.
+
+\begin{corollary}[Top stage stashes for all supported maps]
+\label{cor:top-stages}
+Keep the top map, population and notation of
+Proposition~\ref{prop:top-excess}. A preparation bit-stage stash of
+capacity $S_b$ has the same excess-tail bound $b_{\rm top}(S_b)$; a
+whole-digit radix-stage stash does also. Union these bounds over the
+actual stage slots. This covers binary and whole-digit top preparation,
+including $D=6$, independently of the separate range distributor.
+\end{corollary}
+\begin{proof}
+Write the route as binary stages inside its public blocks, then the radix
+stage if present. For a bit stage $b$ and old home $O_x$, the complete
+raw destination is
+\[
+ V_b(x)=2^b\lfloor O_x/2^b\rfloor+(H_{f,x}\bmod2^b).
+\]
+Old and current families are independent on complete A. A destination's
+raw probability is $2^{-b}$ times the old probability of its aligned
+$2^b$-home block, hence at most $p_*$. Different keys' raw destinations
+are independent. The retained main is a deletion of complete A; earlier
+caps only delete further raw arrivals. Each stage stash therefore has
+demand at most $\sum_v(X_{b,v}-C)_+$. The top-excess MGF and uniform-law
+density arguments apply verbatim to this raw categorical law. At the
+radix stage the complete raw destination is the final current home, with
+probabilities $p_v$, giving the same conclusion. The final fused offers
+run after the routing test of their disjoint pair or radix tuple; they
+cannot increase another tuple's arrivals. Slots shared by the disjoint
+blocks of one stage use one combined $T$-home witness, not one capacity
+allowance per block.
+\end{proof}
+
+Initialization's scatter is fixed independently of the routing family.
+If it puts at most $L_0\le C$ records per source home, a bit-stage raw
+arrival has mean at most $L_0$ at each destination: each key chooses
+uniformly within its aligned $2^b$ block. Distinct keys are independent,
+though their categorical distributions differ. Their subset MGF is at
+most $\exp\{L_0|J|(z-1)\}$. Marked Poisson replacement, exactly as in the
+binary initialization proof, also gives the positive-series excess bound
+$\Phi_q(T,C,L_0,S_b)$. Take the smaller of this and
+$\mathcal B_{\rm sub}(T,C,L_0,S_b,1)$ for each bit-stage stash. If
+$2L_0\le C$, the first bit stage is deterministically safe. The final
+whole-digit radix stage, when present, has complete raw homes under the
+current map and uses $b_{\rm top}(S_{\rm radix})$. Packing the initial
+tier uses its input-excess bound from the same map. Thus initialization's
+scatter, route stashes and publication-tier demand have symbolic bounds
+for every native top map; only its distributor and the deterministic
+native inventory remain separate obligations. No final-range theorem
+for a nonbinary map is inferred, and the library refuses such tops.
+
+\paragraph{Preparation, initialization and the distributor boundary.}
+Preparation starts with the previous top's distinct live set A, of size
+at most $K$, under an independent old family. Its retained carry has
+exactly the new-home excess of A: A-only routing and offers conserve A,
+and every residual targets a full home. Apply the same one-population
+bound with the retained-carry capacity. Initialization starts with its
+fixed distinct input set and publishes exactly its full-home excess in
+the tier; charge that tier under initialization, not as a top-finish
+exposure. The input scatter is deterministically safe (at most $C/2$ per
+bucket); its intermediate routing stashes and distributor are separate.
+For binary top preparation and initialization the stage and packing
+bounds of Appendix~\ref{sec:binary-top-preparation} have their complete
+source and early-selection premises from the native induction.
+
+The finish's swept pool is R and B's carry tier, with combined
+class-marked dedup before any distribution; the merge stash, which receives
+the sweep's own sheds, is drain-only. Even a key
+that B will delete at resolution can occupy R here. Thus $E_f$ does
+\emph{not} bound the finish's distributor: the dictionary at the old cut can
+be full while the new cut is empty. The distributor is bounded instead by
+R's own law. R is the complete-home excess of the fixed set A, and a coarse
+range sees that excess restricted to its homes; the following lemma is
+that marginal.
+
+\begin{lemma}[Complete-home excess on a public home set]
+\label{lem:restricted-excess}
+Let $W$ be a fixed set of at most $K$ keys whose homes $h(x)$ are
+independent categorical trials on $T$ homes of capacity $C$, with
+probabilities $p_v\le p_*$. For a public home set $J$ put
+$Y_v=\#\{x\in W:h(x)=v\}$ and $R_J=\sum_{v\in J}(Y_v-C)_+$. For integers
+$s\ge0$ and $q>s$, if $0<Kp_*\le C$,
+\[
+ \Prb\{R_J>s\}\le b_J(s)=\min\{1,\Phi_q(|J|,C,Kp_*,s)\}.
+\]
+An empty $J$ or $W$ gives zero.
+\end{lemma}
+\begin{proof}
+Give a key whose home lies outside $J$ a zero increment; the keys'
+increments to $(Y_v)_{v\in J}$ are then independent. The stop loss
+$(R_J-s)_+$ is increasing and has nonnegative mixed differences for
+nonnegative increments, so the marked Poisson comparison in the proof of
+Proposition~\ref{prop:general-tiers} applies to this one complete
+population: Poisson splitting gives independent counts on $J$ with means
+$|W|p_v\le Kp_*$, and padding the means only increases the stop loss.
+Equation~\eqref{eq:general-series} bounds the resulting expectation. No
+uniformity of the $p_v$ within $J$ and no old-map density factor is used.
+\end{proof}
+
+\begin{corollary}[The top finish is a separated pass]
+\label{cor:top-finish-separated}
+Let the top be binary, with $T=2^b$ homes of capacity $C$ and $p_*=1/T$,
+and let the public live capacity be $K\le CT/2$. At a top finish let R be
+the preparation's retained carry, of physical capacity $S_R$, let B's
+carry tier have $s_B$ pages, and let the merge stash and output tier have
+capacities $S_{\rm merge}$ and $S_{\rm tier}$. Let the finish range plan
+partition the homes into $2^\rho$ public coarse ranges
+$J_r=\{v:\lfloor v/2^I\rfloor=r\}$ of $2^I$ homes, $\rho+I=b$. Suppose the
+finish distributes R alone through one-page DFS leaves on this partition
+with the capacities of Equation~\eqref{eq:dfs-capacity} ($S=C$,
+$P_{\rm pool}=S_R$, $R_f=0$), and offers each destination its A leaf
+followed by B's $s_B$ tier pages, read directly. Preserve the combined
+class-marked dedup of R and B's tier, the
+per-destination resolution of Proposition~\ref{prop:top-resolution}, and
+the coordinated drain. Then every first capacity failure of the finish
+implies one of
+\begin{enumerate}
+\item $E_A=\{\max_r R_r>C\}$, where $R_r=\sum_{v\in J_r}(Y^A_v-C)_+$ and
+      $Y^A_v$ counts the previous top's live set A at current home $v$;
+\item $E_f>\min(S_{\rm merge},S_{\rm tier})$, with $E_f$ as in
+      Proposition~\ref{prop:top-excess};
+\item a capacity failure of B's tier at its producer, charged there.
+\end{enumerate}
+A finish therefore contributes at most
+\[
+ b_{\rm fin}=\min\Bigl\{1,\;\ind[S_R>C]\,2^\rho\,\Phi_q(2^I,C,K/T,C)
+   +b_{\rm top}\bigl(\min(S_{\rm merge},S_{\rm tier})\bigr)\Bigr\},
+\]
+and a direct plan, which routes nothing, has no first term. Neither the
+top digit $D$ nor any A/B independence enters $b_{\rm fin}$.
+\end{corollary}
+\begin{proof}
+This is Proposition~\ref{prop:separated-capacity} with A the retained
+carry and B the carry tier; only its A marginal and its item~3 need their
+top instances.
+For item~1, A-only preparation leaves exactly $(Y^A_v-C)_+$ records of
+home $v$ in R (the paragraph on preparation above). Combined dedup and the
+unshadowed drops only delete them, so at most $R_r$ records of R are routed
+to range $r$, and R holds at most $S_R$ records before the first failure.
+Item~1 of the proposition (DFS containment) turns any first
+A-distributor overflow into $E_A$, which is impossible when $S_R\le C$.
+Lemma~\ref{lem:restricted-excess} with $W=A$, $J=J_r$ and $s=C$ gives
+$\Prb\{R_r>C\}\le\Phi_q(2^I,C,K/T,C)$; take the union over the ranges.
+Item~2 of the proposition holds as stated: every destination reads its one
+A page and the same $s_B$ B pages, and B adds no distributor test.
+For item~3, Proposition~\ref{prop:top-resolution} is per destination and
+reads every candidate page of a destination, its A leaf and B's direct
+pages alike, so it holds for this layout: every append prefix of the merge
+stash and of the output tier is at most $E_f$, the count of
+Lemma~\ref{lem:resolved-compression} for the resolved live set.
+Proposition~\ref{prop:top-excess} bounds $\Prb\{E_f>S\}$ by
+$b_{\rm top}(S)$, charged once for both buffers and every lane
+(Lemma~\ref{lem:pause-storage}). Adding the two probabilities is
+Theorem~\ref{thm:abstract-composition} for one finish. The top digit
+enters only through the carry width $U=T/D$, which none of these
+quantities reads.
+\end{proof}
+
+\paragraph{Worked values.}
+At the worked shape $T=2^{22}$, R has two pages ($S_R=128$) and the finish
+range plan has $\rho=4$ and $I=18$: 16 coarse ranges of $2^{18}$ homes.
+The positive series (at the cutoff its rule picks,
+Equation~\eqref{eq:general-series}, which is 256 at this shape) gives about
+$2^{-82.775}$ per range, so about $2^{-78.775}$ per finish; the merge/output witness at capacity 128 is
+about $2^{-126.056}$ per finish, charged once. Over the 257 public ordinals
+of $D=8$, including speculation, the top finish contributes about
+$2^{-70.769}$. With the same per-finish bound, $D=4,2,1$ have 129, 65 and
+33 exposures and contribute about $2^{-71.764}$, $2^{-72.753}$ and
+$2^{-73.731}$ (\path{code/configuration_space_2p27.json}).
+At $T=2^{23}$, $2^{24}$ and $2^{25}$ ($N=2^{28}$ to $2^{30}$) the plan's
+$2^{18}$-home width cap (the separated offer contract) gives $2^5$,
+$2^6$ and $2^7$ ranges of $2^{18}$ homes, so the range term is about
+$2^{-77.775}$, $2^{-76.775}$ and $2^{-75.775}$ per finish
+(\path{code/bound_table.json}).
+\path{code/evaluate_top_finish.py} evaluates the corollary at the native
+row of each selected configuration: \path{code/configuration_probe.cpp}
+prints the finish range plan (\texttt{LevelFinishRangePlan}), the direct B
+pages and the pool slots from \texttt{TopMergePoolShapeOf}. The result is
+\path{code/top_finish_evaluation.json}. The checker attaches it as three
+obligations built by the same \texttt{separated\_finish\_obligations} as at
+every sparse ordinary digit: the A-only range event, B's producer reuse
+(charged zero) and the shared merge/tier witness. The selected ordinary
+jobs plus this top finish contribute about $2^{-69.678}$ at both selected
+ladders, but remaining source classes still prevent a full certificate.
+
+ For \emph{top preparation and initialization}, the selected fix
+is to reuse DFS at the existing proved binary-top coarse partition, with
+one page per leaf; see Appendix~\ref{sec:top-dfs-decision}.
+The finish uses the same distributor on another pool and partition; the
+preparation's final-range bound is not reused there.
+
+\begin{lemma}[Pauses, lane folds and retained storage]
+\label{lem:pause-storage}
+Suppose a logical stash accumulates a list of records with nonnegative
+unit demand $D$ during a phase, with no removals before its fold, and has
+capacity $S$. Split the list into any public lane partition. Give each
+lane capacity at least $S$ and fold into an initially empty stash of
+capacity $S$, checking every append. Then every lane overflow or fold
+overflow implies $D>S$. The conclusion also holds with an existing
+retained population if $D$ includes it and the fold appends to it exactly
+once. Pausing and resuming without changing buffers or repeating operations
+introduces no additional witness. An exact copy to capacity at least that
+of its valid source is deterministically safe.
+\end{lemma}
+\begin{proof}
+Every lane prefix and every fold prefix is a sublist of the combined
+population counted by $D$. If $D\le S$, all those prefixes fit. Retention
+and pauses leave the lists unchanged. A valid source has no more records
+than its capacity, which proves the copy assertion.
+\end{proof}
+For a reused stash, $D$ includes all its preparation and cross writers;
+bounding each writer separately by $S$ is insufficient. For DFS, the
+public node capacities and full-parent work arrays satisfy the separate
+containment proposition in Section~\ref{sec:dfs-theorem}. Retained buffers
+need distinct reserved storage, or a proof that their lifetimes do not
+overlap. This lemma does not bound total scratch allocation or allow two
+paused jobs to overwrite each other's storage. Those are deterministic
+ownership and allocation obligations. Lanes with smaller private capacities
+would also need their own bounds.
+
+\paragraph{Horizon accounting without a resumption factor.}
+If potential admissions of a job class are at least $\tau$ access positions
+apart, at most $\lceil H/\tau\rceil$ lie in $(0,H]$.
+Indeed, $n$ such positions require $(n-1)\tau<H$.
+If a public list of at most $J$ potential jobs admitted at or before the
+left boundary covers every job that can still perform a tested operation
+in the horizon, a whole-job witness has
+at most
+\[
+ n(H)\le J+\lceil H/\tau\rceil
+\]
+exposures, plus any separately charged initialization. Enumerate these by
+public logical ordinals, including jobs not reached after an earlier
+failure. A partial job or a resumed job uses its original exposure. Cold
+start has $J=0$ once initialization is separately handled; an arbitrary
+warm start needs an unconditioned history bound for its $J$ jobs, not a
+fresh-family assumption for their retained state.
+For a fixed non-top digit the admission spacing is $b_\ell aP_\ell$ in
+the logical counter schedule. A proof must still bound pre-boundary jobs
+and show that speculative preparation belongs to the charged ordinal;
+wall-clock starts and completions need not have this spacing. Bounding only
+the number of randomly selected active jobs is insufficient: the public
+potential-job list or a selection-safe witness is required.
+
+\section{Public storage exposure accounting}
+\label{sec:native-ledger}
+Retained scratch and lane copies carry subsets of their producing witnesses.
+They do not multiply event counts. Public extents must cover every copied
+page, mask, task-list entry and DFS work array. Online dense storage is
+bounded by admitted access positions rather than random occupancy.
+\begin{proposition}[An ordinal exposure envelope including speculation]
+\label{prop:ordinal-exposures}
+Let $aP_\ell$ be the access positions per incoming level-$\ell$ carry.
+Let $s_\ell$ be the seeded accepted-carry counter, zero for an empty
+start, or the counter from \texttt{DirectInitializationSeed}. For $H$
+online access positions after that start, set
+\[
+ m_\ell(H)=\left\lfloor\frac{H}{aP_\ell}\right\rfloor+1.
+\]
+Every non-initialization job that can perform record-storage work through
+that horizon has ordinal in the public list
+$\{s_\ell+1,\ldots,s_\ell+m_\ell(H)\}$.
+For a non-top digit $d\in\{1,\ldots,b_\ell\}$ the number in that list is
+\[
+ n_{\ell,d}(H)=
+ \left\lfloor\frac{s_\ell+m_\ell(H)-d}{b_\ell}\right\rfloor
+ -\left\lfloor\frac{s_\ell-d}{b_\ell}\right\rfloor.
+\]
+Negative arguments here use mathematical floor. At the top there are
+$m_L(H)$ potential ordinals, all at its fixed top digit. Initialization
+adds one separate exposure if performed. Adoption-only digits have zero
+job-demand bounds, even if included in this envelope.
+\end{proposition}
+\begin{proof}
+A complete incoming carry requires its complete interval of $aP_\ell$
+positions. At most $\lfloor H/(aP_\ell)\rfloor$ new such intervals exist.
+FIFO and \texttt{Advance} bind only \texttt{ordinal()+1}; they cannot
+prepare a second future ordinal before accepting the first. Speculation
+can therefore add at most the next ordinal, regardless of thread speed,
+pauses or helper interleaving. Counting ordinals congruent to $d$ modulo $b_\ell$ gives the formula.
+The argument bounds potential jobs, rather than conditioning on which
+jobs are active or complete at the right boundary.
+\end{proof}
+At an exact multiple of $aP_\ell$ the final $+1$ is intentional: a next
+preparation can run before any of its carry's accesses. At a non-multiple
+it equals the usual ceiling allowance. This envelope may overcount
+unreachable speculative work, which is harmless. It assigns a whole-job
+witness to partial jobs and never multiplies by the number of resumptions,
+lanes, copies or retained scratch buffers.
+
+For a horizon $(h_0,h_0+H]$ in the same initialized run, a completely
+selection-safe warm-start envelope is the above list with $H$ replaced
+by $h_0+H$, including its initialization if an unconditional bound on the
+whole preceding run is desired. This conservatively charges all past
+ordinals and covers every initially active or retained producer without
+assuming fresh randomness for a snapshot. A shorter list consisting of
+$J$ pre-boundary jobs plus new admissions is valid only after proving a
+\emph{public} ordinal envelope for those $J$ jobs; a count of observed
+active jobs is insufficient. Arbitrary imported warm states have no
+claimed probability law here.
+
+Consequently the symbolic record-storage sum can be written
+\[
+ B_{\rm records}(\Theta,H)=\min\left(1,
+ b_{\rm init}+\sum_{\ell<L}\sum_{d=1}^{b_\ell}
+ n_{\ell,d}(H)b_{\ell,d}
+ +m_L(H)b_L\right),
+\]
+where each $b_{\ell,d}$ is the sum of its \emph{distinct} ledger witnesses,
+and $b_L$ includes preparation, retained carry, both top distributors and
+one finish-excess term. $b_{\rm init}=0$ for an empty start; otherwise it
+includes scatter through publication. Open range terms receive bound one
+until replaced by a proved applicable bound. Do not first maximize each
+component over digits: sum within a digit, then apply its own exposure
+count. This does not assert a complete engine certificate: each public shape requires fresh numerical applicability, a deterministic
+inventory audit and discharge of the checker's premises.
+
+\subsection{Structural applicability, separate from numerical certification}
+\label{sec:structural-domain}
+The window and exposure algebra permits arbitrary integer fanouts at least
+two. The present native source-frontier proof and ordinary routing bounds
+specialize to power-of-two $b_\ell\in\{2,4,8\}$ with binary carry widths,
+$U_{\ell+1}=b_\ell U_\ell$ except for the explicitly modeled staged
+low-load fold. Set $N_{A,\max}=(d-1)aP_\ell$,
+$N_{B,\max}=aP_\ell$ and $\lambda_\ell=aP_\ell/U_\ell$ in ordinary
+component bounds. Use the actual staged home width for a low-load route
+and the actual carry width after its fold; do not silently substitute
+$32U_\ell$ for both. Require the component's stated load, bit-width,
+range-index and capacity inequalities. DFS permits public pages/widths
+satisfying its containment layout; its source bound must use the matching
+coarse ranges. Direct passes have no range-compression event.
+
+The top-excess theorem covers the native maps for every $1\le D\le8$
+allowed by geometry, with $T=DU_L$, any legal $K$, and the exact $p_*$
+above. The binary-top stage/final-range adapter covers
+binary tops only and retains its own size restrictions; the library
+refuses other tops. The separated top finish
+(Corollary~\ref{cor:top-finish-separated}) is stated for binary tops at
+every $D$; its A marginal (Lemma~\ref{lem:restricted-excess}) needs only
+$p_*$. Corollary~\ref{cor:top-stages} bounds every supported top
+map's main-route stage stashes and initialization scatter; it does not
+extend the final-range adapter to nonbinary tops. All theorems require
+consistent family/key encoding without wraparound, successful public
+allocation, sufficient copy/view extents, legal distinct initialization,
+and a fixed logical trace obeying capacity at every prefix. Shared and
+per-level tier profiles substitute their actual source, view and output
+capacities; they do not alter the family argument.
+
+A native geometry audit checks that a chosen implementation instance meets
+these structural conditions and that every native test is assigned. A
+numerical certificate evaluates its complete symbolic sum with rigorous
+arithmetic and compares it with the requested target. Neither a successful
+geometry probe nor a previously computed uniform-fanout subtotal performs
+those other two tasks. Variable fanouts therefore need different public
+sizes and exposure counts, not a new independence theorem. The default
+half-fanout ladder is the first such ladder carried through all three
+tasks; the configuration-space ledger lists, component by component, why
+each premise holds at its fanout-four levels and at the four-to-eight
+transition.
+
+\section{Input invariants and probabilistic premises}
+\subsection{Completed non-top tables}
+At consuming digit $d>1$, A has $(d-1)U$ buckets and uses the \emph{previous}
+digit's map and family. Its logical window has at most $32(d-1)U$ records,
+including tombstones: a prefix contributes at most one record per access
+position, and each subsequent union/dedup can only reduce the sum of its
+input windows. Production geometry gives
+$\texttt{PrefixPositions}\cdot\texttt{PrefixProduct}(\ell)=32U_\ell$.
+Published main records are at their old homes, and the main/tier union is
+distinct on a successful execution with valid inputs.
+
+There is a stronger retained-load invariant than the arbitrary-split premise.
+In a completed non-top table, every tier record targets a full main bucket.
+An unabsorbed offer candidate has a full destination; a last fused-stage
+shed also targets a bucket that just filled. Offers cannot lower occupancy:
+every cleared main key has a distinct fresher replacement. Explicitly, with
+main occupancy $m$, eligible stale/fresh counts $s,f$, and $q\le\min(m,f)$
+cleared keys, the two rounds allocate
+\[
+ u=\min(s,64-m),\qquad v=\min(f,64-m+q-u).
+\]
+Then $m-q+u+v\ge m$, and it equals 64 whenever $s>u$ or $f>v$.
+There is no subsequent non-top tombstone drop. Leftover dedup and drain
+do not lower main occupancy. Adoption preserves the result, and
+hashed main/tier publication makes both inputs non-removable by online
+probes. Consequently,
+\[
+ a_i=\min(x_i,64).
+\]
+This is a count identity. The preparation proof below needs only
+$a_i\le X_i$; neither symmetry of retained identities nor exchangeability
+of selected loads is required.
+The native job tests recompute every output tier key's home and check
+that it is full, alongside their existing distinctness, placement and
+newest-value checks, including sliced preparation and helper execution.
+Checked and unchecked suites pass. They use smaller geometry; the separate
+header probe enumerates the selected production geometry without tables.
+
+\subsection{Exact odd-radix bias}
+Uniform ideal words do not give exactly uniform homes for an odd-radix
+old table. Write $M=r2^k$, $Q=\lfloor2^{64-k}/r\rfloor$ and
+$s=2^{64-k}\bmod r$. A bucket in radix class $j$ has mass
+\[
+ p_j=\frac{Q+\ind_{j<s}}{2^{64-k}}\frac1{2^k}.
+\]
+Odd-radix boundaries have $r>1$. For a fixed logical set
+of $N$ distinct keys with independent ideal old words, compare its old-home
+law $P$ to uniform homes $P_0$. With $\delta=M\max_j p_j-1$,
+\[
+ \frac{dP}{dP_0}\le(1+\delta)^N\le\frac1{1-N\delta}\quad(N\delta<1).
+\]
+The last inequality expands the binomial and bounds its coefficients by
+$N^j$. Applying the same fresh-mark/retention procedure to both laws
+preserves this upper density for nonnegative tests. At $N\le32M$, the
+largest audited factor is
+\[
+ D=\frac{67108864}{67108843}<1.000001.
+\]
+This multiplicative correction does not charge an additive modulo-bias
+failure probability. Exact finite checks verify the pushed-forward bound
+for retained count states and demonstrate their nonexchangeability under
+biased homes. The comparison does not assign fresh laws to selected
+residuals or condition ideal words on capacity success.
+
+\subsection{Families and ownership}
+The native family audit checks different families for A and the new merge,
+and identical producer/consumer families for the carry. It also checks consecutive top families and the
+reserved empty-top/initialization separation. These public identities
+support the ideal-family model; Proposition~\ref{prop:native-sources}
+supplies the complete-source induction on a fixed logical trace. Shared A/B keys use one common new
+mark, and B's current-family selected tier is not a fresh independent source.
+
+Published source payload stays pinned. Borrowed tier masks are copied into
+private descriptors before modifying offers/deduplication; paused jobs
+retain their cursor and scratch. Physical private copies do not add logical
+keys. Tombstones still shadow older values and must retain their metadata.
+Top preparation and initialization keep their existing separate paths and
+explicit source/reset premises. Appendix~\ref{sec:native-ledger} charges partially completed jobs and
+retained storage; unresolved range terms outside the selected
+configurations and the checker's undischarged premises still prevent a
+complete certificate (the deterministic native inventory requires a matching
+configuration audit, Appendix~\ref{sec:deterministic-inventory}).
+
+\section{Ordinary preparation: applying the subset bound}
+\label{sec:preparation}
+Before fixed B insertion, A's retained main count at
+old home $i$ obeys $a_i\le X_i$. Its uncapped routes at bit stage $b$ lie
+within disjoint binary source blocks: each source sends probability
+$2^{-b}$ to each of its $2^b$ destinations. Thus every destination column
+has source-probability sum at most one. With $N/M\le32$, deletion gives
+exactly the envelope of Proposition~\ref{prop:general-subset}, with
+$n\le(d-1)U_\ell$, $C=64$, $\lambda=32$ and old-map factor $D$.
+Earlier capping only removes arrivals; no sheds return before finishing.
+The bound needs neither independent stages nor exchangeable retained loads.
+
+Use the allocated stash capacity $S\in\{64,128\}$ and sum over at most
+\texttt{block\_bits} stages. The numerical evaluator retains subset sizes
+through 64 and uses the general tail formula with cutoff $q=65$.
+
+This covers A's preparation population only. A's old tier is excluded,
+and later cross writers sharing a stash require the combined-demand proof
+in the per-key Poissonization comparison.
+
+\subsection{Final fused stashes and both output-tier drain phases}
+\label{sec:final-drain-bound}
+There is a simpler joint witness for the storage \emph{after} the range
+router. Let $K=A\cup B$ be the complete distinct logical union, including
+tombstones, with $|K|\le32dU$. Assume this complete set is fixed independently
+of its new ideal-family words; shared keys have one word, and distinct keys
+have independent words. This assumption concerns the complete source, not
+its selected tier or a law conditioned on earlier capacity success. Define
+\[
+ X_v=\#\{x\in K:D(H_x)=v\},\qquad
+ E=\sum_{v=0}^{dU-1}(X_v-64)_+.
+\]
+No uniform old-home law is required for this witness.
+
+\paragraph{The final insertion stash.}
+In fixed insertion, meeting A/B copies deduplicate before the capacity
+test and retagging selects the exact binary or radix final way.
+A itself has no internal duplicates.
+Consequently each final destination receives a distinct subset of the raw
+$X_v$ keys. Its shed count is at most $(X_v-64)_+$. The insertion drain-only
+stash has no preparation writer and is separate from every A stage stash.
+It starts empty and only accumulates these final sheds. Every accumulation
+prefix is therefore at most $E$, even if the next append would fail.
+Offers do not add records to this stash. This accounts for one shared stash
+capacity, without giving each source a separate allowance.
+
+\paragraph{The output tier before and after leftover dedup.}
+For the argument, extend only the tier's capacity to infinity and follow
+the same execution until its first would-be overflow. The swept pool
+deduplicates by source rank before scatter; its range leftovers therefore
+contain at most one physical copy of each key. After all offers, each
+leftover is disjoint from final main and targets a full home. At a full
+home there are only $X_v-64$ distinct union keys absent from main, so the
+first drain of range leftovers, including each packing prefix, is bounded
+by $E$. This is true \emph{before} deduplicating against the drain-only
+stash; no temporary second tier capacity is assumed.
+
+The drain-only epilogue must also inspect the \emph{original} fresh swept
+sources, including candidates already absorbed into main. For example, a
+fresh candidate can replace a main key while a different fresh candidate
+occupies the freed slot and duplicates a final-stage shed. Reading only
+the remaining range candidates would miss that shed/main duplicate. The
+native pool dedup reads the original stash and clears the shed copy.
+Any remaining cross-set duplicates are resolved by leftover dedup after
+the first drain and before drain-only records append. Both sides are then
+distinct from each other and from main, and every residual has a full home.
+All subsequent packing prefixes are again at most $E$. With conservation
+of the complete union and no non-top tombstone drop, the final main/tier
+counts are exactly $\min(X_v,64)$ and $(X_v-64)_+$ at each home.
+
+This proof covers direct level-one digit-one output drainage. Higher-level
+digit-one adoption reuses the producer tier witness at its actual capacity.
+
+\paragraph{Current-map probability.}
+Under uniform final homes, for any destination subset $J$ and $z\ge1$,
+\[
+ \E z^{\sum_{v\in J}X_v}
+ =\left(1+\frac{|J|}{dU}(z-1)\right)^{|K|}
+ \le \exp(32|J|(z-1)).
+\]
+Apply the subset witness of Equation~\eqref{eq:general-subset} with
+$n=dU$ and the actual tested capacity $S$. For the current map's modulo
+bias, use $\delta=dU\,p_{\max}-1$ and multiply once by
+$1/(1-32dU\delta)$, as in the earlier old-map density argument. This
+factor applies to the complete union's new homes; it does not assert
+freshness or independence for selected A/B residuals.
+
+Finite tests check 6,000 shared-key
+offer/drain histories and small exact multinomial tails.
+
+\section{Binary-top preparation and initialization}
+The top rekeys A before B insertion. Its old tier and all preparation
+losses form an A-only pool; initialization has distinct input keys and
+an empty old tier. One-page DFS distributes that pool. The final-range
+witness below contains every DFS node overflow.
+\subsection{A shadow process counts each shed key once}
+To avoid assuming independent losses at successive stages, retain an
+analytical shadow of each key that leaves main. At a bucket, the cap sends
+\[
+ (M,R)\longmapsto(\min(M,64),R+(M-64)_+),
+\]
+where $M$ is main occupancy and $R$ counts already-shed shadows. Every key
+is either main or shadow. Both follow their unused routing bits, and no
+shed returns to main during the counted interval. Survivor selection must
+ignore the bits not yet used. This is a premise about the input flow,
+not a consequence of distinct keys alone.
+
+The terminal test $(\sum R-S)_+$ is increasing with increasing differences,
+and a shadow increment has at least the effect of a main increment.
+Backward expectation through routing preserves these properties: an added
+record chooses one output by an independent unused bit, and main/shadow
+increments can be coupled to that same choice. The cap preserves them as
+well. Below capacity an added main record stays main; at capacity its
+effect changes to a shadow increment, which is larger. Thus the boundary
+second difference remains nonnegative, as do the other mixed differences.
+
+Suppose the first counted arrivals are subsets of independent-key ideal
+positions with mean at most $\lam$ per coordinate. Monotonicity permits
+replacement by the complete ideal positions. The per-key Poissonization
+argument of the per-key Poissonization comparison, applied to the backward test,
+then gives independent $\Pois(\lam)$ initial populations after padding.
+This is an expectation comparison after averaging unused bits; it does
+not assert pathwise domination by independent capped buckets. Establishing
+the ideal-position subset premise for each application remains necessary.
+
+\subsection{The finite loss tree and its error bound}
+At depth one draw $N\sim\Pois(\lam)$ and set
+$(M,R)=(\min(N,64),(N-64)_+)$. For the next depth take two independent
+child states. Thin each child's main and shadow populations independently
+with probability $1/2$, giving combined counts $U,V$, and set
+\[
+ (M',R')=(\min(U,64),V+(U-64)_+).
+\]
+After depth $t$, thin $R$ by $2^{-h}$ for $h$ still-unrevealed pattern bits;
+call the result $L_{t,h}$. This recurrence keeps all losses along one
+counted route together, rather than multiplying successive-stage MGFs.
+
+The distribution is enclosed by exact nonnegative integer arithmetic in
+units of $2^{-512}$, with cutoff $H=256$. At every tree node the ideal
+main-plus-shadow population is $\Pois(\lam)$. Write
+\[
+ \tau_H\le\frac{\Prb\{\Pois(\lam)=H+1\}}{1-\lam/(H+2)},
+ \qquad \mu_h=\lam 2^{-h}.
+\]
+A depth-$t$ tree has $2^t-1$ nodes. The thinned loss $L_{t,h}$ is at most
+the thinned root main-plus-shadow total, whose law is $\Pois(\mu_h)$;
+therefore $\E L_{t,h}^2\le\mu_h+\mu_h^2$. A union bound on a truncated
+node and Cauchy--Schwarz give, for $g$ roots,
+the additive stop-loss correction
+\[
+ \epsilon=g\sqrt{(\mu_h+\mu_h^2)(2^t-1)\tau_H}.
+\]
+For each root, replace its loss by zero on that root's truncation event.
+The positive-series convention $c_0=1$ majorizes this completed law:
+it retains all positive untruncated masses and puts at least the missing
+mass at zero. Thus convolution does not discard other roots' contributions
+when one root truncates. The positive-part test is 1-Lipschitz, so its
+error is at most the sum of $\E[L_{t,h};\text{root truncates}]$;
+adding an independent early population does not increase this correction.
+This justifies both the single-root and sorted-top calculations.
+Rounding and truncation are included in the numerical bounds below.
+
+\subsection{Parameterized binary-top stage and packing bounds}
+\label{sec:binary-top-preparation}
+The binary-top adapter covers $T=2^k$ homes, $k\ge2$, main capacity 64,
+one stage-stash capacity $S$, and an output drain capacity $R$.
+For preparation, $R=S$ is the retained preparation carry; for
+initialization, $R$ is the published tier capacity. The implementation still
+has a separate old tier of capacity $R_{\rm old}$. Require one distinct,
+tombstone-free complete A population of at most $32T$ keys, independent
+of the relevant ideal families. These premises concern A before the
+incoming B merge; no half-load assertion for the later A/B union is inferred.
+The stage and packing series use any cutoff $q>\max(S,R)$, selected
+adaptively by \texttt{series\_cutoff}. The loss-tree cutoff $K=256$ is
+separate: its final-range test is at 64 slots, while $S$ and $R_{\rm old}$
+enter only the early binomial population cap $IS+R_{\rm old}$ (or $IS$
+for initialization). That binomial law is not capped at $K$: its finite
+coefficients and its full generating function at 2 bound the omitted
+series. The tree's truncation correction remains valid after adding the
+early population. Thus $S,R\ge256$ pose no proof restriction and require
+no larger loss-tree cutoff. At $N=2^{31}$ a stage-stash width of 3 buckets
+does not make the bound small: $\Phi$ per stage is about
+$2^{-71.017}$ before unioning stages and exposures. The existing series
+suffices with stage-stash width 4, giving about $2^{-119.717}$ per stage,
+and the top's single packing event fits the lifetime budget with its
+three-page tier. The sizing header takes this as a floor for any level
+whose output exceeds $2^{25}$ homes, keeping a larger horizon-based
+requirement if present; middle-level stage stashes at $D=8$ keep their
+existing widths. This is the smallest whole-page width that closes the
+term with the positive-series bound. This capacity choice is justified by
+the evaluated proof, not by the loss-tree cutoff; the routing and the tree
+are unaffected.
+
+\paragraph{Raw stage arrivals.}
+In preparation, let $O_x$ be the old binary home and $H_x$ the independent
+new ideal word of key $x$. At one-based stage $b$, its uncapped destination is
+\[
+ V_b(x)=2^b\left\lfloor O_x/2^b\right\rfloor+(H_x\bmod2^b).
+\]
+Uniform independent old homes and new words make $V_b(x)$ uniform on
+$[0,T)$, independently for distinct keys. Main membership may depend on
+the old family: the retained main is still a subset of this complete raw
+population, and earlier route deletions only remove keys. Earlier stages
+perform no offers; the final fused stage offers only after routing each
+disjoint pair. Its offers cannot change another pair's routing input.
+The stage stash demand is therefore pointwise at most
+\[
+ E_b=\sum_{v=0}^{T-1}(X_{b,v}-64)_+,
+ \qquad X_{b,v}=\#\{x:V_b(x)=v\}.
+\]
+This uses deletion, not exchangeability of selected retained loads.
+
+Initialization instead has a public, family-independent source scatter
+with at most 32 keys per bucket. For stage $b$, each key chooses uniformly
+among $2^b$ destinations in its fixed source block. These independent
+categorical laws need not be identical across keys. Every destination's
+mean is at most 32. Apply the increasing-differences marked-Poisson
+comparison from the per-key Poissonization comparison to
+$(\sum_v(X_{b,v}-64)_+-S)_+$: replace each independent key by an independent
+$\Pois(1)$ number of copies with independent marks. Poisson splitting
+then gives independent destination counts at their respective means;
+pad each mean to 32. The same comparison applies to preparation's
+multinomial raw counts. Independence is introduced in this comparison,
+not assumed of capped bucket populations or different stages.
+
+Write $Q(T,s)$ for the positive-series upper bound computed by
+\texttt{positive\_excess\_bound(T,s)} at capacity 64 and mean 32.
+The conditional stage-stash union bounds are
+\[
+ kQ(T,S)\quad\hbox{for preparation},\qquad
+ (k-1)Q(T,S)\quad\hbox{for initialization}.
+\]
+The missing first initialization term is deterministic: two initial buckets
+contain at most 64 records together, so neither first-stage destination
+can exceed 64. No independence between stage failures is needed.
+
+\paragraph{One A-only packing witness.}
+Let $X_v$ count the complete A population at its new final home, and
+$E=\sum_v(X_v-64)_+$. The old tier, earlier sheds, retained main and last
+stage's shed partition one distinct population. The actual top preparation
+pass uses \texttt{kNoDedup}. A successful range distributor preserves that
+partition; final offers only insert into free lanes. Every range leftover
+therefore targets a full home and is disjoint from main. Every final-stage
+shed also targets a home that became full before its offer and stays full.
+Thus their combined population is at most $E$ (equal to $E$ if all keys
+are conserved). Draining the range leftovers first and the disjoint
+drain-only stash second gives the same upper bound on every packing prefix.
+There is no temporary second drain capacity and no early deduplication of
+physical copies. This establishes $Q(T,R)$ for the retained preparation
+carry or initial published tier. Range-distribution failures remain separate
+events; the reference-word law is not conditioned on their absence.
+
+\paragraph{Parameterized sorted ranges.}
+For range index width $I$, assume $0\le I<k-1$, one scatter group with
+eight slots per initial range bucket, and $2^{k-I}$ final ranges. The final
+main stage $k$ is drain-only. Early stages $1,\ldots,I$ and the old tier
+give a deferred binomial padding population
+\[
+ P=IS+R_{\rm old}\quad\hbox{for preparation},\qquad
+ P_0=IS\quad\hbox{for initialization},\qquad p=2^{-(k-I)}.
+\]
+Later stages $I+1,\ldots,k-1$ give depth $t=k-I-1$, one remaining thinning
+bit and $g=2^{I+1}$ shadow roots. Substituting these parameters into the
+following sorted-range derivation generalizes its positive-series and
+truncation calculation. Disjoint-key deferred selection and the ideal-arrival
+reset comparison remain explicit premises. The native source and frontier inductions above supply these histories
+for binary preparation and fixed-scatter initialization; the existing
+shadow argument supplies the reset comparison.
+
+\paragraph{Computation and checks.}
+\path{code/certify_top_preparation.py} applies these formulas to eight
+distinct physical/init shapes obtained from the 16 native domain settings
+(each default-ladder setting ends in the same top as its uniform partner);
+\path{code/top_preparation_certificates.json} records the arithmetic,
+source hashes and tree caches. At $T=2^{22}$ and $S=R=128$, preparation's
+stage union is below $2^{-121}$ and its packing bound is below $2^{-126}$
+per pass. Adding sorted final ranges gives a conditional contribution below
+$2^{-108}$ over 257 regular preparation allowances plus one initialization
+(displayed logarithm $-108.1670$). This does not include top finish.
+
+Seven finite tests check raw categorical laws, a correlated-family
+counterexample, initial scatter, 2,000 A-only offer/drain histories, the
+generalized sorted formula against the previous fixed-size certificate,
+and applicability. Forty-one native fixtures check final-stage and tier
+64/65 and 128/129 boundaries, earlier-pool offers and actual initialization
+scatter. These adversarial kernel fixtures validate pointwise counts;
+they are neither ideal-family probability samples nor a reachability proof.
+Nonbinary tops (refused by the library) and the later B merge remain
+outside this numerical adapter. The symbolic top results above do not
+extend its final-range arithmetic.
+
+\subsection{Final ranges of binary top preparation and initialization}
+\label{sec:top-final-ranges}
+This bound is stated for a sorted reference distributor (an analysis model,
+not library code); it concerns only the swept pool and its final
+partition, and Corollary~\ref{cor:top-dfs-transfer} transfers it to the
+one-page DFS the library runs.
+There are $2^{22}$ main buckets, 512 final ranges, and $I=13$ low bits
+matched by the eventual offer. The range pattern uses bits 13 through 21.
+Stages 1--21 enter the swept pool; stage 22 is drain-only. Each allocated
+stage stash has 128 slots.
+
+Separate stages 1--13 and the old tier from the later sheds. Their keys
+have been selected without revealing their nine range bits, and are
+disjoint from the remaining main keys. For a fixed range, expose the
+remaining main-key words as well. The late loss is now determined while
+the early count is still $\Bin(m,2^{-9})$, where
+\[
+ m\le P=14\cdot128\quad\text{for preparation},\qquad
+ m\le P_0=13\cdot128\quad\text{for initialization}.
+\]
+Padding to $P$ or $P_0$ yields an independent binomial comparison for
+increasing tests. This does not assume that the actual early and late
+counts were independent. It relies on disjoint keys and unused-bit-blind
+selection, supplied by the A-only frontier in
+Proposition~\ref{prop:native-frontiers}; shared copies would invalidate it.
+
+Stages 14--21 give $t=8$, $h=1$, and $g=2^{14}$ comparison roots for one
+range. Consequently its overflow probability is bounded by
+\[
+ \E\left(B+\sum_{i=1}^{g}L_{8,1}^{(i)}-64\right)_+,
+ \qquad B\sim\Bin(P,2^{-9}),
+\]
+with independent quantities only in the comparison experiment. Let $w_j$
+enclose the positive masses of the truncated root loss and set
+\[
+ C(z)=(1-p+pz)^P\exp\left(g\sum_{j=1}^{H}w_jz^j\right),\qquad p=2^{-9}.
+\]
+Use the positive coefficient recurrence of Section~\ref{sec:positive-series}
+and convolve with the exact binomial coefficients. The series tail is at
+most $(H+1-64)2^{-(H+1)}(1+p)^P\exp(gW(2))$; add $\epsilon$ for root
+truncation. Union over the 512 final ranges.
+
+This gives $<2^{-117}$ per initialization, $<2^{-116}$ per top preparation,
+and $<2^{-108}$ after charging the larger bound for all 257 exposures,
+including initialization. Earlier stage failures are counted separately;
+the ideal experiment is not conditioned on earlier success. These numbers
+do not bound the top's later B merge (the finish).
+
+\subsection{Selected implementation: one-page DFS for top preparation}
+\label{sec:top-dfs-decision}
+The preparation builder always uses the existing DFS distributor (the
+geometry refuses a nonbinary top). Initialization uses the same builder. It preserves the swept source pool and coarse partition of the
+binary-top final-range proof, with one 64-slot page per leaf.
+The top finish is a separate pass with its own pool and partition: it
+distributes only the retained carry, whose law is A's complete-home excess
+(Corollary~\ref{cor:top-finish-separated}), and this final-range bound is
+not used there.
+One page minimizes the page count and offer multiplicity at this fixed
+partition within the present interface. No measured global runtime optimum,
+universal one-page bound, or wider-range setting is claimed.
+
+\paragraph{Freshness and the actual distinction between levels.}
+A's old tier was selected under the old family. Relative to that selection,
+its destinations under the new family are fresh, at the top just as at
+ordinary levels. The newly produced stage sheds were selected using some
+of the \emph{current} family's bits; only their unexamined bits remain
+fresh. The existing shadow argument handles these dependent losses when
+bounding a final range. This is not a special loss of freshness at the top.
+The implementation difference is that ordinary preparation defers its
+residual offers to the ordinary finish, where DFS is wired,
+whereas the top fully routes and offers A in its own preparation pass,
+which always distributes through its own one-page DFS. Initialization uses
+that same preparation path. This integration requires no additional
+source-independence premise.
+
+\begin{corollary}[Transfer of the top final-range bound to DFS]
+\label{cor:top-dfs-transfer}
+Fix an A-only preparation or initialization instance satisfying the
+binary-top source, stage-capacity and coarse-partition premises above.
+Let $Y_r$ count its swept pool records naming final range $r$, and let
+$\varepsilon_{\rm range}$ be the existing unconditional first-failure
+bound for $\max_r Y_r>64$. Replace only its distributor by DFS, preserving
+that pool and partition, with node capacities
+\[
+ C(h)=\min(P,64\cdot2^h),
+\]
+where $P$ is the public pool slot capacity and a height-$h$ node covers
+$2^h$ leaves. Then the probability that this distributor is the first
+capacity failure is at most $\varepsilon_{\rm range}$. Charge one range
+event per preparation or initialization, with no factor for DFS nodes.
+Main-route stash and retained-carry/publication-tier events remain separate.
+\end{corollary}
+\begin{proof}
+On an execution with no earlier failure, the swept multiset is unchanged
+by the replacement. The sorted reference's final-range test counts exactly these
+$Y_r$; their population bound does not depend on sorting the records.
+If every $Y_r\le64$, each ancestor's count is at most 64 times its number
+of descendant leaves, and also at most $P$. The gather and work arrays
+hold their full inputs, so the DFS containment theorem covers every
+partition capacity test. Hence a first DFS failure implies the same
+reference range event used by the existing bound. The first-failure
+implication does not condition the probability law on earlier success.
+\end{proof}
+
+\paragraph{One page here does not improve the ordinary bound.}
+Appendix~\ref{sec:top-final-ranges} already bounded 64-slot final ranges
+for the worked binary top: $T=2^{22}$, $I=13$, 512 coarse ranges and
+128-slot stage stashes/old tier. DFS with one page asks for the \emph{same} event, so this
+transfer uses no stronger probability estimate. A published top tier is yet another capacity:
+one temporary page per range does not justify one bucket in that tier.
+
+\paragraph{Native applicability and acceptance scope.}
+\texttt{TopPrepareRangePlan} is the common per-pass plan for allocation,
+work prediction and execution. It fixes one page and the DFS range plan's
+coarse width, which is the production plan's (its $2^{18}$-home cap,
+the separated offer contract, does not bind at any top preparation
+from $2^{20}$ to $2^{30}$); the library has no page or width setting, and its geometry
+refuses nonbinary tops. \texttt{MaxLevelDfsAllocation} and the widest range-table calculation
+include this pass; engine scratch construction and byte accounting already
+consume those helpers. The preparation and finish use the same exclusive
+per-level scratch at disjoint times. The existing coarse-task reservation
+covers gather and partition;
+DFS units remain sliceable through the existing cursor.
+
+The source pool, last-stage drain-only stash, final-stage fusion, private masks,
+original-source lifetime and both drain phases are unchanged. Native top tests
+check logical contents against the test model for binary digits
+$1,2,4,8$, including retained excess, poisoned input tags, empty A, pauses,
+lanes and helpers. Resumed execution's charged residual work equals the
+planner estimate. Direct initialization tests cover empty, half and full
+input for all four digits and read back contents through online rebuilds.
+The existing distributor suite checks record bytes, masks, placement, empty
+and full pools and the 64/65 boundary.
+
+The checker matches all source capacities and partition dimensions to the
+parameterized final-range certificate, then requires an exact native DFS row
+in that certificate's audited shape list. Its scatter field is explicitly 64
+for DFS instead of the production builder's 8: this is a build-format change,
+not a population or coarse-partition change. It charges the range witness once,
+separately from main-route and drain excess. Nonbinary maps, changed widths,
+missing evidence and stale dependencies cannot inherit this bound.
+
+\paragraph{Workspace.}
+At a fixed range width, one DFS page retains one offer page per main
+bucket. For the worked 44-source-bucket, 512-range shape, the
+workspace formulas give 9,600 additional record slots plus 6,216 bytes
+of masks, prefixes and unit metadata: about 278 KiB at 29-byte stored
+records, excluding allocator rounding. The 512-bucket leaf table serves as
+the range table. The DFS schedule has 512 units covering 1,008
+compactions. Wider ranges may reduce work but require reevaluating their
+population bound.
+
+\section{Completed-A comparison}
+\label{sec:separated-residuals}\label{sec:dfs-application}
+\subsection{Completed-A comparison by padding the blank input}
+\label{sec:completed-a-shadow}
+The selected route admits a single shadow comparison, including its final
+losses. It is unnecessary to keep separate preparation-span marginals or
+allocate leaf capacity among successive A stages. The following statement
+is symbolic; it does not reuse separate preparation-only numbers.
+
+\begin{proposition}[Completed-A coarse-range bound]
+Let the bucket capacity be a positive integer $C$, $\lambda>0$, $U=2^k$, $d=r2^e>1$ with $r$ odd,
+$b=k+e<w$, and $T=dU=r2^b$. Assume the native ordinary A source contract:
+a fixed distinct logical population of at most $\lambda(d-1)U$ keys,
+old homes uniform on $(d-1)U$ positions up to a joint density factor $D$,
+and an independent current $w$-bit ideal word per key. Retained main is a
+subset of those old-home positions. Embed it at $[U,T)$, leave $[0,U)$
+empty, and run the implemented binary blocks and terminal radix without
+reinsertion or selection on unused current bits. Include the old tier and
+\emph{all} A routing losses in the distributor population.
+
+Choose $0\le I<k$. Let $S_j$ bound the entire shared stash for binary
+stage $j$, across all its preparation and continuation writers, and let
+$T_A$ bound the old tier. Put
+\[
+ P=T_A+\sum_{j=1}^{I}S_j,\quad g=2^I,\quad t=b-I,
+ \qquad q_a=\frac{\#\{0\le h<2^{w-b}:h\bmod r=a\}}{2^{w-b}}.
+\]
+The early range probability is $p_a=q_a2^{-(b-I)}$.
+Define $F_t=(M_t,R_t)$ by the existing binary shadow recurrence at capacity
+$C$ and mean $\lambda$, with \emph{no final thinning}. For $r=1$ let
+$Z_a=R_t$. For $r>1$, take $r$ independent copies of $F_t$ and,
+conditionally on their states, independent counts
+\[
+ U_j\sim\operatorname{Bin}(M_t^{(j)},q_a),\qquad
+ V_j\sim\operatorname{Bin}(R_t^{(j)},q_a),\qquad
+ Z_a=\sum_{j=1}^r V_j+\left(\sum_{j=1}^r U_j-C\right)_+.
+\]
+All independence in these definitions belongs to the comparison process.
+Let $E_a\sim\operatorname{Bin}(P,p_a)$ be independent of $g$ copies of
+$Z_a$, and set $Y_a=E_a+\sum_{v=1}^{g}Z_a^{(v)}$. For nonnegative integral leaf
+capacity $L$, the first-failure contribution of any coarse range in radix
+class $a$ is at most
+\[
+ \min\{1,D\,\mathbb E[(Y_a-L)_+]\}.
+\]
+Consequently a whole completed-A distributor is bounded by
+\[
+ a_{\rm job}\le
+ \min\left\{1,D\,2^{b-I}\sum_{a=0}^{r-1}
+                   \mathbb E[(Y_a-L)_+]\right\}.                 \tag{CA}
+\]
+Every DFS storage overflow is contained in this event. In the selected
+implementation $C=L=64$. This statement excludes top
+preparation/finish, and widths $I\ge k$; a direct small-pool plan has no
+leaf-capacity event and needs no use of (CA).
+\end{proposition}
+
+\begin{proof}
+Use an analytical frontier after stages $1,\ldots,I$ in every binary
+subnetwork. The physical schedule may finish disjoint blocks in a different
+order; their operations commute. Early sheds and the old tier are distinct
+and disjoint from the remaining A main. Their unused current bits retain
+the deferred-mark law. On a history with no earlier capacity failure their
+number is at most $P$. Apply the existing early-padding argument first:
+replace their range count by an independent $\operatorname{Bin}(P,p_a)$.
+Use the bounded reference list on other histories as in the earlier
+first-failure argument. In particular, do not condition on B's history,
+on the eventual pool deduplication, or on execution success.
+
+Only then restore complete-A positions as phantom main records at the
+first counted arrivals, stage $I+1$. In the uniform old-home reference law,
+each occupied old position has mean at most $\lambda$. Both endpoints of
+the blank interval are aligned to $2^{I+1}$, since $I<k$. Thus every first
+arrival coordinate has mean at most $\lambda$: its old-address block is
+wholly blank or wholly occupied, and its low current bits are uniform.
+The per-key ideal-position comparison for the backward shadow test gives
+independent Poisson coordinates of these means. Add independent Poisson
+records to raise every coordinate, including the blank region, to
+$\lambda$. This only increases the increasing shadow test. Padding is an
+analytical replacement, not a change to the native route or its load.
+
+The actual preparation spans followed by the new continuation levels are
+exactly the full binary network in each of the $r$ blocks, with the blank
+region's ineffective early operations omitted. For a fixed final range,
+there are $g$ low-bit roots per block, each with $t$ counted cap stages.
+The existing backward increasing-differences argument and Poisson splitting
+give the binary shadow comparison $F_t$ jointly at these roots. This step
+retains dependence between losses at successive stages.
+
+If $r>1$, the untouched high word independently selects radix $a$ with
+probability $q_a$ for each key. Previously shed shadows follow that same
+selection; arriving main records undergo the terminal capacity-$C$ cap.
+The displayed definition of $Z_a$ is precisely that operation. Its cap is
+the same $(M,R)\mapsto(\min(M,C),R+(M-C)_+)$ map used at binary nodes;
+independent thinning and addition preserve the same backward test class.
+Therefore the earlier shadow comparison also applies with this terminal
+node. No assumption of independent binary and radix losses is introduced.
+For $r=1$ there is no terminal node, and $R_t$ already includes the last
+binary cap. Apply the old-home density factor $D$ once to the full
+nonnegative test. Later combined dedup can only delete A candidates.
+Finally, an integer count above $L$ contributes at least one to its
+stop-loss, and each radix class has $2^{b-I}$ coarse ranges. Union over
+these ranges and apply DFS containment.
+\end{proof}
+
+\paragraph{Evaluation and remaining scope.}
+For a joint-state probability generating function
+$F(x,y)=\mathbb E[x^M y^R]$, the terminal node is particularly simple:
+form
+\[
+ G(x,y)=F(1-q_a+q_a x,\,1-q_a+q_a y)^r,
+\]
+then move its coefficient at $(u,v)$ to
+$(\min(u,C),v+(u-C)_+)$. The marginal of the second coordinate gives
+$Z_a$. Keeping the joint $(M,R)$ law is essential: thinning an existing
+loss-only marginal omits the newly shed main records. Replacing $q_a$ by
+$1/r$ is also invalid for a finite-word biased radix; its exact value, or a
+proved conservative replacement, is required.
+
+\paragraph{A rigorous terminal truncation enclosure.}
+Let $H>C$ be the count cutoff, and let
+\[
+ \tau_H(\nu)=\frac{\Prb\{\Pois(\nu)=H+1\}}{1-\nu/(H+2)},
+ \qquad \nu<H+2.
+\]
+In each binary tree discard a state whenever its main-plus-shadow total
+exceeds $H$, as in the existing binary calculation. At the terminal radix
+node thin both coordinates with the exact $q_a$, convolve the $r$ children,
+and discard totals above $H$ before applying the final cap. Intermediate
+partial sums in that convolution may also be discarded above $H$:
+nonnegative remaining summands cannot reduce their total.
+
+Put $\mu_a=\lambda$ for $r=1$ and $\mu_a=r\lambda q_a$ otherwise. Every
+binary node has total $\Pois(\lambda)$, while the terminal total is
+$\Pois(\mu_a)$: caps preserve totals, and independent thinning and addition
+preserve the Poisson law. A root's bad-event probability is at most
+\[
+ \beta_a=r(2^t-1)\tau_H(\lambda)
+              +\ind_{\{r>1\}}\tau_H(\mu_a).
+\]
+The discarded partial sums require no extra union term because their
+failure implies the terminal-total event. Since the root loss $Z_a$ is
+at most that root's total, Cauchy--Schwarz gives
+\[
+ \E[Z_a;\text{some node discarded}]
+       \le\sqrt{(\mu_a+\mu_a^2)\beta_a}.
+\]
+Replace a root's loss by zero on this event. The stop-loss function is
+1-Lipschitz, so for $g$ roots, including the independent early population,
+the additive correction per coarse range is
+\[
+ \boxed{\epsilon_a=g\sqrt{(\mu_a+\mu_a^2)
+       \left[r(2^t-1)\tau_H(\lambda)
+                 +\ind_{\{r>1\}}\tau_H(\mu_a)\right]}.}
+\]
+This specializes to the existing unthinned binary correction when $r=1$.
+It requires no independence between truncation and the terminal total.
+
+\paragraph{Positive arithmetic and the final stop-loss.}
+The driver \path{code/certify_completed_a.py} uses $H=256$ and
+$2^{-512}$ fixed-point upper coefficients. It computes each binomial
+thinning weight from the exact rational $q_a$, rounds upward, retains the
+joint law through all radix additions, and caps only after the last
+addition. Packed integer convolution uses a coefficient-width bound
+calculated from its actual inputs, so there are no carries between
+coefficients. The optional GMP accelerator changes only execution time.
+No floating-point convolution is used.
+
+Let $w_j$ majorize the retained root loss mass at $j>0$, and put
+$W(z)=\sum_{j=1}^H w_jz^j$ and $B(z)=(1-p_a+p_az)^P$.
+The zero-on-failure completed root law is coefficientwise at most
+$1+W(z)$; hence $B(z)\exp(gW(z))$ majorizes the completed sum law.
+Writing $c_n=[z^n]B(z)\exp(gW(z))$, the driver bounds its stop-loss by
+\[
+ \sum_{n=L+1}^H(n-L)c_n+
+ \frac{H+1-L}{2^{H+1}}B(2)\exp(gW(2)).
+\]
+Here $(n-L)2^{-n}$ is nonincreasing for $n>H>L$. The coefficients through
+$H$ use the positive exponential recurrence; the displayed remainder,
+Poisson tails, square root and final sums are all rounded upward.
+Add $\epsilon_a$ before multiplying by the density and range count in
+(CA). This also retains other roots' contributions when one root is
+truncated; simply convolving deficient subprobability laws would not.
+
+\begin{corollary}[Complete raw excess for separated middle levels]
+\label{cor:middle-storage}
+Let $M=(d-1)U$, $T=dU=r2^b$, with $U=2^k$, odd $r$ and
+$2\le d\le8$. Assume the native source law of
+Proposition~\ref{prop:native-sources} and the separated ordinary route
+and drain premises. Write $D_A$ for the old-A home-law density bound,
+$D_{A,\rm current}$ for A's current-home density bound and
+$D_{\cup,\rm current}$ for the complete distinct union's current-home
+density bound. Put
+\[
+ G(T,S)=\min\{\mathcal B_{\rm sub}(T,64,32,S,1),
+                         \Phi_q(T,64,32,S)\},\qquad q>S.
+\]
+The A binary stage stashes of capacity $S_A$ have total failure bound
+$\min(1,bD_A G(T,S_A))$. The terminal radix stash, when present, has
+bound $\min(1,D_{A,\rm current}G(T,S_A))$. One event bounds both the
+insertion stash and every published-tier append prefix by
+\[
+ \min\{1,D_{\cup,\rm current}
+       G(T,\min(S_{\rm insert},S_{\rm output}))\}.
+\]
+These are unconditional reference-event bounds for first-failure
+composition, for every middle level with the stated shape.
+\end{corollary}
+\begin{proof}
+The needed additional premise beyond a subset-MGF envelope is that the
+\emph{complete raw destinations}, under the reference law, are independent
+categorical trials across distinct keys. Proposition~\ref{prop:native-sources}
+already supplies it: complete logical sets are fixed independently of
+routing words, and old and current families have their joint independent
+law. This premise is not asserted for selected main survivors.
+
+At binary stage $j$, a complete A key with old home $O\in[0,M)$ and
+current word $H$ has uncapped destination
+\[
+ V_j=2^j\left\lfloor\frac{O+U}{2^j}\right\rfloor+(H\bmod2^j).
+\]
+Under independent uniform old homes, an aligned block contains at most
+$2^j$ admitted old positions. Consequently every destination has
+probability at most $1/M$, and the destinations of distinct keys are
+independent. They need not be uniform on the expanded $T$ homes.
+There are at most $32M$ keys. Apply Lemma~\ref{lem:restricted-excess}
+to this categorical population with $J=[0,T)$, $p_*=1/M$ and population
+cap $32M$: its complete raw excess has tail at most
+$\Phi_q(T,64,32,S_A)$. The same home-mass bound gives the subset-MGF
+envelope at mean 32, hence Proposition~\ref{prop:general-subset} gives
+$\mathcal B_{\rm sub}$ as well. Transfer both bounds by $D_A$ once.
+This is the marked-Poisson comparison already proved in
+Proposition~\ref{prop:general-tiers}, in the nonuniform form of
+Lemma~\ref{lem:restricted-excess}; no new comparison theorem is needed.
+
+Retained A records and earlier caps only delete complete raw arrivals.
+Preparation and continuation writers of one binary stage visit disjoint
+nodes of the expanded blank-B network, once each. Their combined shared
+stash demand is therefore at most the single complete raw excess.
+Union over its $b$ stages; empty and non-shedding operations may be
+included. At the terminal radix, the complete raw destinations are A's
+current final homes. Use the uniform current-home reference, at most
+$32M\le32T$ keys, and transfer by $D_{A,\rm current}$ once.
+
+For insertion and publication, the existing complete-home witness
+(Proposition~\ref{prop:separated-capacity} and the coordinated-drain
+argument) uses the fixed distinct logical A/B union, of size at most
+$32T$. Shared keys have one current word and are counted once. Its
+reference homes are independent uniform choices on $T$; apply
+Proposition~\ref{prop:general-tiers} to this one population, or
+Lemma~\ref{lem:restricted-excess} with $p_*=1/T$, and the subset bound.
+Transfer by $D_{\cup,\rm current}$, not by the old-map factor: insertion
+and publication depend on current union homes. Charge once at the smaller
+capacity. Neither the two inputs' physical dependence nor conditioning
+on earlier success enters the probability calculation.
+\end{proof}
+
+After the completed A route, the fixed B insertion deduplicates meeting
+keys before its capacity test, chooses each key's exact final way, and
+then offers residuals. Its total sheds are at most the complete distinct
+A/B union's current-home excess $E$. The existing coordinated-drain proof
+bounds every output-tier append prefix by the same $E$, including the
+range-only drain before final shed deduplication. Thus one event
+\[
+ E>\min(S_{\rm insert},S_{\rm output})
+\]
+covers insertion and publication. The native pool recipe gives insertion
+its own initially empty drain-only stash, separate from all A binary and
+radix stashes. B's already published tier is charged at its producer, with
+no new consumer, lane or range multiplier. These are ordinary contracts:
+tombstones remain logical records; top live-set resolution is separate.
+
+\paragraph{Native applicability.}
+The separated-source adapter checks every A bit/terminal stash once, the old
+tier, direct B-tier pages, the initially empty insertion stash and actual
+one-page DFS plan. The completed-A probability comparison applies at direct
+level-one shapes as well: its input is the completed A population, not B's
+source representation. Require $0\le I<k$ and exact public-row matching.
+Missing or stale evidence is charged one. Each digit's stage, range and
+shared insertion/output witnesses are summed before multiplying by its
+public ordinal count.
+
+\section{Published-tier sizing and the per-level profile}
+\label{sec:tier-sizing}
+For a completed non-top population with final-home counts $X_v$, the
+published tier has the full-home identity
+\[
+ T=\sum_v(X_v-64)_+.
+\]
+For any population retaining the same final home map, this sum is at least
+the overflow storage required after filling main, regardless of whether
+its distributor uses sorting or a butterfly. Better distribution does not
+make an overfull home larger.
+
+\paragraph{A direct finite-population lower witness at the top.}
+The admitted top capacity is $N=32m$ distinct live records with $m=2^{22}$
+homes; initialization explicitly permits this population. Under the ideal
+uniform-home law the occupancy vector is multinomial. For a one-bucket
+tier, the event $\sum_v(X_v-64)_+=65$ already forces failure. We bound that
+event \emph{from below in the finite multinomial law}, rather than treating
+a Poisson upper comparison as a lower bound.
+
+More generally let $C$ be main capacity, $S$ tier capacity, $t=S+1$,
+$\lambda=N/m\le C/2$, and $m>t+1$. With
+\[
+ W(z)=\sum_{e\ge1}\Prb\{\Pois(\lambda)=C+e\}z^e,
+ \qquad c_t=[z^t]\exp(mW(z)),
+\]
+consider $j\le t$ specified overloaded homes with positive excesses summing
+to $t$. Their total record count is $K=Cj+t$. Summing their multinomial
+probabilities over home choices and excess compositions differs from the
+corresponding contribution to $c_t$ by the factor
+\[
+ \frac{(m)_j}{m^j}\frac{(N)_K}{N^K}
+           e^{\lambda j}(1-j/m)^{N-K},
+\]
+where $(n)_k$ denotes a falling factorial. Let $K_*=(C+1)t$. The product
+inequality $\prod_i(1-x_i)\ge1-\sum_i x_i$, and
+$\log(1-x)\ge-x-x^2/(2(1-x))$, give the uniform lower factor
+\[
+ a=\left(1-\frac{t(t-1)}{2m}\right)
+   \left(1-\frac{K_*(K_*-1)}{2N}\right)
+   \left(1-\frac{\lambda t^2}{2(m-t)}\right),
+\]
+provided all three factors are positive. For the last factor, discard the
+positive $Kj/m$ term and use $e^{-x}\ge1-x$.
+
+Conditioned on those specified exact occupancies, the remaining
+$n=N-K$ keys choose among $m'=m-j$ homes uniformly. For every count $u$,
+\[
+ \Prb\{\Bin(n,1/m')=u\}
+ \le e^{n/(m'(m'-1))}
+         \Prb\{\Pois(n/(m'-1))=u\}.
+\]
+This follows directly from $\binom nu\le n^u/u!$ and
+$(1-1/m')^n\le e^{-n/m'}$. Since $C\ge2\lambda$, we have
+$K\ge\lambda(j+1)$ and hence $n/(m'-1)\le\lambda$. A conditional union
+bound therefore bounds the probability of \emph{any additional} overloaded
+home by
+\[
+ b=m\exp\!\left(\frac{\lambda}{m-t-1}\right)
+                  \Prb\{\Pois(\lambda)>C\}.
+\]
+When $b<1$, demand that all other homes have at most $C$ records. The
+events for different sets of overloaded homes and compositions are then
+disjoint, yielding the finite-population lower bound
+\[
+ \Prb\!\left\{\sum_v(X_v-C)_+=t\right\}\ge a(1-b)c_t.
+\]
+The code evaluates $c_t$ downward using the positive recurrence, evaluates
+$b$ upward with an explicit Poisson-series tail, and performs the final
+comparison as an exact rational inequality.
+
+For $m=2^{22}$, $N=32m$, $C=S=64$, the result is
+\[
+ \Prb\{\text{required tier size}>64\}>2^{-62}>2^{-64},
+ \qquad \text{displayed lower-bound }\log_2\approx-61.8572.
+\]
+This is a single-population obstruction, already above the entire lifetime
+target. It applies to the declared full live initialization population,
+not to every smaller workload or an estimated measured failure rate.
+Earlier algorithmic failures do not evade the storage requirement.
+Consequently bitonic sorting cannot justify reducing \emph{every}
+published tier to one bucket at the current maximum population and home
+map. A smaller population/load or a different storage design is a separate
+configuration question.
+
+The analysis and exact small-multinomial checks are in
+\path{code/analyze_tier_sizes.py}, \path{code/test_tier_sizes.py}, and
+\path{code/tier_size_analysis.json}.
+
+\paragraph{The per-level profile.} The engine sizes each level's tier by
+its own lifetime requirement for the tables it produces, a Chernoff bound
+over that level's homes and executions, kept non-decreasing below the top;
+this is the automatic sizing. A tier's width is its producer's and never
+changes over time: level $\ell$'s banks and top banks hold its own width
+and level $\ell+1$'s inboxes hold it too, so a merge reads its carry at the
+level below's width and its older operand at its own, except an adopted
+first carry, still in its inbox at its producer's width; forwards keep one
+width on both sides. Each job's bound therefore depends only on its input
+tiers' widths and its own, which are fields of its native shape key, so
+the per-job table of Appendix~\ref{sec:configuration-space} covers the
+profile with no new statement. At the default horizon the profile is
+1,1,1,1,1,2 at $2^{22}$ entries and 1,1,1,1,1,2,2 on the default ladder at
+$2^{27}$. It leaves the total bytes almost unchanged but narrows every lower
+level's pool and the tier each of its tables adds to a probe, so a probe
+touches fewer tier buckets than with one shared width. The
+engine checks each profile against the sizing, and the engine tests run
+pinned profiles of every seam's width change against a reference model.
+A pinned shared width is a different shape and is not covered by the
+artifacts.
+
+
+\section{Deterministic inventory and current ledger}
+\label{sec:deterministic-inventory}\label{prop:deterministic-inventory}
+\path{code/audit_deterministic_inventory.py} enumerates tested capacities and
+fixed extents in the engine include closure. A matching native plan assigns
+every reachable test to a component witness or a deterministic capacity.
+For direct level one the assignment is:
+\begin{center}\small
+\begin{tabular}{p{0.37\linewidth}p{0.54\linewidth}}
+\toprule
+Native test & Reference event or deterministic reason\\\midrule
+Digit-one dense drain & B complete-home excess at output-tier capacity\\
+Dense drain at $d>1$ & B complete-home excess at one producer bucket\\
+Completed-A shared stage stash & Complete raw A stage excess\\
+A-only DFS node/leaf & One completed-A coarse-range event\\
+Fixed insertion stash and lane copies & Dominated by output capacity;
+complete distinct-union excess\\
+Output append/pack prefixes & Same complete distinct-union excess\\
+Source/home-cache and mask views & Public indexed extents and copied masks\\
+\bottomrule
+\end{tabular}
+\end{center}
+Higher ordinary levels reuse completed-A separation. Binary-top preparation
+and initialization use their stage, carry/tier and final-range witnesses.
+Top finish uses retained-carry range excess and one resolved-live-set
+insertion/output event. No imported B tier receives a consumer multiplier.
+
+The audit's reviewed rules and lexical lint do not establish all semantic
+claims that a planner reads public state only. The inventory is evidence
+under those recorded assumptions. Liveness, allocations and memory safety
+outside the enumerated extents remain outside its claim. An absent or stale
+configuration section leaves its inventory line charged one.
+
+\section{Configuration-space composition}
+\label{sec:configuration-space}\label{prop:shape-key}
+A bound-table key is its role plus its complete public native row, omitting
+only the level index used in labels. It includes actual producer, older and
+output tier widths, stash capacity, digit, routing partition and direct/DFS
+mode. Direct level one additionally records the producer mode and standalone
+one-bucket B tier. Every key must match the adapter's exact source contract.
+Exposures depend on the configuration and are not part of the per-job bound.
+
+The planner space fixes $B=8$, $q=2$, $H=2^{32}$ and automatic per-level tier
+sizing, enumerates supported depths, $r_0\in\{2,4,8\}$, binary top digits
+and native half-fanout ladders, and considers $s=1,2,4$ at capacities
+$2^{15}$ through $2^{31}$. Larger capacities, other horizons, bank-first
+placement, pinned tiers and explicit non-planner ladders need matching
+applicability and inventory artifacts. A formula's validity alone does not
+establish a target comparison.
+
+The configuration-space sweep uses 401 of the bound table's 413 public
+shapes. Across the 17 capacities,
+334 of 339 candidates meet the conditional target at $s=1$, 332 of 337 at
+$s=2$, and 328 of 333 at $s=4$. Every planner default meets the target,
+and all spaces have complete native/inventory coverage with no missing job
+keys. All candidates through $2^{30}$ meet the target; at $2^{31}$ five
+$D=1$ geometries in each setting exceed it. This comparison remains
+conditional on each candidate's recorded premises.
+
+The actual A-only coarse width still must satisfy the completed-A theorem's
+$0\le I<k$ condition. Native direct A-pool plans have no distributor event.
+A larger prefix changes $U=2r_0s$ and the producer's $\Phi$ argument, and
+changes the A route's public shape; it is evaluated rather than inferred
+from the default prefix result.
+
+\path{code/bound_table.json}, the selected configuration ledgers and
+\path{code/configuration_space_2p}$n$\path{.json} (with the corresponding
+$s=2,4$ filenames) contain exact outward-rounded rational bounds.
+\path{CONFIGURATION_SPACE.md} presents their numerical outcomes.
+\path{code/export_certified_bounds.py} exports conditional target results
+with exact geometry to the planner's table. The library label ``certified''
+means a matching conditional capacity bound is at most $2^{-64}$; it does
+not discharge the checker's mathematical premises. Stale dependencies,
+missing keys and refusals fail closed. Displayed logarithms are summaries;
+acceptance uses exact rational comparisons.
+
+\section{Open applicability and reproduction}
+\label{sec:evidence}\label{sec:remaining}
+The checker retains status \texttt{unproved\_applicability} and unconditional
+upper bound one while native model/tape correspondence, trace and unshadowed
+promises, imported-comparison applicability and inventory-rule semantics
+remain open. A native geometry test or finite numerical check cannot replace
+these arguments. The complete direct-level-one reference and the ideal
+hierarchy probability chain are proved, with the scope stated in
+Section~\ref{sec:lean-current}. \path{LEAN_CLAIMS.md} states the trusted
+boundary and premises; \path{lean/README.md} explains how to build and audit
+the proofs.
+
+\path{code/README.md} maps tools to certificates and describes
+regeneration in dependency order. Source/input hashes are regenerated by
+their producers, rather than edited to accept stale computations. The direct
+producer, paused jobs, lanes, helpers, freshness and output-placement native
+regressions validate the implementation's concrete contracts. The completed-A
+and abstract-completion finite checks validate recurrences and numerical
+bounds without discharging the ideal-source laws.
+\path{COMPLETED_A_FRONTIER.md} proves the abstract deferred-mark lemma
+under explicit measurability premises. Its finite regressions distinguish
+intermediate unused suffixes from completed residual selection; the latter
+does not preserve an independent-family law.
+
+From the repository root, run:
+\begin{verbatim}
+python3 analysis/bound_certification/code/regenerate.py --dry-run
+python3 analysis/bound_certification/code/regenerate.py
+\end{verbatim}
+For report-only edits, from this directory run:
+\begin{verbatim}
+python3 code/build_report.py
+python3 code/manifest.py
+python3 code/manifest.py --check
+\end{verbatim}
+This report, the artifacts in \path{code/} and the registered Lean statements
+define the analysis.
+\end{document}

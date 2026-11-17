@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "name": "c4-native-smoke",
+  "base_seed": 4001,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "native",
+    "require_protected": false
+  },
+  "stages": [
+    {
+      "name": "correctness",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        128
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          }
+        },
+        {
+          "name": "hierarchical_incremental",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          }
+        },
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        }
+      ],
+      "batch_sizes": [
+        16
+      ]
+    },
+    {
+      "name": "correctness-std-unordered-map",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        },
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        128
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    }
+  ],
+  "repetitions": 1,
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 1000000,
+    "drain_deadline_ns": 1000000000,
+    "setup_allowance_ns": 30000000000,
+    "max_trial_ns": 60000000000
+  },
+  "limits": {
+    "max_trials": 27,
+    "max_campaign_trial_ns": 3240000000000
+  }
+}

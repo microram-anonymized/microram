@@ -1,0 +1,18 @@
+--- a/include/hash_planner.hpp
++++ b/include/hash_planner.hpp
+@@ -26,9 +26,13 @@
+     static std::string getExecutablePath()
+     {
+         char result[PATH_MAX];
+-        ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
++        ssize_t count = readlink("/proc/self/exe", result, PATH_MAX - 1);
++        // P-H7: readlink does not terminate the path; scanning from result[count] read a stale byte, and a '/'
++        // there made the "folder" the executable's own path (planner cache files then failed to open).
++        if (count < 0) count = 0;
++        result[count] = '\0';
+         // get its folder
+-        for (int i = count; i >= 0; i--)
++        for (int i = count - 1; i >= 0; i--)
+         {
+             if (result[i] == '/')
+             {

@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.build/
+code/__pycache__/
+code/tree_*.json
+code/libgmp_square.so
+code/.probe_cache/

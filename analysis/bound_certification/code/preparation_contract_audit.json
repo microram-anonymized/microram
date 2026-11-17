@@ -1,0 +1,694 @@
+{
+  "scope": "Completed non-top inputs; conditional source audit, not capacity certification",
+  "full_home_claim": "On successful completed non-top jobs, distinct main/tier keys imply a_i=min(x_i,64)",
+  "ideal_family_premise": "Independent ideal words for the complete logical key set; do not condition on selected residuals or successful capacity",
+  "ordinary_boundaries": 35,
+  "family_checks": 8960,
+  "biased_boundaries": 20,
+  "maximum_density_upper_bound": "67108864/67108843",
+  "offer_count_checks": 2870,
+  "likelihood_checks": {
+    "states": 15,
+    "density_factor": "6561/4096",
+    "biased_permutation_witness": {
+      "2,1,1": "81/512",
+      "1,1,2": "27/256"
+    }
+  },
+  "source_sha256": {
+    "analysis/bound_certification/code/audit_ordinary_ranges.py": "2b56e4cf5cb2a56dc489dae5d3eedeb1cb2aac50c7b5ee815195c4d8cd056895",
+    "analysis/bound_certification/code/audit_preparation_contract.py": "40dd49316ed6e7fce525c00d28d4a61f055ab052f40b89570c52987049514bc8",
+    "analysis/bound_certification/code/ordinary_range_probe.cpp": "b8c0d4a525fdbcdfd4eab4ef3499adb7c613df90cfa673fd67d9e4d1e62a783e",
+    "analysis/bound_certification/code/preparation_contract_probe.cpp": "c0eaa5e1b3c2d8b835abe490f4e8c903c06f3874c32f7f3178df3d98f22e04a3",
+    "src/oram/levelarena/cpu_byteslice_level_arena_geometry.hpp": "7c15bc7660f78912023a23a1c12ae05437e2c6e979f26c3f6307ae4039413d57",
+    "src/oram/levelarena/cpu_byteslice_level_arena_merge.hpp": "8a5c48f43fceee9df12310d06936afde47fa6d4a2b7d3ab8a9838de98a0192d4",
+    "src/oram/levelarena/cpu_byteslice_level_arena_pass_shape.hpp": "d323499b9bfff5502fd341952f0b2f1da490201078973ca502b18648c969accb",
+    "src/oram/levelarena/cpu_byteslice_level_arena_stash.hpp": "b316f8c668e731ee06b52cfc4022d174177810813708dac5ce0eea968348e9ff",
+    "src/oram/rebuild/cpu_byteslice_dfs_residual.hpp": "a37d058cc3994ed52d71836739e1f3e0257ef3aa6f79e8ba7df1f19fbfbcff66",
+    "src/oram/rebuild/cpu_byteslice_residual_range.hpp": "c32589da50eda79e8e1d68c43930469e66f20833d4895b34f441d435851885c1",
+    "src/oram/scheduler/cpu_byteslice_residual_pass.hpp": "b4c664474d79ad4f20aeb43abae941d36aa27685cd205e2992776c8622b8f6d5",
+    "analysis/bound_certification/code/source_scope.py": "a8cbe29b0d7866486c539e00f9dfe73337777b25b7ff88bdf7140765df8115da"
+  },
+  "boundaries": [
+    {
+      "level": 1,
+      "digit": 2,
+      "old_digit": 1,
+      "old_buckets": 16,
+      "old_low_bits": 4,
+      "old_radix": 1,
+      "population_bound": 512,
+      "out_buckets": 32,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/16",
+        "maximum_bucket_mass": "1/16",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 3,
+      "old_digit": 2,
+      "old_buckets": 32,
+      "old_low_bits": 5,
+      "old_radix": 1,
+      "population_bound": 1024,
+      "out_buckets": 48,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/32",
+        "maximum_bucket_mass": "1/32",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 4,
+      "old_digit": 3,
+      "old_buckets": 48,
+      "old_low_bits": 4,
+      "old_radix": 3,
+      "population_bound": 1536,
+      "out_buckets": 64,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+        "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/576460752303423488",
+        "joint_density_upper_bound": "1125899906842624/1125899906842621"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 5,
+      "old_digit": 4,
+      "old_buckets": 64,
+      "old_low_bits": 6,
+      "old_radix": 1,
+      "population_bound": 2048,
+      "out_buckets": 80,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/64",
+        "maximum_bucket_mass": "1/64",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 6,
+      "old_digit": 5,
+      "old_buckets": 80,
+      "old_low_bits": 4,
+      "old_radix": 5,
+      "population_bound": 2560,
+      "out_buckets": 96,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "230584300921369395/18446744073709551616",
+        "maximum_bucket_mass": "57646075230342349/4611686018427387904",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/288230376151711744",
+        "joint_density_upper_bound": "562949953421312/562949953421307"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 7,
+      "old_digit": 6,
+      "old_buckets": 96,
+      "old_low_bits": 5,
+      "old_radix": 3,
+      "population_bound": 3072,
+      "out_buckets": 112,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "96076792050570581/9223372036854775808",
+        "maximum_bucket_mass": "192153584101141163/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/576460752303423488",
+        "joint_density_upper_bound": "562949953421312/562949953421309"
+      }
+    },
+    {
+      "level": 1,
+      "digit": 8,
+      "old_digit": 7,
+      "old_buckets": 112,
+      "old_low_bits": 4,
+      "old_radix": 7,
+      "population_bound": 3584,
+      "out_buckets": 128,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "164703072086692425/18446744073709551616",
+        "maximum_bucket_mass": "82351536043346213/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/576460752303423488",
+        "joint_density_upper_bound": "1125899906842624/1125899906842603"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 2,
+      "old_digit": 1,
+      "old_buckets": 128,
+      "old_low_bits": 7,
+      "old_radix": 1,
+      "population_bound": 4096,
+      "out_buckets": 256,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/128",
+        "maximum_bucket_mass": "1/128",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 3,
+      "old_digit": 2,
+      "old_buckets": 256,
+      "old_low_bits": 8,
+      "old_radix": 1,
+      "population_bound": 8192,
+      "out_buckets": 384,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/256",
+        "maximum_bucket_mass": "1/256",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 4,
+      "old_digit": 3,
+      "old_buckets": 384,
+      "old_low_bits": 7,
+      "old_radix": 3,
+      "population_bound": 12288,
+      "out_buckets": 512,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "24019198012642645/9223372036854775808",
+        "maximum_bucket_mass": "48038396025285291/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/144115188075855872",
+        "joint_density_upper_bound": "35184372088832/35184372088829"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 5,
+      "old_digit": 4,
+      "old_buckets": 512,
+      "old_low_bits": 9,
+      "old_radix": 1,
+      "population_bound": 16384,
+      "out_buckets": 640,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/512",
+        "maximum_bucket_mass": "1/512",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 6,
+      "old_digit": 5,
+      "old_buckets": 640,
+      "old_low_bits": 7,
+      "old_radix": 5,
+      "population_bound": 20480,
+      "out_buckets": 768,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "14411518807585587/9223372036854775808",
+        "maximum_bucket_mass": "28823037615171175/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/144115188075855872",
+        "joint_density_upper_bound": "35184372088832/35184372088817"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 7,
+      "old_digit": 6,
+      "old_buckets": 768,
+      "old_low_bits": 8,
+      "old_radix": 3,
+      "population_bound": 24576,
+      "out_buckets": 896,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "24019198012642645/18446744073709551616",
+        "maximum_bucket_mass": "12009599006321323/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/36028797018963968",
+        "joint_density_upper_bound": "4398046511104/4398046511101"
+      }
+    },
+    {
+      "level": 2,
+      "digit": 8,
+      "old_digit": 7,
+      "old_buckets": 896,
+      "old_low_bits": 7,
+      "old_radix": 7,
+      "population_bound": 28672,
+      "out_buckets": 1024,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "20587884010836553/18446744073709551616",
+        "maximum_bucket_mass": "10293942005418277/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/72057594037927936",
+        "joint_density_upper_bound": "17592186044416/17592186044395"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 2,
+      "old_digit": 1,
+      "old_buckets": 1024,
+      "old_low_bits": 10,
+      "old_radix": 1,
+      "population_bound": 32768,
+      "out_buckets": 2048,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/1024",
+        "maximum_bucket_mass": "1/1024",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 3,
+      "old_digit": 2,
+      "old_buckets": 2048,
+      "old_low_bits": 11,
+      "old_radix": 1,
+      "population_bound": 65536,
+      "out_buckets": 3072,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/2048",
+        "maximum_bucket_mass": "1/2048",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 4,
+      "old_digit": 3,
+      "old_buckets": 3072,
+      "old_low_bits": 10,
+      "old_radix": 3,
+      "population_bound": 98304,
+      "out_buckets": 4096,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "6004799503160661/18446744073709551616",
+        "maximum_bucket_mass": "3002399751580331/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/9007199254740992",
+        "joint_density_upper_bound": "274877906944/274877906941"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 5,
+      "old_digit": 4,
+      "old_buckets": 4096,
+      "old_low_bits": 12,
+      "old_radix": 1,
+      "population_bound": 131072,
+      "out_buckets": 5120,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/4096",
+        "maximum_bucket_mass": "1/4096",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 6,
+      "old_digit": 5,
+      "old_buckets": 5120,
+      "old_low_bits": 10,
+      "old_radix": 5,
+      "population_bound": 163840,
+      "out_buckets": 6144,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "900719925474099/4611686018427387904",
+        "maximum_bucket_mass": "3602879701896397/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/18014398509481984",
+        "joint_density_upper_bound": "549755813888/549755813883"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 7,
+      "old_digit": 6,
+      "old_buckets": 6144,
+      "old_low_bits": 11,
+      "old_radix": 3,
+      "population_bound": 196608,
+      "out_buckets": 7168,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1501199875790165/9223372036854775808",
+        "maximum_bucket_mass": "3002399751580331/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/9007199254740992",
+        "joint_density_upper_bound": "137438953472/137438953469"
+      }
+    },
+    {
+      "level": 3,
+      "digit": 8,
+      "old_digit": 7,
+      "old_buckets": 7168,
+      "old_low_bits": 10,
+      "old_radix": 7,
+      "population_bound": 229376,
+      "out_buckets": 8192,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "2573485501354569/18446744073709551616",
+        "maximum_bucket_mass": "1286742750677285/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/9007199254740992",
+        "joint_density_upper_bound": "274877906944/274877906923"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 2,
+      "old_digit": 1,
+      "old_buckets": 8192,
+      "old_low_bits": 13,
+      "old_radix": 1,
+      "population_bound": 262144,
+      "out_buckets": 16384,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/8192",
+        "maximum_bucket_mass": "1/8192",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 3,
+      "old_digit": 2,
+      "old_buckets": 16384,
+      "old_low_bits": 14,
+      "old_radix": 1,
+      "population_bound": 524288,
+      "out_buckets": 24576,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/16384",
+        "maximum_bucket_mass": "1/16384",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 4,
+      "old_digit": 3,
+      "old_buckets": 24576,
+      "old_low_bits": 13,
+      "old_radix": 3,
+      "population_bound": 786432,
+      "out_buckets": 32768,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "375299968947541/9223372036854775808",
+        "maximum_bucket_mass": "750599937895083/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/2251799813685248",
+        "joint_density_upper_bound": "8589934592/8589934589"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 5,
+      "old_digit": 4,
+      "old_buckets": 32768,
+      "old_low_bits": 15,
+      "old_radix": 1,
+      "population_bound": 1048576,
+      "out_buckets": 40960,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/32768",
+        "maximum_bucket_mass": "1/32768",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 6,
+      "old_digit": 5,
+      "old_buckets": 40960,
+      "old_low_bits": 13,
+      "old_radix": 5,
+      "population_bound": 1310720,
+      "out_buckets": 49152,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "450359962737049/18446744073709551616",
+        "maximum_bucket_mass": "225179981368525/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/1125899906842624",
+        "joint_density_upper_bound": "4294967296/4294967291"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 7,
+      "old_digit": 6,
+      "old_buckets": 49152,
+      "old_low_bits": 14,
+      "old_radix": 3,
+      "population_bound": 1572864,
+      "out_buckets": 57344,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "375299968947541/18446744073709551616",
+        "maximum_bucket_mass": "187649984473771/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/562949953421312",
+        "joint_density_upper_bound": "1073741824/1073741821"
+      }
+    },
+    {
+      "level": 4,
+      "digit": 8,
+      "old_digit": 7,
+      "old_buckets": 57344,
+      "old_low_bits": 13,
+      "old_radix": 7,
+      "population_bound": 1835008,
+      "out_buckets": 65536,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "321685687669321/18446744073709551616",
+        "maximum_bucket_mass": "160842843834661/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/1125899906842624",
+        "joint_density_upper_bound": "4294967296/4294967275"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 2,
+      "old_digit": 1,
+      "old_buckets": 65536,
+      "old_low_bits": 16,
+      "old_radix": 1,
+      "population_bound": 2097152,
+      "out_buckets": 131072,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/65536",
+        "maximum_bucket_mass": "1/65536",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 3,
+      "old_digit": 2,
+      "old_buckets": 131072,
+      "old_low_bits": 17,
+      "old_radix": 1,
+      "population_bound": 4194304,
+      "out_buckets": 196608,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/131072",
+        "maximum_bucket_mass": "1/131072",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 4,
+      "old_digit": 3,
+      "old_buckets": 196608,
+      "old_low_bits": 16,
+      "old_radix": 3,
+      "population_bound": 6291456,
+      "out_buckets": 262144,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "93824992236885/18446744073709551616",
+        "maximum_bucket_mass": "46912496118443/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/140737488355328",
+        "joint_density_upper_bound": "67108864/67108861"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 5,
+      "old_digit": 4,
+      "old_buckets": 262144,
+      "old_low_bits": 18,
+      "old_radix": 1,
+      "population_bound": 8388608,
+      "out_buckets": 327680,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "1/262144",
+        "maximum_bucket_mass": "1/262144",
+        "exactly_uniform": true,
+        "per_key_relative_excess": "0",
+        "joint_density_upper_bound": "1"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 6,
+      "old_digit": 5,
+      "old_buckets": 327680,
+      "old_low_bits": 16,
+      "old_radix": 5,
+      "population_bound": 10485760,
+      "out_buckets": 393216,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "56294995342131/18446744073709551616",
+        "maximum_bucket_mass": "14073748835533/4611686018427387904",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/70368744177664",
+        "joint_density_upper_bound": "33554432/33554427"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 7,
+      "old_digit": 6,
+      "old_buckets": 393216,
+      "old_low_bits": 17,
+      "old_radix": 3,
+      "population_bound": 12582912,
+      "out_buckets": 458752,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "23456248059221/9223372036854775808",
+        "maximum_bucket_mass": "46912496118443/18446744073709551616",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "1/140737488355328",
+        "joint_density_upper_bound": "33554432/33554429"
+      }
+    },
+    {
+      "level": 5,
+      "digit": 8,
+      "old_digit": 7,
+      "old_buckets": 458752,
+      "old_low_bits": 16,
+      "old_radix": 7,
+      "population_bound": 14680064,
+      "out_buckets": 524288,
+      "family_checks": 256,
+      "old_home_law": {
+        "minimum_bucket_mass": "40210710958665/18446744073709551616",
+        "maximum_bucket_mass": "20105355479333/9223372036854775808",
+        "exactly_uniform": false,
+        "per_key_relative_excess": "3/140737488355328",
+        "joint_density_upper_bound": "67108864/67108843"
+      }
+    }
+  ],
+  "pooled_source_inventory": "ordinary_range_audit.json",
+  "unchanged_adoptions": [
+    {
+      "kind": "adoption",
+      "level": 2,
+      "digit": 1
+    },
+    {
+      "kind": "adoption",
+      "level": 3,
+      "digit": 1
+    },
+    {
+      "kind": "adoption",
+      "level": 4,
+      "digit": 1
+    },
+    {
+      "kind": "adoption",
+      "level": 5,
+      "digit": 1
+    }
+  ],
+  "open_obligations": [
+    "Joint A/B marks and B current-family selection in capacity tests",
+    "Engine input-history independence for old/new family words and logical key sets",
+    "Partial-job storage ledger, source failures and lifetime union bound",
+    "Joint preparation/finish stash bounds and every residual range shape"
+  ],
+  "all_checks_passed": true
+}

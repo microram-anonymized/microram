@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-width-hierarchy-wide",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 1048576,
+    "measurement_ns": 300000000000,
+    "setup_allowance_ns": 900000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 1800000000000
+  },
+  "stages": [
+    {
+      "name": "hierarchy-wide",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        },
+        {
+          "name": "k8-v4096",
+          "key_bytes": 8,
+          "value_bytes": 4096
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "hierarchy-frozen",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "branching_factor": 8,
+              "online_stash_entries": 64,
+              "prefix_flushes": 8,
+              "top_digit": 8,
+              "dense_prefixes": 2,
+              "owner_threads": 2,
+              "top_helpers": 0,
+              "rebuild_lanes": 1,
+              "bank_first": "no_clone",
+              "time_rebuild_stages": false,
+              "near_max_level": 0,
+              "batch_lanes": 16,
+              "batch_execution": "chunked_cascade",
+              "batch_participants": 1,
+              "batch_bucket_scan": false,
+              "batch_profile": false,
+              "batch_result_layout": "sliced_place_at_lane",
+              "batch_spin_ns": 1000000,
+              "owner_spin_ns": 1000000,
+              "park_retry_us": 1000,
+              "wait_limit_ms": 120000
+            }
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-width-k8-2p20"
+    }
+  ],
+  "limits": {
+    "max_trials": 2,
+    "max_campaign_trial_ns": 604800000000000
+  }
+}

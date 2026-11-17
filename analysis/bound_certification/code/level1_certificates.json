@@ -1,0 +1,1786 @@
+{
+  "scope": "Conditional dense-direct L1: producer excess, completed A, output excess.\n\nUses fixed unfiltered logical populations and never conditions a tail law on\nproducer success. A and B share the current family; no independent carry\nselection law is imported. This covers the native direct level-one path.\n",
+  "ladder": "uniform",
+  "configuration": {
+    "branching": 8,
+    "levels": 6,
+    "top_digit": 8,
+    "prefix_flushes": 8,
+    "stash_buckets": 1,
+    "dense_prefixes": 2,
+    "tier_buckets": 0,
+    "horizon_accesses": 4294967296,
+    "sorted_top_prepare": false,
+    "separated_sources": true,
+    "top_prepare_dfs": true,
+    "target_exact": "1/18446744073709551616",
+    "level_fanouts": []
+  },
+  "backend": "dense-direct-v1",
+  "level_one_fanout": 8,
+  "cases": [
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 1,
+        "carry_bits": 4,
+        "block_bits": 4,
+        "radix": 1,
+        "out_buckets": 16,
+        "main_bits": 4,
+        "pool_buckets": 0,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 0,
+        "index_bits": 4,
+        "range_buckets": 1,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": false,
+        "dfs": false,
+        "direct_buckets": 0,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "no_separate_producer",
+        "probability_upper_decimal": "0",
+        "approximate_log2_for_display_only": null
+      },
+      "stages": {
+        "name": "no_A_route",
+        "probability_upper_decimal": "0",
+        "approximate_log2_for_display_only": null
+      },
+      "ranges": {
+        "name": "no_A_range",
+        "probability_upper_decimal": "0",
+        "approximate_log2_for_display_only": null
+      },
+      "range_sources": [],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "1/16",
+          "maximum_bucket_mass": "1/16",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": false,
+      "exposures": 1048577,
+      "per_job_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 2,
+        "carry_bits": 4,
+        "block_bits": 5,
+        "radix": 1,
+        "out_buckets": 32,
+        "main_bits": 5,
+        "pool_buckets": 7,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 5,
+        "index_bits": 0,
+        "range_buckets": 32,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "6.26712073411271798061922333375507221211723979963697251806532315470870370624954208963337355E-35",
+        "certified_power_of_two_exponent": 113,
+        "approximate_log2_for_display_only": -113.61968053459691,
+        "binary_stage_count": 5,
+        "binary_per_stage_upper": "1.25342414682254359612384466675101444242344795992739450361306463094174074124990841792667471E-35",
+        "radix_upper": "0",
+        "capacity_slots": 64,
+        "padded_destinations": 32,
+        "old_map_law": {
+          "minimum_bucket_mass": "1/16",
+          "maximum_bucket_mass": "1/16",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "1/32",
+          "maximum_bucket_mass": "1/32",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "5.96628603651578967224573727917826142947922961022500202223409540212925840445694930951978519E-34",
+        "certified_power_of_two_exponent": 110,
+        "approximate_log2_for_display_only": -110.36872208095267,
+        "k": 4,
+        "digit": 2,
+        "index_bits": 0,
+        "depth": 5,
+        "early_cap": 64,
+        "density_exact": "1",
+        "radix_classes": [
+          {
+            "q_exact": "1",
+            "multiplicity": 1,
+            "truncation_upper": "1.19581737901231567081073803129217261977512716628056789305737881709828172077306013856766300E-66",
+            "column_upper": "1.86446438641118427257679289974320669671225925319531313194815481316539325139279665922493287E-35",
+            "finite_positive_series": "1.86446438641118427257679289974308711497376078801645921545655344030541110630386032505912762E-35",
+            "series_tail_upper": "5.97233611772842688472155598004632372308277376499504770632618778306911862111587161425579822E-75",
+            "truncated_process_stoploss_upper": "1.86446438641118427257679289974308711497435802162823205814502559590341573867616860243562713E-35"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 5
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "1.25342414682254359612384466675101444242344795992739450361306463094174074124990841792667471E-35",
+        "certified_power_of_two_exponent": 115,
+        "approximate_log2_for_display_only": -115.94160862948428,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "1/32",
+          "maximum_bucket_mass": "1/32",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 3,
+        "carry_bits": 4,
+        "block_bits": 4,
+        "radix": 3,
+        "out_buckets": 48,
+        "main_bits": 6,
+        "pool_buckets": 7,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 0,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "1.33378172056435123558056315520309694747983005284571966151350930635602836734817252274535562E-34",
+        "certified_power_of_two_exponent": 112,
+        "approximate_log2_for_display_only": -112.53003264392534,
+        "binary_stage_count": 4,
+        "binary_per_stage_upper": "2.66756344112870152345221367379724297707872187016544853073951428033268195548969450521780360E-35",
+        "radix_upper": "2.66756344112870626199677685684199756648341304779540249217703594222955585152294720658234172E-35",
+        "capacity_slots": 64,
+        "padded_destinations": 48,
+        "old_map_law": {
+          "minimum_bucket_mass": "1/32",
+          "maximum_bucket_mass": "1/32",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+          "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "562949953421312/562949953421311"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "1.53751263319271951923330440569244062777730869822586343406529652403083467035038390058640500E-34",
+        "certified_power_of_two_exponent": 112,
+        "approximate_log2_for_display_only": -112.32495696155935,
+        "k": 4,
+        "digit": 3,
+        "index_bits": 0,
+        "depth": 4,
+        "early_cap": 64,
+        "density_exact": "1",
+        "radix_classes": [
+          {
+            "q_exact": "192153584101141163/576460752303423488",
+            "multiplicity": 1,
+            "truncation_upper": "1.45667588200429457235903072374993294685333378440547421230850385426914277442511240390716009E-66",
+            "column_upper": "3.20315131915149954196971943362548762155131887269036503909179325694513436763839440965045693E-36",
+            "finite_positive_series": "3.20315131915149954196971943362403094566619597162146871650696473777526619644604948208854658E-36",
+            "series_tail_upper": "3.11860649653729186107858622301483740793945334960183381525037638264193258202587688646710487E-75",
+            "truncated_process_stoploss_upper": "3.20315131915149954196971943362403094566931457811800600836804332399828103385398893543814842E-36"
+          },
+          {
+            "q_exact": "384307168202282325/1152921504606846976",
+            "multiplicity": 2,
+            "truncation_upper": "1.45667588200429455935024533394789191881065116282715479951539175324797998541403515597196911E-66",
+            "column_upper": "3.20315131915149872661921655097613315102843024561064071190815500912379116102575248450728713E-36",
+            "finite_positive_series": "3.20315131915149872661921655097467647514330734455475317472372821411908671287425157278096398E-36",
+            "series_tail_upper": "3.11860649653729185047890308589379698867375692680774263246071913290343100751338627821666216E-75",
+            "truncated_process_stoploss_upper": "3.20315131915149872661921655097467647514642595105129046657420711720498050986292532970777173E-36"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 4
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "2.66756344112870863126905844837068787071846845879809233336310517592966536486926260392145998E-35",
+        "certified_power_of_two_exponent": 114,
+        "approximate_log2_for_display_only": -114.8519607388127,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+          "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "1125899906842624/1125899906842621"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 4,
+        "carry_bits": 4,
+        "block_bits": 6,
+        "radix": 1,
+        "out_buckets": 64,
+        "main_bits": 6,
+        "pool_buckets": 8,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 0,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "2.76610232082754089590200150359102115351031925771832730241935692474352753020724626836886791E-34",
+        "certified_power_of_two_exponent": 111,
+        "approximate_log2_for_display_only": -111.47770070199566,
+        "binary_stage_count": 6,
+        "binary_per_stage_upper": "4.61017053471256815983666917265170192251719876286387883736559487457254588367874378061477985E-35",
+        "radix_upper": "0",
+        "capacity_slots": 64,
+        "padded_destinations": 64,
+        "old_map_law": {
+          "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+          "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "1125899906842624/1125899906842621"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "1/64",
+          "maximum_bucket_mass": "1/64",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "8.25590108979229928955885570122544887305063951550312701214713118406274455995426452687798678E-35",
+        "certified_power_of_two_exponent": 113,
+        "approximate_log2_for_display_only": -113.22205763446814,
+        "k": 4,
+        "digit": 4,
+        "index_bits": 0,
+        "depth": 6,
+        "early_cap": 64,
+        "density_exact": "1125899906842624/1125899906842621",
+        "radix_classes": [
+          {
+            "q_exact": "1",
+            "multiplicity": 1,
+            "truncation_upper": "1.70472483683245553267095800999356365596965271705286869653348489595189577776619706884789291E-66",
+            "column_upper": "1.28998454528004332678426661006674668341590166401095784510722978061352536943715725289487135E-36",
+            "finite_positive_series": "1.28998454528004332678426661006504195857682125395125793093397307909204707825671152474391705E-36",
+            "series_tail_upper": "2.24795452702895616326313786550863846339285945442080057046956654339403944269034596887844169E-75",
+            "truncated_process_stoploss_upper": "1.28998454528004332678426661006504195857906920847828688709723621695755571672010438419833786E-36"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 6
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "4.61017053471255587587472896538132880926415699475839639069757414689756036045567254952318236E-35",
+        "certified_power_of_two_exponent": 114,
+        "approximate_log2_for_display_only": -114.06266320271682,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "1/64",
+          "maximum_bucket_mass": "1/64",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 5,
+        "carry_bits": 4,
+        "block_bits": 4,
+        "radix": 5,
+        "out_buckets": 80,
+        "main_bits": 7,
+        "pool_buckets": 7,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 1,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "3.54194236134272843951420147260790031463887340071470338876899333461376153733622276107342582E-34",
+        "certified_power_of_two_exponent": 111,
+        "approximate_log2_for_display_only": -111.12101449112217,
+        "binary_stage_count": 4,
+        "binary_per_stage_upper": "7.08388472268544681222274161295223755972013528834900763101677916930692547219464886650762073E-35",
+        "radix_upper": "7.08388472268549714625104827427005290750819285375100336362281666890991348458363214470377511E-35",
+        "capacity_slots": 64,
+        "padded_destinations": 80,
+        "old_map_law": {
+          "minimum_bucket_mass": "1/64",
+          "maximum_bucket_mass": "1/64",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "230584300921369395/18446744073709551616",
+          "maximum_bucket_mass": "57646075230342349/4611686018427387904",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/288230376151711744",
+          "joint_density_upper_bound": "140737488355328/140737488355327"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "3.84893145497248990258725833314503778144859982860190324662716855884094657615097824375524853E-32",
+        "certified_power_of_two_exponent": 104,
+        "approximate_log2_for_display_only": -104.35724105775186,
+        "k": 4,
+        "digit": 5,
+        "index_bits": 1,
+        "depth": 3,
+        "early_cap": 128,
+        "density_exact": "1",
+        "radix_classes": [
+          {
+            "q_exact": "57646075230342349/288230376151711744",
+            "multiplicity": 1,
+            "truncation_upper": "2.57730169831647974920545770501278682218211210850261426136033030692361897774741541237365708E-66",
+            "column_upper": "9.62232863743122793988416897564003021933158712358541306592387267650623974058768977364440520E-34",
+            "finite_positive_series": "9.62232863743122793988416897564000444631440739345018817345565626042131310123190855097062490E-34",
+            "series_tail_upper": "1.96565337732837891166288216704818234696196531166685358808814576281668442508376973227771174E-74",
+            "truncated_process_stoploss_upper": "9.62232863743122793988416897564000444631460395878792101134682254863801791946660474750179159E-34"
+          },
+          {
+            "q_exact": "230584300921369395/1152921504606846976",
+            "multiplicity": 4,
+            "truncation_upper": "2.57730169831647970324661368399372170066780715514118848476947280421698992858608780739905154E-66",
+            "column_upper": "9.62232863743122396061414004716823551219397768348459437922893357725139811532488456832405034E-34",
+            "finite_positive_series": "9.62232863743122396061414004716820973917679795334982907520358884623841615331508631398055309E-34",
+            "series_tail_upper": "1.96565337732837888504793795975283938246842458649541584321796254183030946129904344565885697E-74",
+            "truncated_process_stoploss_upper": "9.62232863743122396061414004716820973917699451868756191309209364003439143725333315643920264E-34"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 3
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "7.08388472268550972975812493971127073875158778698629669538421397962070167081701632536833267E-35",
+        "certified_power_of_two_exponent": 113,
+        "approximate_log2_for_display_only": -113.44294258600952,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "230584300921369395/18446744073709551616",
+          "maximum_bucket_mass": "57646075230342349/4611686018427387904",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/288230376151711744",
+          "joint_density_upper_bound": "562949953421312/562949953421307"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 6,
+        "carry_bits": 4,
+        "block_bits": 5,
+        "radix": 3,
+        "out_buckets": 96,
+        "main_bits": 7,
+        "pool_buckets": 8,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 1,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "6.05480816729241585732811237504380519431905189546341815529866511301557333134294515511655947E-34",
+        "certified_power_of_two_exponent": 110,
+        "approximate_log2_for_display_only": -110.3474739740096,
+        "binary_stage_count": 5,
+        "binary_per_stage_upper": "1.00913469454873672313106728656525421115300480205818620993593010834072432738528344518620510E-34",
+        "radix_upper": "1.00913469454873224167277594221753413855402788517248710561901457131195169441652792918553397E-34",
+        "capacity_slots": 64,
+        "padded_destinations": 96,
+        "old_map_law": {
+          "minimum_bucket_mass": "230584300921369395/18446744073709551616",
+          "maximum_bucket_mass": "57646075230342349/4611686018427387904",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/288230376151711744",
+          "joint_density_upper_bound": "562949953421312/562949953421307"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "96076792050570581/9223372036854775808",
+          "maximum_bucket_mass": "192153584101141163/18446744073709551616",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "1125899906842624/1125899906842619"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "1.18212219064526811708342187772126957760756791889720757094556675594689891181711617235353921E-32",
+        "certified_power_of_two_exponent": 106,
+        "approximate_log2_for_display_only": -106.06031986828555,
+        "k": 4,
+        "digit": 6,
+        "index_bits": 1,
+        "depth": 4,
+        "early_cap": 128,
+        "density_exact": "562949953421312/562949953421307",
+        "radix_classes": [
+          {
+            "q_exact": "192153584101141163/576460752303423488",
+            "multiplicity": 2,
+            "truncation_upper": "2.91335176400858914471806144749986589370666756881094842461700770853828554885022480781432018E-66",
+            "column_upper": "2.46275456384428711423475481856791290242834236437319720132010097949038634711097408778745160E-34",
+            "finite_positive_series": "2.46275456384428711423475481856788376891058557797681153082663651470280841983796877323241388E-34",
+            "series_tail_upper": "1.16700504938489878989466128640860597317205070791537047546234800595366441779086321525508685E-74",
+            "truncated_process_stoploss_upper": "2.46275456384428711423475481856788376891070227848175002070562598083144928043528597830320542E-34"
+          },
+          {
+            "q_exact": "96076792050570581/288230376151711744",
+            "multiplicity": 1,
+            "truncation_upper": "2.91335176400858909268291988829171257163131008861824372760974875943133397944465998717415016E-66",
+            "column_upper": "2.46275456384428588233817836334714400802679927022677681247729054520703014500994109432374841E-34",
+            "finite_positive_series": "2.46275456384428588233817836334711487450904248383091149340100475311210715756712735149892191E-34",
+            "series_tail_upper": "1.16700504938489877402874969206674341927560387550397142399938494875522998827658183391590969E-74",
+            "truncated_process_stoploss_upper": "2.46275456384428588233817836334711487450915918433584998327840762808131383190905491188647231E-34"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 4
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "1.00913469454873313796443421108389388543929665464440422471769696646476917460174658967362343E-34",
+        "certified_power_of_two_exponent": 112,
+        "approximate_log2_for_display_only": -112.93243647473076,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "96076792050570581/9223372036854775808",
+          "maximum_bucket_mass": "192153584101141163/18446744073709551616",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "562949953421312/562949953421309"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 7,
+        "carry_bits": 4,
+        "block_bits": 4,
+        "radix": 7,
+        "out_buckets": 112,
+        "main_bits": 7,
+        "pool_buckets": 7,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 1,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "6.81759989463006572485976408179172419545260640005656966048459473222402626118806082685079466E-34",
+        "certified_power_of_two_exponent": 110,
+        "approximate_log2_for_display_only": -110.17629129183923,
+        "binary_stage_count": 4,
+        "binary_per_stage_upper": "1.36351997892601023845430454738747705663380375432372319729540782681645755210624647602864518E-34",
+        "radix_upper": "1.36351997892602477104254589224181596891739138276167687130296342495819605276307492273621394E-34",
+        "capacity_slots": 64,
+        "padded_destinations": 112,
+        "old_map_law": {
+          "minimum_bucket_mass": "96076792050570581/9223372036854775808",
+          "maximum_bucket_mass": "192153584101141163/18446744073709551616",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "1/576460752303423488",
+          "joint_density_upper_bound": "562949953421312/562949953421309"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "164703072086692425/18446744073709551616",
+          "maximum_bucket_mass": "82351536043346213/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "3/576460752303423488",
+          "joint_density_upper_bound": "562949953421312/562949953421303"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "5.10163778829182702841245403546306665578036559391584121671730266521695487642850756527834294E-33",
+        "certified_power_of_two_exponent": 107,
+        "approximate_log2_for_display_only": -107.27266665876071,
+        "k": 4,
+        "digit": 7,
+        "index_bits": 1,
+        "depth": 3,
+        "early_cap": 128,
+        "density_exact": "562949953421312/562949953421309",
+        "radix_classes": [
+          {
+            "q_exact": "82351536043346213/576460752303423488",
+            "multiplicity": 1,
+            "truncation_upper": "3.03737918007198061810432653410029609597179161323684829562711751615669750966076780816886196E-66",
+            "column_upper": "9.11006747909250430431638821220471900214276956288221911320165618778812320272113190514856830E-35",
+            "finite_positive_series": "9.11006747909250430431638821220441526422395927111271528394688999949102126964589039243634828E-35",
+            "series_tail_upper": "8.03093707693396601356158687504753913917827882657295772646591746685583567604686071001383460E-75",
+            "truncated_process_stoploss_upper": "9.11006747909250430431638821220441526422476236482040868054824615817852602355980822031900558E-35"
+          },
+          {
+            "q_exact": "164703072086692425/1152921504606846976",
+            "multiplicity": 6,
+            "truncation_upper": "3.03737918007198055842260944217441886110024798874914739208349332636520880120761206239008662E-66",
+            "column_upper": "9.11006747909249895224918927838498711256803216500642980099592366049270947955208458192959800E-35",
+            "finite_positive_series": "9.11006747909249895224918927838468337464922187324289414346130047412504956472665724837590022E-35",
+            "series_tail_upper": "8.03093707693396590405744481549890026552418814489421627010214234378058046405982073096816704E-75",
+            "truncated_process_stoploss_upper": "9.11006747909249895224918927838468337465002496695058754005170621860659945475320966719038965E-35"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 3
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "1.36351997892602840418960622850380393920710279847422516257221232492415002277101110032175612E-34",
+        "certified_power_of_two_exponent": 112,
+        "approximate_log2_for_display_only": -112.49821938672657,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "164703072086692425/18446744073709551616",
+          "maximum_bucket_mass": "82351536043346213/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "3/576460752303423488",
+          "joint_density_upper_bound": "1125899906842624/1125899906842603"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shape": {
+        "kind": "ordinary",
+        "level": 1,
+        "digit": 8,
+        "carry_bits": 4,
+        "block_bits": 7,
+        "radix": 1,
+        "out_buckets": 128,
+        "main_bits": 7,
+        "pool_buckets": 9,
+        "stash_buckets": 1,
+        "tier_buckets": 1,
+        "dense_bits": 4,
+        "range_bits": 6,
+        "index_bits": 1,
+        "range_buckets": 64,
+        "groups": 1,
+        "scatter_per_bucket": 64,
+        "separated_sources": true,
+        "dfs": true,
+        "direct_buckets": 1,
+        "older_tier_buckets": 1,
+        "carry_tier_buckets": 1,
+        "dense_direct": true,
+        "merge_stash_buckets": 1
+      },
+      "backend": "dense-direct-v1",
+      "dense": {
+        "name": "direct_B_producer_excess",
+        "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+        "certified_power_of_two_exponent": 117,
+        "approximate_log2_for_display_only": -117.72106046931992,
+        "capacity_slots": 64,
+        "logical_population_upper": 512,
+        "same_current_family": true,
+        "backend": "dense-direct-v1"
+      },
+      "stages": {
+        "name": "completed_A_route_stashes",
+        "probability_upper_decimal": "1.24026612403551577617665846399841592138943675573034358433898648523686859019160095542570463E-33",
+        "certified_power_of_two_exponent": 109,
+        "approximate_log2_for_display_only": -109.31297741822502,
+        "binary_stage_count": 7,
+        "binary_per_stage_upper": "1.77180874862216539453808351999773703055633822247191940619855212176695512884514422203672089E-34",
+        "radix_upper": "0",
+        "capacity_slots": 64,
+        "padded_destinations": 128,
+        "old_map_law": {
+          "minimum_bucket_mass": "164703072086692425/18446744073709551616",
+          "maximum_bucket_mass": "82351536043346213/9223372036854775808",
+          "exactly_uniform": false,
+          "per_key_relative_excess": "3/576460752303423488",
+          "joint_density_upper_bound": "1125899906842624/1125899906842603"
+        },
+        "current_A_map_law": {
+          "minimum_bucket_mass": "1/128",
+          "maximum_bucket_mass": "1/128",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        }
+      },
+      "ranges": {
+        "name": "completed_A_ranges",
+        "probability_upper_decimal": "2.73431500214924594588177262872800247774478374910831467312479792650312734951221012951426951E-33",
+        "certified_power_of_two_exponent": 108,
+        "approximate_log2_for_display_only": -108.17244767551514,
+        "k": 4,
+        "digit": 8,
+        "index_bits": 1,
+        "depth": 6,
+        "early_cap": 128,
+        "density_exact": "1125899906842624/1125899906842603",
+        "radix_classes": [
+          {
+            "q_exact": "1",
+            "multiplicity": 1,
+            "truncation_upper": "3.40944967366491106534191601998712731193930543410573739306696979190379155553239413769578582E-66",
+            "column_upper": "4.27236719085811710332913067535993999416332770733629605691631378505379604102901328726210695E-35",
+            "finite_positive_series": "4.27236719085811710332913067535959904919535486170843153888364259600552319349219617236530488E-35",
+            "series_tail_upper": "6.06354521330326430672476317078916993406541157495360626327128518915453423052791834314319083E-75",
+            "truncated_process_stoploss_upper": "4.27236719085811710332913067535959904919596121622976186531431507232260211048560271352280025E-35"
+          }
+        ]
+      },
+      "range_sources": [
+        {
+          "roots": [
+            {
+              "depth": 6
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "name": "merge_shed_and_output_excess",
+        "probability_upper_decimal": "1.77180874862213234720990191608043143311302140889225445117108424733366151831341236240459500E-34",
+        "certified_power_of_two_exponent": 112,
+        "approximate_log2_for_display_only": -112.12033234028264,
+        "capacity_slots": 64,
+        "current_union_map_law": {
+          "minimum_bucket_mass": "1/128",
+          "maximum_bucket_mass": "1/128",
+          "exactly_uniform": true,
+          "per_key_relative_excess": "0",
+          "joint_density_upper_bound": "1"
+        },
+        "merge_stash_capacity_slots": 64,
+        "charged_once": true,
+        "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+      },
+      "final_shed_and_publication_charged_once": true,
+      "exposures": 1048576,
+      "per_job_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "native_inventory": [
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 1,
+      "carry_bits": 4,
+      "block_bits": 4,
+      "radix": 1,
+      "out_buckets": 16,
+      "main_bits": 4,
+      "pool_buckets": 0,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 0,
+      "index_bits": 4,
+      "range_buckets": 1,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": false,
+      "dfs": false,
+      "direct_buckets": 0,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 2,
+      "carry_bits": 4,
+      "block_bits": 5,
+      "radix": 1,
+      "out_buckets": 32,
+      "main_bits": 5,
+      "pool_buckets": 7,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 5,
+      "index_bits": 0,
+      "range_buckets": 32,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 3,
+      "carry_bits": 4,
+      "block_bits": 4,
+      "radix": 3,
+      "out_buckets": 48,
+      "main_bits": 6,
+      "pool_buckets": 7,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 0,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 4,
+      "carry_bits": 4,
+      "block_bits": 6,
+      "radix": 1,
+      "out_buckets": 64,
+      "main_bits": 6,
+      "pool_buckets": 8,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 0,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 5,
+      "carry_bits": 4,
+      "block_bits": 4,
+      "radix": 5,
+      "out_buckets": 80,
+      "main_bits": 7,
+      "pool_buckets": 7,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 1,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 6,
+      "carry_bits": 4,
+      "block_bits": 5,
+      "radix": 3,
+      "out_buckets": 96,
+      "main_bits": 7,
+      "pool_buckets": 8,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 1,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 7,
+      "carry_bits": 4,
+      "block_bits": 4,
+      "radix": 7,
+      "out_buckets": 112,
+      "main_bits": 7,
+      "pool_buckets": 7,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 1,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    },
+    {
+      "kind": "ordinary",
+      "level": 1,
+      "digit": 8,
+      "carry_bits": 4,
+      "block_bits": 7,
+      "radix": 1,
+      "out_buckets": 128,
+      "main_bits": 7,
+      "pool_buckets": 9,
+      "stash_buckets": 1,
+      "tier_buckets": 1,
+      "dense_bits": 4,
+      "range_bits": 6,
+      "index_bits": 1,
+      "range_buckets": 64,
+      "groups": 1,
+      "scatter_per_bucket": 64,
+      "separated_sources": true,
+      "dfs": true,
+      "direct_buckets": 1,
+      "older_tier_buckets": 1,
+      "carry_tier_buckets": 1,
+      "dense_direct": true,
+      "merge_stash_buckets": 1
+    }
+  ],
+  "lifetime_subtotal_exact": "3299532859066600529866060932379471121816165379738838693309208317294656848287564961527585494284690973/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "lifetime_subtotal": {
+    "name": "level_one_complete",
+    "probability_upper_decimal": "6.59906571813320105973212186475894224363233075947767738661841663458931369657512992305517099E-26",
+    "certified_power_of_two_exponent": 83,
+    "approximate_log2_for_display_only": -83.64786868187711
+  },
+  "configuration_gate": {
+    "branching": 8,
+    "levels": 6,
+    "prefix_flushes": 8,
+    "dense_prefixes": 2,
+    "separated_sources": true,
+    "level_fanouts": []
+  },
+  "additional_configurations": [
+    {
+      "ladder": "half_fanout",
+      "configuration": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "backend": "dense-direct-v1",
+      "level_one_fanout": 4,
+      "cases": [
+        {
+          "shape": {
+            "kind": "ordinary",
+            "level": 1,
+            "digit": 1,
+            "carry_bits": 4,
+            "block_bits": 4,
+            "radix": 1,
+            "out_buckets": 16,
+            "main_bits": 4,
+            "pool_buckets": 0,
+            "stash_buckets": 1,
+            "tier_buckets": 1,
+            "dense_bits": 4,
+            "range_bits": 0,
+            "index_bits": 4,
+            "range_buckets": 1,
+            "groups": 1,
+            "scatter_per_bucket": 64,
+            "separated_sources": false,
+            "dfs": false,
+            "direct_buckets": 0,
+            "older_tier_buckets": 1,
+            "carry_tier_buckets": 1,
+            "dense_direct": true,
+            "merge_stash_buckets": 1
+          },
+          "backend": "dense-direct-v1",
+          "dense": {
+            "name": "no_separate_producer",
+            "probability_upper_decimal": "0",
+            "approximate_log2_for_display_only": null
+          },
+          "stages": {
+            "name": "no_A_route",
+            "probability_upper_decimal": "0",
+            "approximate_log2_for_display_only": null
+          },
+          "ranges": {
+            "name": "no_A_range",
+            "probability_upper_decimal": "0",
+            "approximate_log2_for_display_only": null
+          },
+          "range_sources": [],
+          "packing": {
+            "name": "merge_shed_and_output_excess",
+            "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+            "certified_power_of_two_exponent": 117,
+            "approximate_log2_for_display_only": -117.72106046931992,
+            "capacity_slots": 64,
+            "current_union_map_law": {
+              "minimum_bucket_mass": "1/16",
+              "maximum_bucket_mass": "1/16",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            },
+            "merge_stash_capacity_slots": 64,
+            "charged_once": true,
+            "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+          },
+          "final_shed_and_publication_charged_once": false,
+          "exposures": 2097153,
+          "per_job_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "shape": {
+            "kind": "ordinary",
+            "level": 1,
+            "digit": 2,
+            "carry_bits": 4,
+            "block_bits": 5,
+            "radix": 1,
+            "out_buckets": 32,
+            "main_bits": 5,
+            "pool_buckets": 7,
+            "stash_buckets": 1,
+            "tier_buckets": 1,
+            "dense_bits": 4,
+            "range_bits": 5,
+            "index_bits": 0,
+            "range_buckets": 32,
+            "groups": 1,
+            "scatter_per_bucket": 64,
+            "separated_sources": true,
+            "dfs": true,
+            "direct_buckets": 1,
+            "older_tier_buckets": 1,
+            "carry_tier_buckets": 1,
+            "dense_direct": true,
+            "merge_stash_buckets": 1
+          },
+          "backend": "dense-direct-v1",
+          "dense": {
+            "name": "direct_B_producer_excess",
+            "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+            "certified_power_of_two_exponent": 117,
+            "approximate_log2_for_display_only": -117.72106046931992,
+            "capacity_slots": 64,
+            "logical_population_upper": 512,
+            "same_current_family": true,
+            "backend": "dense-direct-v1"
+          },
+          "stages": {
+            "name": "completed_A_route_stashes",
+            "probability_upper_decimal": "6.26712073411271798061922333375507221211723979963697251806532315470870370624954208963337355E-35",
+            "certified_power_of_two_exponent": 113,
+            "approximate_log2_for_display_only": -113.61968053459691,
+            "binary_stage_count": 5,
+            "binary_per_stage_upper": "1.25342414682254359612384466675101444242344795992739450361306463094174074124990841792667471E-35",
+            "radix_upper": "0",
+            "capacity_slots": 64,
+            "padded_destinations": 32,
+            "old_map_law": {
+              "minimum_bucket_mass": "1/16",
+              "maximum_bucket_mass": "1/16",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            },
+            "current_A_map_law": {
+              "minimum_bucket_mass": "1/32",
+              "maximum_bucket_mass": "1/32",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            }
+          },
+          "ranges": {
+            "name": "completed_A_ranges",
+            "probability_upper_decimal": "5.96628603651578967224573727917826142947922961022500202223409540212925840445694930951978519E-34",
+            "certified_power_of_two_exponent": 110,
+            "approximate_log2_for_display_only": -110.36872208095267,
+            "k": 4,
+            "digit": 2,
+            "index_bits": 0,
+            "depth": 5,
+            "early_cap": 64,
+            "density_exact": "1",
+            "radix_classes": [
+              {
+                "q_exact": "1",
+                "multiplicity": 1,
+                "truncation_upper": "1.19581737901231567081073803129217261977512716628056789305737881709828172077306013856766300E-66",
+                "column_upper": "1.86446438641118427257679289974320669671225925319531313194815481316539325139279665922493287E-35",
+                "finite_positive_series": "1.86446438641118427257679289974308711497376078801645921545655344030541110630386032505912762E-35",
+                "series_tail_upper": "5.97233611772842688472155598004632372308277376499504770632618778306911862111587161425579822E-75",
+                "truncated_process_stoploss_upper": "1.86446438641118427257679289974308711497435802162823205814502559590341573867616860243562713E-35"
+              }
+            ]
+          },
+          "range_sources": [
+            {
+              "roots": [
+                {
+                  "depth": 5
+                }
+              ]
+            }
+          ],
+          "packing": {
+            "name": "merge_shed_and_output_excess",
+            "probability_upper_decimal": "1.25342414682254359612384466675101444242344795992739450361306463094174074124990841792667471E-35",
+            "certified_power_of_two_exponent": 115,
+            "approximate_log2_for_display_only": -115.94160862948428,
+            "capacity_slots": 64,
+            "current_union_map_law": {
+              "minimum_bucket_mass": "1/32",
+              "maximum_bucket_mass": "1/32",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            },
+            "merge_stash_capacity_slots": 64,
+            "charged_once": true,
+            "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+          },
+          "final_shed_and_publication_charged_once": true,
+          "exposures": 2097152,
+          "per_job_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "shape": {
+            "kind": "ordinary",
+            "level": 1,
+            "digit": 3,
+            "carry_bits": 4,
+            "block_bits": 4,
+            "radix": 3,
+            "out_buckets": 48,
+            "main_bits": 6,
+            "pool_buckets": 7,
+            "stash_buckets": 1,
+            "tier_buckets": 1,
+            "dense_bits": 4,
+            "range_bits": 6,
+            "index_bits": 0,
+            "range_buckets": 64,
+            "groups": 1,
+            "scatter_per_bucket": 64,
+            "separated_sources": true,
+            "dfs": true,
+            "direct_buckets": 1,
+            "older_tier_buckets": 1,
+            "carry_tier_buckets": 1,
+            "dense_direct": true,
+            "merge_stash_buckets": 1
+          },
+          "backend": "dense-direct-v1",
+          "dense": {
+            "name": "direct_B_producer_excess",
+            "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+            "certified_power_of_two_exponent": 117,
+            "approximate_log2_for_display_only": -117.72106046931992,
+            "capacity_slots": 64,
+            "logical_population_upper": 512,
+            "same_current_family": true,
+            "backend": "dense-direct-v1"
+          },
+          "stages": {
+            "name": "completed_A_route_stashes",
+            "probability_upper_decimal": "1.33378172056435123558056315520309694747983005284571966151350930635602836734817252274535562E-34",
+            "certified_power_of_two_exponent": 112,
+            "approximate_log2_for_display_only": -112.53003264392534,
+            "binary_stage_count": 4,
+            "binary_per_stage_upper": "2.66756344112870152345221367379724297707872187016544853073951428033268195548969450521780360E-35",
+            "radix_upper": "2.66756344112870626199677685684199756648341304779540249217703594222955585152294720658234172E-35",
+            "capacity_slots": 64,
+            "padded_destinations": 48,
+            "old_map_law": {
+              "minimum_bucket_mass": "1/32",
+              "maximum_bucket_mass": "1/32",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            },
+            "current_A_map_law": {
+              "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+              "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+              "exactly_uniform": false,
+              "per_key_relative_excess": "1/576460752303423488",
+              "joint_density_upper_bound": "562949953421312/562949953421311"
+            }
+          },
+          "ranges": {
+            "name": "completed_A_ranges",
+            "probability_upper_decimal": "1.53751263319271951923330440569244062777730869822586343406529652403083467035038390058640500E-34",
+            "certified_power_of_two_exponent": 112,
+            "approximate_log2_for_display_only": -112.32495696155935,
+            "k": 4,
+            "digit": 3,
+            "index_bits": 0,
+            "depth": 4,
+            "early_cap": 64,
+            "density_exact": "1",
+            "radix_classes": [
+              {
+                "q_exact": "192153584101141163/576460752303423488",
+                "multiplicity": 1,
+                "truncation_upper": "1.45667588200429457235903072374993294685333378440547421230850385426914277442511240390716009E-66",
+                "column_upper": "3.20315131915149954196971943362548762155131887269036503909179325694513436763839440965045693E-36",
+                "finite_positive_series": "3.20315131915149954196971943362403094566619597162146871650696473777526619644604948208854658E-36",
+                "series_tail_upper": "3.11860649653729186107858622301483740793945334960183381525037638264193258202587688646710487E-75",
+                "truncated_process_stoploss_upper": "3.20315131915149954196971943362403094566931457811800600836804332399828103385398893543814842E-36"
+              },
+              {
+                "q_exact": "384307168202282325/1152921504606846976",
+                "multiplicity": 2,
+                "truncation_upper": "1.45667588200429455935024533394789191881065116282715479951539175324797998541403515597196911E-66",
+                "column_upper": "3.20315131915149872661921655097613315102843024561064071190815500912379116102575248450728713E-36",
+                "finite_positive_series": "3.20315131915149872661921655097467647514330734455475317472372821411908671287425157278096398E-36",
+                "series_tail_upper": "3.11860649653729185047890308589379698867375692680774263246071913290343100751338627821666216E-75",
+                "truncated_process_stoploss_upper": "3.20315131915149872661921655097467647514642595105129046657420711720498050986292532970777173E-36"
+              }
+            ]
+          },
+          "range_sources": [
+            {
+              "roots": [
+                {
+                  "depth": 4
+                }
+              ]
+            }
+          ],
+          "packing": {
+            "name": "merge_shed_and_output_excess",
+            "probability_upper_decimal": "2.66756344112870863126905844837068787071846845879809233336310517592966536486926260392145998E-35",
+            "certified_power_of_two_exponent": 114,
+            "approximate_log2_for_display_only": -114.8519607388127,
+            "capacity_slots": 64,
+            "current_union_map_law": {
+              "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+              "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+              "exactly_uniform": false,
+              "per_key_relative_excess": "1/576460752303423488",
+              "joint_density_upper_bound": "1125899906842624/1125899906842621"
+            },
+            "merge_stash_capacity_slots": 64,
+            "charged_once": true,
+            "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+          },
+          "final_shed_and_publication_charged_once": true,
+          "exposures": 2097152,
+          "per_job_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "shape": {
+            "kind": "ordinary",
+            "level": 1,
+            "digit": 4,
+            "carry_bits": 4,
+            "block_bits": 6,
+            "radix": 1,
+            "out_buckets": 64,
+            "main_bits": 6,
+            "pool_buckets": 8,
+            "stash_buckets": 1,
+            "tier_buckets": 1,
+            "dense_bits": 4,
+            "range_bits": 6,
+            "index_bits": 0,
+            "range_buckets": 64,
+            "groups": 1,
+            "scatter_per_bucket": 64,
+            "separated_sources": true,
+            "dfs": true,
+            "direct_buckets": 1,
+            "older_tier_buckets": 1,
+            "carry_tier_buckets": 1,
+            "dense_direct": true,
+            "merge_stash_buckets": 1
+          },
+          "backend": "dense-direct-v1",
+          "dense": {
+            "name": "direct_B_producer_excess",
+            "probability_upper_decimal": "3.65115001637835470530121949608238793460592249618794307469058558347068115456561332749454394E-36",
+            "certified_power_of_two_exponent": 117,
+            "approximate_log2_for_display_only": -117.72106046931992,
+            "capacity_slots": 64,
+            "logical_population_upper": 512,
+            "same_current_family": true,
+            "backend": "dense-direct-v1"
+          },
+          "stages": {
+            "name": "completed_A_route_stashes",
+            "probability_upper_decimal": "2.76610232082754089590200150359102115351031925771832730241935692474352753020724626836886791E-34",
+            "certified_power_of_two_exponent": 111,
+            "approximate_log2_for_display_only": -111.47770070199566,
+            "binary_stage_count": 6,
+            "binary_per_stage_upper": "4.61017053471256815983666917265170192251719876286387883736559487457254588367874378061477985E-35",
+            "radix_upper": "0",
+            "capacity_slots": 64,
+            "padded_destinations": 64,
+            "old_map_law": {
+              "minimum_bucket_mass": "384307168202282325/18446744073709551616",
+              "maximum_bucket_mass": "192153584101141163/9223372036854775808",
+              "exactly_uniform": false,
+              "per_key_relative_excess": "1/576460752303423488",
+              "joint_density_upper_bound": "1125899906842624/1125899906842621"
+            },
+            "current_A_map_law": {
+              "minimum_bucket_mass": "1/64",
+              "maximum_bucket_mass": "1/64",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            }
+          },
+          "ranges": {
+            "name": "completed_A_ranges",
+            "probability_upper_decimal": "8.25590108979229928955885570122544887305063951550312701214713118406274455995426452687798678E-35",
+            "certified_power_of_two_exponent": 113,
+            "approximate_log2_for_display_only": -113.22205763446814,
+            "k": 4,
+            "digit": 4,
+            "index_bits": 0,
+            "depth": 6,
+            "early_cap": 64,
+            "density_exact": "1125899906842624/1125899906842621",
+            "radix_classes": [
+              {
+                "q_exact": "1",
+                "multiplicity": 1,
+                "truncation_upper": "1.70472483683245553267095800999356365596965271705286869653348489595189577776619706884789291E-66",
+                "column_upper": "1.28998454528004332678426661006674668341590166401095784510722978061352536943715725289487135E-36",
+                "finite_positive_series": "1.28998454528004332678426661006504195857682125395125793093397307909204707825671152474391705E-36",
+                "series_tail_upper": "2.24795452702895616326313786550863846339285945442080057046956654339403944269034596887844169E-75",
+                "truncated_process_stoploss_upper": "1.28998454528004332678426661006504195857906920847828688709723621695755571672010438419833786E-36"
+              }
+            ]
+          },
+          "range_sources": [
+            {
+              "roots": [
+                {
+                  "depth": 6
+                }
+              ]
+            }
+          ],
+          "packing": {
+            "name": "merge_shed_and_output_excess",
+            "probability_upper_decimal": "4.61017053471255587587472896538132880926415699475839639069757414689756036045567254952318236E-35",
+            "certified_power_of_two_exponent": 114,
+            "approximate_log2_for_display_only": -114.06266320271682,
+            "capacity_slots": 64,
+            "current_union_map_law": {
+              "minimum_bucket_mass": "1/64",
+              "maximum_bucket_mass": "1/64",
+              "exactly_uniform": true,
+              "per_key_relative_excess": "0",
+              "joint_density_upper_bound": "1"
+            },
+            "merge_stash_capacity_slots": 64,
+            "charged_once": true,
+            "witness": "Saturated output; distinct B-main sheds and obsolete A leftovers inject into final excess"
+          },
+          "final_shed_and_publication_charged_once": true,
+          "exposures": 2097152,
+          "per_job_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "native_inventory": [
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 1,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 1,
+          "out_buckets": 16,
+          "main_bits": 4,
+          "pool_buckets": 0,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 0,
+          "index_bits": 4,
+          "range_buckets": 1,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": false,
+          "dfs": false,
+          "direct_buckets": 0,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 2,
+          "carry_bits": 4,
+          "block_bits": 5,
+          "radix": 1,
+          "out_buckets": 32,
+          "main_bits": 5,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 5,
+          "index_bits": 0,
+          "range_buckets": 32,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 3,
+          "carry_bits": 4,
+          "block_bits": 4,
+          "radix": 3,
+          "out_buckets": 48,
+          "main_bits": 6,
+          "pool_buckets": 7,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 0,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        },
+        {
+          "kind": "ordinary",
+          "level": 1,
+          "digit": 4,
+          "carry_bits": 4,
+          "block_bits": 6,
+          "radix": 1,
+          "out_buckets": 64,
+          "main_bits": 6,
+          "pool_buckets": 8,
+          "stash_buckets": 1,
+          "tier_buckets": 1,
+          "dense_bits": 4,
+          "range_bits": 6,
+          "index_bits": 0,
+          "range_buckets": 64,
+          "groups": 1,
+          "scatter_per_bucket": 64,
+          "separated_sources": true,
+          "dfs": true,
+          "direct_buckets": 1,
+          "older_tier_buckets": 1,
+          "carry_tier_buckets": 1,
+          "dense_direct": true,
+          "merge_stash_buckets": 1
+        }
+      ],
+      "lifetime_subtotal_exact": "147378895310788577495348211191566715070632184869572661652299737477904415085746531076203265622337053/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lifetime_subtotal": {
+        "name": "level_one_complete",
+        "probability_upper_decimal": "2.94757790621577154990696422383133430141264369739145323304599474955808830171493062152406532E-27",
+        "certified_power_of_two_exponent": 88,
+        "approximate_log2_for_display_only": -88.13252861697231
+      },
+      "configuration_gate": {
+        "branching": 8,
+        "levels": 7,
+        "prefix_flushes": 8,
+        "dense_prefixes": 2,
+        "separated_sources": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      }
+    }
+  ],
+  "source_sha256": {
+    "analysis/bound_certification/code/configuration_probe.cpp": "5c4406ebf9526a398fae4731e368ffc3fd465d67308361cf6db561b740374dc0",
+    "src/oram/levelarena/cpu_byteslice_level_arena_geometry.hpp": "7c15bc7660f78912023a23a1c12ae05437e2c6e979f26c3f6307ae4039413d57",
+    "src/oram/levelarena/cpu_byteslice_level_arena_merge.hpp": "8a5c48f43fceee9df12310d06936afde47fa6d4a2b7d3ab8a9838de98a0192d4",
+    "src/oram/levelarena/cpu_byteslice_level_arena_pass_shape.hpp": "d323499b9bfff5502fd341952f0b2f1da490201078973ca502b18648c969accb",
+    "src/oram/levelarena/cpu_byteslice_level_arena_stash.hpp": "b316f8c668e731ee06b52cfc4022d174177810813708dac5ce0eea968348e9ff",
+    "src/oram/rebuild/cpu_byteslice_dfs_residual.hpp": "a37d058cc3994ed52d71836739e1f3e0257ef3aa6f79e8ba7df1f19fbfbcff66",
+    "src/oram/rebuild/cpu_byteslice_residual_range.hpp": "c32589da50eda79e8e1d68c43930469e66f20833d4895b34f441d435851885c1",
+    "src/oram/rebuild/cpu_byteslice_residual_tier_bound.hpp": "f7dc6c1fd87a7de89c2b6cf7165c5d5868d8d8bc3d04274c0f4498c8d9b11384",
+    "src/oram/rebuild/cpu_byteslice_stash_capacity_table.hpp": "b534d5b2f5fa279de71ab79ce9efcef2ce39a53ed477fbe3e9f9bc68ad8fff86",
+    "src/oram/scheduler/cpu_byteslice_residual_pass.hpp": "b4c664474d79ad4f20aeb43abae941d36aa27685cd205e2992776c8622b8f6d5",
+    "src/oram/scheduler/cpu_byteslice_subtask.hpp": "48fa2b7b4c0bdb1b4ba65ce6a2fcfe55df664b046797c62656045d9d7dd531ef",
+    "src/oram/scheduler/cpu_byteslice_subtask_plan.hpp": "eb2e3c9d384c155add96a65e3b869aa7e1391d85bc53dad7327968017f15ef4b",
+    "analysis/bound_certification/code/certify_level1.py": "6ea837a64569eb20804cfae839243bb33ce94da48d06564c03ae06b87ac0d4ec",
+    "analysis/bound_certification/code/check_configuration.py": "c9ba4a177f2c71b241ae656748c4fb3c96f015f48ac3585516d2d7b072d7b8ad",
+    "analysis/bound_certification/code/certify_separated_sources.py": "c90b1166c6a2c66145b0ea87b256afa12a9ac194041b1b3dc59f1a1182e406c1",
+    "analysis/bound_certification/code/certify_completed_a.py": "0147284d7650b3552db770eb55138186edba82b741b2b0761a6d545760d8adb6",
+    "analysis/bound_certification/code/loss_tree.py": "4a53b8bd0d590f880f997a6deae3e632d3739ae8cda3b845d040a67c56f451e0",
+    "analysis/bound_certification/code/certify_oram.py": "10e55f084fb73e37e7c0b5d71354ef1a69de38a3a7b702d3d7c14b37602594d9",
+    "analysis/bound_certification/code/certify_preparation.py": "e1da2a17689aa46a335ffa1942866f5a7781418453b1ffd6bb1aad97d0f2b4eb",
+    "analysis/bound_certification/code/certify_tier_router.py": "d108f64e2f4c0b25865140ba436a7188f36529ffacf286a0f102a2f06aceda4d",
+    "analysis/bound_certification/code/certify_sorted_range.py": "3e5686fc3234903664be221a475ad0043ee44f7a3cd548f23c348fec68a35235",
+    "analysis/bound_certification/code/audit_preparation_contract.py": "40dd49316ed6e7fce525c00d28d4a61f055ab052f40b89570c52987049514bc8",
+    "analysis/bound_certification/code/gmp_square.cpp": "2231c80be5b0d13205b560353102effe42bb71c073a59856bcb6a191a7a2eb81",
+    "analysis/bound_certification/code/source_scope.py": "a8cbe29b0d7866486c539e00f9dfe73337777b25b7ff88bdf7140765df8115da"
+  },
+  "tree_cache_sha256": {
+    "tree_3.json": "54502307b44055ad3b0cc7998709f0456b64a5cfc4a5394c36c288b2ab39d20b",
+    "tree_4.json": "7bac581089f4408dfaff55309864b6804dbf1c7eae1195657303fe533b46d2f9",
+    "tree_5.json": "0b167b53fbe27d86a1dc0d6cdba74ac11f5876ebdd49cff641b497b4c5f0f22f",
+    "tree_6.json": "6ea9454347980fa0b4e61c7c8ab92c0a55048e6b300157aa9824bc0c289e1a50"
+  },
+  "complete_configuration_certified": false,
+  "assumptions": [
+    "Fixed logical B key set independent of current word family; independent uniform distinct-key words; exact-key dedup only reduces the population.",
+    "Native source/frontier premises for completed A; independent old/current families, with shared current family between A and B.",
+    "First-failure witnesses use unfiltered A and fixed logical union; no tail bound is conditioned on producer success.",
+    "Native saturated output and freshness epilogue imply merge sheds and obsolete A drain copies are dominated by final excess.",
+    "Native digit exposure schedule including next speculative preparation; no retry or overflow-triggered rehash.",
+    "Conditional capacity bound only; cryptographic and wide-key equality errors remain separate."
+  ],
+  "exclusions": [
+    "Unconditional whole-hierarchy certificate, Lean theorem, unlisted geometries/horizons."
+  ]
+}

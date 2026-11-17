@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-tune-rebuild-screen",
+  "repetitions": 1,
+  "base_seed": 5001,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "stages": [
+    {
+      "name": "rebuild-screen",
+      "kind": "tuning",
+      "seed_role": "screening",
+      "seed_stream": "screening",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        1048576,
+        16777216
+      ],
+      "candidates": [
+        {
+          "name": "budget-2",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "rebuild_threads": 2
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "budget-4",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "rebuild_threads": 4
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "budget-8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "rebuild_threads": 8
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "budget-all",
+          "overrides": {
+            "scheme": "hierarchical_incremental"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "owners-4",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "owner_threads": 4
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        },
+        {
+          "name": "budget-all-refit",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "rebuild_cost_helper_speedup_ppm": 1832565,
+              "rebuild_cost_job_nanos": 27597,
+              "rebuild_cost_line_picos": 2968,
+              "rebuild_cost_max_top_threads": 13,
+              "rebuild_cost_offer_line_picos": 335,
+              "rebuild_cost_probe_bucket_picos": 7520,
+              "rebuild_cost_probe_line_picos": 1013,
+              "rebuild_cost_residual_line_picos": 0,
+              "rebuild_cost_slice_line_picos": 5268
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1469,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 163404,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 876,
+              "setup_ns_per_entry": 108,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 136764,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3127,
+              "setup_ns_per_entry": 256,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 185847,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 3058,
+              "setup_ns_per_entry": 257,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 180479,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "batch_sizes": [
+        64
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 144,
+    "max_campaign_trial_ns": 259200000000000
+  },
+  "timing": {
+    "max_trial_ns": 900000000000
+  }
+}

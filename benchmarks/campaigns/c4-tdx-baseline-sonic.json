@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-baseline-sonic",
+  "base_seed": 7501,
+  "repetitions": 1,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "stages": [
+    {
+      "name": "capacity",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        32768,
+        131072,
+        524288,
+        2097152,
+        8388608,
+        33554432,
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 10797,
+              "setup_ns_per_entry": 10713,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 6749,
+              "setup_ns_per_entry": 6599,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 181910
+            }
+          ]
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 45801,
+              "setup_ns_per_entry": 38912,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 29992,
+              "setup_ns_per_entry": 31002,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 344459
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar",
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ]
+    },
+    {
+      "name": "latency",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576,
+        16777216
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 10797,
+              "setup_ns_per_entry": 10713,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 173225
+            }
+          ]
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 45801,
+              "setup_ns_per_entry": 38912,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 354642
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "absolute_ops_per_second": [
+          10000,
+          100000
+        ],
+        "saturation_fractions_ppm": [
+          100000,
+          500000,
+          850000,
+          950000
+        ],
+        "minimum_ops_per_second": 1
+      }
+    },
+    {
+      "name": "value-width-dense-k4",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k4-dense-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v16",
+          "key_bytes": 4,
+          "value_bytes": 16,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v32",
+          "key_bytes": 4,
+          "value_bytes": 32,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v48",
+          "key_bytes": 4,
+          "value_bytes": 48,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v64",
+          "key_bytes": 4,
+          "value_bytes": 64,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v128",
+          "key_bytes": 4,
+          "value_bytes": 128,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v192",
+          "key_bytes": 4,
+          "value_bytes": 192,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v256",
+          "key_bytes": 4,
+          "value_bytes": 256,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v512",
+          "key_bytes": 4,
+          "value_bytes": 512,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v1024",
+          "key_bytes": 4,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v2048",
+          "key_bytes": 4,
+          "value_bytes": 2048,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k4-dense-v4096",
+          "key_bytes": 4,
+          "value_bytes": 4096,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576,
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 10797,
+              "setup_ns_per_entry": 10713,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 16,
+              "api_mode": "scalar",
+              "access_ns": 7063,
+              "setup_ns_per_entry": 7022,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 32,
+              "api_mode": "scalar",
+              "access_ns": 7683,
+              "setup_ns_per_entry": 7660,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 8181,
+              "setup_ns_per_entry": 8175,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 8602,
+              "setup_ns_per_entry": 8610,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 128,
+              "api_mode": "scalar",
+              "access_ns": 10119,
+              "setup_ns_per_entry": 10493,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 192,
+              "api_mode": "scalar",
+              "access_ns": 11233,
+              "setup_ns_per_entry": 11915,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 256,
+              "api_mode": "scalar",
+              "access_ns": 12133,
+              "setup_ns_per_entry": 13088,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 14715,
+              "setup_ns_per_entry": 16553,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 17960,
+              "setup_ns_per_entry": 21098,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 2048,
+              "api_mode": "scalar",
+              "access_ns": 21992,
+              "setup_ns_per_entry": 26998,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 4096,
+              "api_mode": "scalar",
+              "access_ns": 26975,
+              "setup_ns_per_entry": 34619,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 173225
+            }
+          ]
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 45801,
+              "setup_ns_per_entry": 38912,
+              "reference_capacity": 16777216,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 16,
+              "api_mode": "scalar",
+              "access_ns": 19125,
+              "setup_ns_per_entry": 16568,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 32,
+              "api_mode": "scalar",
+              "access_ns": 22574,
+              "setup_ns_per_entry": 20139,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 25550,
+              "setup_ns_per_entry": 23300,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 28205,
+              "setup_ns_per_entry": 26176,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 128,
+              "api_mode": "scalar",
+              "access_ns": 30426,
+              "setup_ns_per_entry": 28710,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 192,
+              "api_mode": "scalar",
+              "access_ns": 31945,
+              "setup_ns_per_entry": 30467,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 256,
+              "api_mode": "scalar",
+              "access_ns": 33116,
+              "setup_ns_per_entry": 31833,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 36235,
+              "setup_ns_per_entry": 35526,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 39766,
+              "setup_ns_per_entry": 39790,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 2048,
+              "api_mode": "scalar",
+              "access_ns": 43708,
+              "setup_ns_per_entry": 44649,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 4096,
+              "api_mode": "scalar",
+              "access_ns": 48078,
+              "setup_ns_per_entry": 50150,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 354642
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ]
+    }
+  ],
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "limits": {
+    "max_trials": 312,
+    "max_campaign_trial_ns": 374400000000000
+  },
+  "timing": {
+    "max_trial_ns": 10800000000000
+  }
+}

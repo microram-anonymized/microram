@@ -1,0 +1,367 @@
+{
+  "format": "family-prep-registry/1",
+  "checker": {
+    "version": 1,
+    "scale": 320,
+    "cutoff": 256,
+    "capacity": 64,
+    "load": 32,
+    "tail_exponent": 46
+  },
+  "generated_files": [
+    "RebuildBound/Proofs/NumericsFamilyPrep/C0.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/C1.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/C2.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane0.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane1.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane2.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane3.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC0th.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC1th.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC2th.lean",
+    "RebuildBound/Proofs/NumericsFamilyPrep.lean",
+    "RebuildBound/Spec/ConfigurationFamilyPrep.lean"
+  ],
+  "generated_sha256": {
+    "RebuildBound/Proofs/NumericsFamilyPrep/C0.lean": "c3271407cf6494d4326b9f5ee7c8f11c990481d2f77bbebc30a2fb4ef815f5a9",
+    "RebuildBound/Proofs/NumericsFamilyPrep/C1.lean": "e3c3dc7cd1e7bac4de8b4c7e3dd55276ec59dac6ccbe382e7a0a6a929efd0566",
+    "RebuildBound/Proofs/NumericsFamilyPrep/C2.lean": "e3128b3df614650cc7ef6e1888f3238159cfb8356bca1e9318fa0f7c5d9de2fe",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane0.lean": "97f164fe90b730107932a8f264c6bc1c60557c42d109ce3a5b16f51574b7e86d",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane1.lean": "bbebec4aab5b651db6ccbb8e720e10f36e2da2dadbcd4f2e94b42758e993cc1b",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane2.lean": "47b26480f939722445de6e7358f5691930819846ebe7c8d9418ce753e09f2bce",
+    "RebuildBound/Proofs/NumericsFamilyPrep/Lane3.lean": "1474e8f043d7a2ac0d1f7daaaa3813892ad130c19896c39e67b61c7f6fe92f72",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC0th.lean": "c3601c4275f92a52f29b3f6b36b37c052184afa136cd693cf1878ed9f0cf6643",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC1th.lean": "859601cbaa6b7fed963462082cf23715df624fcb0b608acbfe9e7538c1f879d4",
+    "RebuildBound/Proofs/NumericsFamilyPrep/TabC2th.lean": "430006e3174883e0d31380dfebb4f1e5be066b90b2360570221286f1ab1df8d1",
+    "RebuildBound/Proofs/NumericsFamilyPrep.lean": "393effa58121527d7f437985dfdfa97728c3fb5cd699c1cc58fc5de66e41e3a7",
+    "RebuildBound/Spec/ConfigurationFamilyPrep.lean": "84d645fd8832c6edfa318a4904c4edac962861782c98b96f61e4fd9e22a80eca"
+  },
+  "shapes": [
+    {
+      "geometry": [
+        64,
+        6,
+        1,
+        1,
+        1,
+        6,
+        0,
+        "true"
+      ],
+      "range_exponent": 145,
+      "rest_exponent": 111
+    },
+    {
+      "geometry": [
+        64,
+        7,
+        1,
+        1,
+        1,
+        6,
+        1,
+        "true"
+      ],
+      "range_exponent": 144,
+      "rest_exponent": 109
+    },
+    {
+      "geometry": [
+        64,
+        8,
+        1,
+        1,
+        1,
+        6,
+        2,
+        "true"
+      ],
+      "range_exponent": 142,
+      "rest_exponent": 106
+    },
+    {
+      "geometry": [
+        64,
+        9,
+        1,
+        1,
+        1,
+        7,
+        2,
+        "true"
+      ],
+      "range_exponent": 142,
+      "rest_exponent": 104
+    },
+    {
+      "geometry": [
+        64,
+        10,
+        1,
+        1,
+        1,
+        7,
+        3,
+        "true"
+      ],
+      "range_exponent": 141,
+      "rest_exponent": 102
+    },
+    {
+      "geometry": [
+        64,
+        11,
+        1,
+        1,
+        1,
+        7,
+        4,
+        "true"
+      ],
+      "range_exponent": 140,
+      "rest_exponent": 100
+    },
+    {
+      "geometry": [
+        64,
+        12,
+        1,
+        1,
+        1,
+        7,
+        5,
+        "true"
+      ],
+      "range_exponent": 137,
+      "rest_exponent": 97
+    },
+    {
+      "geometry": [
+        64,
+        13,
+        1,
+        1,
+        1,
+        7,
+        6,
+        "true"
+      ],
+      "range_exponent": 132,
+      "rest_exponent": 95
+    },
+    {
+      "geometry": [
+        64,
+        14,
+        1,
+        1,
+        1,
+        7,
+        7,
+        "true"
+      ],
+      "range_exponent": 128,
+      "rest_exponent": 92
+    },
+    {
+      "geometry": [
+        64,
+        15,
+        1,
+        1,
+        1,
+        7,
+        8,
+        "true"
+      ],
+      "range_exponent": 123,
+      "rest_exponent": 89
+    },
+    {
+      "geometry": [
+        64,
+        16,
+        2,
+        1,
+        1,
+        8,
+        8,
+        "true"
+      ],
+      "range_exponent": 123,
+      "rest_exponent": 90
+    },
+    {
+      "geometry": [
+        64,
+        16,
+        2,
+        1,
+        2,
+        8,
+        8,
+        "true"
+      ],
+      "range_exponent": 123,
+      "rest_exponent": 176
+    },
+    {
+      "geometry": [
+        64,
+        17,
+        2,
+        2,
+        2,
+        9,
+        8,
+        "true"
+      ],
+      "range_exponent": 133,
+      "rest_exponent": 170
+    },
+    {
+      "geometry": [
+        64,
+        18,
+        2,
+        2,
+        2,
+        9,
+        9,
+        "true"
+      ],
+      "range_exponent": 130,
+      "rest_exponent": 163
+    },
+    {
+      "geometry": [
+        64,
+        19,
+        2,
+        2,
+        2,
+        9,
+        10,
+        "true"
+      ],
+      "range_exponent": 127,
+      "rest_exponent": 155
+    },
+    {
+      "geometry": [
+        64,
+        20,
+        2,
+        2,
+        2,
+        9,
+        11,
+        "true"
+      ],
+      "range_exponent": 123,
+      "rest_exponent": 146
+    },
+    {
+      "geometry": [
+        64,
+        21,
+        2,
+        2,
+        2,
+        9,
+        12,
+        "true"
+      ],
+      "range_exponent": 120,
+      "rest_exponent": 134
+    },
+    {
+      "geometry": [
+        64,
+        22,
+        2,
+        2,
+        2,
+        9,
+        13,
+        "true"
+      ],
+      "range_exponent": 116,
+      "rest_exponent": 121
+    },
+    {
+      "geometry": [
+        64,
+        23,
+        2,
+        2,
+        2,
+        9,
+        14,
+        "true"
+      ],
+      "range_exponent": 112,
+      "rest_exponent": 104
+    },
+    {
+      "geometry": [
+        64,
+        24,
+        2,
+        2,
+        2,
+        9,
+        15,
+        "true"
+      ],
+      "range_exponent": 107,
+      "rest_exponent": 84
+    },
+    {
+      "geometry": [
+        64,
+        25,
+        3,
+        3,
+        3,
+        10,
+        15,
+        "true"
+      ],
+      "range_exponent": 111,
+      "rest_exponent": 110
+    },
+    {
+      "geometry": [
+        64,
+        26,
+        4,
+        3,
+        3,
+        10,
+        16,
+        "true"
+      ],
+      "range_exponent": 101,
+      "rest_exponent": 71
+    },
+    {
+      "geometry": [
+        64,
+        26,
+        4,
+        3,
+        4,
+        10,
+        16,
+        "true"
+      ],
+      "range_exponent": 101,
+      "rest_exponent": 107
+    }
+  ],
+  "reused_whole_ranges": {
+    "TP26": 101
+  },
+  "new_half_chains": 3
+}

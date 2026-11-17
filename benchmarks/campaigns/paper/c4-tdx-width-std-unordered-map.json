@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-width-std-unordered-map",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 900000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 3600000000000
+  },
+  "stages": [
+    {
+      "name": "value-width-std-unordered-map",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v8",
+          "key_bytes": 8,
+          "value_bytes": 8
+        },
+        {
+          "name": "k8-v16",
+          "key_bytes": 8,
+          "value_bytes": 16
+        },
+        {
+          "name": "k8-v32",
+          "key_bytes": 8,
+          "value_bytes": 32
+        },
+        {
+          "name": "k8-v64",
+          "key_bytes": 8,
+          "value_bytes": 64
+        },
+        {
+          "name": "k8-v128",
+          "key_bytes": 8,
+          "value_bytes": 128
+        },
+        {
+          "name": "k8-v256",
+          "key_bytes": 8,
+          "value_bytes": 256
+        },
+        {
+          "name": "k8-v512",
+          "key_bytes": 8,
+          "value_bytes": 512
+        },
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        },
+        {
+          "name": "k8-v4096",
+          "key_bytes": 8,
+          "value_bytes": 4096
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "api_mode": "scalar",
+              "access_ns": 300,
+              "setup_ns_per_entry": 500,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-width-k8-2p20"
+    }
+  ],
+  "limits": {
+    "max_trials": 10,
+    "max_campaign_trial_ns": 172800000000000
+  }
+}

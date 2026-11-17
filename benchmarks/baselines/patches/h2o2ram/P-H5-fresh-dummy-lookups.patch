@@ -1,0 +1,48 @@
+--- a/include/ohash_bucket.hpp
++++ b/include/ohash_bucket.hpp
+@@ -130,6 +130,9 @@
+         const KeyType bucket_size;
+         AESPRF<uint32_t> prf;
+         std::vector<Block<KeyType, BlockSize>> entries;
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++        KeyType dummy_access_ctr = 0; // P-H5
++#endif
+ 
+     public:
+         static std::tuple<double, KeyType, KeyType> compute_appropriate_bucket_num(
+@@ -310,6 +313,11 @@
+ 
+         virtual Block<KeyType, BlockSize> operator[](KeyType key)
+         {
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++            // P-H5: a dummy lookup (index -1) probes a fresh dummy's bucket, as
++            // OTwoTierHash does, not the one fixed bucket of index -1.
++            CMOV(key == KeyType(-1), key, --dummy_access_ctr);
++#endif
+             Block<KeyType, BlockSize> ret;
+             KeyType bucket_id = prf(key);
+             KeyType st = bucket_id * bucket_size;
+--- a/include/ocuckoo_hash.hpp
++++ b/include/ocuckoo_hash.hpp
+@@ -20,6 +20,9 @@
+         KeyType bucket_size;
+         std::vector<AESPRF<uint32_t>> prfs;
+         std::vector<Block<KeyType, BlockSize>> entries;
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++        KeyType dummy_access_ctr = 0; // P-H5
++#endif
+ 
+         void compute_prf_cnt(const KeyType delta_inv_log2)
+         {
+@@ -145,6 +148,11 @@
+ 
+         virtual Block<KeyType, BlockSize> operator[](KeyType i)
+         {
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++            // P-H5: a dummy lookup (index -1) probes a fresh dummy's positions,
++            // as OTwoTierHash does, not the fixed positions of index -1.
++            CMOV(i == KeyType(-1), i, --dummy_access_ctr);
++#endif
+             Block<KeyType, BlockSize> ret;
+             for (uint32_t j = 0; j < prf_cnt; j++)
+             {

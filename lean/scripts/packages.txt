@@ -1,0 +1,708 @@
+# Package registry read by scripts/audit_axioms.sh. A package <ID> is the proof
+# module RebuildBound/Proofs/<ID>.lean and/or the directory RebuildBound/Proofs/<ID>/.
+#
+#   <ID> <flags> <theorem>=<statement> ...
+#
+# flags: always "-" (no flag is defined; in particular nothing admits
+# native_decide's auxiliary axioms).
+# Each <theorem> must be declared by the package and have exactly the type
+# <statement>, a definition under RebuildBound.Spec. A package without a
+# registered theorem holds lemmas or conditional forms (`X_of : premises → X`)
+# that a later package (often `<ID>fin`) assembles.
+
+# First closure and replacement lemmas of the shadow comparison (Spec/Phase0.lean).
+X1 - RebuildBound.X1_cap=RebuildBound.Spec.X1_cap_statement RebuildBound.X1_thin=RebuildBound.Spec.X1_thin_statement RebuildBound.X1_add=RebuildBound.Spec.X1_add_statement RebuildBound.X1_terminal=RebuildBound.Spec.X1_terminal_statement
+X2 - RebuildBound.X2=RebuildBound.Spec.X2_statement
+
+# Probability library, first packages (statements in Spec/P5.lean, Spec/P6.lean).
+P5a - RebuildBound.P5a=RebuildBound.Spec.P5a_statement
+P5b - RebuildBound.P5b_split=RebuildBound.Spec.P5b_split_statement RebuildBound.P5b_conv=RebuildBound.Spec.P5b_conv_statement RebuildBound.P5b_pad=RebuildBound.Spec.P5b_pad_statement
+P6 - RebuildBound.P6_thinAll=RebuildBound.Spec.P6_thinAll_statement RebuildBound.P6_capAll=RebuildBound.Spec.P6_capAll_statement RebuildBound.P6_mix=RebuildBound.Spec.P6_mix_statement RebuildBound.P6_bound=RebuildBound.Spec.P6_bound_statement RebuildBound.P6_embed=RebuildBound.Spec.P6_embed_statement RebuildBound.P6_terminal=RebuildBound.Spec.P6_terminal_statement
+
+# Shadow network of a blind route (statements in Spec/P11.lean).
+P11a - RebuildBound.P11a=RebuildBound.Spec.P11a_statement
+P11b - RebuildBound.P11b=RebuildBound.Spec.P11b_statement
+P11c - RebuildBound.P11c_class=RebuildBound.Spec.P11c_class_statement
+P11ab - RebuildBound.P11ab=RebuildBound.Spec.P11ab_statement
+P11d - RebuildBound.P11d=RebuildBound.Spec.P11d_statement
+P11e - RebuildBound.P11e=RebuildBound.Spec.P11e_statement
+
+# Deterministic theorems about the d = 2 model (statements in Spec/T.lean).
+D1 - RebuildBound.D1=RebuildBound.Spec.D1_statement RebuildBound.T0=RebuildBound.Spec.T0_statement
+D23 - RebuildBound.T1=RebuildBound.Spec.T1_statement RebuildBound.T2=RebuildBound.Spec.T2_statement
+D4a - RebuildBound.T4a=RebuildBound.Spec.T4a_statement
+D4b - RebuildBound.T4b=RebuildBound.Spec.T4b_statement
+D5 - RebuildBound.T5_step=RebuildBound.Spec.T5_step_statement RebuildBound.T5_route=RebuildBound.Spec.T5_route_statement
+D6 - RebuildBound.T6=RebuildBound.Spec.T6_statement
+
+# Subset witness and glue at d = 2 (Spec/Prob/Subset.lean, Spec/G.lean).
+P3 - RebuildBound.P3=RebuildBound.Spec.P3_statement
+# G1 proves the conditional `RebuildBound.G1_of : T4a → T4b → P3 → G1`; package
+# G1fin assembles `RebuildBound.G1 : G1_statement`.
+G1 -
+G1fin - RebuildBound.G1=RebuildBound.Spec.G1_statement
+G2 - RebuildBound.G2=RebuildBound.Spec.G2_statement
+Pilot - RebuildBound.Pilot=RebuildBound.Spec.Pilot_statement
+
+# Non-vacuity of InputLaw at every population size.
+Canon - RebuildBound.Canonical=RebuildBound.Model.Canonical_statement
+
+# Top-finish chain.
+# Positive series (Spec/Prob/Series.lean, Spec/P7.lean). P7 proves the conditional
+# `RebuildBound.P7_of : P7alg_statement → P7_statement`; P7fin assembles it.
+P7alg - RebuildBound.P7alg=RebuildBound.Spec.P7alg_statement
+P7 -
+P7fin - RebuildBound.P7=RebuildBound.Spec.P7_statement
+P8a - RebuildBound.P8a=RebuildBound.Spec.P8a_statement
+# The top-finish Phi checker and its soundness, used by TopNum2 and TPNum.
+NTop -
+# Top-finish model (Spec/Model/Top*.lean) and statements (Spec/TopT.lean, Spec/G3.lean).
+D8 - RebuildBound.T3top=RebuildBound.Spec.T3top_statement
+# D8b proves `RebuildBound.T4top_of : T3top_statement → T4top_statement`; D8bfin assembles.
+D8b -
+D8bfin - RebuildBound.T4top=RebuildBound.Spec.T4top_statement
+# G3 proves `RebuildBound.G3_of : T4top_statement → G3_statement` (using P7 and P8a);
+# G3fin assembles. TopSel2 (below) applies G3 and TopNum2 at the selected shape.
+G3 -
+G3fin - RebuildBound.G3=RebuildBound.Spec.G3_statement
+# Non-vacuity of TopLaw at every population size.
+CanonTop - RebuildBound.TopCanonical=RebuildBound.Model.TopCanonical_statement
+
+# Completed-A numbers: the truncation enclosure (Spec/P10.lean, definitions in
+# Spec/Prob/Trunc.lean) and the first instance (Spec/CANum.lean). NCA1 proves the conditional
+# `RebuildBound.NCA1_of : P10_statement → NCA1_statement`; its checkers, series soundness and
+# tree tables are used by NCA5, SelRange*, TPNum and DirectJobANumerics (SelRange1 certifies
+# NCA1's row).
+P10 - RebuildBound.P10=RebuildBound.Spec.P10_statement
+NCA1 -
+
+# General-digit separated merge (model Spec/Model/Sep.lean, contracts
+# Spec/Model/SepContract.lean and Spec/Model/SepLaw.lean, statements Spec/SepT.lean
+# and Spec/SepG.lean).
+SEng - RebuildBound.SEngine=RebuildBound.Spec.SEngine_statement
+S05 - RebuildBound.ST0=RebuildBound.Spec.ST0_statement RebuildBound.ST5=RebuildBound.Spec.ST5_statement
+# S12, S4a and S4b prove conditionals on ST6 (`RebuildBound.ST1_of : ST6_statement → ST1_statement`,
+# `ST2_of`, `ST4a_of`, `ST4b_of`); the *fin packages assemble them.
+S12 -
+S12fin - RebuildBound.ST1=RebuildBound.Spec.ST1_statement RebuildBound.ST2=RebuildBound.Spec.ST2_statement
+S4a -
+S4afin - RebuildBound.ST4a=RebuildBound.Spec.ST4a_statement
+S4b -
+S4bfin - RebuildBound.ST4b=RebuildBound.Spec.ST4b_statement
+S6 - RebuildBound.ST6=RebuildBound.Spec.ST6_statement
+# SG1: the separated failure inventory and witness terms, used by SG1p (no registered statement).
+SG1 -
+
+# Completed-A at a general digit: the shadow network in r blocks with a terminal radix
+# (Spec/P12.lean; definitions Spec/Prob/RadixNetwork.lean, Spec/Prob/RadixTree.lean) and
+# the glue SG2 (Spec/SepG.lean). P12ab, P12d and SG2 prove conditionals
+# (`P12ab_of : P12a → P12b → P12c → P12ab`, `P12d_of : P12c → P12d`,
+# `SG2_of : P12ab → P12d → P12e → SG2`); the *fin packages assemble them.
+P12a - RebuildBound.P12a=RebuildBound.Spec.P12a_statement
+P12b - RebuildBound.P12b=RebuildBound.Spec.P12b_statement
+P12c - RebuildBound.P12c=RebuildBound.Spec.P12c_statement
+P12ab -
+P12abfin - RebuildBound.P12ab=RebuildBound.Spec.P12ab_statement
+P12d -
+P12dfin - RebuildBound.P12d=RebuildBound.Spec.P12d_statement
+P12e - RebuildBound.P12e=RebuildBound.Spec.P12e_statement
+SG2 -
+SG2fin - RebuildBound.SG2=RebuildBound.Spec.SG2_statement
+
+# The truncation enclosure at a terminal radix (Spec/P10r.lean) and the first r > 1 instance
+# (Spec/CANumR.lean). NCA5 proves `RebuildBound.NCA5_of : P10r_statement → NCA5_statement`.
+P10r - RebuildBound.P10r=RebuildBound.Spec.P10r_statement
+NCA5 -
+NCA5fin - RebuildBound.NCA5=RebuildBound.Spec.NCA5_statement
+# Non-vacuity of SInputLaw at every population size (Spec/Model/SepCanonical.lean).
+SCanon - RebuildBound.SCanonical=RebuildBound.Model.SCanonical_statement
+# SG1 with min(B_sub, D Φ_K) witnesses (Spec/SepBound.lean): SG1p proves
+# `RebuildBound.SG1p_of : ST4a → ST4b → ST6 → SEngine → SG1p`; SJob = SG1p + SG2.
+SG1p -
+SG1pfin - RebuildBound.SG1p=RebuildBound.Spec.SG1p_statement
+SJob - RebuildBound.SJob=RebuildBound.Spec.SJob_statement
+
+# The selected configurations' separated jobs (Spec/Selected.lean).
+# SelOrd proves `RebuildBound.SelOrd_of : SelRange1 → SelRange3 → SelRange5 → SelRange7 → SelRest → SelOrd`.
+SelRest - RebuildBound.SelRest=RebuildBound.Spec.SelRest_statement
+SelRange1 - RebuildBound.SelRange1=RebuildBound.Spec.SelRange1_statement
+SelRange3 - RebuildBound.SelRange3=RebuildBound.Spec.SelRange3_statement
+SelRange5 - RebuildBound.SelRange5=RebuildBound.Spec.SelRange5_statement
+SelRange7 - RebuildBound.SelRange7=RebuildBound.Spec.SelRange7_statement
+SelOrd -
+SelOrdfin - RebuildBound.SelOrd=RebuildBound.Spec.SelOrd_statement
+
+# The selected subtotal (Spec/Subtotal.lean). Subtotal proves the conditional
+# `RebuildBound.Subtotal_of : SelOrd_statement → Subtotal_statement`; TopSel2 assembles
+# G3 and TopNum2.
+SelJob - RebuildBound.SelJob=RebuildBound.Spec.SelJob_statement
+TopNum2 - RebuildBound.TopNum2=RebuildBound.Spec.TopNum2_statement
+TopSel2 - RebuildBound.TopSel2=RebuildBound.Spec.TopSel2_statement
+Subtotal -
+Subtotalfin - RebuildBound.Subtotal=RebuildBound.Spec.Subtotal_statement
+
+# The composition over a horizon (Spec/Model/Config.lean, Spec/Compose.lean).
+G4a - RebuildBound.Expo=RebuildBound.Spec.Expo_statement RebuildBound.G4a=RebuildBound.Spec.G4a_statement RebuildBound.SelExpo=RebuildBound.Spec.SelExpo_statement
+
+# Top preparation and initialization, model-independent probability (Spec/P8c.lean).
+P8c - RebuildBound.P8c=RebuildBound.Spec.P8c_statement
+P11fg - RebuildBound.P11f=RebuildBound.Spec.P11f_statement RebuildBound.P11g=RebuildBound.Spec.P11g_statement
+
+# The shadow network with a drain-only terminal stage (Spec/P13.lean), for the top preparation's
+# ranges. P13ab proves `RebuildBound.P13ab_of : P13b_statement → P13c_statement → P13ab_statement`
+# and P13dg proves `RebuildBound.P13d_of`, `RebuildBound.P13g_of : P13c_statement → …`; the *fin
+# packages assemble them.
+P13bc - RebuildBound.P13b=RebuildBound.Spec.P13b_statement RebuildBound.P13c=RebuildBound.Spec.P13c_statement
+P13ab -
+P13abfin - RebuildBound.P13ab=RebuildBound.Spec.P13ab_statement
+P13dg -
+P13dgfin - RebuildBound.P13d=RebuildBound.Spec.P13d_statement RebuildBound.P13g=RebuildBound.Spec.P13g_statement
+P13e - RebuildBound.P13e=RebuildBound.Spec.P13e_statement
+
+# Top preparation and initialization (model Spec/Model/TopPrep.lean, contracts
+# Spec/Model/TopPrepContract.lean and TopPrepLaw.lean, statements Spec/TopPrepT.lean
+# and Spec/TopPrepG.lean). Conditionals:
+#   TP12 proves `RebuildBound.TP12_of : TP6_statement → TP12_statement`;
+#   TP4 proves `RebuildBound.TP4a_of : TP6_statement → TP12_statement → …`,
+#     `RebuildBound.TP4b_of : TP12_statement → …`;
+#   TG1 proves `RebuildBound.TG1_of`, `RebuildBound.IG1_of :
+#     TPEngine_statement → TP6_statement → TP4a_statement → TP4b_statement → …`;
+#   TG2 proves `RebuildBound.TG2_of`, `RebuildBound.IG2_of : TP5_step_statement → TP5_route_statement → …`.
+# The *fin packages assemble them; TPJobfin assembles TG1, IG1, TG2, IG2, TPJob, IJob, TPSel and ISel.
+TPEng - RebuildBound.TPEngine=RebuildBound.Spec.TPEngine_statement
+TP5 - RebuildBound.TP5_step=RebuildBound.Spec.TP5_step_statement RebuildBound.TP5_route=RebuildBound.Spec.TP5_route_statement
+TP6 - RebuildBound.TP6=RebuildBound.Spec.TP6_statement
+TP12 -
+TP12fin - RebuildBound.TP12=RebuildBound.Spec.TP12_statement
+TP4 -
+TP4fin - RebuildBound.TP4a=RebuildBound.Spec.TP4a_statement RebuildBound.TP4b=RebuildBound.Spec.TP4b_statement
+TG1 -
+TG2 -
+TPJobfin - RebuildBound.TPJob=RebuildBound.Spec.TPJob_statement RebuildBound.IJob=RebuildBound.Spec.IJob_statement RebuildBound.TPSel=RebuildBound.Spec.TPSel_statement RebuildBound.ISel=RebuildBound.Spec.ISel_statement RebuildBound.TG1=RebuildBound.Spec.TG1_statement RebuildBound.IG1=RebuildBound.Spec.IG1_statement RebuildBound.TG2=RebuildBound.Spec.TG2_statement RebuildBound.IG2=RebuildBound.Spec.IG2_statement
+TPCanon - RebuildBound.TPCanonical=RebuildBound.Model.TPCanonical_statement RebuildBound.ICanonical=RebuildBound.Model.ICanonical_statement
+TPNum - RebuildBound.TPNum=RebuildBound.Spec.TPNum_statement
+
+# The selected configurations' horizon bound (Spec/SelTotal.lean). SelTot proves
+# `RebuildBound.SelTotal_of : TPSel_statement → ISel_statement → SelTotal_statement`; SelTotfin assembles.
+SelTot -
+SelTotfin - RebuildBound.SelTotal=RebuildBound.Spec.SelTotal_statement
+
+# Reusable generic mixed allocation and shared-count comparison lemmas.
+P9 - RebuildBound.P9_alloc=RebuildBound.Spec.P9_alloc_statement RebuildBound.P9=RebuildBound.Spec.P9_statement RebuildBound.P9_ranges=RebuildBound.Spec.P9_ranges_statement
+# One shared-rate step, not the complete P8b star comparison.
+P8bPair - RebuildBound.P8bPair=RebuildBound.Spec.P8bPair_statement
+P8bRate - RebuildBound.P8bRate=RebuildBound.Spec.P8bRate_statement
+P8bStar - RebuildBound.P8bStar=RebuildBound.Spec.P8bStar_statement RebuildBound.P8bStarStopLoss=RebuildBound.Spec.P8bStarStopLoss_statement RebuildBound.P8bStarRates=RebuildBound.Spec.P8bStarRates_statement
+
+
+
+
+
+
+
+
+# Direct level-one B producer: finite deterministic contract.
+DirectB - RebuildBound.DirectBResidual=RebuildBound.Spec.DirectBResidual_statement RebuildBound.DirectBHome=RebuildBound.Spec.DirectBHome_statement RebuildBound.DirectBConservation=RebuildBound.Spec.DirectBConservation_statement RebuildBound.DirectBUnique=RebuildBound.Spec.DirectBUnique_statement
+
+# Chronological exact-key prefix winners; native mutable-mask correspondence remains open.
+DirectPrefix - RebuildBound.DirectPrefixUnique=RebuildBound.Spec.DirectPrefixUnique_statement RebuildBound.DirectPrefixKeys=RebuildBound.Spec.DirectPrefixKeys_statement RebuildBound.DirectPrefixStable=RebuildBound.Spec.DirectPrefixStable_statement RebuildBound.DirectPrefixLatest=RebuildBound.Spec.DirectPrefixLatest_statement RebuildBound.DirectPrefixAppend=RebuildBound.Spec.DirectPrefixAppend_statement RebuildBound.DirectPrefixUnits=RebuildBound.Spec.DirectPrefixUnits_statement RebuildBound.DirectPrefixHome=RebuildBound.Spec.DirectPrefixHome_statement
+
+# Checked source-order drain, pause boundaries and exact capacity failure.
+DirectDrain - RebuildBound.DirectDrainExact=RebuildBound.Spec.DirectDrainExact_statement RebuildBound.DirectDrainRechunk=RebuildBound.Spec.DirectDrainRechunk_statement
+
+DirectMasks - RebuildBound.DirectMasksLanes=RebuildBound.Spec.DirectMasksLanes_statement RebuildBound.DirectMasksStep=RebuildBound.Spec.DirectMasksStep_statement RebuildBound.DirectMasksWinners=RebuildBound.Spec.DirectMasksWinners_statement
+
+# Multi-bucket chronological comparisons refine grouped masks; decoder/SIMD remain native.
+DirectMaskBuckets - RebuildBound.DirectMaskBucketsPair=RebuildBound.Spec.DirectMaskBucketsPair_statement RebuildBound.DirectMaskBucketsRun=RebuildBound.Spec.DirectMaskBucketsRun_statement RebuildBound.DirectMaskBucketsShape=RebuildBound.Spec.DirectMaskBucketsShape_statement RebuildBound.DirectMaskBucketsWinners=RebuildBound.Spec.DirectMaskBucketsWinners_statement
+
+# Indexed current-state unit-pair sweep; native numeric decoding remains open.
+DirectMaskSweep - RebuildBound.DirectMaskSweepPrefix=RebuildBound.Spec.DirectMaskSweepPrefix_statement RebuildBound.DirectMaskSweepComplete=RebuildBound.Spec.DirectMaskSweepComplete_statement RebuildBound.DirectMaskSweepResume=RebuildBound.Spec.DirectMaskSweepResume_statement RebuildBound.DirectMaskSweepWinners=RebuildBound.Spec.DirectMaskSweepWinners_statement
+
+# Native kPrefixLogDedup pair-index decoding, flat bucket indices and task cuts (Spec/DirectMaskIndex.lean).
+DirectMaskIndex - RebuildBound.DirectMaskIndexDecode=RebuildBound.Spec.DirectMaskIndexDecode_statement RebuildBound.DirectMaskIndexResume=RebuildBound.Spec.DirectMaskIndexResume_statement RebuildBound.DirectMaskIndexPlan=RebuildBound.Spec.DirectMaskIndexPlan_statement RebuildBound.DirectMaskIndexComplete=RebuildBound.Spec.DirectMaskIndexComplete_statement RebuildBound.DirectMaskIndexWinners=RebuildBound.Spec.DirectMaskIndexWinners_statement
+
+# 64-lane mask-word form of one prefix dedup comparison and of a native task (Spec/DirectMask64.lean).
+DirectMask64 - RebuildBound.DirectMask64Pair=RebuildBound.Spec.DirectMask64Pair_statement RebuildBound.DirectMask64Run=RebuildBound.Spec.DirectMask64Run_statement
+
+# Lane-level native home selection (pdep allocation, BuildMergeIndex placement, remaining clears) and drain checks (Spec/DirectSelect64.lean).
+DirectSelect64 - RebuildBound.DirectSelect64Pdep=RebuildBound.Spec.DirectSelect64Pdep_statement RebuildBound.DirectSelect64Home=RebuildBound.Spec.DirectSelect64Home_statement RebuildBound.DirectSelect64Homes=RebuildBound.Spec.DirectSelect64Homes_statement RebuildBound.DirectSelect64Drain=RebuildBound.Spec.DirectSelect64Drain_statement
+
+# Native flat-prefix build (dedup, home selection, drain) = DirectMaskedRecords.build on the grouped flush units (Spec/DirectNative.lean).
+DirectNative - RebuildBound.DirectNativeDedup=RebuildBound.Spec.DirectNativeDedup_statement RebuildBound.DirectNativeBuild=RebuildBound.Spec.DirectNativeBuild_statement
+
+# The online stash unit discipline keeps every flush unit internally unique (Spec/Requester.lean).
+Requester - RebuildBound.RequesterUnique=RebuildBound.Spec.RequesterUnique_statement RebuildBound.RequesterShape=RebuildBound.Spec.RequesterShape_statement
+
+# Lane copies at least as wide as the phase stash add no failure and rebuild the one-lane stash (Spec/LaneFold.lean).
+LaneFold - RebuildBound.LaneFoldExact=RebuildBound.Spec.LaneFoldExact_statement RebuildBound.LaneFoldNarrow=RebuildBound.Spec.LaneFoldNarrow_statement
+
+DirectSelect - RebuildBound.DirectSelectDrain=RebuildBound.Spec.DirectSelectDrain_statement RebuildBound.DirectSelectStable=RebuildBound.Spec.DirectSelectStable_statement RebuildBound.DirectSelectOccupancy=RebuildBound.Spec.DirectSelectOccupancy_statement RebuildBound.DirectSelectConservation=RebuildBound.Spec.DirectSelectConservation_statement RebuildBound.DirectSelectUnique=RebuildBound.Spec.DirectSelectUnique_statement
+
+# Constructive stable grouping, chunk selection, mask clears and logical B producer.
+DirectGroups - RebuildBound.DirectGroupsPermutation=RebuildBound.Spec.DirectGroupsPermutation_statement RebuildBound.DirectGroupsGrouped=RebuildBound.Spec.DirectGroupsGrouped_statement
+DirectScan - RebuildBound.DirectScanSelected=RebuildBound.Spec.DirectScanSelected_statement RebuildBound.DirectScanRejected=RebuildBound.Spec.DirectScanRejected_statement RebuildBound.DirectScanRemaining=RebuildBound.Spec.DirectScanRemaining_statement RebuildBound.DirectScanResume=RebuildBound.Spec.DirectScanResume_statement RebuildBound.DirectScanCandidates=RebuildBound.Spec.DirectScanCandidates_statement RebuildBound.DirectScanHomeSelected=RebuildBound.Spec.DirectScanHomeSelected_statement RebuildBound.DirectScanHomeRejected=RebuildBound.Spec.DirectScanHomeRejected_statement
+DirectRemaining - RebuildBound.DirectRemainingFold=RebuildBound.Spec.DirectRemainingFold_statement RebuildBound.DirectRemainingDrain=RebuildBound.Spec.DirectRemainingDrain_statement RebuildBound.DirectRemainingOccupancy=RebuildBound.Spec.DirectRemainingOccupancy_statement RebuildBound.DirectRemainingChunks=RebuildBound.Spec.DirectRemainingChunks_statement RebuildBound.DirectRemainingFreshHome=RebuildBound.Spec.DirectRemainingFreshHome_statement
+DirectProducer - RebuildBound.DirectProducerExact=RebuildBound.Spec.DirectProducerExact_statement RebuildBound.DirectProducerFailure=RebuildBound.Spec.DirectProducerFailure_statement RebuildBound.DirectProducerSuccess=RebuildBound.Spec.DirectProducerSuccess_statement RebuildBound.DirectProducerRechunk=RebuildBound.Spec.DirectProducerRechunk_statement RebuildBound.DirectProducerScanned=RebuildBound.Spec.DirectProducerScanned_statement
+
+# Shared averaging scaffolding (all declarations audited).
+NetworkAverage - -
+
+# Shared lane filtering and appendFill drain folds.
+LaneDrain - -
+
+# Shared schedule exchange argument for the D6, S6 and TP6 routes.
+Exchange -
+
+# One merge-split step on (main, stash) shared by the binary routes of the
+# general-digit, top-preparation and d = 2 models, and their stage invariant.
+RouteCore -
+
+# Finite weighted laws, independent of geometry.
+FiniteLaw - -
+
+# Geometry-independent averages of per-key factors.
+ProductAverage - -
+
+# Helpers shared with the binary d = 2 chain: list/lane/bucket
+# lemmas, the abstract per-home finish, bit words and key sets, counting and
+# averaging, shadow-network averages, Poisson bridge and shadow-tree laws.
+ListAux - -
+HomeFinish - -
+BlindBits - -
+StageAvg - -
+ShadowNet - -
+ShadowLaw - -
+
+# Full-record restoration of chronological winners through the logical direct producer.
+DirectRecords - RebuildBound.DirectRecordsSource=RebuildBound.Spec.DirectRecordsSource_statement RebuildBound.DirectRecordsFailure=RebuildBound.Spec.DirectRecordsFailure_statement RebuildBound.DirectRecordsSuccess=RebuildBound.Spec.DirectRecordsSuccess_statement RebuildBound.DirectRecordsMain=RebuildBound.Spec.DirectRecordsMain_statement RebuildBound.DirectRecordsRechunk=RebuildBound.Spec.DirectRecordsRechunk_statement
+
+# Construct winner-index chunks from chronological surviving mask units.
+DirectMaskedRecords - RebuildBound.DirectMaskedRecordsValid=RebuildBound.Spec.DirectMaskedRecordsValid_statement RebuildBound.DirectMaskedRecordsRestore=RebuildBound.Spec.DirectMaskedRecordsRestore_statement RebuildBound.DirectMaskedRecordsFailure=RebuildBound.Spec.DirectMaskedRecordsFailure_statement RebuildBound.DirectMaskedRecordsSuccess=RebuildBound.Spec.DirectMaskedRecordsSuccess_statement RebuildBound.DirectMaskedRecordsMain=RebuildBound.Spec.DirectMaskedRecordsMain_statement RebuildBound.DirectMaskedRecordsRechunk=RebuildBound.Spec.DirectMaskedRecordsRechunk_statement
+
+# Original grouped-unit/lane addresses of dense chronological winner indices.
+DirectAddresses - RebuildBound.DirectAddressesUnique=RebuildBound.Spec.DirectAddressesUnique_statement RebuildBound.DirectAddressesRestore=RebuildBound.Spec.DirectAddressesRestore_statement RebuildBound.DirectAddressesChunks=RebuildBound.Spec.DirectAddressesChunks_statement RebuildBound.DirectAddressesDense=RebuildBound.Spec.DirectAddressesDense_statement RebuildBound.DirectAddressesWinners=RebuildBound.Spec.DirectAddressesWinners_statement RebuildBound.DirectAddressesHome=RebuildBound.Spec.DirectAddressesHome_statement
+
+# Scalar byte-cache comparison, conditional on lane encoding correspondence.
+DirectCache - RebuildBound.DirectCacheLines=RebuildBound.Spec.DirectCacheLines_statement RebuildBound.DirectCacheBytes=RebuildBound.Spec.DirectCacheBytes_statement RebuildBound.DirectCacheHome=RebuildBound.Spec.DirectCacheHome_statement RebuildBound.DirectCacheCandidate=RebuildBound.Spec.DirectCacheCandidate_statement RebuildBound.DirectCacheClear=RebuildBound.Spec.DirectCacheClear_statement
+
+# Fixed-width cache arithmetic and the native byte-line candidate-mask loop.
+DirectCache64 - RebuildBound.DirectCache64Byte=RebuildBound.Spec.DirectCache64Byte_statement RebuildBound.DirectCache64Fold=RebuildBound.Spec.DirectCache64Fold_statement RebuildBound.DirectCache64Candidate=RebuildBound.Spec.DirectCache64Candidate_statement RebuildBound.DirectCache64Clear=RebuildBound.Spec.DirectCache64Clear_statement
+
+# Original-source reference cache to the existing stable logical home scan.
+DirectSourceCache - RebuildBound.DirectSourceCacheEncoding=RebuildBound.Spec.DirectSourceCacheEncoding_statement RebuildBound.DirectSourceCacheCandidates=RebuildBound.Spec.DirectSourceCacheCandidates_statement RebuildBound.DirectSourceCacheSelected=RebuildBound.Spec.DirectSourceCacheSelected_statement
+
+# Complete direct reference, first increment: DirectJobContract.
+DirectJobContract - RebuildBound.DirectJobHome=RebuildBound.Spec.DirectJobHome_statement RebuildBound.DirectJobExamples=RebuildBound.Spec.DirectJobExamples_statement RebuildBound.DirectJobDrainErasure=RebuildBound.Spec.DirectJobDrainErasure_statement RebuildBound.DirectJobDrainSimulation=RebuildBound.Spec.DirectJobDrainSimulation_statement RebuildBound.DirectJobDrainRecords=RebuildBound.Spec.DirectJobDrainRecords_statement RebuildBound.DirectJobDrainFailureCheck=RebuildBound.Spec.DirectJobDrainFailureCheck_statement
+
+# Complete direct reference, first increment: DirectJobB.
+DirectJobB - RebuildBound.DirectJobBRefinement=RebuildBound.Spec.DirectJobBRefinement_statement RebuildBound.DirectJobBFailure=RebuildBound.Spec.DirectJobBFailure_statement RebuildBound.DirectJobBSuccess=RebuildBound.Spec.DirectJobBSuccess_statement RebuildBound.DirectJobDigitOneSuccess=RebuildBound.Spec.DirectJobDigitOneSuccess_statement RebuildBound.DirectJobBExcess=RebuildBound.Spec.DirectJobBExcess_statement RebuildBound.DirectJobDigitOnePlacement=RebuildBound.Spec.DirectJobDigitOnePlacement_statement RebuildBound.DirectJobBIndices=RebuildBound.Spec.DirectJobBIndices_statement RebuildBound.DirectJobBFailureCheck=RebuildBound.Spec.DirectJobBFailureCheck_statement
+
+# Record-level B tier in original source order.
+DirectTierOrder - RebuildBound.DirectRecordsTierOrder=RebuildBound.Spec.DirectRecordsTierOrder_statement RebuildBound.DirectJobBTierOrder=RebuildBound.Spec.DirectJobBTierOrder_statement
+
+# Complete direct reference: ordered A preparation and residual distribution.
+DirectJobA - RebuildBound.DirectJobATopology=RebuildBound.Spec.DirectJobATopology_statement RebuildBound.DirectJobARefinement=RebuildBound.Spec.DirectJobARefinement_statement RebuildBound.DirectJobASimulation=RebuildBound.Spec.DirectJobASimulation_statement RebuildBound.DirectJobADirect=RebuildBound.Spec.DirectJobADirect_statement RebuildBound.DirectJobADfs=RebuildBound.Spec.DirectJobADfs_statement RebuildBound.DirectJobAFailureCheck=RebuildBound.Spec.DirectJobAFailureCheck_statement
+
+# Direct finish execution, simulation and ranked drain.
+DirectJobFinish - RebuildBound.DirectJobFinishTopology=RebuildBound.Spec.DirectJobFinishTopology_statement RebuildBound.DirectJobFinishDistribution=RebuildBound.Spec.DirectJobFinishDistribution_statement RebuildBound.DirectJobFinishInsertRefinement=RebuildBound.Spec.DirectJobFinishInsertRefinement_statement RebuildBound.DirectJobFinishInsertSimulation=RebuildBound.Spec.DirectJobFinishInsertSimulation_statement RebuildBound.DirectJobFinishDrainSimulation=RebuildBound.Spec.DirectJobFinishDrainSimulation_statement RebuildBound.DirectJobFinishSimulation=RebuildBound.Spec.DirectJobFinishSimulation_statement RebuildBound.DirectJobFinishFailureCheck=RebuildBound.Spec.DirectJobFinishFailureCheck_statement RebuildBound.DirectJobFinishBLanes=RebuildBound.Spec.DirectJobFinishBLanes_statement RebuildBound.DirectJobFinishDrainWidth=RebuildBound.Spec.DirectJobFinishDrainWidth_statement RebuildBound.DirectJobFinishOutputWidth=RebuildBound.Spec.DirectJobFinishOutputWidth_statement
+
+# Direct original-input finish correctness, capacity bounds and all-digit publication.
+DirectJobBridge - RebuildBound.DirectJobBridgeShape=RebuildBound.Spec.DirectJobBridgeShape_statement RebuildBound.DirectJobBridgeWinners=RebuildBound.Spec.DirectJobBridgeWinners_statement RebuildBound.DirectJobBridgeNodup=RebuildBound.Spec.DirectJobBridgeNodup_statement
+DirectJobFinishCorrectness - RebuildBound.DirectJobFinishConservation=RebuildBound.Spec.DirectJobFinishConservation_statement RebuildBound.DirectJobFinishPlacement=RebuildBound.Spec.DirectJobFinishPlacement_statement RebuildBound.DirectJobFinishExactExcess=RebuildBound.Spec.DirectJobFinishExactExcess_statement
+DirectJobFinishBounds - RebuildBound.DirectJobFinishBounds=RebuildBound.Spec.DirectJobFinishBounds_statement RebuildBound.DirectJobFinishFailureExcess=RebuildBound.Spec.DirectJobFinishFailureExcess_statement
+DirectJobPublication - RebuildBound.DirectJobPublication=RebuildBound.Spec.DirectJobPublication_statement
+DirectJob - RebuildBound.DirectJob=RebuildBound.Spec.DirectJob_statement
+DirectJobSelected - RebuildBound.DirectJobSelectedGeometry=RebuildBound.Spec.DirectJobSelectedGeometry_statement RebuildBound.DirectJobSelectedAAdapter=RebuildBound.Spec.DirectJobSelectedAAdapter_statement RebuildBound.DirectJobSelectedExcess=RebuildBound.Spec.DirectJobSelectedExcess_statement RebuildBound.DirectJobSelectedDensity=RebuildBound.Spec.DirectJobSelectedDensity_statement
+DirectJobProbability - RebuildBound.DirectJobBCount=RebuildBound.Spec.DirectJobBCount_statement RebuildBound.DirectJobFailureProbability=RebuildBound.Spec.DirectJobFailureProbability_statement
+DirectJobABounds - RebuildBound.DirectJobARouteBound=RebuildBound.Spec.DirectJobARouteBound_statement RebuildBound.DirectJobARangeBound=RebuildBound.Spec.DirectJobARangeBound_statement RebuildBound.DirectJobAWitnessBound=RebuildBound.Spec.DirectJobAWitnessBound_statement RebuildBound.DirectJobAWitnessProbability=RebuildBound.Spec.DirectJobAWitnessProbability_statement RebuildBound.DirectJobARouteWitnessBound=RebuildBound.Spec.DirectJobARouteWitnessBound_statement RebuildBound.DirectJobARouteWitnessProbability=RebuildBound.Spec.DirectJobARouteWitnessProbability_statement RebuildBound.DirectJobADirectWitnessProbability=RebuildBound.Spec.DirectJobADirectWitnessProbability_statement
+
+# Unconditional whole-job analytical continuation and failure witnesses.
+DirectJobFailure - RebuildBound.DirectJobBAnalytical=RebuildBound.Spec.DirectJobBAnalytical_statement RebuildBound.DirectJobSimulation=RebuildBound.Spec.DirectJobSimulation_statement RebuildBound.DirectJobRangeFailure=RebuildBound.Spec.DirectJobRangeFailure_statement RebuildBound.DirectJobFirstFailure=RebuildBound.Spec.DirectJobFirstFailure_statement RebuildBound.DirectJobFailureContainment=RebuildBound.Spec.DirectJobFailureContainment_statement
+
+# Ordered A routing-mark dependency, without schedule normalization.
+DirectJobExposure - RebuildBound.DirectJobExposureStep=RebuildBound.Spec.DirectJobExposureStep_statement RebuildBound.DirectJobExposurePrefix=RebuildBound.Spec.DirectJobExposurePrefix_statement RebuildBound.DirectJobExposureBounded=RebuildBound.Spec.DirectJobExposureBounded_statement RebuildBound.DirectJobExposurePause=RebuildBound.Spec.DirectJobExposurePause_statement
+DirectJobANumerics - RebuildBound.DirectJobSelectedARange=RebuildBound.Spec.DirectJobSelectedARange_statement RebuildBound.DirectJobSelectedAStorage=RebuildBound.Spec.DirectJobSelectedAStorage_statement RebuildBound.DirectJobSelectedANumerics=RebuildBound.Spec.DirectJobSelectedANumerics_statement
+DirectJobAProbability - RebuildBound.DirectJobSelectedAProbability=RebuildBound.Spec.DirectJobSelectedAProbability_statement RebuildBound.DirectJobSelectedLifetimeNumerics=RebuildBound.Spec.DirectJobSelectedLifetimeNumerics_statement
+
+# Logical whole-job cursors, finite completion and exact atomic refinement.
+DirectJobResume - RebuildBound.DirectJobResumeStart=RebuildBound.Spec.DirectJobResumeStart_statement RebuildBound.DirectJobResumeStep=RebuildBound.Spec.DirectJobResumeStep_statement RebuildBound.DirectJobResumePause=RebuildBound.Spec.DirectJobResumePause_statement RebuildBound.DirectJobResumeTerminal=RebuildBound.Spec.DirectJobResumeTerminal_statement RebuildBound.DirectJobResumeProgress=RebuildBound.Spec.DirectJobResumeProgress_statement RebuildBound.DirectJobResumeCompletion=RebuildBound.Spec.DirectJobResumeCompletion_statement RebuildBound.DirectJobResumeRefinement=RebuildBound.Spec.DirectJobResumeRefinement_statement
+
+# Original direct input keys under the shared independent finite-word law.
+DirectJobFiniteWords - RebuildBound.DirectJobDigitOneFiniteWordsFor=RebuildBound.Spec.DirectJobDigitOneFiniteWordsFor_statement RebuildBound.DirectJobBFiniteWords=RebuildBound.Spec.DirectJobBFiniteWords_statement RebuildBound.DirectJobUnionFiniteWords=RebuildBound.Spec.DirectJobUnionFiniteWords_statement RebuildBound.DirectJobSelectedWordDensity=RebuildBound.Spec.DirectJobSelectedWordDensity_statement RebuildBound.DirectJobFiniteWordProbability=RebuildBound.Spec.DirectJobFiniteWordProbability_statement RebuildBound.DirectJobDigitOneFiniteWords=RebuildBound.Spec.DirectJobDigitOneFiniteWords_statement
+
+# Logical publication adoption and chronological job-chain histories.
+DirectJobAdoption - RebuildBound.DirectJobEmptyInput=RebuildBound.Spec.DirectJobEmptyInput_statement RebuildBound.DirectJobAdoption=RebuildBound.Spec.DirectJobAdoption_statement RebuildBound.DirectJobSelectedAdoption=RebuildBound.Spec.DirectJobSelectedAdoption_statement RebuildBound.DirectJobSelectedChainAdmissible=RebuildBound.Spec.DirectJobSelectedChainAdmissible_statement
+DirectJobChain - RebuildBound.DirectJobHistoryStep=RebuildBound.Spec.DirectJobHistoryStep_statement
+
+# Total logical reference histories, unconditional cycle coverage and input shape.
+DirectJobReference - RebuildBound.DirectJobReferenceStep=RebuildBound.Spec.DirectJobReferenceStep_statement RebuildBound.DirectJobReferenceHistory=RebuildBound.Spec.DirectJobReferenceHistory_statement RebuildBound.DirectJobReferenceKeys=RebuildBound.Spec.DirectJobReferenceKeys_statement
+DirectJobReferenceCoverage - RebuildBound.DirectJobReferenceAgreement=RebuildBound.Spec.DirectJobReferenceAgreement_statement RebuildBound.DirectJobReferenceOrdinals=RebuildBound.Spec.DirectJobReferenceOrdinals_statement RebuildBound.DirectJobReferenceCoverage=RebuildBound.Spec.DirectJobReferenceCoverage_statement
+DirectJobReferenceInputs - RebuildBound.DirectJobReferenceInputShape=RebuildBound.Spec.DirectJobReferenceInputShape_statement RebuildBound.DirectJobReferenceInputMatch=RebuildBound.Spec.DirectJobReferenceInputMatch_statement RebuildBound.DirectJobReferenceInputShapeFor=RebuildBound.Spec.DirectJobReferenceInputShapeFor_statement
+
+# Joint finite-word fibers, selected old density and explicit history input laws.
+WordHomeFibers - RebuildBound.WordHomeFibers=RebuildBound.Spec.WordHomeFibers_statement
+DirectJobOldWordDensity - RebuildBound.DirectJobOldWordDensity=RebuildBound.Spec.DirectJobOldWordDensity_statement
+DirectJobHistoryLaw - RebuildBound.DirectJobHistoryInputLaw=RebuildBound.Spec.DirectJobHistoryInputLaw_statement RebuildBound.DirectJobHistoryInputMatch=RebuildBound.Spec.DirectJobHistoryInputMatch_statement RebuildBound.DirectJobHistoryProbability=RebuildBound.Spec.DirectJobHistoryProbability_statement
+
+# Fixed chronological populations and unconditional transport to a shared space.
+DirectJobPopulation - RebuildBound.DirectJobPopulationKeys=RebuildBound.Spec.DirectJobPopulationKeys_statement RebuildBound.DirectJobPopulationLoad=RebuildBound.Spec.DirectJobPopulationLoad_statement RebuildBound.DirectJobReferencePopulation=RebuildBound.Spec.DirectJobReferencePopulation_statement RebuildBound.DirectJobHistoryPrefixValid=RebuildBound.Spec.DirectJobHistoryPrefixValid_statement RebuildBound.DirectJobReferencePopulationFor=RebuildBound.Spec.DirectJobReferencePopulationFor_statement RebuildBound.DirectJobHistoryPrefixValidFor=RebuildBound.Spec.DirectJobHistoryPrefixValidFor_statement
+DirectJobLawTransport - RebuildBound.DirectJobLawTransport=RebuildBound.Spec.DirectJobLawTransport_statement RebuildBound.DirectJobHistoryTransport=RebuildBound.Spec.DirectJobHistoryTransport_statement
+# Level-one cycles are bounded through the cycle correspondence (DirectJobSelectedCycle), which
+# bounds actual failures at reached ordinals; G4a supplies the union bound over ordinals.
+# DirectJobUniform holds the uniform-tape coupling and per-job bounds. DirectJobCycle holds the
+# deterministic reference-prefix identity.
+DirectJobCycle - RebuildBound.DirectJobReferencePrefix=RebuildBound.Spec.DirectJobReferencePrefix_statement
+DirectJobUniform - RebuildBound.DirectJobUniformCoupling=RebuildBound.Spec.DirectJobUniformCoupling_statement RebuildBound.DirectJobUniformDigitOneProbability=RebuildBound.Spec.DirectJobUniformDigitOneProbability_statement RebuildBound.DirectJobUniformHistoryProbability=RebuildBound.Spec.DirectJobUniformHistoryProbability_statement
+
+# One finite job law, one coupling, one transport (Spec/FiniteTransport.lean);
+# SelTotal with premises 2-3 in coupling form (Spec/SelTotal.lean).
+FiniteCoupling - RebuildBound.FiniteTransport=RebuildBound.Spec.FiniteTransport_statement
+SelTotCoupled - RebuildBound.SelTotalCoupled=RebuildBound.Spec.SelTotalCoupled_statement
+
+# SelTotalCoupled premises 1-4 plus, per level-one ordinal, a coupled reference law containing its event: 2^-69.
+DirectJobHierarchy - RebuildBound.DirectJobHierarchy=RebuildBound.Spec.DirectJobHierarchy_statement RebuildBound.DirectJobSelectedChainOutcome=RebuildBound.Spec.DirectJobSelectedChainOutcome_statement
+
+# One selected level-one cycle from empty: per-ordinal coupled laws and the pointwise correspondence at
+# reached ordinals bound the probability that the cycle does not publish (Spec/DirectJobSelectedCycle.lean).
+DirectJobSelectedCycle - RebuildBound.DirectJobSelectedCycle=RebuildBound.Spec.DirectJobSelectedCycle_statement
+
+# The horizon bound with level one given by its selected cycles: DirectJobHierarchy's covering of level-one
+# ordinals derived from DirectJobSelectedCycle's per-cycle premises (Spec/DirectJobHierarchyCycles.lean).
+DirectJobHierarchyCycles - RebuildBound.DirectJobHierarchyCycles=RebuildBound.Spec.DirectJobHierarchyCycles_statement
+
+# One selected cycle on the uniform word tape: every coupling and history-validity premise of
+# DirectJobSelectedCycle instantiated on a product of uniform word blocks (Spec/DirectJobUniformCycle.lean).
+DirectJobUniformCycle - RebuildBound.DirectJobUniformCycle=RebuildBound.Spec.DirectJobUniformCycle_statement
+
+# The horizon bound with level one on uniform word blocks: per cycle a measurable projection with uniform
+# image law and native words agreeing on the unions (Spec/DirectJobUniformHierarchy.lean).
+DirectJobUniformHierarchy - RebuildBound.DirectJobUniformHierarchy=RebuildBound.Spec.DirectJobUniformHierarchy_statement
+
+# Word locality: each job reads its word only at its records' keys (Spec/WordLocality.lean).
+WordLocalS - RebuildBound.SJobWordLocal=RebuildBound.Spec.SJobWordLocal_statement
+WordLocalTop - RebuildBound.TopJobWordLocal=RebuildBound.Spec.TopJobWordLocal_statement
+WordLocalTP - RebuildBound.TPJobWordLocal=RebuildBound.Spec.TPJobWordLocal_statement
+WordLocalDirect - RebuildBound.DirectJobWordLocal=RebuildBound.Spec.DirectJobWordLocal_statement
+
+# The serialised hierarchy model on the uniform family tape
+# (Spec/Model/Hierarchy.lean, Spec/Hierarchy.lean).
+HierarchyInvariant - RebuildBound.HierarchyInvariant=RebuildBound.Spec.HierarchyInvariant_statement
+HierarchyLocality - RebuildBound.HierarchyLocality=RebuildBound.Spec.HierarchyLocality_statement
+TierFit - RebuildBound.SepTierFit=RebuildBound.Spec.SepTierFit_statement RebuildBound.TopTierFit=RebuildBound.Spec.TopTierFit_statement RebuildBound.TPTierFit=RebuildBound.Spec.TPTierFit_statement
+HierarchyCovering - RebuildBound.HierarchyCovering=RebuildBound.Spec.HierarchyCovering_statement
+OldWordDensity - RebuildBound.OldWordDensity=RebuildBound.Spec.OldWordDensity_statement
+HierarchySepLaw - RebuildBound.HierarchySepLaw=RebuildBound.Spec.HierarchySepLaw_statement
+HierarchyTopLaw - RebuildBound.HierarchyTopLaw=RebuildBound.Spec.HierarchyTopLaw_statement
+HierarchyLevelOne - RebuildBound.HierarchyLevelOne=RebuildBound.Spec.HierarchyLevelOne_statement RebuildBound.HierarchyLevelOneGeometry=RebuildBound.Spec.HierarchyLevelOneGeometry_statement
+HierarchyUniform -
+
+# Every chunk of 2^32 accesses (Spec/HierarchyChunk.lean). The packages restate
+# the hierarchy packages at every chunk horizon; the assembly relabels a chunk into the first horizon.
+HierarchyHorizonFree - RebuildBound.HierarchyHorizonFree=RebuildBound.Spec.HierarchyHorizonFree_statement
+HierarchyInvariantChunks - RebuildBound.HierarchyInvariantChunks=RebuildBound.Spec.HierarchyInvariantChunks_statement
+HierarchyLocalityChunks - RebuildBound.HierarchyLocalityChunks=RebuildBound.Spec.HierarchyLocalityChunks_statement
+HierarchySepLawChunks - RebuildBound.HierarchySepLawChunks=RebuildBound.Spec.HierarchySepLawChunks_statement
+HierarchyTopLawChunks - RebuildBound.HierarchyTopLawChunks=RebuildBound.Spec.HierarchyTopLawChunks_statement
+HierarchyLevelOneChunks - RebuildBound.HierarchyLevelOneChunks=RebuildBound.Spec.HierarchyLevelOneChunks_statement
+HierarchyCoveringFrom - RebuildBound.HierarchyCoveringFrom=RebuildBound.Spec.HierarchyCoveringFrom_statement
+HierarchyChunkAssembly -
+HierarchyChunk -
+
+# Obliviousness of the online layer (Spec/Model/Online.lean, Spec/Oblivious.lean).
+OnlinePattern - RebuildBound.OnlinePattern=RebuildBound.Spec.OnlinePattern_statement
+OnlineFresh - RebuildBound.OnlineFresh=RebuildBound.Spec.OnlineFresh_statement
+OnlineExact - RebuildBound.OnlineExact=RebuildBound.Spec.OnlineExact_statement
+HierarchyChunkPartition - RebuildBound.HierarchyChunkPartition=RebuildBound.Spec.HierarchyChunkPartition_statement
+OnlineFailure - RebuildBound.OnlineFailure=RebuildBound.Spec.OnlineFailure_statement
+OnlineObliviousAssembly -
+SyncSchedule - RebuildBound.SyncSchedule=RebuildBound.Spec.SyncSchedule_statement
+
+# Obliviousness with batch chunks (Spec/Model/OnlineBatch.lean, Spec/ObliviousBatch.lean).
+BatchPattern - RebuildBound.BatchPattern=RebuildBound.Spec.BatchPattern_statement
+BatchFresh - RebuildBound.BatchFresh=RebuildBound.Spec.BatchFresh_statement
+BatchExact - RebuildBound.BatchExact=RebuildBound.Spec.BatchExact_statement
+BatchFailure - RebuildBound.BatchFailure=RebuildBound.Spec.BatchFailure_statement
+BatchObliviousAssembly -
+BatchScalar - RebuildBound.BatchScalar=RebuildBound.Spec.BatchScalar_statement
+
+# Generic chunk-to-window transfer and UnshPromise reduction.
+HierarchyWindows -
+UnshReduction -
+
+# Packed cache candidates equal the native B build's lane-level home mask.
+DirectNativeCache - RebuildBound.DirectNativeCacheCandidate=RebuildBound.Spec.DirectNativeCacheCandidate_statement RebuildBound.DirectNativeCacheHomeMask=RebuildBound.Spec.DirectNativeCacheHomeMask_statement
+
+# Generic deterministic probe lookup and address agreement; public endpoints are in ProbeCorrectness31.
+OnlineCorrectness -
+BatchCorrectness -
+
+# D8 capacity extension: finite inventory and proposed budget arithmetic only.
+Inventory31 - RebuildBound.Inventory31=RebuildBound.Spec.Inventory31_statement RebuildBound.Budget31=RebuildBound.Spec.Budget31_statement
+
+# The capacity-2^31 inventory instantiated with separate initialization geometry.
+Geometry31 - RebuildBound.Geometry31=RebuildBound.Spec.Geometry31_statement
+HierarchyInvariant31 - RebuildBound.HierarchyInvariant31=RebuildBound.Spec.HierarchyInvariant31_statement
+HierarchyCovering31 - RebuildBound.HierarchyCovering31=RebuildBound.Spec.HierarchyCovering31_statement
+HierarchyLaws31 - RebuildBound.HierarchyLocality31=RebuildBound.Spec.HierarchyLocality31_statement RebuildBound.HierarchyLevelOne31=RebuildBound.Spec.HierarchyLevelOne31_statement RebuildBound.HierarchySepLaw31=RebuildBound.Spec.HierarchySepLaw31_statement RebuildBound.HierarchyTopLaw31=RebuildBound.Spec.HierarchyTopLaw31_statement
+
+# Capacity-2^31 numerical pilot certificates.
+Numerics31Top - RebuildBound.TopNum31=RebuildBound.Spec.TopNum31_statement RebuildBound.TPRemainder31=RebuildBound.Spec.TPRemainder31_statement
+Numerics31Range - RebuildBound.Numerics31Range=RebuildBound.Spec.Numerics31Range_statement RebuildBound.TPRange31=RebuildBound.Spec.TPRange31_statement
+Numerics31Pilot - RebuildBound.TPNum31=RebuildBound.Spec.TPNum31_statement
+
+# Complete capacity-2^31 separated ordinary numerical certificates.
+Numerics31OrdRange - RebuildBound.Numerics31OrdRange=RebuildBound.Spec.Numerics31OrdRange_statement
+Numerics31Rest - RebuildBound.Numerics31Rest=RebuildBound.Spec.Numerics31Rest_statement
+Numerics31Ordinary - RebuildBound.OrdinaryRest31=RebuildBound.Spec.OrdinaryRest31_statement RebuildBound.OrdinaryNum31=RebuildBound.Spec.OrdinaryNum31_statement
+
+# Explicit-geometry probability composition and capacity-2^31 first horizon.
+Compose31 -
+HierarchyUniform31 - RebuildBound.HierarchyUniform31=RebuildBound.Spec.HierarchyUniform31_statement
+
+# Capacity-2^31 arbitrary-horizon laws and chunk/window endpoints.
+HierarchyLawsChunks31 - RebuildBound.HierarchyLawsChunks31=RebuildBound.Spec.HierarchyLawsChunks31_statement
+HierarchyChunk31 - RebuildBound.HierarchyCoveringChunks31=RebuildBound.Spec.HierarchyCoveringChunks31_statement RebuildBound.HierarchyChunk31=RebuildBound.Spec.HierarchyChunk31_statement RebuildBound.HierarchyWindows31=RebuildBound.Spec.HierarchyWindows31_statement
+HierarchyHorizonTransfer -
+
+# Generic online interfaces specialized to capacity 2^31.
+OnlineOblivious31 - RebuildBound.OnlinePattern31=RebuildBound.Spec.OnlinePattern31_statement RebuildBound.OnlineFresh31=RebuildBound.Spec.OnlineFresh31_statement RebuildBound.OnlineExact31=RebuildBound.Spec.OnlineExact31_statement RebuildBound.OnlineFailure31=RebuildBound.Spec.OnlineFailure31_statement RebuildBound.OnlineOblivious31=RebuildBound.Spec.OnlineOblivious31_statement RebuildBound.SyncSchedule31=RebuildBound.Spec.SyncSchedule31_statement
+BatchOblivious31 - RebuildBound.BatchPattern31=RebuildBound.Spec.BatchPattern31_statement RebuildBound.BatchFresh31=RebuildBound.Spec.BatchFresh31_statement RebuildBound.BatchExact31=RebuildBound.Spec.BatchExact31_statement RebuildBound.BatchFailure31=RebuildBound.Spec.BatchFailure31_statement RebuildBound.BatchOblivious31=RebuildBound.Spec.BatchOblivious31_statement
+ProbeCorrectness31 - RebuildBound.OnlineCorrectness31=RebuildBound.Spec.OnlineCorrectness31_statement RebuildBound.BatchCorrectness31=RebuildBound.Spec.BatchCorrectness31_statement
+
+# Exact key renaming and arbitrary-key fixed-universe endpoints.
+KeyRelabel - RebuildBound.GenericOnlinePattern31=RebuildBound.Spec.GenericOnlinePattern31_statement RebuildBound.GenericOnlineFresh31=RebuildBound.Spec.GenericOnlineFresh31_statement RebuildBound.GenericOnlineExact31=RebuildBound.Spec.GenericOnlineExact31_statement RebuildBound.GenericOnlineFailure31=RebuildBound.Spec.GenericOnlineFailure31_statement RebuildBound.GenericOnlineCorrectness31=RebuildBound.Spec.GenericOnlineCorrectness31_statement RebuildBound.GenericOnlineOblivious31=RebuildBound.Spec.GenericOnlineOblivious31_statement RebuildBound.GenericBatchPattern31=RebuildBound.Spec.GenericBatchPattern31_statement RebuildBound.GenericBatchFresh31=RebuildBound.Spec.GenericBatchFresh31_statement RebuildBound.GenericBatchExact31=RebuildBound.Spec.GenericBatchExact31_statement RebuildBound.GenericBatchFailure31=RebuildBound.Spec.GenericBatchFailure31_statement RebuildBound.GenericBatchCorrectness31=RebuildBound.Spec.GenericBatchCorrectness31_statement RebuildBound.GenericBatchOblivious31=RebuildBound.Spec.GenericBatchOblivious31_statement RebuildBound.GenericHierarchyWindows31=RebuildBound.Spec.GenericHierarchyWindows31_statement RebuildBound.GenericHierarchyChunk31=RebuildBound.Spec.GenericHierarchyChunk31_statement
+
+# Adaptive clients (Spec/Adaptive.lean, Spec/AdaptiveSteps*.lean).
+# Deterministic steps: trace-prefix locality, row causality, replay, requester premises, causal trace.
+AdaptiveTracePrefix - RebuildBound.TracePrefix=RebuildBound.Spec.TracePrefix_statement
+AdaptiveRequester - RebuildBound.RequesterTrace=RebuildBound.Spec.RequesterTrace_statement
+AdaptiveRowCausality - RebuildBound.RowCausalityStep=RebuildBound.Spec.RowCausalityStep_statement RebuildBound.TraceUnitsPrefix=RebuildBound.Spec.TraceUnitsPrefix_statement
+AdaptiveReplay - RebuildBound.ReplayShape=RebuildBound.Spec.ReplayShape_statement RebuildBound.AdaptiveReplayStep=RebuildBound.Spec.AdaptiveReplayStep_statement RebuildBound.AdaptiveConstantStep=RebuildBound.Spec.AdaptiveConstantStep_statement RebuildBound.AdaptiveAdmissibleStep=RebuildBound.Spec.AdaptiveAdmissibleStep_statement
+AdaptiveCausal - RebuildBound.AdaptiveCausalStep=RebuildBound.Spec.AdaptiveCausalStep_statement
+# Capacity over a trace that is causal for exposure: the conditioning lemma and the per-job cells.
+AdaptiveCell - RebuildBound.CausalCell=RebuildBound.Spec.CausalCell_statement
+AdaptiveSepA - RebuildBound.CausalSepAStep=RebuildBound.Spec.CausalSepAStep_statement
+AdaptiveSepU - RebuildBound.CausalSepUStep=RebuildBound.Spec.CausalSepUStep_statement
+AdaptiveLevelOneA - RebuildBound.CausalLevelOneAStep=RebuildBound.Spec.CausalLevelOneAStep_statement
+AdaptiveLevelOneBU - RebuildBound.CausalLevelOneBUStep=RebuildBound.Spec.CausalLevelOneBUStep_statement
+AdaptiveTop - RebuildBound.CausalTopStep=RebuildBound.Spec.CausalTopStep_statement
+# Composition: first-failure covering, per-chunk G4a, per-role splits.
+AdaptiveCompose - RebuildBound.AdaptiveCovering31=RebuildBound.Spec.AdaptiveCovering31_statement RebuildBound.CausalWindowsStep=RebuildBound.Spec.CausalWindowsStep_statement RebuildBound.CausalSepStep=RebuildBound.Spec.CausalSepStep_statement RebuildBound.CausalLevelOneStep=RebuildBound.Spec.CausalLevelOneStep_statement
+# Assembly: exact lift, numeric windows, key-universe transport, obliviousness transfer.
+AdaptiveAssembly - RebuildBound.AdaptiveExactStep=RebuildBound.Spec.AdaptiveExactStep_statement RebuildBound.AdaptiveNumericWindowsStep=RebuildBound.Spec.AdaptiveNumericWindowsStep_statement RebuildBound.AdaptiveWindowsUniverse=RebuildBound.Spec.AdaptiveWindowsUniverse_statement RebuildBound.AdaptiveObliviousAssembly=RebuildBound.Spec.AdaptiveObliviousAssembly_statement
+# The native reduction: raw selected records and the unshadowed flag.
+AdaptiveFound - RebuildBound.BatchFound31=RebuildBound.Spec.BatchFound31_statement RebuildBound.BatchFoundCausal=RebuildBound.Spec.BatchFoundCausal_statement
+AdaptiveFoundMem - RebuildBound.BatchFoundMem31=RebuildBound.Spec.BatchFoundMem31_statement
+AdaptiveFlagSound - RebuildBound.FlagSoundness31=RebuildBound.Spec.FlagSoundness31_statement
+AdaptiveFlagAdmissible - RebuildBound.AdaptiveFlagAdmissibleStep=RebuildBound.Spec.AdaptiveFlagAdmissibleStep_statement RebuildBound.AdaptiveTwoClients31=RebuildBound.Spec.AdaptiveTwoClients31_statement
+# The headlines.
+Adaptive - RebuildBound.AdaptiveExact31=RebuildBound.Spec.AdaptiveExact31_statement RebuildBound.AdaptiveWindows31=RebuildBound.Spec.AdaptiveWindows31_statement RebuildBound.AdaptiveOblivious31=RebuildBound.Spec.AdaptiveOblivious31_statement RebuildBound.AdaptiveConstant=RebuildBound.Spec.AdaptiveConstant_statement RebuildBound.AdaptiveAdmissible=RebuildBound.Spec.AdaptiveAdmissible_statement RebuildBound.AdaptiveFlagAdmissible31=RebuildBound.Spec.AdaptiveFlagAdmissible31_statement
+
+# API request/response semantics and conditional native-interface correspondence.
+ApiCorrectness - RebuildBound.BatchApiCorrectness31=RebuildBound.Spec.BatchApiCorrectness31_statement RebuildBound.ApiFlagRule=RebuildBound.Spec.ApiFlagRule_statement RebuildBound.ApiReferenceCorrectness=RebuildBound.Spec.ApiReferenceCorrectness_statement RebuildBound.ApiAdmissible31=RebuildBound.Spec.ApiAdmissible31_statement
+AdaptiveApi - RebuildBound.AdaptiveRealizedSetting=RebuildBound.Spec.AdaptiveRealizedSetting_statement RebuildBound.AdaptiveApiCorrectness31=RebuildBound.Spec.AdaptiveApiCorrectness31_statement
+NativeAdapter - RebuildBound.NativeAdapterAgreement=RebuildBound.Spec.NativeAdapterAgreement_statement RebuildBound.NativeAdapterOblivious31=RebuildBound.Spec.NativeAdapterOblivious31_statement RebuildBound.NativeAdapterTwoClients31=RebuildBound.Spec.NativeAdapterTwoClients31_statement
+NativeApi - RebuildBound.NativeApiCorrectness31=RebuildBound.Spec.NativeApiCorrectness31_statement RebuildBound.NativeAdapterApiCorrectness31=RebuildBound.Spec.NativeAdapterApiCorrectness31_statement
+ApiAccess - RebuildBound.ApiAccessLowering=RebuildBound.Spec.ApiAccessLowering_statement RebuildBound.ApiAccessCorrectness=RebuildBound.Spec.ApiAccessCorrectness_statement RebuildBound.BatchApiAccessCorrectness31=RebuildBound.Spec.BatchApiAccessCorrectness31_statement
+ApiLowering - RebuildBound.ApiLoweringStructure=RebuildBound.Spec.ApiLoweringStructure_statement RebuildBound.ApiLoweringMap=RebuildBound.Spec.ApiLoweringMap_statement RebuildBound.PublicBatchApiCorrectness=RebuildBound.Spec.PublicBatchApiCorrectness_statement RebuildBound.PublicBatchApiCorrectness31=RebuildBound.Spec.PublicBatchApiCorrectness31_statement
+ApiGrouped - RebuildBound.ApiGroupedChoices=RebuildBound.Spec.ApiGroupedChoices_statement RebuildBound.ApiGroupedReference=RebuildBound.Spec.ApiGroupedReference_statement
+ApiExecution - RebuildBound.ApiExecutionShape=RebuildBound.Spec.ApiExecutionShape_statement RebuildBound.ApiExecutionImplements=RebuildBound.Spec.ApiExecutionImplements_statement RebuildBound.ApiExecutionFlags=RebuildBound.Spec.ApiExecutionFlags_statement RebuildBound.ApiExecutionTransfer=RebuildBound.Spec.ApiExecutionTransfer_statement RebuildBound.ApiExecutionLowered=RebuildBound.Spec.ApiExecutionLowered_statement RebuildBound.ApiExecutionCorrectness=RebuildBound.Spec.ApiExecutionCorrectness_statement
+
+# Generic geometry contracts and both-start reference semantics.
+HierarchySemantics - RebuildBound.HierarchyLookup=RebuildBound.Spec.HierarchyLookup_statement RebuildBound.HierarchyUniverseLookup=RebuildBound.Spec.HierarchyUniverseLookup_statement RebuildBound.HierarchyFixedSemantics=RebuildBound.Spec.HierarchyFixedSemantics_statement RebuildBound.HierarchyUniverseSemantics=RebuildBound.Spec.HierarchyUniverseSemantics_statement RebuildBound.HierarchyAdaptiveSemantics=RebuildBound.Spec.HierarchyAdaptiveSemantics_statement
+HierarchyApi - RebuildBound.HierarchyBatchFound=RebuildBound.Spec.HierarchyBatchFound_statement RebuildBound.HierarchyFlagSoundness=RebuildBound.Spec.HierarchyFlagSoundness_statement RebuildBound.HierarchyBatchApiCorrectness=RebuildBound.Spec.HierarchyBatchApiCorrectness_statement RebuildBound.HierarchyApiAdmissible=RebuildBound.Spec.HierarchyApiAdmissible_statement RebuildBound.HierarchyAdaptiveFlagAdmissible=RebuildBound.Spec.HierarchyAdaptiveFlagAdmissible_statement RebuildBound.HierarchyAdaptiveApiCorrectness=RebuildBound.Spec.HierarchyAdaptiveApiCorrectness_statement
+HierarchyBounded - RebuildBound.HierarchyBoundedOnline=RebuildBound.Spec.HierarchyBoundedOnline_statement RebuildBound.HierarchyBoundedBatch=RebuildBound.Spec.HierarchyBoundedBatch_statement RebuildBound.HierarchyBoundedAdaptive=RebuildBound.Spec.HierarchyBoundedAdaptive_statement
+HierarchyExposure - RebuildBound.HierarchyExposure=RebuildBound.Spec.HierarchyExposure_statement RebuildBound.HierarchyExposureBudget=RebuildBound.Spec.HierarchyExposureBudget_statement
+DirectJobHistoryGeometry - RebuildBound.DirectJobHistoryInputLawFor=RebuildBound.Spec.DirectJobHistoryInputLawFor_statement RebuildBound.DirectJobHistoryInputMatchFor=RebuildBound.Spec.DirectJobHistoryInputMatchFor_statement
+
+# Geometry-parametric cycle coupling and unconditional local failure transport.
+DirectJobCycleGeometry - RebuildBound.DirectJobCycleBound=RebuildBound.Spec.DirectJobCycleBound_statement RebuildBound.DirectJobCycleFirstBound=RebuildBound.Spec.DirectJobCycleFirstBound_statement RebuildBound.DirectJobCycleLaterBound=RebuildBound.Spec.DirectJobCycleLaterBound_statement RebuildBound.DirectJobUniformCycleFirst=RebuildBound.Spec.DirectJobUniformCycleFirst_statement RebuildBound.DirectJobUniformCycleHistory=RebuildBound.Spec.DirectJobUniformCycleHistory_statement RebuildBound.DirectJobCycleHistoryTransport=RebuildBound.Spec.DirectJobCycleHistoryTransport_statement
+
+# Finite structural family; generic semantics do not import this inventory.
+ConfigurationFamily - RebuildBound.ConfigurationFamilyStructural=RebuildBound.Spec.ConfigurationFamilyStructural_statement
+ConfigurationFamilyProbability - RebuildBound.ConfigurationFamilySourceLaws=RebuildBound.Spec.ConfigurationFamilySourceLaws_statement RebuildBound.ConfigurationFamilyCovering=RebuildBound.Spec.ConfigurationFamilyCovering_statement
+HierarchyFirstFailure -
+HierarchyProbability -
+ConfigurationFamilyDirect - RebuildBound.ConfigurationFamilyDirectA=RebuildBound.Spec.ConfigurationFamilyDirectA_statement RebuildBound.ConfigurationFamilyDirect=RebuildBound.Spec.ConfigurationFamilyDirect_statement
+NumericalPhi -
+RationalBudget -
+ConfigurationFamilyTop - RebuildBound.ConfigurationFamilyTopNumerics=RebuildBound.Spec.ConfigurationFamilyTopNumerics_statement RebuildBound.ConfigurationFamilyTopCoverage=RebuildBound.Spec.ConfigurationFamilyTopCoverage_statement
+ConfigurationFamilyDirectNumerics - RebuildBound.ConfigurationFamilyDirectBUNumerics=RebuildBound.Spec.ConfigurationFamilyDirectBUNumerics_statement RebuildBound.ConfigurationFamilyDirectANumerics=RebuildBound.Spec.ConfigurationFamilyDirectANumerics_statement RebuildBound.ConfigurationFamilyDirectNumerics=RebuildBound.Spec.ConfigurationFamilyDirectNumerics_statement
+ConfigurationFamilyRest - RebuildBound.ConfigurationFamilyRestNumerics=RebuildBound.Spec.ConfigurationFamilyRestNumerics_statement
+NumericsFamilyRange - RebuildBound.ConfigurationFamilyRangeNumerics=RebuildBound.Spec.ConfigurationFamilyRangeNumerics_statement
+NumericsFamilyDirectRange - RebuildBound.ConfigurationFamilyDirectRangeNumerics=RebuildBound.Spec.ConfigurationFamilyDirectRangeNumerics_statement
+NumericsFamilyPrep - RebuildBound.ConfigurationFamilyPrepRange=RebuildBound.Spec.ConfigurationFamilyPrepRange_statement
+ConfigurationFamilyPrep - RebuildBound.ConfigurationFamilyPrepNumerics=RebuildBound.Spec.ConfigurationFamilyPrepNumerics_statement
+ConfigurationFamilyNumerics - RebuildBound.ConfigurationFamilyNumerics=RebuildBound.Spec.ConfigurationFamilyNumerics_statement
+ConfigurationFamilyBound - RebuildBound.ConfigurationFamilyAnalytic=RebuildBound.Spec.ConfigurationFamilyAnalytic_statement RebuildBound.ConfigurationFamilyCausal=RebuildBound.Spec.ConfigurationFamilyCausal_statement RebuildBound.ConfigurationFamilyWindows=RebuildBound.Spec.ConfigurationFamilyWindows_statement RebuildBound.ConfigurationFamilyOblivious=RebuildBound.Spec.ConfigurationFamilyOblivious_statement
+
+# Arbitrary byte-key foundations and request-driven adaptive construction.
+Key - RebuildBound.LogicalKeyRoundtrip=RebuildBound.Spec.LogicalKeyRoundtrip_statement RebuildBound.LogicalKeyIdentity=RebuildBound.Spec.LogicalKeyIdentity_statement
+IdealKeyLaw - RebuildBound.IdealKeyProbability=RebuildBound.Spec.IdealKeyProbability_statement RebuildBound.IdealKeyRestriction=RebuildBound.Spec.IdealKeyRestriction_statement RebuildBound.IdealKeySelection=RebuildBound.Spec.IdealKeySelection_statement RebuildBound.IdealKeyRepeated=RebuildBound.Spec.IdealKeyRepeated_statement RebuildBound.IdealKeyBlocks=RebuildBound.Spec.IdealKeyBlocks_statement RebuildBound.IdealKeyConsistent=RebuildBound.Spec.IdealKeyConsistent_statement RebuildBound.IdealKeyDynamic=RebuildBound.Spec.IdealKeyDynamic_statement RebuildBound.IdealKeySelectedKeys=RebuildBound.Spec.IdealKeySelectedKeys_statement RebuildBound.IdealKeySections=RebuildBound.Spec.IdealKeySections_statement RebuildBound.IdealKeyOutsideSections=RebuildBound.Spec.IdealKeyOutsideSections_statement
+ApiAdaptive - RebuildBound.ApiAdaptiveFrames=RebuildBound.Spec.ApiAdaptiveFrames_statement RebuildBound.ApiAdaptiveReplay=RebuildBound.Spec.ApiAdaptiveReplay_statement RebuildBound.ApiAdaptiveInteraction=RebuildBound.Spec.ApiAdaptiveInteraction_statement RebuildBound.ApiAdaptiveCorrectness=RebuildBound.Spec.ApiAdaptiveCorrectness_statement
+
+# Key-model chronology and live-population derivation.
+ApiCapacity - RebuildBound.ApiFiniteSupport=RebuildBound.Spec.ApiFiniteSupport_statement RebuildBound.ApiSupportStep=RebuildBound.Spec.ApiSupportStep_statement RebuildBound.ApiInitialCapacity=RebuildBound.Spec.ApiInitialCapacity_statement RebuildBound.ApiSnapshotPopulation=RebuildBound.Spec.ApiSnapshotPopulation_statement RebuildBound.ApiResolvedHistory=RebuildBound.Spec.ApiResolvedHistory_statement RebuildBound.ApiLivePopulation=RebuildBound.Spec.ApiLivePopulation_statement RebuildBound.ApiMissCapacity=RebuildBound.Spec.ApiMissCapacity_statement RebuildBound.ApiChurnCapacity=RebuildBound.Spec.ApiChurnCapacity_statement RebuildBound.ApiCapacityExtension=RebuildBound.Spec.ApiCapacityExtension_statement
+RequesterCuts - RebuildBound.RequesterTraceSaturatedCuts=RebuildBound.Spec.RequesterTraceSaturatedCuts_statement RebuildBound.RequesterUnitCuts=RebuildBound.Spec.RequesterUnitCuts_statement RebuildBound.RequesterTraceCuts=RebuildBound.Spec.RequesterTraceCuts_statement RebuildBound.RequesterLoweredFits=RebuildBound.Spec.RequesterLoweredFits_statement
+HierarchyStructural - RebuildBound.HierarchyStructuralTop=RebuildBound.Spec.HierarchyStructuralTop_statement RebuildBound.HierarchyStructuralStep=RebuildBound.Spec.HierarchyStructuralStep_statement
+HierarchyLive - RebuildBound.HierarchyLivePopulations=RebuildBound.Spec.HierarchyLivePopulations_statement
+ApiStructural - RebuildBound.ApiExecutionStructural=RebuildBound.Spec.ApiExecutionStructural_statement RebuildBound.ApiExecutionLive=RebuildBound.Spec.ApiExecutionLive_statement RebuildBound.ApiAdaptiveStructural=RebuildBound.Spec.ApiAdaptiveStructural_statement RebuildBound.ApiAdaptiveLive=RebuildBound.Spec.ApiAdaptiveLive_statement
+
+# Physical continuations, canonical hierarchy tapes, and legal adaptive observations.
+ApiContinuation - RebuildBound.ApiIdleShape=RebuildBound.Spec.ApiIdleShape_statement RebuildBound.ApiIdlePrefix=RebuildBound.Spec.ApiIdlePrefix_statement RebuildBound.ApiIdleObservations=RebuildBound.Spec.ApiIdleObservations_statement RebuildBound.ApiIdleComplete=RebuildBound.Spec.ApiIdleComplete_statement RebuildBound.ApiIdleLive=RebuildBound.Spec.ApiIdleLive_statement
+IdealHierarchy - RebuildBound.IdealHierarchyWords=RebuildBound.Spec.IdealHierarchyWords_statement RebuildBound.IdealHierarchyCarry=RebuildBound.Spec.IdealHierarchyCarry_statement RebuildBound.IdealHierarchyHorizon=RebuildBound.Spec.IdealHierarchyHorizon_statement RebuildBound.IdealHierarchyFinite=RebuildBound.Spec.IdealHierarchyFinite_statement RebuildBound.IdealHierarchyOnline=RebuildBound.Spec.IdealHierarchyOnline_statement RebuildBound.IdealHierarchySelected=RebuildBound.Spec.IdealHierarchySelected_statement RebuildBound.IdealHierarchyOutside=RebuildBound.Spec.IdealHierarchyOutside_statement
+ApiLegal - RebuildBound.ApiLegalPrefixExtension=RebuildBound.Spec.ApiLegalPrefixExtension_statement RebuildBound.ApiLegalNormalization=RebuildBound.Spec.ApiLegalNormalization_statement RebuildBound.ApiLegalTranscript=RebuildBound.Spec.ApiLegalTranscript_statement RebuildBound.ApiLegalStructural=RebuildBound.Spec.ApiLegalStructural_statement RebuildBound.ApiLegalLive=RebuildBound.Spec.ApiLegalLive_statement
+IdealMeasurable - RebuildBound.IdealFiniteReadMeasurable=RebuildBound.Spec.IdealFiniteReadMeasurable_statement RebuildBound.IdealTableFiniteRead=RebuildBound.Spec.IdealTableFiniteRead_statement RebuildBound.IdealViewMeasurable=RebuildBound.Spec.IdealViewMeasurable_statement RebuildBound.IdealAdaptiveFiniteRead=RebuildBound.Spec.IdealAdaptiveFiniteRead_statement RebuildBound.IdealAdaptiveMeasurable=RebuildBound.Spec.IdealAdaptiveMeasurable_statement
+IdealFailure - RebuildBound.IdealJobFailureFiniteRead=RebuildBound.Spec.IdealJobFailureFiniteRead_statement RebuildBound.IdealFailureMeasurable=RebuildBound.Spec.IdealFailureMeasurable_statement RebuildBound.IdealAdaptiveFailureMeasurable=RebuildBound.Spec.IdealAdaptiveFailureMeasurable_statement
+IdealSeed - RebuildBound.IdealSeedProbability=RebuildBound.Spec.IdealSeedProbability_statement RebuildBound.IdealSeedMeasurable=RebuildBound.Spec.IdealSeedMeasurable_statement RebuildBound.IdealSeedBound=RebuildBound.Spec.IdealSeedBound_statement RebuildBound.IdealSeedExact=RebuildBound.Spec.IdealSeedExact_statement RebuildBound.IdealSeedFailure=RebuildBound.Spec.IdealSeedFailure_statement
+ApiSeed - RebuildBound.ApiSeedMeasurable=RebuildBound.Spec.ApiSeedMeasurable_statement RebuildBound.ApiSeedLive=RebuildBound.Spec.ApiSeedLive_statement RebuildBound.ApiSeedEventBound=RebuildBound.Spec.ApiSeedEventBound_statement RebuildBound.ApiSeedExact=RebuildBound.Spec.ApiSeedExact_statement RebuildBound.ApiSeedFailure=RebuildBound.Spec.ApiSeedFailure_statement
+
+# Actual canonical-tape exposure, prefix independence, and initialization probability.
+IdealExposure - RebuildBound.IdealExposureGeometry=RebuildBound.Spec.IdealExposureGeometry_statement RebuildBound.IdealAdaptiveExposure=RebuildBound.Spec.IdealAdaptiveExposure_statement RebuildBound.IdealAdaptiveFamilyFresh=RebuildBound.Spec.IdealAdaptiveFamilyFresh_statement
+IdealFreshness - RebuildBound.IdealInputPrefixMeasurable=RebuildBound.Spec.IdealInputPrefixMeasurable_statement RebuildBound.IdealInputPrefixIndependent=RebuildBound.Spec.IdealInputPrefixIndependent_statement
+IdealInitialization - RebuildBound.IdealInitializationMeasurable=RebuildBound.Spec.IdealInitializationMeasurable_statement RebuildBound.IdealInitializationBound=RebuildBound.Spec.IdealInitializationBound_statement RebuildBound.IdealInitializationApi=RebuildBound.Spec.IdealInitializationApi_statement
+
+# Canonical direct current-family sections and actual adaptive job bounds.
+IdealDirectFresh - RebuildBound.IdealDirectInputFiniteRead=RebuildBound.Spec.IdealDirectInputFiniteRead_statement RebuildBound.IdealDirectInputFresh=RebuildBound.Spec.IdealDirectInputFresh_statement
+IdealDirectLocal - RebuildBound.IdealDirectLocalB=RebuildBound.Spec.IdealDirectLocalB_statement RebuildBound.IdealDirectLocalDigitOne=RebuildBound.Spec.IdealDirectLocalDigitOne_statement RebuildBound.IdealDirectLocalUnion=RebuildBound.Spec.IdealDirectLocalUnion_statement
+IdealDirect - RebuildBound.IdealDirectB=RebuildBound.Spec.IdealDirectB_statement RebuildBound.IdealDirectDigitOne=RebuildBound.Spec.IdealDirectDigitOne_statement RebuildBound.IdealDirectUnion=RebuildBound.Spec.IdealDirectUnion_statement
+IdealDirectA - RebuildBound.IdealDirectA=RebuildBound.Spec.IdealDirectA_statement RebuildBound.IdealDirectFirstFailure=RebuildBound.Spec.IdealDirectFirstFailure_statement
+
+# Canonical separated current-home union on actual adaptive execution.
+IdealSepUnion - RebuildBound.IdealSepUnion=RebuildBound.Spec.IdealSepUnion_statement
+
+# Canonical separated early-A and complete first failure.
+IdealSepA - RebuildBound.IdealSepA=RebuildBound.Spec.IdealSepA_statement RebuildBound.IdealSepFirstFailure=RebuildBound.Spec.IdealSepFirstFailure_statement
+
+# Canonical top-preparation sections and legal adaptive live-capacity clients.
+IdealTopPrep - RebuildBound.IdealTopPreparation=RebuildBound.Spec.IdealTopPreparation_statement RebuildBound.IdealTopPreparationFirstFailure=RebuildBound.Spec.IdealTopPreparationFirstFailure_statement
+
+# Canonical top-finish law from legal adaptive live capacity.
+IdealTopFinish - RebuildBound.IdealTopFinish=RebuildBound.Spec.IdealTopFinish_statement RebuildBound.IdealTopFinishFirstFailure=RebuildBound.Spec.IdealTopFinishFirstFailure_statement
+
+# Canonical arbitrary-key IdealProbe endpoints.
+IdealProbe - RebuildBound.IdealBatchExact=RebuildBound.Spec.IdealBatchExact_statement RebuildBound.IdealAdaptiveExact=RebuildBound.Spec.IdealAdaptiveExact_statement RebuildBound.IdealApiExact=RebuildBound.Spec.IdealApiExact_statement RebuildBound.IdealApiSeedExact=RebuildBound.Spec.IdealApiSeedExact_statement
+
+# Canonical arbitrary-key IdealCapacity endpoints.
+IdealCapacity - RebuildBound.IdealCapacityAnalytic=RebuildBound.Spec.IdealCapacityAnalytic_statement RebuildBound.IdealCapacity=RebuildBound.Spec.IdealCapacity_statement RebuildBound.IdealSeedCapacity=RebuildBound.Spec.IdealSeedCapacity_statement
+
+# Canonical arbitrary-key IdealOblivious endpoints.
+IdealOblivious - RebuildBound.IdealApiFamily=RebuildBound.Spec.IdealApiFamily_statement RebuildBound.IdealApiOblivious=RebuildBound.Spec.IdealApiOblivious_statement RebuildBound.IdealSeedOblivious=RebuildBound.Spec.IdealSeedOblivious_statement
+
+# Arbitrary-key bounded API correctness and canonical family/seed transfer.
+ApiBounded - RebuildBound.ApiBoundedTransfer=RebuildBound.Spec.ApiBoundedTransfer_statement
+IdealBounded - RebuildBound.IdealApiBounded=RebuildBound.Spec.IdealApiBounded_statement RebuildBound.IdealSeedBounded=RebuildBound.Spec.IdealSeedBounded_statement
+
+# Geometry-parametric canonical analytic bounds and certified-family instantiation.
+IdealGeometry - RebuildBound.IdealGeometryCapacity=RebuildBound.Spec.IdealGeometryCapacity_statement RebuildBound.IdealGeometryWindows=RebuildBound.Spec.IdealGeometryWindows_statement RebuildBound.IdealGeometryApi=RebuildBound.Spec.IdealGeometryApi_statement RebuildBound.IdealGeometrySeedCapacity=RebuildBound.Spec.IdealGeometrySeedCapacity_statement RebuildBound.IdealGeometryOblivious=RebuildBound.Spec.IdealGeometryOblivious_statement
+IdealGeometryFamily - RebuildBound.IdealGeometryFamily=RebuildBound.Spec.IdealGeometryFamily_statement
+
+# Unconditional native correctness/observation error accounting.
+NativeError - RebuildBound.NativeFailureBound=RebuildBound.Spec.NativeFailureBound_statement RebuildBound.NativeObservationBound=RebuildBound.Spec.NativeObservationBound_statement
+
+# Random-function normalization: replay law, birthday bound and trace adapter.
+NativeNormalize - RebuildBound.NativeNormalizeFresh=RebuildBound.Spec.NativeNormalizeFresh_statement RebuildBound.NativeNormalizeAdaptive=RebuildBound.Spec.NativeNormalizeAdaptive_statement RebuildBound.NativeNormalizeIndependent=RebuildBound.Spec.NativeNormalizeIndependent_statement RebuildBound.NativeNormalizeBirthday=RebuildBound.Spec.NativeNormalizeBirthday_statement RebuildBound.NativeNormalizeBound=RebuildBound.Spec.NativeNormalizeBound_statement RebuildBound.NativeNormalizeConversions=RebuildBound.Spec.NativeNormalizeConversions_statement RebuildBound.NativeNormalizeTrace=RebuildBound.Spec.NativeNormalizeTrace_statement
+
+# Native fixed-width short-key injectivity (verbatim below sixteen bytes) and long CBC message encoding.
+NativeKey - RebuildBound.NativeKeyShort=RebuildBound.Spec.NativeKeyShort_statement RebuildBound.NativeKeyVerbatim=RebuildBound.Spec.NativeKeyVerbatim_statement RebuildBound.NativeKeyLong=RebuildBound.Spec.NativeKeyLong_statement
+
+# Segment matching of sixteen-byte stored keys: rule, counting and false-match bounds (random function and permutation).
+NativeMatch - RebuildBound.NativeMatchSegments=RebuildBound.Spec.NativeMatchSegments_statement RebuildBound.NativeMatchExact=RebuildBound.Spec.NativeMatchExact_statement RebuildBound.NativeMatchSound=RebuildBound.Spec.NativeMatchSound_statement RebuildBound.NativeMatchCover=RebuildBound.Spec.NativeMatchCover_statement RebuildBound.NativeMatchCount=RebuildBound.Spec.NativeMatchCount_statement RebuildBound.NativeMatchCountBound=RebuildBound.Spec.NativeMatchCountBound_statement RebuildBound.NativeMatchBridge=RebuildBound.Spec.NativeMatchBridge_statement RebuildBound.NativeMatchWeight=RebuildBound.Spec.NativeMatchWeight_statement RebuildBound.NativeMatchSection=RebuildBound.Spec.NativeMatchSection_statement RebuildBound.NativeMatchIndependent=RebuildBound.Spec.NativeMatchIndependent_statement RebuildBound.NativeMatchPermutation=RebuildBound.Spec.NativeMatchPermutation_statement
+
+# Width-sixteen routing relabeling by the ideal stored-key permutation.
+NativeMatchRelabel - RebuildBound.NativeMatchRelabel=RebuildBound.Spec.NativeMatchRelabel_statement
+
+# Native identity packing, complete messages, SIMD lanes and canonical-family lifetime bounds.
+NativeRouting - RebuildBound.NativeRoutingPacking=RebuildBound.Spec.NativeRoutingPacking_statement RebuildBound.NativeRoutingMessage=RebuildBound.Spec.NativeRoutingMessage_statement RebuildBound.NativeRoutingSharedLanes=RebuildBound.Spec.NativeRoutingSharedLanes_statement RebuildBound.NativeRoutingInterleavedLanes=RebuildBound.Spec.NativeRoutingInterleavedLanes_statement RebuildBound.NativeRoutingLifetime=RebuildBound.Spec.NativeRoutingLifetime_statement RebuildBound.NativeRoutingFamilyBounds=RebuildBound.Spec.NativeRoutingFamilyBounds_statement RebuildBound.NativeRoutingFamilyEncoding=RebuildBound.Spec.NativeRoutingFamilyEncoding_statement
+
+# Production dense segment lookup: shuffle lanes, verification, displaced-hit coverage and weight.
+NativeMatchDense - RebuildBound.NativeMatchDenseTranspose=RebuildBound.Spec.NativeMatchDenseTranspose_statement RebuildBound.NativeMatchDenseSubsets=RebuildBound.Spec.NativeMatchDenseSubsets_statement RebuildBound.NativeMatchDenseSound=RebuildBound.Spec.NativeMatchDenseSound_statement RebuildBound.NativeMatchDenseAbsent=RebuildBound.Spec.NativeMatchDenseAbsent_statement RebuildBound.NativeMatchDenseRecovery=RebuildBound.Spec.NativeMatchDenseRecovery_statement RebuildBound.NativeMatchDenseInventory=RebuildBound.Spec.NativeMatchDenseInventory_statement
+
+# Production rebuild segment lane assembly, zero repair, retained source and class directions.
+NativeMatchLanes - RebuildBound.NativeMatchPackedWords=RebuildBound.Spec.NativeMatchPackedWords_statement RebuildBound.NativeMatchUnpack=RebuildBound.Spec.NativeMatchUnpack_statement RebuildBound.NativeMatchLanes=RebuildBound.Spec.NativeMatchLanes_statement RebuildBound.NativeMatchRetained=RebuildBound.Spec.NativeMatchRetained_statement RebuildBound.NativeMatchClassLanes=RebuildBound.Spec.NativeMatchClassLanes_statement RebuildBound.NativeMatchLanesBridge=RebuildBound.Spec.NativeMatchLanesBridge_statement RebuildBound.NativeMatchClassBridge=RebuildBound.Spec.NativeMatchClassBridge_statement
+
+# Production matching refinement: NativeMatchTrace.
+NativeMatchTrace - RebuildBound.NativeMatchPrefixTrace=RebuildBound.Spec.NativeMatchPrefixTrace_statement RebuildBound.NativeMatchPoolTrace=RebuildBound.Spec.NativeMatchPoolTrace_statement RebuildBound.NativeMatchFixedTrace=RebuildBound.Spec.NativeMatchFixedTrace_statement RebuildBound.NativeMatchOfferTrace=RebuildBound.Spec.NativeMatchOfferTrace_statement RebuildBound.NativeMatchClassTrace=RebuildBound.Spec.NativeMatchClassTrace_statement RebuildBound.NativeMatchTopResolveTrace=RebuildBound.Spec.NativeMatchTopResolveTrace_statement RebuildBound.NativeMatchTraceLayout=RebuildBound.Spec.NativeMatchTraceLayout_statement
+
+# Production matching refinement: NativeMatchDenseTrace.
+NativeMatchDenseTrace - RebuildBound.NativeMatchDenseRecord=RebuildBound.Spec.NativeMatchDenseRecord_statement RebuildBound.NativeMatchDenseRemoval=RebuildBound.Spec.NativeMatchDenseRemoval_statement RebuildBound.NativeMatchDenseDeferredRemoval=RebuildBound.Spec.NativeMatchDenseDeferredRemoval_statement RebuildBound.NativeMatchCascadeProjection=RebuildBound.Spec.NativeMatchCascadeProjection_statement RebuildBound.NativeMatchBatchAgreement=RebuildBound.Spec.NativeMatchBatchAgreement_statement RebuildBound.NativeMatchBatchDivergence=RebuildBound.Spec.NativeMatchBatchDivergence_statement RebuildBound.NativeMatchDenseUnitCount=RebuildBound.Spec.NativeMatchDenseUnitCount_statement RebuildBound.NativeMatchRequesterCount=RebuildBound.Spec.NativeMatchRequesterCount_statement RebuildBound.NativeMatchRequesterPages=RebuildBound.Spec.NativeMatchRequesterPages_statement RebuildBound.NativeMatchDenseUnitRemoval=RebuildBound.Spec.NativeMatchDenseUnitRemoval_statement RebuildBound.NativeMatchRequesterAgreement=RebuildBound.Spec.NativeMatchRequesterAgreement_statement RebuildBound.NativeMatchRequesterDivergence=RebuildBound.Spec.NativeMatchRequesterDivergence_statement RebuildBound.NativeMatchDenseEventPartners=RebuildBound.Spec.NativeMatchDenseEventPartners_statement RebuildBound.NativeMatchPhysicalLiveCount=RebuildBound.Spec.NativeMatchPhysicalLiveCount_statement RebuildBound.NativeMatchPhysicalDenseRingCount=RebuildBound.Spec.NativeMatchPhysicalDenseRingCount_statement RebuildBound.NativeMatchPhysicalDenseProjection=RebuildBound.Spec.NativeMatchPhysicalDenseProjection_statement RebuildBound.NativeMatchPhysicalQueryCount=RebuildBound.Spec.NativeMatchPhysicalQueryCount_statement RebuildBound.NativeMatchPhysicalAllocation=RebuildBound.Spec.NativeMatchPhysicalAllocation_statement
+
+
+# Production matching refinement: NativeRoutingCoupling.
+NativeRoutingCoupling - RebuildBound.NativeRoutingReindex=RebuildBound.Spec.NativeRoutingReindex_statement RebuildBound.NativeRoutingReplay=RebuildBound.Spec.NativeRoutingReplay_statement RebuildBound.NativeRoutingNativeLaw=RebuildBound.Spec.NativeRoutingNativeLaw_statement RebuildBound.NativeRoutingReferenceLaw=RebuildBound.Spec.NativeRoutingReferenceLaw_statement RebuildBound.NativeRoutingCouplingBound=RebuildBound.Spec.NativeRoutingCouplingBound_statement RebuildBound.NativeRoutingCoordinateEncoding=RebuildBound.Spec.NativeRoutingCoordinateEncoding_statement RebuildBound.NativeRoutingFiniteCouplingBound=RebuildBound.Spec.NativeRoutingFiniteCouplingBound_statement RebuildBound.NativeRoutingCoordinateLaw=RebuildBound.Spec.NativeRoutingCoordinateLaw_statement
+
+# Production whole-job writers and carry-ordinal arithmetic.
+NativeMatchJobs - RebuildBound.NativeMatchJobProjection=RebuildBound.Spec.NativeMatchJobProjection_statement RebuildBound.NativeMatchSeparatedJobTrace=RebuildBound.Spec.NativeMatchSeparatedJobTrace_statement RebuildBound.NativeMatchDirectJobLayout=RebuildBound.Spec.NativeMatchDirectJobLayout_statement RebuildBound.NativeMatchDirectJobTrace=RebuildBound.Spec.NativeMatchDirectJobTrace_statement RebuildBound.NativeMatchDrainJobTrace=RebuildBound.Spec.NativeMatchDrainJobTrace_statement RebuildBound.NativeMatchTopJobTrace=RebuildBound.Spec.NativeMatchTopJobTrace_statement RebuildBound.NativeMatchSeparatedFullJob=RebuildBound.Spec.NativeMatchSeparatedFullJob_statement RebuildBound.NativeMatchJobFiniteRead=RebuildBound.Spec.NativeMatchJobFiniteRead_statement RebuildBound.NativeMatchTopFullJob=RebuildBound.Spec.NativeMatchTopFullJob_statement RebuildBound.NativeMatchDirectFullJob=RebuildBound.Spec.NativeMatchDirectFullJob_statement RebuildBound.NativeMatchFullJobFiniteRead=RebuildBound.Spec.NativeMatchFullJobFiniteRead_statement RebuildBound.NativeMatchDirectJobFiniteRead=RebuildBound.Spec.NativeMatchDirectJobFiniteRead_statement
+NativeMatchCounts - RebuildBound.NativeMatchSeparatedInventory=RebuildBound.Spec.NativeMatchSeparatedInventory_statement RebuildBound.NativeMatchTopInventory=RebuildBound.Spec.NativeMatchTopInventory_statement RebuildBound.NativeMatchJobRows=RebuildBound.Spec.NativeMatchJobRows_statement
+NativeMatchOrdinals - RebuildBound.NativeMatchOrdinalExposures=RebuildBound.Spec.NativeMatchOrdinalExposures_statement RebuildBound.NativeMatchOrdinalPrefixes=RebuildBound.Spec.NativeMatchOrdinalPrefixes_statement RebuildBound.NativeMatchResumeInventory=RebuildBound.Spec.NativeMatchResumeInventory_statement RebuildBound.NativeMatchChargedAccesses=RebuildBound.Spec.NativeMatchChargedAccesses_statement RebuildBound.NativeMatchPrefixAllocation=RebuildBound.Spec.NativeMatchPrefixAllocation_statement
+NativeMatchAllocation - RebuildBound.NativeMatchCapacityAllocation=RebuildBound.Spec.NativeMatchCapacityAllocation_statement RebuildBound.NativeMatchFamilyArithmetic=RebuildBound.Spec.NativeMatchFamilyArithmetic_statement RebuildBound.NativeMatchCombinedAllocation=RebuildBound.Spec.NativeMatchCombinedAllocation_statement
+
+NativeMatchHierarchy - RebuildBound.NativeMatchPrefixProducer=RebuildBound.Spec.NativeMatchPrefixProducer_statement RebuildBound.NativeMatchDirectPlanFull=RebuildBound.Spec.NativeMatchDirectPlanFull_statement RebuildBound.NativeMatchRequesterLayout=RebuildBound.Spec.NativeMatchRequesterLayout_statement RebuildBound.NativeMatchHierarchyReplay=RebuildBound.Spec.NativeMatchHierarchyReplay_statement RebuildBound.NativeMatchHierarchyDivergence=RebuildBound.Spec.NativeMatchHierarchyDivergence_statement RebuildBound.NativeMatchHierarchyFiniteRead=RebuildBound.Spec.NativeMatchHierarchyFiniteRead_statement RebuildBound.NativeMatchGlobalFiniteRead=RebuildBound.Spec.NativeMatchGlobalFiniteRead_statement RebuildBound.NativeMatchInventoryKeys=RebuildBound.Spec.NativeMatchInventoryKeys_statement
+
+NativeMatchHierarchyCounts - RebuildBound.NativeMatchProductionJobInventory=RebuildBound.Spec.NativeMatchProductionJobInventory_statement RebuildBound.NativeMatchRebuildInventory=RebuildBound.Spec.NativeMatchRebuildInventory_statement RebuildBound.NativeMatchAdaptiveRebuildInventory=RebuildBound.Spec.NativeMatchAdaptiveRebuildInventory_statement RebuildBound.NativeMatchNoComparisonPaths=RebuildBound.Spec.NativeMatchNoComparisonPaths_statement
+
+NativeRoutingActual - RebuildBound.NativeRoutingActualUsed=RebuildBound.Spec.NativeRoutingActualUsed_statement RebuildBound.NativeRoutingActualProgram=RebuildBound.Spec.NativeRoutingActualProgram_statement RebuildBound.NativeRoutingActualBudget=RebuildBound.Spec.NativeRoutingActualBudget_statement RebuildBound.NativeRoutingActualComplete=RebuildBound.Spec.NativeRoutingActualComplete_statement RebuildBound.NativeRoutingActualCoverage=RebuildBound.Spec.NativeRoutingActualCoverage_statement RebuildBound.NativeRoutingActualWidth=RebuildBound.Spec.NativeRoutingActualWidth_statement RebuildBound.NativeRoutingActualWire=RebuildBound.Spec.NativeRoutingActualWire_statement RebuildBound.NativeRoutingActualReservations=RebuildBound.Spec.NativeRoutingActualReservations_statement RebuildBound.NativeRoutingActualMemo=RebuildBound.Spec.NativeRoutingActualMemo_statement RebuildBound.NativeRoutingActualTable=RebuildBound.Spec.NativeRoutingActualTable_statement RebuildBound.NativeRoutingActualReference=RebuildBound.Spec.NativeRoutingActualReference_statement RebuildBound.NativeRoutingActualNative=RebuildBound.Spec.NativeRoutingActualNative_statement RebuildBound.NativeRoutingActualCoupling=RebuildBound.Spec.NativeRoutingActualCoupling_statement RebuildBound.NativeRoutingActualSixteen=RebuildBound.Spec.NativeRoutingActualSixteen_statement
+
+NativeMatchProduction - RebuildBound.NativeMatchProductionDense=RebuildBound.Spec.NativeMatchProductionDense_statement RebuildBound.NativeMatchProductionFiniteRead=RebuildBound.Spec.NativeMatchProductionFiniteRead_statement RebuildBound.NativeMatchProductionWeights=RebuildBound.Spec.NativeMatchProductionWeights_statement RebuildBound.NativeMatchProductionIndependence=RebuildBound.Spec.NativeMatchProductionIndependence_statement RebuildBound.NativeMatchProductionRandomFunction=RebuildBound.Spec.NativeMatchProductionRandomFunction_statement RebuildBound.NativeMatchProductionSixteen=RebuildBound.Spec.NativeMatchProductionSixteen_statement RebuildBound.NativeMatchProductionCombined=RebuildBound.Spec.NativeMatchProductionCombined_statement
+
+# Faithful native API continuation and causal memo decoding.
+NativeMatchApi - RebuildBound.NativeMatchApiFallback=RebuildBound.Spec.NativeMatchApiFallback_statement RebuildBound.NativeMatchApiDispatch=RebuildBound.Spec.NativeMatchApiDispatch_statement RebuildBound.NativeMatchApiRemoval=RebuildBound.Spec.NativeMatchApiRemoval_statement RebuildBound.NativeMatchApiProjection=RebuildBound.Spec.NativeMatchApiProjection_statement RebuildBound.NativeMatchApiDivergence=RebuildBound.Spec.NativeMatchApiDivergence_statement
+NativeMatchMemo - RebuildBound.NativeMatchMemoReference=RebuildBound.Spec.NativeMatchMemoReference_statement RebuildBound.NativeMatchMemoFailure=RebuildBound.Spec.NativeMatchMemoFailure_statement RebuildBound.NativeMatchMemoDecoded=RebuildBound.Spec.NativeMatchMemoDecoded_statement
+
+# All-width production matching probability and native error composition.
+NativeMatchRoutingBudget - RebuildBound.NativeMatchRoutingBudget=RebuildBound.Spec.NativeMatchRoutingBudget_statement RebuildBound.NativeMatchRoutingSixteenLaw=RebuildBound.Spec.NativeMatchRoutingSixteenLaw_statement RebuildBound.NativeMatchRoutingSixteenBudget=RebuildBound.Spec.NativeMatchRoutingSixteenBudget_statement
+NativeMatchEndpoint - RebuildBound.NativeMatchIdealFailure=RebuildBound.Spec.NativeMatchIdealFailure_statement RebuildBound.NativeMatchFailureEndpoint=RebuildBound.Spec.NativeMatchFailureEndpoint_statement RebuildBound.NativeMatchObservationEndpoint=RebuildBound.Spec.NativeMatchObservationEndpoint_statement
+NativeMatchCoded - RebuildBound.NativeMatchCodedFailure=RebuildBound.Spec.NativeMatchCodedFailure_statement RebuildBound.NativeMatchCodedObservation=RebuildBound.Spec.NativeMatchCodedObservation_statement
+
+# Local wide-key normalization: independent finite pair inventories.
+NativeNormalizePairs - RebuildBound.NativeNormalizePairsEvent=RebuildBound.Spec.NativeNormalizePairsEvent_statement RebuildBound.NativeNormalizePairsMeasurable=RebuildBound.Spec.NativeNormalizePairsMeasurable_statement RebuildBound.NativeNormalizePairsBound=RebuildBound.Spec.NativeNormalizePairsBound_statement
+NativeMatchExactPairs - RebuildBound.NativeMatchExactPairsLocal=RebuildBound.Spec.NativeMatchExactPairsLocal_statement RebuildBound.NativeMatchExactPairsBatch=RebuildBound.Spec.NativeMatchExactPairsBatch_statement RebuildBound.NativeMatchExactPairsRun=RebuildBound.Spec.NativeMatchExactPairsRun_statement RebuildBound.NativeMatchExactPairsCounts=RebuildBound.Spec.NativeMatchExactPairsCounts_statement
+NativeRoutingFamilySupport - RebuildBound.NativeRoutingRealCodeFamily=RebuildBound.Spec.NativeRoutingRealCodeFamily_statement RebuildBound.NativeRoutingPlanFrontier=RebuildBound.Spec.NativeRoutingPlanFrontier_statement RebuildBound.NativeRoutingRingPosition=RebuildBound.Spec.NativeRoutingRingPosition_statement RebuildBound.NativeRoutingProbeInterval=RebuildBound.Spec.NativeRoutingProbeInterval_statement
+NativeMatchLocalApi - RebuildBound.NativeMatchLocalApiFiniteRead=RebuildBound.Spec.NativeMatchLocalApiFiniteRead_statement RebuildBound.NativeMatchLocalApiFrame=RebuildBound.Spec.NativeMatchLocalApiFrame_statement RebuildBound.NativeMatchLocalApiProjection=RebuildBound.Spec.NativeMatchLocalApiProjection_statement
+
+# Actual-access exact counts and sparse routing support.
+NativeMatchExactCounts - RebuildBound.NativeMatchExactTableCount=RebuildBound.Spec.NativeMatchExactTableCount_statement RebuildBound.NativeMatchExactPairsLinear=RebuildBound.Spec.NativeMatchExactPairsLinear_statement
+NativeRoutingFamilyExposure - RebuildBound.NativeRoutingProductionInterval=RebuildBound.Spec.NativeRoutingProductionInterval_statement RebuildBound.NativeRoutingProbeKeysBound=RebuildBound.Spec.NativeRoutingProbeKeysBound_statement RebuildBound.NativeRoutingProbeOrdinalsBound=RebuildBound.Spec.NativeRoutingProbeOrdinalsBound_statement
+NativeRoutingLocalTable - RebuildBound.NativeRoutingLocalTableEvaluate=RebuildBound.Spec.NativeRoutingLocalTableEvaluate_statement RebuildBound.NativeRoutingLocalTableStepReads=RebuildBound.Spec.NativeRoutingLocalTableStepReads_statement RebuildBound.NativeRoutingLocalTablePrefix=RebuildBound.Spec.NativeRoutingLocalTablePrefix_statement RebuildBound.NativeRoutingLocalTableHorizon=RebuildBound.Spec.NativeRoutingLocalTableHorizon_statement
+NativeRoutingLocalCausality - RebuildBound.NativeRoutingLocalTableAtState=RebuildBound.Spec.NativeRoutingLocalTableAtState_statement RebuildBound.NativeRoutingLocalTableExtension=RebuildBound.Spec.NativeRoutingLocalTableExtension_statement RebuildBound.NativeRoutingLocalTableFrame=RebuildBound.Spec.NativeRoutingLocalTableFrame_statement
+NativeRoutingLocalReplay - RebuildBound.NativeRoutingLocalReplayLane=RebuildBound.Spec.NativeRoutingLocalReplayLane_statement RebuildBound.NativeRoutingLocalReplayReads=RebuildBound.Spec.NativeRoutingLocalReplayReads_statement RebuildBound.NativeRoutingLocalReplayIssue=RebuildBound.Spec.NativeRoutingLocalReplayIssue_statement RebuildBound.NativeRoutingLocalReplayEvaluate=RebuildBound.Spec.NativeRoutingLocalReplayEvaluate_statement
+NativeRoutingBuildSupport - RebuildBound.NativeRoutingBuildFamilyCoordinates=RebuildBound.Spec.NativeRoutingBuildFamilyCoordinates_statement RebuildBound.NativeRoutingBuildKeysBound=RebuildBound.Spec.NativeRoutingBuildKeysBound_statement RebuildBound.NativeRoutingBuildOrdinalsBound=RebuildBound.Spec.NativeRoutingBuildOrdinalsBound_statement RebuildBound.NativeRoutingBuildReadsCovered=RebuildBound.Spec.NativeRoutingBuildReadsCovered_statement
+
+# Sparse invoked diagnostics, finite replay laws and affine family pairs.
+NativeRoutingLocalDiagnostics - RebuildBound.NativeRoutingLocalDiagnosticsProjection=RebuildBound.Spec.NativeRoutingLocalDiagnosticsProjection_statement RebuildBound.NativeRoutingLocalDiagnosticsReads=RebuildBound.Spec.NativeRoutingLocalDiagnosticsReads_statement RebuildBound.NativeRoutingLocalDiagnosticsOutput=RebuildBound.Spec.NativeRoutingLocalDiagnosticsOutput_statement RebuildBound.NativeRoutingLocalDiagnosticsEvaluate=RebuildBound.Spec.NativeRoutingLocalDiagnosticsEvaluate_statement RebuildBound.NativeRoutingLocalDiagnosticsContained=RebuildBound.Spec.NativeRoutingLocalDiagnosticsContained_statement
+NativeRoutingLocalBudget - RebuildBound.NativeRoutingFiniteBudget=RebuildBound.Spec.NativeRoutingFiniteBudget_statement RebuildBound.NativeRoutingFiniteComplete=RebuildBound.Spec.NativeRoutingFiniteComplete_statement RebuildBound.NativeRoutingFiniteReindexed=RebuildBound.Spec.NativeRoutingFiniteReindexed_statement RebuildBound.NativeRoutingLocalBudget=RebuildBound.Spec.NativeRoutingLocalBudget_statement RebuildBound.NativeRoutingLocalNativeLaw=RebuildBound.Spec.NativeRoutingLocalNativeLaw_statement RebuildBound.NativeRoutingFiniteReferenceLaw=RebuildBound.Spec.NativeRoutingFiniteReferenceLaw_statement
+NativeRoutingLocalPairs - RebuildBound.NativeRoutingLocalPairsEvent=RebuildBound.Spec.NativeRoutingLocalPairsEvent_statement RebuildBound.NativeRoutingLocalPairsFiniteRead=RebuildBound.Spec.NativeRoutingLocalPairsFiniteRead_statement RebuildBound.NativeRoutingLocalPairsKeysBound=RebuildBound.Spec.NativeRoutingLocalPairsKeysBound_statement RebuildBound.NativeRoutingLocalPairsLaneCovered=RebuildBound.Spec.NativeRoutingLocalPairsLaneCovered_statement RebuildBound.NativeRoutingLocalPairsLinear=RebuildBound.Spec.NativeRoutingLocalPairsLinear_statement
+
+# Local native refinement, issued-prefix coverage and shared normalization bound.
+NativeRoutingLocalNative - RebuildBound.NativeRoutingLocalNativeTable=RebuildBound.Spec.NativeRoutingLocalNativeTable_statement RebuildBound.NativeRoutingLocalNativeDivergence=RebuildBound.Spec.NativeRoutingLocalNativeDivergence_statement
+NativeRoutingLocalCoverage - RebuildBound.NativeRoutingLocalLanePrefix=RebuildBound.Spec.NativeRoutingLocalLanePrefix_statement RebuildBound.NativeRoutingLocalReplayCovered=RebuildBound.Spec.NativeRoutingLocalReplayCovered_statement RebuildBound.NativeRoutingLocalRealInjective=RebuildBound.Spec.NativeRoutingLocalRealInjective_statement
+NativeRoutingLocalReference - RebuildBound.NativeRoutingFiniteEncodedWidth=RebuildBound.Spec.NativeRoutingFiniteEncodedWidth_statement RebuildBound.NativeRoutingFiniteReference=RebuildBound.Spec.NativeRoutingFiniteReference_statement RebuildBound.NativeRoutingLocalDomain=RebuildBound.Spec.NativeRoutingLocalDomain_statement RebuildBound.NativeRoutingLocalReference=RebuildBound.Spec.NativeRoutingLocalReference_statement
+NativeMatchLocalBound - RebuildBound.NativeMatchLocalBoundFiniteRead=RebuildBound.Spec.NativeMatchLocalBoundFiniteRead_statement RebuildBound.NativeMatchLocalBoundLinear=RebuildBound.Spec.NativeMatchLocalBoundLinear_statement RebuildBound.NativeMatchLocalBoundNormalize=RebuildBound.Spec.NativeMatchLocalBoundNormalize_statement RebuildBound.NativeMatchLocalBoundError=RebuildBound.Spec.NativeMatchLocalBoundError_statement RebuildBound.NativeMatchLocalBoundProjection=RebuildBound.Spec.NativeMatchLocalBoundProjection_statement
+
+# Logged sparse API transfer and complete-message local normalization endpoints.
+NativeRoutingLocalLog - RebuildBound.NativeRoutingLocalLogEvaluate=RebuildBound.Spec.NativeRoutingLocalLogEvaluate_statement RebuildBound.NativeRoutingLocalLogReads=RebuildBound.Spec.NativeRoutingLocalLogReads_statement RebuildBound.NativeRoutingLocalLogQueries=RebuildBound.Spec.NativeRoutingLocalLogQueries_statement RebuildBound.NativeRoutingLocalLogDepth=RebuildBound.Spec.NativeRoutingLocalLogDepth_statement RebuildBound.NativeRoutingLocalLogProjection=RebuildBound.Spec.NativeRoutingLocalLogProjection_statement RebuildBound.NativeRoutingLocalLogCongruence=RebuildBound.Spec.NativeRoutingLocalLogCongruence_statement RebuildBound.NativeRoutingLocalLogMemo=RebuildBound.Spec.NativeRoutingLocalLogMemo_statement RebuildBound.NativeRoutingLocalLogNative=RebuildBound.Spec.NativeRoutingLocalLogNative_statement RebuildBound.NativeRoutingLocalLogReference=RebuildBound.Spec.NativeRoutingLocalLogReference_statement
+NativeRoutingLocalLoggedCoupling - RebuildBound.NativeRoutingLocalLoggedTableReads=RebuildBound.Spec.NativeRoutingLocalLoggedTableReads_statement RebuildBound.NativeRoutingLocalLoggedDomain=RebuildBound.Spec.NativeRoutingLocalLoggedDomain_statement RebuildBound.NativeRoutingLocalLoggedHistory=RebuildBound.Spec.NativeRoutingLocalLoggedHistory_statement RebuildBound.NativeRoutingLocalLoggedAlias=RebuildBound.Spec.NativeRoutingLocalLoggedAlias_statement RebuildBound.NativeRoutingLocalLoggedReplay=RebuildBound.Spec.NativeRoutingLocalLoggedReplay_statement
+NativeRoutingLocalApi - RebuildBound.NativeRoutingLocalApiProjection=RebuildBound.Spec.NativeRoutingLocalApiProjection_statement RebuildBound.NativeRoutingLocalApiGuard=RebuildBound.Spec.NativeRoutingLocalApiGuard_statement RebuildBound.NativeRoutingLocalApiMemoSafe=RebuildBound.Spec.NativeRoutingLocalApiMemoSafe_statement
+NativeMatchLinearCoded - RebuildBound.NativeMatchLinearCodedFailure=RebuildBound.Spec.NativeMatchLinearCodedFailure_statement RebuildBound.NativeMatchLinearCodedObservation=RebuildBound.Spec.NativeMatchLinearCodedObservation_statement RebuildBound.NativeMatchBestCodedFailure=RebuildBound.Spec.NativeMatchBestCodedFailure_statement RebuildBound.NativeMatchBestCodedObservation=RebuildBound.Spec.NativeMatchBestCodedObservation_statement
+
+# Public arithmetic and ring checks for the complete-message endpoints.
+NativeMatchPublicFit - RebuildBound.NativeMatchPublicFieldsFit=RebuildBound.Spec.NativeMatchPublicFieldsFit_statement RebuildBound.NativeMatchPublicCounterFit=RebuildBound.Spec.NativeMatchPublicCounterFit_statement
+NativeMatchRing - RebuildBound.NativeMatchRingPublic=RebuildBound.Spec.NativeMatchRingPublic_statement RebuildBound.NativeMatchRingCost=RebuildBound.Spec.NativeMatchRingCost_statement
+NativeMatchPublic - RebuildBound.NativeMatchPublicChecks=RebuildBound.Spec.NativeMatchPublicChecks_statement RebuildBound.NativeMatchPublicFailure=RebuildBound.Spec.NativeMatchPublicFailure_statement RebuildBound.NativeMatchPublicObservation=RebuildBound.Spec.NativeMatchPublicObservation_statement
+
+# Refined rational local budgets, on the same unconditional adaptive cutoffs.
+NativeMatchTightNumerics - RebuildBound.NativeMatchTightLocalNumerics=RebuildBound.Spec.NativeMatchTightLocalNumerics_statement RebuildBound.NativeMatchTightExposure=RebuildBound.Spec.NativeMatchTightExposure_statement RebuildBound.NativeMatchTightArithmetic=RebuildBound.Spec.NativeMatchTightArithmetic_statement
+
+NativeMatchLivePairs - RebuildBound.NativeMatchLivePairCount=RebuildBound.Spec.NativeMatchLivePairCount_statement RebuildBound.NativeMatchLivePairBound=RebuildBound.Spec.NativeMatchLivePairBound_statement RebuildBound.NativeMatchLivePairWindow=RebuildBound.Spec.NativeMatchLivePairWindow_statement RebuildBound.NativeMatchLivePostperm=RebuildBound.Spec.NativeMatchLivePostperm_statement
+
+NativeNormalizeLiveApi - RebuildBound.NativeNormalizeLiveCapacity=RebuildBound.Spec.NativeNormalizeLiveCapacity_statement RebuildBound.NativeNormalizeLiveReplies=RebuildBound.Spec.NativeNormalizeLiveReplies_statement RebuildBound.NativeNormalizeLiveContext=RebuildBound.Spec.NativeNormalizeLiveContext_statement
+
+NativeMatchTightPublic - RebuildBound.NativeMatchTightAdaptiveCapacity=RebuildBound.Spec.NativeMatchTightAdaptiveCapacity_statement RebuildBound.NativeMatchTightPublicAllocation=RebuildBound.Spec.NativeMatchTightPublicAllocation_statement RebuildBound.NativeMatchTightPublicFailure=RebuildBound.Spec.NativeMatchTightPublicFailure_statement RebuildBound.NativeMatchTightPublicObservation=RebuildBound.Spec.NativeMatchTightPublicObservation_statement RebuildBound.NativeMatchTightWindowError=RebuildBound.Spec.NativeMatchTightWindowError_statement
+
+NativeMatchLivePublic - RebuildBound.NativeMatchLivePublicFailure=RebuildBound.Spec.NativeMatchLivePublicFailure_statement RebuildBound.NativeMatchLivePublicObservation=RebuildBound.Spec.NativeMatchLivePublicObservation_statement RebuildBound.NativeMatchLiveWindowError=RebuildBound.Spec.NativeMatchLiveWindowError_statement
+
+# The refined overflow budget as a number, one real probe per family and key
+# on request runs, and sixteen-byte keys over any number of windows.
+NativeMatchTightOverflow - RebuildBound.NativeMatchTightOverflow=RebuildBound.Spec.NativeMatchTightOverflow_statement RebuildBound.IdealCapacityTight=RebuildBound.Spec.IdealCapacityTight_statement
+IdealFresh - RebuildBound.IdealApiFresh=RebuildBound.Spec.IdealApiFresh_statement
+NativeMatchSixteenWindow - RebuildBound.NativeMatchSixteenWindowError=RebuildBound.Spec.NativeMatchSixteenWindowError_statement

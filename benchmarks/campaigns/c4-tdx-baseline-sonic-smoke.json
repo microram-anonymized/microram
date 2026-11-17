@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-baseline-sonic-smoke",
+  "base_seed": 7601,
+  "repetitions": 1,
+  "resources": {
+    "host_memory_limit_bytes": 125580361728,
+    "required_cache_domains": 1
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "stages": [
+    {
+      "name": "correctness",
+      "kind": "smoke",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        65536
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram",
+          "overrides": {
+            "scheme": "sonic_zingoram"
+          }
+        },
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive"
+          }
+        }
+      ],
+      "api_modes": [
+        "scalar",
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ]
+    }
+  ],
+  "timing": {
+    "warmup_ns": 0,
+    "measurement_ns": 1000000,
+    "drain_deadline_ns": 1000000000,
+    "setup_allowance_ns": 30000000000,
+    "max_trial_ns": 60000000000
+  },
+  "limits": {
+    "max_trials": 4,
+    "max_campaign_trial_ns": 480000000000
+  }
+}

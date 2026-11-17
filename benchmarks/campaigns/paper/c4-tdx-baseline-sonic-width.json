@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "name": "c4-tdx-baseline-sonic-width",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 1,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "tdx",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 4000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 28800000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 57600000000000
+  },
+  "stages": [
+    {
+      "name": "sonic-scalar",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v8-dense",
+          "key_bytes": 8,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v16-dense",
+          "key_bytes": 8,
+          "value_bytes": 16,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v32-dense",
+          "key_bytes": 8,
+          "value_bytes": 32,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v64-dense",
+          "key_bytes": 8,
+          "value_bytes": 64,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v128-dense",
+          "key_bytes": 8,
+          "value_bytes": 128,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v256-dense",
+          "key_bytes": 8,
+          "value_bytes": 256,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v512-dense",
+          "key_bytes": 8,
+          "value_bytes": 512,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v1024-dense",
+          "key_bytes": 8,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v2048-dense",
+          "key_bytes": 8,
+          "value_bytes": 2048,
+          "key_layout": "dense"
+        },
+        {
+          "name": "k8-v4096-dense",
+          "key_bytes": 8,
+          "value_bytes": 4096,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "sonic_zingoram_recursive",
+          "overrides": {
+            "scheme": "sonic_zingoram_recursive",
+            "sonic": {
+              "map_top_entries": 2048
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 28031,
+              "setup_ns_per_entry": 28031,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 16,
+              "api_mode": "scalar",
+              "access_ns": 28266,
+              "setup_ns_per_entry": 28266,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 32,
+              "api_mode": "scalar",
+              "access_ns": 28763,
+              "setup_ns_per_entry": 28763,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 64,
+              "api_mode": "scalar",
+              "access_ns": 28990,
+              "setup_ns_per_entry": 28990,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 128,
+              "api_mode": "scalar",
+              "access_ns": 30527,
+              "setup_ns_per_entry": 30527,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 256,
+              "api_mode": "scalar",
+              "access_ns": 34383,
+              "setup_ns_per_entry": 34383,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 512,
+              "api_mode": "scalar",
+              "access_ns": 37791,
+              "setup_ns_per_entry": 37791,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 55158,
+              "setup_ns_per_entry": 55158,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 2048,
+              "api_mode": "scalar",
+              "access_ns": 78260,
+              "setup_ns_per_entry": 78260,
+              "coverage_accesses_per_entry_ppm": 1100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 4096,
+              "api_mode": "scalar",
+              "access_ns": 122459,
+              "setup_ns_per_entry": 122459,
+              "coverage_accesses_per_entry_ppm": 1100000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-width-k8-2p20"
+    }
+  ],
+  "limits": {
+    "max_trials": 10,
+    "max_campaign_trial_ns": 1209600000000000
+  }
+}

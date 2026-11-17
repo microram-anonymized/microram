@@ -1,0 +1,56 @@
+--- a/include/oblivious_operations.hpp
++++ b/include/oblivious_operations.hpp
+@@ -199,13 +199,27 @@
+         val1 = v1;
+     }
+ 
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++    // P-H3: declared here so that the generic CMOV below finds it for
++    // non-class types too (class types would find it by ADL at instantiation).
++    template <typename T>
++    inline void obliSwap(T &guy1, T &guy2, const bool mov);
++#endif
++
+     template <typename T>
+     inline void CMOV(const bool cond, T &val1, const T &val2)
+     {
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++        // P-H3: select in constant time with their own obliSwap; the shipped
++        // template below is a branch on the secret condition.
++        T tmp = val2;
++        obliSwap(val1, tmp, cond);
++#else
+         if (cond)
+         {
+             val1 = val2;
+         }
++#endif
+     }
+ 
+     // Some CMOV specializations:
+--- a/include/ohash_tiers.hpp
++++ b/include/ohash_tiers.hpp
+@@ -207,6 +207,15 @@
+             if (bin_num > 1)
+             {
+                 auto ret = overflow_bin[key];
++#ifdef H2O2RAM_CONSTANT_TIME_CMOV
++                // P-H3: the same single major-bin lookup as below (the key, or a
++                // fresh dummy when the overflow bin had it), chosen by CMOV
++                // rather than a branch on whether the overflow bin had the key.
++                KeyType major_key = --dummy_access_ctr;
++                CMOV(ret.dummy(), major_key, key);
++                auto major = major_bins[prf(major_key)][major_key];
++                CMOV(ret.dummy(), ret, major);
++#else
+                 if (ret.dummy())
+                 {
+                     KeyType bin_id = prf(key);
+@@ -218,6 +227,7 @@
+                     KeyType bin_id = prf(dummy_access_ctr);
+                     major_bins[bin_id][dummy_access_ctr];
+                 }
++#endif
+                 return ret;
+             }
+             else

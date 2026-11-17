@@ -1,0 +1,33 @@
+name = "RebuildBound"
+version = "0.1.0"
+defaultTargets = ["RebuildBound", "SpecTests"]
+testDriver = "SpecTests"
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.34.1"
+
+# Spec, proofs, utilities, numerics and the oracle's library code. Every
+# module under RebuildBound/ belongs to it and builds by name.
+[[lean_lib]]
+name = "RebuildBound"
+globs = ["RebuildBound.*"]
+
+# Compile every standalone spec regression and non-vacuity witness, including
+# newly added files. `lake test` runs this target; `lake build` includes it too.
+[[lean_lib]]
+name = "SpecTests"
+globs = ["spec_tests.+"]
+
+# Differential-test oracle: `lake exe oracle <fixture.json>` checks fixtures
+# dumped from the C++ engine against the Lean model (see oracle/README.md).
+# Its modules must not import Mathlib, so that linking the executable does
+# not need native objects for Mathlib.
+[[lean_exe]]
+name = "oracle"
+root = "RebuildBound.Oracle.Main"

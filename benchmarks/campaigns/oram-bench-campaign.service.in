@@ -1,0 +1,35 @@
+# Target campaign service: runs one resolved campaign, and resumes it after
+# every boot (a preemption, host maintenance, a reboot). Substitute every
+# @...@ placeholder; one unit per campaign (see README.md, "Running a
+# campaign"). It does not create, start or replace the VM.
+[Unit]
+Description=ORAM campaign @CAMPAIGN_ROOT@
+RequiresMountsFor=@CAMPAIGN_ROOT@
+After=local-fs.target
+
+[Service]
+Type=exec
+User=@BENCH_USER@
+WorkingDirectory=@SOURCE_ROOT@
+# Lets attest's root step read the service user's checkout (git refuses a repository
+# another user owns); the capture binds no git state either way.
+Environment=GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory GIT_CONFIG_VALUE_0=@SOURCE_ROOT@
+# tdx and snp campaigns only (delete it for native): capture this boot's
+# report as root ("+"). "-" keeps a failed capture from failing the unit, so
+# run blocks with attestation:no_capture_this_boot instead of restart-looping.
+ExecStartPre=-+@PYTHON@ -m analysis.oram_bench attest --campaign @CAMPAIGN_ROOT@
+# After a stop and start the guest clock is off by about a second, and chrony
+# slews CLOCK_MONOTONIC by up to a few percent until it is corrected: wait until
+# less than 100 us remains (up to 60 x 10 s), so no trial is timed during the slew.
+ExecStartPre=-/usr/bin/chronyc waitsync 60 0.0001
+# The campaign must already be resolved; resume launches its frozen build/worker.
+# The free-space guard is the campaign's launch policy, so pass the same value
+# the first run stored in launch_policy.json (a different one is refused).
+ExecStart=@PYTHON@ -m analysis.oram_bench resume --campaign @CAMPAIGN_ROOT@ --reducer @REDUCER@ --min-free-bytes @MIN_FREE_BYTES@
+KillMode=control-group
+TimeoutStopSec=30
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

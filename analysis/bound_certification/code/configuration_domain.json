@@ -1,0 +1,20 @@
+{
+  "base": {
+    "branching": 8,
+    "prefix_flushes": 8,
+    "stash_buckets": 1,
+    "dense_prefixes": 2,
+    "tier_buckets": 0,
+    "target_exact": "1/18446744073709551616"
+  },
+  "axes": {
+    "ladder": [
+      {"levels": 3},
+      {"levels": 4, "level_fanouts": [4, 4, 4]},
+      {"levels": 6},
+      {"levels": 7, "level_fanouts": [4, 4, 4, 8, 8, 8]}
+    ],
+    "top_digit": [4, 8],
+    "horizon_accesses": [1048576, 4294967296]
+  }
+}

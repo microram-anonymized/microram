@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-native-control-pair",
+  "repetitions": 1,
+  "base_seed": 9001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 125580361728,
+    "placement": "near_far"
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off"
+  },
+  "timing": {
+    "max_trial_ns": 1200000000000
+  },
+  "stages": [
+    {
+      "name": "capacity-k4v8",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1648,
+              "setup_ns_per_entry": 36,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 696,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "capacity-k8v48",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 2603,
+              "setup_ns_per_entry": 237,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "batch",
+              "access_ns": 2109,
+              "setup_ns_per_entry": 239,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "capacity-k4v1024",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "k4-dense-v1024",
+          "key_bytes": 4,
+          "value_bytes": 1024,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "candidates": [
+        {
+          "name": "tree",
+          "overrides": {
+            "scheme": "tree"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "max_trials": 3,
+    "max_campaign_trial_ns": 7200000000000
+  }
+}

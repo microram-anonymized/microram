@@ -1,0 +1,3790 @@
+{
+  "scope": "Native configuration inventory and conservative lifetime ledger.\n\nThe adapter reuses conditional ordinary certificates only at their audited\ngeometry. Other cases remain explicit gaps with probability one. This is a\nchecker foundation, not a proof of integrated histories or exhaustive events.\nThe library runs one residual routing, the certified one (separated sources,\none-page DFS top preparation), so the routing fields must name it.\n",
+  "declared_domain": {
+    "base": {
+      "branching": 8,
+      "prefix_flushes": 8,
+      "stash_buckets": 1,
+      "dense_prefixes": 2,
+      "tier_buckets": 0,
+      "target_exact": "1/18446744073709551616"
+    },
+    "axes": {
+      "ladder": [
+        {
+          "levels": 3
+        },
+        {
+          "levels": 4,
+          "level_fanouts": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "levels": 6
+        },
+        {
+          "levels": 7,
+          "level_fanouts": [
+            4,
+            4,
+            4,
+            8,
+            8,
+            8
+          ]
+        }
+      ],
+      "top_digit": [
+        4,
+        8
+      ],
+      "horizon_accesses": [
+        1048576,
+        4294967296
+      ]
+    }
+  },
+  "status_counts": {
+    "unproved_applicability": 16
+  },
+  "configurations": [
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 3,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4096,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 11514,
+        "capacity_entries": 131072
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "54564814683332866747694417676825179981169766282884656840265483363481671780736571865509779254922753215559/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L1_d5/direct_B_producer_tier",
+        "ordinary_L1_d5/completed_A_route_stashes",
+        "ordinary_L1_d5/A_only_range_router",
+        "ordinary_L1_d5/insertion_and_published_tier",
+        "ordinary_L1_d6/direct_B_producer_tier",
+        "ordinary_L1_d6/completed_A_route_stashes",
+        "ordinary_L1_d6/A_only_range_router",
+        "ordinary_L1_d6/insertion_and_published_tier",
+        "ordinary_L1_d7/direct_B_producer_tier",
+        "ordinary_L1_d7/completed_A_route_stashes",
+        "ordinary_L1_d7/A_only_range_router",
+        "ordinary_L1_d7/insertion_and_published_tier",
+        "ordinary_L1_d8/direct_B_producer_tier",
+        "ordinary_L1_d8/completed_A_route_stashes",
+        "ordinary_L1_d8/A_only_range_router",
+        "ordinary_L1_d8/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "top_finish_L3_d4/A_only_range_router",
+        "top_finish_L3_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "321697320128502858412895707014289611200165815319746298313660457734049387983938978155351884644554022129/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "742378431064947554783313009733697066571203377563258809255753918681761381693320234938359144285669782137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 71,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 131072,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 3,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4096,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 11514,
+        "capacity_entries": 131072
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "210830648962878405698876961653439378438329811963780659311950597390712640678857555059252064598366718052136359/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L1_d5/direct_B_producer_tier",
+        "ordinary_L1_d5/completed_A_route_stashes",
+        "ordinary_L1_d5/A_only_range_router",
+        "ordinary_L1_d5/insertion_and_published_tier",
+        "ordinary_L1_d6/direct_B_producer_tier",
+        "ordinary_L1_d6/completed_A_route_stashes",
+        "ordinary_L1_d6/A_only_range_router",
+        "ordinary_L1_d6/insertion_and_published_tier",
+        "ordinary_L1_d7/direct_B_producer_tier",
+        "ordinary_L1_d7/completed_A_route_stashes",
+        "ordinary_L1_d7/A_only_range_router",
+        "ordinary_L1_d7/insertion_and_published_tier",
+        "ordinary_L1_d8/direct_B_producer_tier",
+        "ordinary_L1_d8/completed_A_route_stashes",
+        "ordinary_L1_d8/A_only_range_router",
+        "ordinary_L1_d8/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "top_finish_L3_d4/A_only_range_router",
+        "top_finish_L3_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 1048577,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "321697320128502858412895707014289611200165815319746298313660457734049387983938978155351884644554022129/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "742378431064947554783313009733697066571203377563258809255753918681761381693320234938359144285669782137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 71,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 131072,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 3,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 8192,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 19706,
+        "capacity_entries": 262144
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "6270614424617754660786491287223143331568159026970223114209472864171060744290683133475205616477690660619/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L1_d5/direct_B_producer_tier",
+        "ordinary_L1_d5/completed_A_route_stashes",
+        "ordinary_L1_d5/A_only_range_router",
+        "ordinary_L1_d5/insertion_and_published_tier",
+        "ordinary_L1_d6/direct_B_producer_tier",
+        "ordinary_L1_d6/completed_A_route_stashes",
+        "ordinary_L1_d6/A_only_range_router",
+        "ordinary_L1_d6/insertion_and_published_tier",
+        "ordinary_L1_d7/direct_B_producer_tier",
+        "ordinary_L1_d7/completed_A_route_stashes",
+        "ordinary_L1_d7/A_only_range_router",
+        "ordinary_L1_d7/insertion_and_published_tier",
+        "ordinary_L1_d8/direct_B_producer_tier",
+        "ordinary_L1_d8/completed_A_route_stashes",
+        "ordinary_L1_d8/A_only_range_router",
+        "ordinary_L1_d8/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "top_finish_L3_d8/A_only_range_router",
+        "top_finish_L3_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "18481810935718136864278184514640557613534031444923158115547551922689879686144715862960887353946290043/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "171616815830769495574690397391759319101928650145580936078780729683400447862926898698112789675414946429/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 71,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 262144,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 3,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 8192,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 19706,
+        "capacity_entries": 262144
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "24224835664589664301610919479272209840106562964454276617727721512356989401468326349957421994227696163007819/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L1_d5/direct_B_producer_tier",
+        "ordinary_L1_d5/completed_A_route_stashes",
+        "ordinary_L1_d5/A_only_range_router",
+        "ordinary_L1_d5/insertion_and_published_tier",
+        "ordinary_L1_d6/direct_B_producer_tier",
+        "ordinary_L1_d6/completed_A_route_stashes",
+        "ordinary_L1_d6/A_only_range_router",
+        "ordinary_L1_d6/insertion_and_published_tier",
+        "ordinary_L1_d7/direct_B_producer_tier",
+        "ordinary_L1_d7/completed_A_route_stashes",
+        "ordinary_L1_d7/A_only_range_router",
+        "ordinary_L1_d7/insertion_and_published_tier",
+        "ordinary_L1_d8/direct_B_producer_tier",
+        "ordinary_L1_d8/completed_A_route_stashes",
+        "ordinary_L1_d8/A_only_range_router",
+        "ordinary_L1_d8/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "top_finish_L3_d8/A_only_range_router",
+        "top_finish_L3_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 1048577,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "18481810935718136864278184514640557613534031444923158115547551922689879686144715862960887353946290043/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "171616815830769495574690397391759319101928650145580936078780729683400447862926898698112789675414946429/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 71,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 262144,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4096,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 11899,
+        "capacity_entries": 131072
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "54564814683332866747694417676825179981169766282884656840265483363481671780736571865509779254922753215559/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "top_finish_L4_d4/A_only_range_router",
+        "top_finish_L4_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 513,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 129,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "321697320128502858412895707014289611200165815319746298313660457734049387983938978155351884644554022129/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "742378431064947554783313009733697066571203377563258809255753918681761381693320234938359144285669782137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 52,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 131072,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4096,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 11899,
+        "capacity_entries": 131072
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "210830648962878405698876961653439378438329811963780659311950597390712640678857555059252064598366718052136359/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "top_finish_L4_d4/A_only_range_router",
+        "top_finish_L4_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 2097153,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 524289,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "321697320128502858412895707014289611200165815319746298313660457734049387983938978155351884644554022129/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "742378431064947554783313009733697066571203377563258809255753918681761381693320234938359144285669782137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 52,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 131072,
+        "levels": 4,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 8192,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 20091,
+        "capacity_entries": 262144
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "6270614424617754660786491287223143331568159026970223114209472864171060744290683133475205616477690660619/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "top_finish_L4_d8/A_only_range_router",
+        "top_finish_L4_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 513,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 129,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "18481810935718136864278184514640557613534031444923158115547551922689879686144715862960887353946290043/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "171616815830769495574690397391759319101928650145580936078780729683400447862926898698112789675414946429/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 52,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 262144,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 8192,
+        "tier_buckets": 1,
+        "prefix_positions": 512,
+        "arena_buckets": 20091,
+        "capacity_entries": 262144
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "24224835664589664301610919479272209840106562964454276617727721512356989401468326349957421994227696163007819/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L1_d1/direct_B_producer_tier",
+        "ordinary_L1_d1/completed_A_route_stashes",
+        "ordinary_L1_d1/A_only_range_router",
+        "ordinary_L1_d1/insertion_and_published_tier",
+        "ordinary_L1_d2/direct_B_producer_tier",
+        "ordinary_L1_d2/completed_A_route_stashes",
+        "ordinary_L1_d2/A_only_range_router",
+        "ordinary_L1_d2/insertion_and_published_tier",
+        "ordinary_L1_d3/direct_B_producer_tier",
+        "ordinary_L1_d3/completed_A_route_stashes",
+        "ordinary_L1_d3/A_only_range_router",
+        "ordinary_L1_d3/insertion_and_published_tier",
+        "ordinary_L1_d4/direct_B_producer_tier",
+        "ordinary_L1_d4/completed_A_route_stashes",
+        "ordinary_L1_d4/A_only_range_router",
+        "ordinary_L1_d4/insertion_and_published_tier",
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "top_finish_L4_d8/A_only_range_router",
+        "top_finish_L4_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 2097153,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 524289,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "18481810935718136864278184514640557613534031444923158115547551922689879686144715862960887353946290043/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "171616815830769495574690397391759319101928650145580936078780729683400447862926898698112789675414946429/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 52,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 262144,
+        "levels": 4,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 6,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 2097152,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 5916936,
+        "capacity_entries": 67108864
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "402775123460305211215530359785266320880521063385951738793903842461906107269218538822912936989503271459/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "ordinary_L3_d5/completed_A_route_stashes",
+        "ordinary_L3_d5/A_only_range_router",
+        "ordinary_L3_d5/insertion_and_published_tier",
+        "ordinary_L3_d6/completed_A_route_stashes",
+        "ordinary_L3_d6/A_only_range_router",
+        "ordinary_L3_d6/insertion_and_published_tier",
+        "ordinary_L3_d7/completed_A_route_stashes",
+        "ordinary_L3_d7/A_only_range_router",
+        "ordinary_L3_d7/insertion_and_published_tier",
+        "ordinary_L3_d8/completed_A_route_stashes",
+        "ordinary_L3_d8/A_only_range_router",
+        "ordinary_L3_d8/insertion_and_published_tier",
+        "ordinary_L4_d2/completed_A_route_stashes",
+        "ordinary_L4_d2/A_only_range_router",
+        "ordinary_L4_d2/insertion_and_published_tier",
+        "ordinary_L4_d3/completed_A_route_stashes",
+        "ordinary_L4_d3/A_only_range_router",
+        "ordinary_L4_d3/insertion_and_published_tier",
+        "ordinary_L4_d4/completed_A_route_stashes",
+        "ordinary_L4_d4/A_only_range_router",
+        "ordinary_L4_d4/insertion_and_published_tier",
+        "ordinary_L4_d5/completed_A_route_stashes",
+        "ordinary_L4_d5/A_only_range_router",
+        "ordinary_L4_d5/insertion_and_published_tier",
+        "ordinary_L4_d6/completed_A_route_stashes",
+        "ordinary_L4_d6/A_only_range_router",
+        "ordinary_L4_d6/insertion_and_published_tier",
+        "ordinary_L4_d7/completed_A_route_stashes",
+        "ordinary_L4_d7/A_only_range_router",
+        "ordinary_L4_d7/insertion_and_published_tier",
+        "ordinary_L4_d8/completed_A_route_stashes",
+        "ordinary_L4_d8/A_only_range_router",
+        "ordinary_L4_d8/insertion_and_published_tier",
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "top_finish_L6_d4/A_only_range_router",
+        "top_finish_L6_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 5,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d5": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d6": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d7": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d8": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "71425627808564109211368837392848347062077902221185492923815775884698361421262556709231418457873/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "28548617263185616308434257702839218153232765189170516557266196657703936875222007978769288627963/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 158,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 67108864,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 6,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 2097152,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 5916940,
+        "capacity_entries": 67108864
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "1649766434129534005949070887097291927824298793146232755663064708141808573900078186298717517705156444575331/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L2_d5/completed_A_route_stashes",
+        "ordinary_L2_d5/A_only_range_router",
+        "ordinary_L2_d5/insertion_and_published_tier",
+        "ordinary_L2_d6/completed_A_route_stashes",
+        "ordinary_L2_d6/A_only_range_router",
+        "ordinary_L2_d6/insertion_and_published_tier",
+        "ordinary_L2_d7/completed_A_route_stashes",
+        "ordinary_L2_d7/A_only_range_router",
+        "ordinary_L2_d7/insertion_and_published_tier",
+        "ordinary_L2_d8/completed_A_route_stashes",
+        "ordinary_L2_d8/A_only_range_router",
+        "ordinary_L2_d8/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "ordinary_L3_d5/completed_A_route_stashes",
+        "ordinary_L3_d5/A_only_range_router",
+        "ordinary_L3_d5/insertion_and_published_tier",
+        "ordinary_L3_d6/completed_A_route_stashes",
+        "ordinary_L3_d6/A_only_range_router",
+        "ordinary_L3_d6/insertion_and_published_tier",
+        "ordinary_L3_d7/completed_A_route_stashes",
+        "ordinary_L3_d7/A_only_range_router",
+        "ordinary_L3_d7/insertion_and_published_tier",
+        "ordinary_L3_d8/completed_A_route_stashes",
+        "ordinary_L3_d8/A_only_range_router",
+        "ordinary_L3_d8/insertion_and_published_tier",
+        "ordinary_L4_d2/completed_A_route_stashes",
+        "ordinary_L4_d2/A_only_range_router",
+        "ordinary_L4_d2/insertion_and_published_tier",
+        "ordinary_L4_d3/completed_A_route_stashes",
+        "ordinary_L4_d3/A_only_range_router",
+        "ordinary_L4_d3/insertion_and_published_tier",
+        "ordinary_L4_d4/completed_A_route_stashes",
+        "ordinary_L4_d4/A_only_range_router",
+        "ordinary_L4_d4/insertion_and_published_tier",
+        "ordinary_L4_d5/completed_A_route_stashes",
+        "ordinary_L4_d5/A_only_range_router",
+        "ordinary_L4_d5/insertion_and_published_tier",
+        "ordinary_L4_d6/completed_A_route_stashes",
+        "ordinary_L4_d6/A_only_range_router",
+        "ordinary_L4_d6/insertion_and_published_tier",
+        "ordinary_L4_d7/completed_A_route_stashes",
+        "ordinary_L4_d7/A_only_range_router",
+        "ordinary_L4_d7/insertion_and_published_tier",
+        "ordinary_L4_d8/completed_A_route_stashes",
+        "ordinary_L4_d8/A_only_range_router",
+        "ordinary_L4_d8/insertion_and_published_tier",
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "top_finish_L6_d4/A_only_range_router",
+        "top_finish_L6_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 1048577,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 16385,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d5": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d6": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d7": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d8": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 2049,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "71425627808564109211368837392848347062077902221185492923815775884698361421262556709231418457873/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "28548617263185616308434257702839218153232765189170516557266196657703936875222007978769288627963/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 158,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 67108864,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 6,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4194304,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 10111240,
+        "capacity_entries": 134217728
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "33456278370384823987525851818317686415031581213667896966991342890820145660196676355464303612391584133/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L4_d2/completed_A_route_stashes",
+        "ordinary_L4_d2/A_only_range_router",
+        "ordinary_L4_d2/insertion_and_published_tier",
+        "ordinary_L4_d3/completed_A_route_stashes",
+        "ordinary_L4_d3/A_only_range_router",
+        "ordinary_L4_d3/insertion_and_published_tier",
+        "ordinary_L4_d4/completed_A_route_stashes",
+        "ordinary_L4_d4/A_only_range_router",
+        "ordinary_L4_d4/insertion_and_published_tier",
+        "ordinary_L4_d5/completed_A_route_stashes",
+        "ordinary_L4_d5/A_only_range_router",
+        "ordinary_L4_d5/insertion_and_published_tier",
+        "ordinary_L4_d6/completed_A_route_stashes",
+        "ordinary_L4_d6/A_only_range_router",
+        "ordinary_L4_d6/insertion_and_published_tier",
+        "ordinary_L4_d7/completed_A_route_stashes",
+        "ordinary_L4_d7/A_only_range_router",
+        "ordinary_L4_d7/insertion_and_published_tier",
+        "ordinary_L4_d8/completed_A_route_stashes",
+        "ordinary_L4_d8/A_only_range_router",
+        "ordinary_L4_d8/insertion_and_published_tier",
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "top_finish_L6_d8/A_only_range_router",
+        "top_finish_L6_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "133380906260974052368845772498423982445048761460781550240601170176242478388519567190132147/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "2318603317082090970312561469886972911442500504479993573707780167817216015921785541504475347/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "3154123397944432950120998795234364143165460309691036964930935696090534531707466975416682233/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "41153854090033074723305953419381446204683628031765914477044628716799624217300583110692150867/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "17808434801224336153373084577675864484805299281548744696997717978764218012144812914469200651/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "6487762763279479324588231776639302519627387913667868277450241265880681578259513463640522863/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "314352264171088795341037911257102741691434472546938147845130979254810133792172354772354979/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 5,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "8466818353733515269678000805888129442791944067902481341761242529517567328036902466183999649/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "2190877512082372294966024139837056497867435366027968630560560285214993029959094861319567827/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "5043716522109236039331237246550351390757696457130364102099795344981424607294599275897013183/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d5": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1360752074429428407650788019316733210046704182722336499063342348078012115665583117399492421259/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d6": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "37812966813526622917402116379381155988553880491425336843963973425626503875270126156832740231/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d7": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "54519079957196153298880171618595761313456883087398219505837566915529427842267046508478041647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d8": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "3352915211413426422941865852983626675456815602959527682662101854087173413507555288615354169/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "6663476096146592468924411814003965512960406381695159689452531162996495828354657285304130743/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "22736672790294702736812073490450393386077812532003795270069867829885801190189206603448272889/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 158,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 134217728,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 6,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": []
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4194304,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 10111244,
+        "capacity_entries": 134217728
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "meets_target",
+      "conditional_lifetime_upper_exact": "6460153821712987743525358989609415570082152070688339901977753908004972449435404391446364475405408877711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "covered_obligations_subtotal_exact": "6460153821712987743525358989609415570082152070688339901977753908004972449435404391446364475405408877711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker.",
+        "The deterministic inventory classifies non-capacity census sites (public refusals, liveness, unreachable paths) by reviewed per-rule arguments and a lexical occupancy lint, not by a machine proof; scheduler liveness, C++ memory safety beyond the audited extents and allocation failure are outside it."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 1048577,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d5": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "121618746197195016630709018586263634191475023207676730359928492647657873790956689032003142977/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d6": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "626563367132658721253438732766077403599305998323952294526599717650024702496009825567095246697/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d7": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "296170046283190739801134614299435092859047121813255432104883697825762159298949018566154628097/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d8": {
+          "exposures": 1048576,
+          "per_exposure_upper_exact": "207770657553167665574236125191527196519006428411203582282779171102841638634485896725396409197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "133380906260974052368845772498423982445048761460781550240601170176242478388519567190132147/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "2318603317082090970312561469886972911442500504479993573707780167817216015921785541504475347/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "3154123397944432950120998795234364143165460309691036964930935696090534531707466975416682233/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d5": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "41153854090033074723305953419381446204683628031765914477044628716799624217300583110692150867/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d6": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "17808434801224336153373084577675864484805299281548744696997717978764218012144812914469200651/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d7": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "6487762763279479324588231776639302519627387913667868277450241265880681578259513463640522863/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d8": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "314352264171088795341037911257102741691434472546938147845130979254810133792172354772354979/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 16385,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "8466818353733515269678000805888129442791944067902481341761242529517567328036902466183999649/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "2190877512082372294966024139837056497867435366027968630560560285214993029959094861319567827/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "5043716522109236039331237246550351390757696457130364102099795344981424607294599275897013183/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d5": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1360752074429428407650788019316733210046704182722336499063342348078012115665583117399492421259/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d6": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "37812966813526622917402116379381155988553880491425336843963973425626503875270126156832740231/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d7": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "54519079957196153298880171618595761313456883087398219505837566915529427842267046508478041647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d8": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "3352915211413426422941865852983626675456815602959527682662101854087173413507555288615354169/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 2049,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1271023382500808637218478997688647382200951503986285106821873661448806140585458439079587213692987061765498717193134873/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "19853615523004279601156676489371573572080045192652001483787787418385994655402738490692876728975765657833356864964971739/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "2073001129182053707937042380521744654794965628656977625508115483406842461761681633966157198166181628190016167786896119/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "56884651511357684128543518748816378841738300471843897257329835642624257944528104476541966148410348662148306912952967247/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "21851650123255831068934582794936425197551458316072032792029085901292795077985703589194236755748110245027601244800266847/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "112551341667770953211629471828410125965457673114128361876744539412532386412629275946292637937718442975338552368972963/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "29083801262821061732381325975898908360924873236051603330901563011874640520658240557503550919740193605206569367200521/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "274500735209460953090941700680310466718852235366548041849747372139745162242561334301829018459913845350469045749563/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "217120642869608257742501748788919513123059121007957515979593857657835262013185110274013756119879106967623172917613/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "10884353338123662496223290006835128819606801913476389687322676194089272058255017316241775320504613180752860029151/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "107814427116957235340832083832638163496203282413743238473539912350362055799601669355459703660584637902205662996763/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "30712366737537597553092404828581839285681149663351550934696259591699198150135053389597296784643814261892604892209/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1287609835528027139561246026380035973623390470804515358636417660136372864777547381299531720978606717747230074401/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "172217802135802304286047476226290233901679427816460554734356496943984627186526552598238185380961363568908526159/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_prepare": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "6663476096146592468924411814003965512960406381695159689452531162996495828354657285304130743/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "22736672790294702736812073490450393386077812532003795270069867829885801190189206603448272889/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "4833942090915170423710608398897137231929388711121886053728506610207584849487616330615655200473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 158,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 134217728,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": false
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 2097152,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 5917321,
+        "capacity_entries": 67108864
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "17990704056519572498402342062133458728966718309137037663910119339743945013137187449453192279743271459/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "ordinary_L4_d2/completed_A_route_stashes",
+        "ordinary_L4_d2/A_only_range_router",
+        "ordinary_L4_d2/insertion_and_published_tier",
+        "ordinary_L4_d3/completed_A_route_stashes",
+        "ordinary_L4_d3/A_only_range_router",
+        "ordinary_L4_d3/insertion_and_published_tier",
+        "ordinary_L4_d4/completed_A_route_stashes",
+        "ordinary_L4_d4/A_only_range_router",
+        "ordinary_L4_d4/insertion_and_published_tier",
+        "ordinary_L4_d5/completed_A_route_stashes",
+        "ordinary_L4_d5/A_only_range_router",
+        "ordinary_L4_d5/insertion_and_published_tier",
+        "ordinary_L4_d6/completed_A_route_stashes",
+        "ordinary_L4_d6/A_only_range_router",
+        "ordinary_L4_d6/insertion_and_published_tier",
+        "ordinary_L4_d7/completed_A_route_stashes",
+        "ordinary_L4_d7/A_only_range_router",
+        "ordinary_L4_d7/insertion_and_published_tier",
+        "ordinary_L4_d8/completed_A_route_stashes",
+        "ordinary_L4_d8/A_only_range_router",
+        "ordinary_L4_d8/insertion_and_published_tier",
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "ordinary_L6_d2/completed_A_route_stashes",
+        "ordinary_L6_d2/A_only_range_router",
+        "ordinary_L6_d2/insertion_and_published_tier",
+        "ordinary_L6_d3/completed_A_route_stashes",
+        "ordinary_L6_d3/A_only_range_router",
+        "ordinary_L6_d3/insertion_and_published_tier",
+        "ordinary_L6_d4/completed_A_route_stashes",
+        "ordinary_L6_d4/A_only_range_router",
+        "ordinary_L6_d4/insertion_and_published_tier",
+        "ordinary_L6_d5/completed_A_route_stashes",
+        "ordinary_L6_d5/A_only_range_router",
+        "ordinary_L6_d5/insertion_and_published_tier",
+        "ordinary_L6_d6/completed_A_route_stashes",
+        "ordinary_L6_d6/A_only_range_router",
+        "ordinary_L6_d6/insertion_and_published_tier",
+        "ordinary_L6_d7/completed_A_route_stashes",
+        "ordinary_L6_d7/A_only_range_router",
+        "ordinary_L6_d7/insertion_and_published_tier",
+        "ordinary_L6_d8/completed_A_route_stashes",
+        "ordinary_L6_d8/A_only_range_router",
+        "ordinary_L6_d8/insertion_and_published_tier",
+        "top_finish_L7_d4/A_only_range_router",
+        "top_finish_L7_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 513,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 129,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 5,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L6_d2": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d3": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d4": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d5": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "71425627808564109211368837392848347062077902221185492923815775884698361421262556709231418457873/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "28548617263185616308434257702839218153232765189170516557266196657703936875222007978769288627963/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 139,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 67108864,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 2097152,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 5917325,
+        "capacity_entries": 67108864
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "73689452251628029763714526503339724451532195711599739834610418233432357299168971073026403373979484575331/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L2_d2/completed_A_route_stashes",
+        "ordinary_L2_d2/A_only_range_router",
+        "ordinary_L2_d2/insertion_and_published_tier",
+        "ordinary_L2_d3/completed_A_route_stashes",
+        "ordinary_L2_d3/A_only_range_router",
+        "ordinary_L2_d3/insertion_and_published_tier",
+        "ordinary_L2_d4/completed_A_route_stashes",
+        "ordinary_L2_d4/A_only_range_router",
+        "ordinary_L2_d4/insertion_and_published_tier",
+        "ordinary_L3_d2/completed_A_route_stashes",
+        "ordinary_L3_d2/A_only_range_router",
+        "ordinary_L3_d2/insertion_and_published_tier",
+        "ordinary_L3_d3/completed_A_route_stashes",
+        "ordinary_L3_d3/A_only_range_router",
+        "ordinary_L3_d3/insertion_and_published_tier",
+        "ordinary_L3_d4/completed_A_route_stashes",
+        "ordinary_L3_d4/A_only_range_router",
+        "ordinary_L3_d4/insertion_and_published_tier",
+        "ordinary_L4_d2/completed_A_route_stashes",
+        "ordinary_L4_d2/A_only_range_router",
+        "ordinary_L4_d2/insertion_and_published_tier",
+        "ordinary_L4_d3/completed_A_route_stashes",
+        "ordinary_L4_d3/A_only_range_router",
+        "ordinary_L4_d3/insertion_and_published_tier",
+        "ordinary_L4_d4/completed_A_route_stashes",
+        "ordinary_L4_d4/A_only_range_router",
+        "ordinary_L4_d4/insertion_and_published_tier",
+        "ordinary_L4_d5/completed_A_route_stashes",
+        "ordinary_L4_d5/A_only_range_router",
+        "ordinary_L4_d5/insertion_and_published_tier",
+        "ordinary_L4_d6/completed_A_route_stashes",
+        "ordinary_L4_d6/A_only_range_router",
+        "ordinary_L4_d6/insertion_and_published_tier",
+        "ordinary_L4_d7/completed_A_route_stashes",
+        "ordinary_L4_d7/A_only_range_router",
+        "ordinary_L4_d7/insertion_and_published_tier",
+        "ordinary_L4_d8/completed_A_route_stashes",
+        "ordinary_L4_d8/A_only_range_router",
+        "ordinary_L4_d8/insertion_and_published_tier",
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "ordinary_L6_d2/completed_A_route_stashes",
+        "ordinary_L6_d2/A_only_range_router",
+        "ordinary_L6_d2/insertion_and_published_tier",
+        "ordinary_L6_d3/completed_A_route_stashes",
+        "ordinary_L6_d3/A_only_range_router",
+        "ordinary_L6_d3/insertion_and_published_tier",
+        "ordinary_L6_d4/completed_A_route_stashes",
+        "ordinary_L6_d4/A_only_range_router",
+        "ordinary_L6_d4/insertion_and_published_tier",
+        "ordinary_L6_d5/completed_A_route_stashes",
+        "ordinary_L6_d5/A_only_range_router",
+        "ordinary_L6_d5/insertion_and_published_tier",
+        "ordinary_L6_d6/completed_A_route_stashes",
+        "ordinary_L6_d6/A_only_range_router",
+        "ordinary_L6_d6/insertion_and_published_tier",
+        "ordinary_L6_d7/completed_A_route_stashes",
+        "ordinary_L6_d7/A_only_range_router",
+        "ordinary_L6_d7/insertion_and_published_tier",
+        "ordinary_L6_d8/completed_A_route_stashes",
+        "ordinary_L6_d8/A_only_range_router",
+        "ordinary_L6_d8/insertion_and_published_tier",
+        "top_finish_L7_d4/A_only_range_router",
+        "top_finish_L7_d4/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 2097153,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 524289,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 16385,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 2049,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L6_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "71425627808564109211368837392848347062077902221185492923815775884698361421262556709231418457873/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "28548617263185616308434257702839218153232765189170516557266196657703936875222007978769288627963/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 139,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 67108864,
+        "levels": 7,
+        "top_digit": 4,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 1048576,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4194304,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 10111625,
+        "capacity_entries": 134217728
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "bound_above_target",
+      "conditional_lifetime_upper_exact": "1",
+      "covered_obligations_subtotal_exact": "33789741983440051848667084896493606674485909130480662711919439994310366255873466265339532062930272133/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [
+        "ordinary_L5_d2/completed_A_route_stashes",
+        "ordinary_L5_d2/A_only_range_router",
+        "ordinary_L5_d2/insertion_and_published_tier",
+        "ordinary_L5_d3/completed_A_route_stashes",
+        "ordinary_L5_d3/A_only_range_router",
+        "ordinary_L5_d3/insertion_and_published_tier",
+        "ordinary_L5_d4/completed_A_route_stashes",
+        "ordinary_L5_d4/A_only_range_router",
+        "ordinary_L5_d4/insertion_and_published_tier",
+        "ordinary_L5_d5/completed_A_route_stashes",
+        "ordinary_L5_d5/A_only_range_router",
+        "ordinary_L5_d5/insertion_and_published_tier",
+        "ordinary_L5_d6/completed_A_route_stashes",
+        "ordinary_L5_d6/A_only_range_router",
+        "ordinary_L5_d6/insertion_and_published_tier",
+        "ordinary_L5_d7/completed_A_route_stashes",
+        "ordinary_L5_d7/A_only_range_router",
+        "ordinary_L5_d7/insertion_and_published_tier",
+        "ordinary_L5_d8/completed_A_route_stashes",
+        "ordinary_L5_d8/A_only_range_router",
+        "ordinary_L5_d8/insertion_and_published_tier",
+        "ordinary_L6_d2/completed_A_route_stashes",
+        "ordinary_L6_d2/A_only_range_router",
+        "ordinary_L6_d2/insertion_and_published_tier",
+        "ordinary_L6_d3/completed_A_route_stashes",
+        "ordinary_L6_d3/A_only_range_router",
+        "ordinary_L6_d3/insertion_and_published_tier",
+        "ordinary_L6_d4/completed_A_route_stashes",
+        "ordinary_L6_d4/A_only_range_router",
+        "ordinary_L6_d4/insertion_and_published_tier",
+        "ordinary_L6_d5/completed_A_route_stashes",
+        "ordinary_L6_d5/A_only_range_router",
+        "ordinary_L6_d5/insertion_and_published_tier",
+        "ordinary_L6_d6/completed_A_route_stashes",
+        "ordinary_L6_d6/A_only_range_router",
+        "ordinary_L6_d6/insertion_and_published_tier",
+        "ordinary_L6_d7/completed_A_route_stashes",
+        "ordinary_L6_d7/A_only_range_router",
+        "ordinary_L6_d7/insertion_and_published_tier",
+        "ordinary_L6_d8/completed_A_route_stashes",
+        "ordinary_L6_d8/A_only_range_router",
+        "ordinary_L6_d8/insertion_and_published_tier",
+        "top_finish_L7_d8/A_only_range_router",
+        "top_finish_L7_d8/insertion_and_published_tier",
+        "integrated_inventory/remaining_storage_and_partial_jobs"
+      ],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 513,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 512,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 129,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "83035240020938016477971303301894134855098937196180660747266164406027173618185967875428489/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "386624218905432570137627786309914589051586718258935646947278672210620913310468155351332158213/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 128,
+          "per_exposure_upper_exact": "333452265652447852484289558474304154770720170220598764377932657187262381897907141884694059/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 33,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "3154123397944188256117644074419937215305211762704842342666091130546906275092012037355270621/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "17808434801217226949259667010487091156850398637658279219699069541390332735488352526800837891/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 32,
+          "per_exposure_upper_exact": "314352264170940141263671592989505283187102948377052543643882439809204108172937765996485137/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 5,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "8466818353733515269678000805888129442791944067902481341761242529517567328036902466183999649/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "2190877512082372294966024139837056497867435366027968630560560285214993029959094861319567827/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "5043716522109236039331237246550351390757696457130364102099795344981424607294599275897013183/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "1360752074429428407650788019316733210046704182722336499063342348078012115665583117399492421259/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "37812966813526622917402116379381155988553880491425336843963973425626503875270126156832740231/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "54519079957196153298880171618595761313456883087398219505837566915529427842267046508478041647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 4,
+          "per_exposure_upper_exact": "3352915211413426422941865852983626675456815602959527682662101854087173413507555288615354169/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d1": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L6_d2": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d3": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d4": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d5": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d6": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d7": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "ordinary_L6_d8": {
+          "exposures": 0,
+          "per_exposure_upper_exact": "1"
+        },
+        "top_prepare": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "6663476096146592468924411814003965512960406381695159689452531162996495828354657285304130743/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "22736672790294702736812073490450393386077812532003795270069867829885801190189206603448272889/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "1"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 139,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 134217728,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": true
+      }
+    },
+    {
+      "configuration": {
+        "branching": 8,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "stash_buckets": 1,
+        "dense_prefixes": 2,
+        "tier_buckets": 0,
+        "horizon_accesses": 4294967296,
+        "sorted_top_prepare": false,
+        "separated_sources": true,
+        "top_prepare_dfs": true,
+        "target_exact": "1/18446744073709551616",
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ]
+      },
+      "geometry": {
+        "kind": "geometry",
+        "top_buckets": 4194304,
+        "tier_buckets": 2,
+        "prefix_positions": 512,
+        "arena_buckets": 10111629,
+        "capacity_entries": 134217728
+      },
+      "status": "unproved_applicability",
+      "conditional_bound_status": "meets_target",
+      "conditional_lifetime_upper_exact": "6461821139778263882831065155000295171379423710272403730702394393522423552413788340995740617658102317711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "covered_obligations_subtotal_exact": "6461821139778263882831065155000295171379423710272403730702394393522423552413788340995740617658102317711216827708390222447/6103515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "unconditional_capacity_upper_exact": "1",
+      "complete_configuration_certified": false,
+      "coverage_gaps": [],
+      "undischarged_premises": [
+        "Native-source and frontier propositions supply logical histories; imported historical artifacts still require their own applicability audits.",
+        "Every imported certificate retains all assumptions recorded in its assumptions field; native geometry does not discharge them.",
+        "Empty or directly initialized start; public per-digit ordinal lists include the next speculative job. Arbitrary warm-start producer inventory is outside this checker.",
+        "The deterministic inventory classifies non-capacity census sites (public refusals, liveness, unreachable paths) by reviewed per-rule arguments and a lexical occupancy lint, not by a machine proof; scheduler liveness, C++ memory safety beyond the audited extents and allocation failure are outside it."
+      ],
+      "clocks": {
+        "ordinary_L1_d1": {
+          "exposures": 2097153,
+          "per_exposure_upper_exact": "182557500818917735265060974804119396730296124809397153734529279173534057728280666374727197/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d2": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "33774260123865496884865281370948469871396788055716590775744200182645048303762752467753677277/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d3": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "15872810990168625824968928003467151208375224109566358798310111019072681928655694084994260287/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L1_d4": {
+          "exposures": 2097152,
+          "per_exposure_upper_exact": "20446104917209049797491860826062614005439290668531795367253666568371324168969480546419651317/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d1": {
+          "exposures": 524289,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L2_d2": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "83035240020938016477971303301894134855098937196180660747266164406027173618185967875428489/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d3": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "386624218905432570137627786309914589051586718258935646947278672210620913310468155351332158213/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L2_d4": {
+          "exposures": 524288,
+          "per_exposure_upper_exact": "333452265652447852484289558474304154770720170220598764377932657187262381897907141884694059/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d1": {
+          "exposures": 131073,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L3_d2": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "3154123397944188256117644074419937215305211762704842342666091130546906275092012037355270621/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d3": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "17808434801217226949259667010487091156850398637658279219699069541390332735488352526800837891/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L3_d4": {
+          "exposures": 131072,
+          "per_exposure_upper_exact": "314352264170940141263671592989505283187102948377052543643882439809204108172937765996485137/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d1": {
+          "exposures": 16385,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L4_d2": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "8466818353733515269678000805888129442791944067902481341761242529517567328036902466183999649/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d3": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "2190877512082372294966024139837056497867435366027968630560560285214993029959094861319567827/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d4": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "5043716522109236039331237246550351390757696457130364102099795344981424607294599275897013183/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d5": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "1360752074429428407650788019316733210046704182722336499063342348078012115665583117399492421259/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d6": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "37812966813526622917402116379381155988553880491425336843963973425626503875270126156832740231/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d7": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "54519079957196153298880171618595761313456883087398219505837566915529427842267046508478041647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L4_d8": {
+          "exposures": 16384,
+          "per_exposure_upper_exact": "3352915211413426422941865852983626675456815602959527682662101854087173413507555288615354169/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d1": {
+          "exposures": 2049,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L5_d2": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "1271023382500808637218478997688647382200951503986285106821873661448806140585458439079587213692987061765498717193134873/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d3": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "19853615523004279601156676489371573572080045192652001483787787418385994655402738490692876728975765657833356864964971739/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d4": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "2073001129182053707937042380521744654794965628656977625508115483406842461761681633966157198166181628190016167786896119/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d5": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "56884651511357684128543518748816378841738300471843897257329835642624257944528104476541966148410348662148306912952967247/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d6": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "21851650123255831068934582794936425197551458316072032792029085901292795077985703589194236755748110245027601244800266847/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d7": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "112551341667770953211629471828410125965457673114128361876744539412532386412629275946292637937718442975338552368972963/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L5_d8": {
+          "exposures": 2048,
+          "per_exposure_upper_exact": "29083801262821061732381325975898908360924873236051603330901563011874640520658240557503550919740193605206569367200521/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d1": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "0"
+        },
+        "ordinary_L6_d2": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "274500735209460953090941700680310466718852235366548041849747372139745162242561334301829018459913845350469045749563/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d3": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "217120642869608257742501748788919513123059121007957515979593857657835262013185110274013756119879106967623172917613/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d4": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "10884353338123662496223290006835128819606801913476389687322676194089272058255017316241775320504613180752860029151/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d5": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "107814427116957235340832083832638163496203282413743238473539912350362055799601669355459703660584637902205662996763/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d6": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "30712366737537597553092404828581839285681149663351550934696259591699198150135053389597296784643814261892604892209/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d7": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "1287609835528027139561246026380035973623390470804515358636417660136372864777547381299531720978606717747230074401/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "ordinary_L6_d8": {
+          "exposures": 256,
+          "per_exposure_upper_exact": "172217802135802304286047476226290233901679427816460554734356496943984627186526552598238185380961363568908526159/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_prepare": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "6663476096146592468924411814003965512960406381695159689452531162996495828354657285304130743/625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "22736672790294702736812073490450393386077812532003795270069867829885801190189206603448272889/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "top_finish": {
+          "exposures": 257,
+          "per_exposure_upper_exact": "4833942090915170423710608398897137231929388711121886053728506610207584849487616330615655200473817410227/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "integrated_inventory": {
+          "exposures": 1,
+          "per_exposure_upper_exact": "0"
+        }
+      },
+      "evidence_errors": {},
+      "cryptographic_and_equality_terms": "Separate; not evaluated or included in the ideal-tag capacity sum.",
+      "obligation_count": 139,
+      "planner_ladder": {
+        "kind": "planner_ladder",
+        "capacity_entries": 134217728,
+        "levels": 7,
+        "top_digit": 8,
+        "prefix_flushes": 8,
+        "half_fanout_prefix": true,
+        "level_fanouts": [
+          4,
+          4,
+          4,
+          8,
+          8,
+          8
+        ],
+        "default_ladder": true
+      }
+    }
+  ],
+  "input_sha256": {
+    "ordinary_geometry_reference.json": "1087136ca95a58c3f4a09491deb15de3ce8de805052c68a9453f722597fc8d47",
+    "ordinary_range_audit.json": "21f06314fd216167a2d2c236a1eafc99be527badefe0e0d5fd2dc50a9d8747cd",
+    "configuration_domain.json": "7db3c82f644c4703ed0dd183f24ed996c0952777aeb25c89da8d0fcfc7467a4b",
+    "top_preparation_certificates.json": "da55aab5640a657dfeaf2be43eda1e598d7440f4e59c6cc9f24161259881c4b7",
+    "separated_sources_certificates.json": "16a6f2f0e450799c6e1553b966edb16d3d59e20feb31f656ec0c537ffaea0116",
+    "top_finish_evaluation.json": "03344327c775a419fcb7e17b768becb09dd0ea76284791204f581d3aef8426b5",
+    "level1_certificates.json": "60d5c989e668b77834d727aad5fbcedc21a2feeb4bd4e23f57f255faa6e396cc",
+    "selected_configuration.json": "08033d195cb0cc871bfcb8070acf6fe00517a86e12a85a89852b50fb5b11ea43",
+    "selected_configuration_half_fanout.json": "163e211285953b5e1b2fe69bba73bf1713e38bd073f9582d5edb7cbcb9f254ab",
+    "deterministic_inventory_audit.json": "9af050f2d8f83898e58ad09ed1465828a18afdffe8ef33446543a1404725337a"
+  },
+  "source_sha256": {
+    "analysis/bound_certification/code/configuration_probe.cpp": "5c4406ebf9526a398fae4731e368ffc3fd465d67308361cf6db561b740374dc0",
+    "src/oram/levelarena/cpu_byteslice_level_arena_geometry.hpp": "7c15bc7660f78912023a23a1c12ae05437e2c6e979f26c3f6307ae4039413d57",
+    "src/oram/levelarena/cpu_byteslice_level_arena_merge.hpp": "8a5c48f43fceee9df12310d06936afde47fa6d4a2b7d3ab8a9838de98a0192d4",
+    "src/oram/levelarena/cpu_byteslice_level_arena_pass_shape.hpp": "d323499b9bfff5502fd341952f0b2f1da490201078973ca502b18648c969accb",
+    "src/oram/levelarena/cpu_byteslice_level_arena_stash.hpp": "b316f8c668e731ee06b52cfc4022d174177810813708dac5ce0eea968348e9ff",
+    "src/oram/rebuild/cpu_byteslice_dfs_residual.hpp": "a37d058cc3994ed52d71836739e1f3e0257ef3aa6f79e8ba7df1f19fbfbcff66",
+    "src/oram/rebuild/cpu_byteslice_residual_range.hpp": "c32589da50eda79e8e1d68c43930469e66f20833d4895b34f441d435851885c1",
+    "src/oram/rebuild/cpu_byteslice_residual_tier_bound.hpp": "f7dc6c1fd87a7de89c2b6cf7165c5d5868d8d8bc3d04274c0f4498c8d9b11384",
+    "src/oram/rebuild/cpu_byteslice_stash_capacity_table.hpp": "b534d5b2f5fa279de71ab79ce9efcef2ce39a53ed477fbe3e9f9bc68ad8fff86",
+    "src/oram/scheduler/cpu_byteslice_residual_pass.hpp": "b4c664474d79ad4f20aeb43abae941d36aa27685cd205e2992776c8622b8f6d5",
+    "src/oram/scheduler/cpu_byteslice_subtask.hpp": "48fa2b7b4c0bdb1b4ba65ce6a2fcfe55df664b046797c62656045d9d7dd531ef",
+    "src/oram/scheduler/cpu_byteslice_subtask_plan.hpp": "eb2e3c9d384c155add96a65e3b869aa7e1391d85bc53dad7327968017f15ef4b",
+    "analysis/bound_certification/code/ladder_probe.cpp": "039a06e85d00ecb7a9a54d060e96f80cb9eb9c300b3067d069095b7ef55f096c",
+    "analysis/bound_certification/code/check_configuration.py": "c9ba4a177f2c71b241ae656748c4fb3c96f015f48ac3585516d2d7b072d7b8ad",
+    "analysis/bound_certification/code/source_scope.py": "a8cbe29b0d7866486c539e00f9dfe73337777b25b7ff88bdf7140765df8115da"
+  },
+  "implementation_scope": "Uniform or explicit per-level fanout ladders (level_fanouts), default no-clone bank placement, fixed 64-slot buckets and 64-bit tags. Other engine options are not modeled; unknown config fields are rejected.",
+  "ledger_scope": "Native ordinary/top pool geometry; exact ordinary source-component coverage; initialization separate; unresolved top and integrated history explicitly charged one; the deterministic-inventory line is charged one unless a fresh inventory audit of exactly that configuration and ledger discharges it."
+}

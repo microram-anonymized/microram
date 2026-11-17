@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-baseline-h2o2ram-width-large",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 269766885376,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000,
+    "headroom_ppm": 50000
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 2000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 1048576,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 14400000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 86400000000000
+  },
+  "stages": [
+    {
+      "name": "h2o2ram",
+      "kind": "value_width",
+      "shapes": [
+        {
+          "name": "k8-v1024",
+          "key_bytes": 8,
+          "value_bytes": 1024
+        },
+        {
+          "name": "k8-v2048",
+          "key_bytes": 8,
+          "value_bytes": 2048
+        }
+      ],
+      "capacities": [
+        1048576
+      ],
+      "candidates": [
+        {
+          "name": "h2o2ram",
+          "overrides": {
+            "scheme": "h2o2ram"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 524408,
+              "setup_ns_per_entry": 103332,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 2100000
+            },
+            {
+              "key_bytes": 8,
+              "value_bytes": 2048,
+              "api_mode": "scalar",
+              "access_ns": 1237189,
+              "setup_ns_per_entry": 216735,
+              "reference_capacity": 1048576,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 2100000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-width-k8-2p20"
+    }
+  ],
+  "limits": {
+    "max_trials": 2,
+    "max_campaign_trial_ns": 1209600000000000
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "name": "oci-e6-native-tee",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 134576222208,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "native",
+    "require_protected": false
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "buffer_bytes": 268435456
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 134217728,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 900000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 1800000000000
+  },
+  "stages": [
+    {
+      "name": "ours-scalar",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1648,
+              "setup_ns_per_entry": 36,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 94176,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-ours-k4v8-2p27"
+    },
+    {
+      "name": "ours-batch64",
+      "kind": "capacity",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "parallel-8x8",
+          "overrides": {
+            "scheme": "hierarchical_incremental",
+            "incremental": {
+              "batch_execution": "parallel_tiles",
+              "batch_participants": 8,
+              "batch_lanes": 8
+            }
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "batch",
+              "access_ns": 696,
+              "setup_ns_per_entry": 103,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 96205,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "batch"
+      ],
+      "batch_sizes": [
+        64
+      ],
+      "seed_role": "screening",
+      "seed_stream": "fp-ours-k4v8-2p27"
+    }
+  ],
+  "limits": {
+    "max_trials": 2,
+    "max_campaign_trial_ns": 10800000000000
+  }
+}

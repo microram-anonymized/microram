@@ -1,0 +1,27 @@
+--- a/include/ohash_tiers.hpp
++++ b/include/ohash_tiers.hpp
+@@ -254,8 +254,11 @@
+             Block<KeyType, BlockSize> dummy_block;
+             auto &data = overflow_bin.extract();
+             tmp.reserve(data.size());
++            // P-H6: prf returns uint32_t and bin_num is KeyType, so the
++            // template cannot deduce one T and the call bound to the bool
++            // overload, putting every overflow block in bin 0 or 1.
+             for (auto &e : data)
+-                tmp.emplace_back(oblivious_select(prf(e.id),
++                tmp.emplace_back(oblivious_select(KeyType(prf(e.id)),
+                                                   bin_num,
+                                                   e.dummy()),
+                                  e);
+@@ -284,7 +287,10 @@
+             for (KeyType i = 1; i < tmp.size(); i++)
+             {
+                 ++cnt;
+-                CMOV(tmp[i].first == prev_first, cnt, KeyType(1));
++                // P-H6: restart the count at a new bin (as the commented line
++                // below does); `==` restarted it within a bin, so no bin was
++                // ever capped at group_size and the fixed-offset copy dropped blocks.
++                CMOV(tmp[i].first != prev_first, cnt, KeyType(1));
+                 // cnt = oblivious_select(KeyType(1),
+                 //                        cnt + 1,
+                 //                        tmp[i].first == prev_first);

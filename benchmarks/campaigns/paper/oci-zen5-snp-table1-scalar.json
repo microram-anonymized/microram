@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "name": "oci-zen5-snp-table1-scalar",
+  "repetitions": 1,
+  "base_seed": 1001,
+  "resources": {
+    "physical_cores": 16,
+    "smt": false,
+    "required_cache_domains": 2,
+    "host_memory_limit_bytes": 134576222208,
+    "placement": "near_far",
+    "spin_before_park_ns": 1000000000
+  },
+  "execution": {
+    "runtime": "snp",
+    "require_protected": true
+  },
+  "workload": {
+    "distribution": "counter"
+  },
+  "instrumentation": {
+    "logging": "histogram_checkpoints",
+    "verification": "off",
+    "checkpoint_thread": true,
+    "buffer_bytes": 268435456,
+    "checkpoint_interval_ns": 1000000000
+  },
+  "timing": {
+    "warmup_ns": 5000000000,
+    "settle_requests": 2097152,
+    "settle_per_entry_ppm": 1000000,
+    "measurement_ns": 30000000000,
+    "setup_allowance_ns": 900000000000,
+    "drain_deadline_ns": 30000000000,
+    "max_trial_ns": 3600000000000
+  },
+  "stages": [
+    {
+      "name": "ours-k4v8",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1648,
+              "setup_ns_per_entry": 36,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000,
+          800000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "ours-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 3030,
+              "setup_ns_per_entry": 300,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k8v48"
+    },
+    {
+      "name": "ours-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "auto",
+          "overrides": {
+            "scheme": "auto"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 5556,
+              "setup_ns_per_entry": 10000,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1000000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 100000
+      },
+      "seed_stream": "oci-large-k32v1024"
+    },
+    {
+      "name": "umap-k4v8",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "standard-provisional-k4-v8",
+          "key_bytes": 4,
+          "value_bytes": 8,
+          "key_layout": "dense"
+        }
+      ],
+      "capacities": [
+        134217728
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 4,
+              "value_bytes": 8,
+              "api_mode": "scalar",
+              "access_ns": 1600,
+              "setup_ns_per_entry": 1000,
+              "reference_capacity": 134217728,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k4v8"
+    },
+    {
+      "name": "umap-k8v48",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "signal-sized",
+          "key_bytes": 8,
+          "value_bytes": 48
+        }
+      ],
+      "capacities": [
+        33554432
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 8,
+              "value_bytes": 48,
+              "api_mode": "scalar",
+              "access_ns": 1000,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 33554432,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k8v48"
+    },
+    {
+      "name": "umap-k32v1024",
+      "kind": "latency",
+      "shapes": [
+        {
+          "name": "ethereum-mpt-sized",
+          "key_bytes": 32,
+          "value_bytes": 1024
+        }
+      ],
+      "capacities": [
+        2097152
+      ],
+      "candidates": [
+        {
+          "name": "std_unordered_map",
+          "overrides": {
+            "scheme": "std_unordered_map"
+          },
+          "trial_time": [
+            {
+              "key_bytes": 32,
+              "value_bytes": 1024,
+              "api_mode": "scalar",
+              "access_ns": 1500,
+              "setup_ns_per_entry": 500,
+              "reference_capacity": 2097152,
+              "capacity_exponent_ppm": 0,
+              "coverage_accesses_per_entry_ppm": 1200000
+            }
+          ]
+        }
+      ],
+      "api_modes": [
+        "scalar"
+      ],
+      "rates": {
+        "saturation_fractions_ppm": [
+          500000
+        ],
+        "minimum_ops_per_second": 1
+      },
+      "seed_stream": "oci-large-k32v1024"
+    }
+  ],
+  "limits": {
+    "max_trials": 13,
+    "max_campaign_trial_ns": 172800000000000
+  }
+}
